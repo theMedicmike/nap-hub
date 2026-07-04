@@ -1,0 +1,10 @@
+{
+  "name": "nap-canon-import",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One-time importer that loads the NAP founding documents into Supabase for the Shape It guide.",
+  "scripts": {
+    "import": "node import-canon.mjs"
+  }
+}
