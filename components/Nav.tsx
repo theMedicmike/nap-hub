@@ -11,7 +11,7 @@ export function Nav() {
         </Link>
         <div className="nav-links">
           <Link href="/framework">The framework</Link>
-          <Link href="/where-it-stands">Where it stands</Link>
+          <Link href="/atlas">The Atlas</Link>
           <Link href="/founders">Founders</Link>
           <Link className="btn btn-gold sm" href="/shape">Join the build</Link>
         </div>
