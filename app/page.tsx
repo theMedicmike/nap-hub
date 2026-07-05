@@ -1,113 +1,122 @@
-import Link from "next/link";
+"use client";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { Seal } from "@/components/Seal";
 
-export default function Home() {
-  return (
-    <>
-      <Nav />
+interface Msg { role: "user" | "assistant"; content: string }
 
-      <section className="hero">
-        <div className="hero-in">
-          <div className="hero-copy">
-            <div className="eyebrow">An open framework · offered for review</div>
-            <h1>A new foundation for natural health care — and an invitation to help build it.</h1>
-            <p>
-              NAP is an early-stage framework for treating the root causes of chronic illness, not only its
-              symptoms. It isn&apos;t finished, and it isn&apos;t trying to become law or doctrine. It&apos;s a
-              beginning — offered openly so the right minds can examine it, challenge it, and shape it.
-            </p>
-            <div className="hero-cta">
-              <Link className="btn btn-gold" href="/shape">Join the build →</Link>
-              <Link className="btn btn-ghost" href="/framework">Read the framework</Link>
-            </div>
-            <div className="hero-fine">
-              An early-stage prototype, offered for review and shaping — not medical advice.
-            </div>
-          </div>
-          <div className="hero-seal">
-            <Seal size={190} full />
-          </div>
-        </div>
-      </section>
+const WELCOME =
+  "Hi — I'm your NAP guide. Ask me anything about health through the terrain-first lens: root causes, the biological drivers of chronic illness, what the evidence says, and how the body's systems connect. You can type, or tap the microphone and just talk to me. I'm educational, not a doctor — and for anything specific to you, I'll always point you to a licensed clinician. What's on your mind?";
 
-      <section className="sec sec-ivory">
-        <div className="wrap">
-          <div className="eyebrow-ink">The idea</div>
-          <h2 className="serif" style={{ margin: "10px 0 4px" }}>Treat the terrain, not just the symptom.</h2>
-          <p className="lead">
-            Chronic illness rarely has a single cause. NAP looks upstream — at the accumulated toxic burden,
-            nutritional gaps, hormonal disruption, and inflammation that drive disease — and asks what it would
-            take to restore the body&apos;s foundation. Every claim is sourced. What&apos;s proven is marked
-            proven; what&apos;s still a question is marked a question.
-          </p>
-          <div className="grid g3" style={{ marginTop: 8 }}>
-            <div className="card" style={{ cursor: "default" }}>
-              <div className="cat">Root-cause</div>
-              <h3>Upstream, not downstream</h3>
-              <p>Address the drivers of illness, not only the labels we give its symptoms.</p>
-            </div>
-            <div className="card" style={{ cursor: "default" }}>
-              <div className="cat">Honest</div>
-              <h3>Proven vs. proposed</h3>
-              <p>A framework that names its own limits is one you can actually trust.</p>
-            </div>
-            <div className="card" style={{ cursor: "default" }}>
-              <div className="cat">Open</div>
-              <h3>Built by many hands</h3>
-              <p>This is a prototype for a shared standard — and you&apos;re invited to shape it.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sec sec-ivory2">
-        <div className="wrap">
-          <div className="eyebrow-ink">The framework</div>
-          <h2 className="serif" style={{ margin: "10px 0 4px" }}>Twelve founding documents. A starting point, not a finish line.</h2>
-          <p className="lead">The system is formed enough to examine — and unfinished enough to need you. Everything here is open to revision.</p>
-          <div className="grid g4">
-            <Link className="card" href="/framework#core"><div className="cat">Core framework</div><h3>The thesis</h3><p>The manifesto, the evidence, and the modalities.</p></Link>
-            <Link className="card" href="/framework#governance"><div className="cat">Governance &amp; build</div><h3>How it&apos;s governed</h3><p>The council, the architecture, and the coalition.</p></Link>
-            <Link className="card" href="/framework#clinical"><div className="cat">Clinical application</div><h3>At the bedside</h3><p>Where the framework meets a real patient.</p></Link>
-            <Link className="card" href="/framework#integrity"><div className="cat">Integrity &amp; proof</div><h3>Honest limits</h3><p>Safety, outcomes, and what we haven&apos;t proven yet.</p></Link>
-          </div>
-          <div style={{ marginTop: 20 }}>
-            <Link className="btn btn-ink" href="/framework">Open the full framework →</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="sec sec-ivory">
-        <div className="wrap">
-          <div className="eyebrow-ink">Where it stands</div>
-          <h2 className="serif" style={{ margin: "10px 0 18px" }}>Honest about the stage we&apos;re at.</h2>
-          <div className="status">
-            <div><div className="k">Stage</div><div className="v">Early prototype</div></div>
-            <div><div className="k">First pilot</div><div className="v">Designed — no outcomes yet</div></div>
-            <div><div className="k">Contributors</div><div className="v">Open — join the founders</div></div>
-          </div>
-          <div style={{ marginTop: 22 }}>
-            <Link className="read-back" href="/where-it-stands" style={{ color: "var(--gold)" }}>Read the full status →</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="join">
-        <h2>This is the beginning. Help shape it.</h2>
-        <p>
-          Bring an idea and our guide will help you sharpen it, show you where it already lives in the framework,
-          or help you add something new. Contributors join the founding members.
-        </p>
-        <div className="avatars">
-          <span className="av">MJ</span><span className="av">DR</span><span className="av">LK</span>
-          <span className="av-note">the founding wall begins with you</span>
-        </div>
-        <Link className="btn btn-gold" href="/founders">Add your name to the founders →</Link>
-      </section>
-
-      <Footer />
-    </>
-  );
+function cleanText(s: string): string {
+  return String(s)
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/^\s*[-*]\s+/gm, "")
+    .replace(/^\s*-{3,}\s*$/gm, "")
+    .replace(/\*/g, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
+
+export default function Ask() {
+  const [messages, setMessages] = useState<Msg[]>([{ role: "assistant", content: WELCOME }]);
+  const [input, setInput] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [voiceOn, setVoiceOn] = useState(true);
+  const [listening, setListening] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
+  const [micSupported, setMicSupported] = useState(false);
+
+  const logRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<any>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const voiceOnRef = useRef(true);
+
+  useEffect(() => { voiceOnRef.current = voiceOn; }, [voiceOn]);
+  useEffect(() => { if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight; }, [messages, busy]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (SR) {
+      setMicSupported(true);
+      const rec = new SR();
+      rec.lang = "en-US";
+      rec.interimResults = false;
+      rec.continuous = false;
+      rec.onresult = (e: any) => { const text = e.results[0][0].transcript; setListening(false); void submit(text); };
+      rec.onerror = () => setListening(false);
+      rec.onend = () => setListening(false);
+      recognitionRef.current = rec;
+    }
+    return () => { try { window.speechSynthesis?.cancel(); } catch {} };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const stopSpeaking = () => {
+    try { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } } catch {}
+    try { window.speechSynthesis?.cancel(); } catch {}
+    setSpeaking(false);
+  };
+
+  const browserSpeak = (text: string) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    try {
+      const u = new SpeechSynthesisUtterance(text);
+      u.rate = 0.98;
+      const voices = window.speechSynthesis.getVoices();
+      const male =
+        voices.find((v) => /en/i.test(v.lang) && /(Daniel|Alex|Fred|Guy|Davis|Mark|Google UK English Male|Microsoft David)/i.test(v.name)) ||
+        voices.find((v) => /en-US/i.test(v.lang));
+      if (male) u.voice = male;
+      u.onstart = () => setSpeaking(true);
+      u.onend = () => setSpeaking(false);
+      window.speechSynthesis.speak(u);
+    } catch {}
+  };
+
+  const speak = useCallback(async (text: string) => {
+    if (!voiceOnRef.current) return;
+    stopSpeaking();
+    try {
+      const r = await fetch("/api/speak", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+      if (r.ok) {
+        const blob = await r.blob();
+        const url = URL.createObjectURL(blob);
+        const audio = new Audio(url);
+        audioRef.current = audio;
+        audio.onplaying = () => setSpeaking(true);
+        audio.onended = () => { setSpeaking(false); URL.revokeObjectURL(url); };
+        audio.onerror = () => { setSpeaking(false); browserSpeak(text); };
+        await audio.play();
+        return;
+      }
+    } catch {}
+    browserSpeak(text);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const toggleMic = () => {
+    const rec = recognitionRef.current;
+    if (!rec) return;
+    if (listening) { try { rec.stop(); } catch {} setListening(false); }
+    else { stopSpeaking(); try { rec.start(); setListening(true); } catch {} }
+  };
+
+  async function submit(text: string) {
+    const clean = text.trim();
+    if (!clean || busy) return;
+    const next = [...messages, { role: "user" as const, content: clean }];
+    setMessages(next);
+    setInput("");
+    setBusy(true);
+    try {
+      const r = await fetch("/api/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(
