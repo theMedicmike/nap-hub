@@ -10,6 +10,7 @@ export function Nav() {
           <span>Nutraceutical Assisted Programs</span>
         </Link>
         <div className="nav-links">
+          <Link href="/ask">Ask</Link>
           <Link href="/framework">The framework</Link>
           <Link href="/atlas">The Atlas</Link>
           <Link href="/founders">Founders</Link>
