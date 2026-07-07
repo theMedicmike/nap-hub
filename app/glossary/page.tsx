@@ -8,7 +8,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "The Living Glossary — NAP", robots: { index: false, follow: false } };
 
-const AUTH_COOKIE = "nap_glossary";
+const AUTH_COOKIE = "nap_preview"; // shared across all preview pages (path "/")
 const COOKIE_PATH = "/glossary";
 
 async function signIn(formData: FormData): Promise<void> {
@@ -17,7 +17,7 @@ async function signIn(formData: FormData): Promise<void> {
   const key = String(formData.get("key") ?? "");
   if (!expected || key !== expected) redirect(`${COOKIE_PATH}?bad=1`);
   const jar = await cookies();
-  jar.set(AUTH_COOKIE, key, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict", path: COOKIE_PATH, maxAge: 60 * 60 * 24 * 7 });
+  jar.set(AUTH_COOKIE, key, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict", path: "/", maxAge: 60 * 60 * 24 * 7 });
   redirect(COOKIE_PATH);
 }
 
@@ -33,7 +33,7 @@ function card(p: Cov) {
   const uses = p.coverage_uses ?? 0;
   const sparse = uses <= 2;
   return (
-    <div key={p.slug} style={{ background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 11, padding: "15px 17px" }}>
+    <Link key={p.slug} href={`/ingredient/${p.slug}`} style={{ display: "block", background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 11, padding: "15px 17px", textDecoration: "none", color: "inherit" }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
         <div className="serif" style={{ fontSize: 18, color: "#14233B", fontWeight: 500 }}>{p.name}</div>
         <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "2px 9px", borderRadius: 20, whiteSpace: "nowrap", background: sparse ? "#F7EAD0" : "#ECEDF1", color: sparse ? "#8a6414" : "#4a5568" }}>
@@ -43,13 +43,8 @@ function card(p: Cov) {
       {p.also_known_as && <div style={{ color: "#8a7a55", fontSize: 12, fontStyle: "italic", marginTop: 2 }}>{p.also_known_as}</div>}
       {p.coverage_top_uses && <div style={{ color: "#5b6472", fontSize: 12.5, lineHeight: 1.5, marginTop: 7 }}><strong style={{ color: "#7a6a45" }}>Recorded for: </strong>{p.coverage_top_uses}</div>}
       {p.coverage_top_countries && <div style={{ color: "#98895f", fontSize: 11.5, marginTop: 4 }}>Traditions in: {p.coverage_top_countries}</div>}
-      {sparse && (
-        <div style={{ marginTop: 9, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-          <span style={{ color: "#8a6414", fontSize: 11.5, fontWeight: 600 }}>Barely documented — help strengthen it</span>
-          <Link href="/shape" style={{ color: "#B48A2F", fontSize: 11.5 }}>Add what you know →</Link>
-        </div>
-      )}
-    </div>
+      {sparse && <div style={{ marginTop: 9, color: "#8a6414", fontSize: 11.5, fontWeight: 600 }}>Barely documented — open it to help strengthen it →</div>}
+    </Link>
   );
 }
 

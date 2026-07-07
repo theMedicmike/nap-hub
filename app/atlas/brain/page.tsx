@@ -17,7 +17,7 @@ async function signIn(formData: FormData): Promise<void> {
   const key = String(formData.get("key") ?? "");
   if (!expected || key !== expected) redirect(`${COOKIE_PATH}?bad=1`);
   const jar = await cookies();
-  jar.set(AUTH_COOKIE, key, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict", path: COOKIE_PATH, maxAge: 60 * 60 * 24 * 7 });
+  jar.set(AUTH_COOKIE, key, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict", path: "/", maxAge: 60 * 60 * 24 * 7 });
   redirect(COOKIE_PATH);
 }
 async function signOut(): Promise<void> {
@@ -183,9 +183,9 @@ export default async function Brain({ searchParams }: { searchParams: Promise<{ 
       <div key={l.id} style={{ background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 11, padding: "16px 18px", display: "flex", flexDirection: "column", gap: 8 }}>
         <div>
           <div className="serif" style={{ fontSize: 18, color: "#14233B", fontWeight: 500, display: "flex", alignItems: "center", gap: 7, flexWrap: "wrap" }}>
-            {r.ing.name}{nCond >= 2 && <span title={`appears across ${nCond} conditions`} style={{ fontSize: 12 }}>🔗</span>}
+            <Link href={`/ingredient/${r.ing.slug}`} style={{ color: "#14233B", textDecoration: "none" }}>{r.ing.name}</Link>{nCond >= 2 && <span title={`appears across ${nCond} conditions`} style={{ fontSize: 12 }}>🔗</span>}
           </div>
-          <div style={{ color: "#5b6472", fontSize: 13 }}>may help with <strong style={{ color: "#14233B", fontWeight: 600 }}>{r.cond.name}</strong></div>
+          <div style={{ color: "#5b6472", fontSize: 13 }}>may help with <Link href={`/ingredient/${r.cond.slug}`} style={{ color: "#14233B", fontWeight: 600, textDecoration: "none" }}>{r.cond.name}</Link></div>
         </div>
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
           {badge(ss.label, ss.bg, ss.color)}
