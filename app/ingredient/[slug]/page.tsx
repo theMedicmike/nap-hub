@@ -22,9 +22,9 @@ async function signIn(formData: FormData): Promise<void> {
   redirect(back);
 }
 
-interface Ent { id: string; type: string; name: string; slug: string; summary: string | null; ingredient_type: string | null; safety_summary: string | null; plain_summary: string | null; also_known_as: string | null; publish_status: string | null; category: string | null; veteran_priority: boolean | null }
+interface Ent { id: string; type: string; name: string; slug: string; summary: string | null; ingredient_type: string | null; safety_summary: string | null; plain_summary: string | null; also_known_as: string | null; publish_status: string | null; category: string | null; veteran_priority: boolean | null; formula_ingredients: { name: string; role: string | null }[] | null; origin_text: string | null }
 interface Lnk { id: string; from_entity: string; to_entity: string; scientific_tier: string | null; traditional_strength: string | null; convergence_count: number | null; safety_note: string | null; status: string }
-interface CovLnk { id: string; from_entity: string; to_entity: string; coverage_countries: string | null; coverage_note: string | null; coverage_use_count: number | null }
+interface CovLnk { id: string; from_entity: string; to_entity: string; relation: string; coverage_countries: string | null; coverage_note: string | null; coverage_use_count: number | null }
 
 function sciStyle(t: string | null) {
   switch ((t || "").toLowerCase()) {
@@ -86,7 +86,7 @@ export default async function IngredientPage({ params, searchParams }: { params:
 
   if (sb) {
     const { data } = await sb.from("atlas_entities")
-      .select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary,also_known_as,publish_status,category,veteran_priority")
+      .select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary,also_known_as,publish_status,category,veteran_priority,formula_ingredients,origin_text")
       .eq("slug", slug).maybeSingle();
     ent = (data as Ent) || null;
     if (ent) {
@@ -115,7 +115,7 @@ export default async function IngredientPage({ params, searchParams }: { params:
 
       // ---- traditional (coverage) links — the Duke ethnobotanical layer ----
       const { data: cd, count } = await sb.from("atlas_links")
-        .select("id,from_entity,to_entity,coverage_countries,coverage_note,coverage_use_count", { count: "exact" })
+        .select("id,from_entity,to_entity,relation,coverage_countries,coverage_note,coverage_use_count", { count: "exact" })
         .eq("status", "coverage").or(`from_entity.eq.${ent.id},to_entity.eq.${ent.id}`)
         .order("coverage_use_count", { ascending: false, nullsFirst: false }).limit(COVERAGE_LIMIT);
       covTotal = count ?? 0;
@@ -152,13 +152,14 @@ export default async function IngredientPage({ params, searchParams }: { params:
       <section className="hero"><div className="hero-in"><div className="hero-copy">
         <Link href="/atlas/brain" className="read-back" style={{ color: "#C9A45A" }}>← Back to the database</Link>
         <div className="eyebrow" style={{ marginTop: 12 }}>
-          {ent.type === "condition" ? "Condition" : "Ingredient"}{ent.ingredient_type ? ` · ${ent.ingredient_type}` : ""}{ent.category ? ` · ${ent.category}` : ""}
+          {ent.type === "condition" ? "Condition" : ent.type === "formula" ? "Classical formula" : "Ingredient"}{ent.ingredient_type ? ` · ${ent.ingredient_type}` : ""}{ent.category ? ` · ${ent.category}` : ""}
         </div>
         <h1 style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
           {ent.name}
           {ent.veteran_priority && <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", background: "#C9A45A", color: "#14233B", borderRadius: 20, padding: "4px 12px" }}>🎖 Veteran priority</span>}
         </h1>
         {ent.also_known_as && <p style={{ color: "var(--ivory-soft)", fontStyle: "italic", margin: "10px 0 0" }}>Also known as: {ent.also_known_as}</p>}
+        {ent.origin_text && <p style={{ color: "var(--ivory-soft)", margin: "6px 0 0" }}>Origin: {ent.origin_text}</p>}
       </div></div></section>
 
       <section className="sec sec-ivory">
@@ -167,6 +168,21 @@ export default async function IngredientPage({ params, searchParams }: { params:
             <div style={{ background: "#F8F3E8", border: "0.5px solid #e2d8c2", borderRadius: 12, padding: "18px 20px" }}>
               <div style={{ color: "#B48A2F", fontSize: 10.5, letterSpacing: 1, textTransform: "uppercase", fontWeight: 700, marginBottom: 6 }}>In plain English</div>
               <p style={{ color: "#23303f", fontSize: 16, lineHeight: 1.7, margin: 0 }}>{ent.plain_summary}</p>
+            </div>
+          )}
+
+          {/* formula composition */}
+          {ent.formula_ingredients && ent.formula_ingredients.length > 0 && (
+            <div style={{ marginTop: 26 }}>
+              <div className="eyebrow-ink">Traditionally contains ({ent.formula_ingredients.length} ingredients)</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
+                {ent.formula_ingredients.map((fi, i) => (
+                  <span key={i} style={{ fontSize: 13, color: "#5b4a2a", background: "#F3EED9", border: "0.5px solid #e2d8c2", borderRadius: 20, padding: "6px 13px" }}>
+                    {fi.name}{fi.role ? <span style={{ color: "#98895f" }}> — {fi.role}</span> : ""}
+                  </span>
+                ))}
+              </div>
+              <div className="note" style={{ marginTop: 12 }}>This is a traditional multi-herb formula. There is little to no modern clinical-trial evidence for the formula AS A WHOLE — this describes historical composition and use, not a proven treatment.</div>
             </div>
           )}
 
@@ -194,22 +210,48 @@ export default async function IngredientPage({ params, searchParams }: { params:
             </div>
           )}
 
-          {/* traditional / coverage connections */}
-          {covConns.length > 0 && (
-            <div style={{ marginTop: 26 }}>
-              <div className="eyebrow-ink">🟤 Traditional record — {ent.type === "condition" ? `plants recorded for this (${covTotal.toLocaleString()} total)` : `what it's historically been used for (${covTotal.toLocaleString()} total)`}</div>
-              <div className="note" style={{ marginTop: 8 }}>This is documented folk/traditional use from Dr. Duke&apos;s Ethnobotanical Database (USDA, public domain) — <strong>not medical evidence and not a health claim.</strong></div>
+          {/* traditional / coverage connections — split by evidence TYPE so lab data is never
+              conflated with folk tradition, and composition is never conflated with either */}
+          {(() => {
+            const folk = covConns.filter((c) => c.link.relation === "traditionally used for");
+            const lab = covConns.filter((c) => c.link.relation === "documented activity (preclinical)");
+            const contains = covConns.filter((c) => c.link.relation === "contains");
+            const chipRow = (items: typeof covConns) => (
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
-                {covConns.map((c) => (
+                {items.map((c) => (
                   <Link key={c.link.id} href={`/ingredient/${c.other.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "#F8F3E8", border: "0.5px solid #e2d8c2", borderRadius: 20, padding: "7px 14px", fontSize: 13, color: "#14233B", textDecoration: "none" }}>
                     {c.other.name}
                     {typeof c.link.coverage_use_count === "number" && <span style={{ color: "#98895f", fontSize: 11 }}>({c.link.coverage_use_count})</span>}
                   </Link>
                 ))}
               </div>
-              {covTotal > COVERAGE_LIMIT && <p style={{ color: "#8a7a55", fontSize: 12.5, marginTop: 10 }}>Showing the top {COVERAGE_LIMIT} of {covTotal.toLocaleString()} — search the database to see more.</p>}
-            </div>
-          )}
+            );
+            return (
+              <>
+                {folk.length > 0 && (
+                  <div style={{ marginTop: 26 }}>
+                    <div className="eyebrow-ink">🟤 Traditional record — {ent.type === "condition" ? `plants recorded for this (${covTotal.toLocaleString()} total)` : "what it's historically been used for"}</div>
+                    <div className="note" style={{ marginTop: 8 }}>Documented folk/traditional use from Dr. Duke&apos;s Ethnobotanical Database (USDA, public domain) — <strong>not medical evidence and not a health claim.</strong></div>
+                    {chipRow(folk)}
+                    {covTotal > COVERAGE_LIMIT && <p style={{ color: "#8a7a55", fontSize: 12.5, marginTop: 10 }}>Showing the top {COVERAGE_LIMIT} of {covTotal.toLocaleString()} — search the database to see more.</p>}
+                  </div>
+                )}
+                {lab.length > 0 && (
+                  <div style={{ marginTop: 26 }}>
+                    <div className="eyebrow-ink">🧪 Documented in lab research — {ent.type === "ingredient" ? "activities recorded in published studies" : "compounds documented for this"}</div>
+                    <div className="note" style={{ marginTop: 8 }}>Recorded in real published laboratory or animal studies — <strong>not the same as folk tradition, and not the same as proven human clinical evidence.</strong></div>
+                    {chipRow(lab)}
+                  </div>
+                )}
+                {contains.length > 0 && (
+                  <div style={{ marginTop: 26 }}>
+                    <div className="eyebrow-ink">🧬 {ent.type === "ingredient" && ent.ingredient_type === "terpene" ? "Found in these plants" : "Contains these compounds"}</div>
+                    {chipRow(contains)}
+                  </div>
+                )}
+              </>
+            );
+          })()}
 
           {covConns.length === 0 && conns.length === 0 && (
             <div style={{ marginTop: 22 }} className="note">No recorded plants yet for this condition — a frontier gap this project exists to fill. If you have real research or a graded ingredient to contribute, <Link href="/shape" style={{ color: "#B48A2F" }}>add it</Link>.</div>
