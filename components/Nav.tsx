@@ -13,7 +13,6 @@ export function Nav() {
           <Link href="/ask">Ask</Link>
           <Link href="/framework">The framework</Link>
           <Link href="/atlas/brain">The database</Link>
-          <Link href="/glossary">Glossary</Link>
           <Link href="/founders">Founders</Link>
           <Link className="btn btn-gold sm" href="/shape">Join the build</Link>
         </div>

@@ -9,20 +9,22 @@ export const dynamic = "force-dynamic";
 export const metadata = { title: "Ingredient — NAP", robots: { index: false, follow: false } };
 
 const AUTH_COOKIE = "nap_preview";
+const COVERAGE_LIMIT = 60;
 
 async function signIn(formData: FormData): Promise<void> {
   "use server";
   const expected = process.env.PREVIEW_KEY ?? "";
   const key = String(formData.get("key") ?? "");
-  const back = String(formData.get("back") ?? "/glossary");
+  const back = String(formData.get("back") ?? "/atlas/brain");
   if (!expected || key !== expected) redirect(`${back}?bad=1`);
   const jar = await cookies();
   jar.set(AUTH_COOKIE, key, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict", path: "/", maxAge: 60 * 60 * 24 * 7 });
   redirect(back);
 }
 
-interface Ent { id: string; type: string; name: string; slug: string; summary: string | null; ingredient_type: string | null; safety_summary: string | null; plain_summary: string | null; also_known_as: string | null; publish_status: string | null; coverage_uses: number | null; coverage_countries: number | null; coverage_top_uses: string | null; coverage_top_countries: string | null; source: string | null }
+interface Ent { id: string; type: string; name: string; slug: string; summary: string | null; ingredient_type: string | null; safety_summary: string | null; plain_summary: string | null; also_known_as: string | null; publish_status: string | null; category: string | null; veteran_priority: boolean | null }
 interface Lnk { id: string; from_entity: string; to_entity: string; scientific_tier: string | null; traditional_strength: string | null; convergence_count: number | null; safety_note: string | null; status: string }
+interface CovLnk { id: string; from_entity: string; to_entity: string; coverage_countries: string | null; coverage_note: string | null; coverage_use_count: number | null }
 
 function sciStyle(t: string | null) {
   switch ((t || "").toLowerCase()) {
@@ -79,22 +81,25 @@ export default async function IngredientPage({ params, searchParams }: { params:
   let ent: Ent | null = null;
   let conns: { other: Ent; link: Lnk; asIngredient: boolean }[] = [];
   const srcByLink = new Map<string, string[]>();
+  let covConns: { other: Ent; link: CovLnk }[] = [];
+  let covTotal = 0;
 
   if (sb) {
     const { data } = await sb.from("atlas_entities")
-      .select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary,also_known_as,publish_status,coverage_uses,coverage_countries,coverage_top_uses,coverage_top_countries,source")
+      .select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary,also_known_as,publish_status,category,veteran_priority")
       .eq("slug", slug).maybeSingle();
     ent = (data as Ent) || null;
     if (ent) {
+      // ---- graded (scientific) links ----
       const { data: ld } = await sb.from("atlas_links")
         .select("id,from_entity,to_entity,scientific_tier,traditional_strength,convergence_count,safety_note,status")
         .not("scientific_tier", "is", null).or(`from_entity.eq.${ent.id},to_entity.eq.${ent.id}`);
       const links = (ld ?? []) as Lnk[];
       const otherIds = Array.from(new Set(links.map((l) => (l.from_entity === ent!.id ? l.to_entity : l.from_entity))));
-      const { data: others } = otherIds.length ? await sb.from("atlas_entities").select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary,also_known_as,publish_status,coverage_uses,coverage_countries,coverage_top_uses,coverage_top_countries,source").in("id", otherIds) : { data: [] as Ent[] };
+      const { data: others } = otherIds.length ? await sb.from("atlas_entities").select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary,also_known_as,publish_status,category,veteran_priority").in("id", otherIds) : { data: [] as Ent[] };
       const oById = new Map((others ?? []).map((o) => [o.id, o as Ent]));
       for (const l of links) {
-        const asIngredient = l.from_entity === ent.id; // ent is the ingredient of this link
+        const asIngredient = l.from_entity === ent.id;
         const other = oById.get(asIngredient ? l.to_entity : l.from_entity);
         if (other) conns.push({ other, link: l, asIngredient });
       }
@@ -107,6 +112,21 @@ export default async function IngredientPage({ params, searchParams }: { params:
         const sById = new Map((sd ?? []).map((s) => [s.id, s]));
         for (const row of lsd ?? []) { const s = sById.get(row.source_id); if (!s) continue; const arr = srcByLink.get(row.link_id) ?? []; arr.push(s.citation || s.title || ""); srcByLink.set(row.link_id, arr); }
       }
+
+      // ---- traditional (coverage) links — the Duke ethnobotanical layer ----
+      const { data: cd, count } = await sb.from("atlas_links")
+        .select("id,from_entity,to_entity,coverage_countries,coverage_note,coverage_use_count", { count: "exact" })
+        .eq("status", "coverage").or(`from_entity.eq.${ent.id},to_entity.eq.${ent.id}`)
+        .order("coverage_use_count", { ascending: false, nullsFirst: false }).limit(COVERAGE_LIMIT);
+      covTotal = count ?? 0;
+      const covLinks = (cd ?? []) as CovLnk[];
+      const covOtherIds = Array.from(new Set(covLinks.map((l) => (l.from_entity === ent!.id ? l.to_entity : l.from_entity))));
+      const { data: covOthers } = covOtherIds.length ? await sb.from("atlas_entities").select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary,also_known_as,publish_status,category,veteran_priority").in("id", covOtherIds) : { data: [] as Ent[] };
+      const covOById = new Map((covOthers ?? []).map((o) => [o.id, o as Ent]));
+      for (const l of covLinks) {
+        const other = covOById.get(l.from_entity === ent.id ? l.to_entity : l.from_entity);
+        if (other) covConns.push({ other, link: l });
+      }
     }
   }
 
@@ -115,7 +135,7 @@ export default async function IngredientPage({ params, searchParams }: { params:
       <>
         <Nav />
         <section className="sec sec-ivory" style={{ minHeight: "50vh" }}><div className="wrap">
-          <Link href="/glossary" style={{ color: "#B48A2F", fontSize: 13 }}>← Back to the glossary</Link>
+          <Link href="/atlas/brain" style={{ color: "#B48A2F", fontSize: 13 }}>← Back to the database</Link>
           <p className="lead" style={{ marginTop: 20 }}>No entry found for &quot;{slug}&quot;.</p>
         </div></section>
         <Footer />
@@ -123,18 +143,21 @@ export default async function IngredientPage({ params, searchParams }: { params:
     );
   }
 
-  const isCoverage = ent.publish_status === "coverage";
-  const topUses = (ent.coverage_top_uses || "").split(",").map((s) => s.trim()).filter(Boolean);
-  const topCountries = (ent.coverage_top_countries || "").split(",").map((s) => s.trim()).filter(Boolean);
+  const isCoverageOnly = ent.publish_status === "coverage" && conns.length === 0;
   const sci = (t: string | null) => sciStyle(t);
 
   return (
     <>
       <Nav />
       <section className="hero"><div className="hero-in"><div className="hero-copy">
-        <Link href={isCoverage ? "/glossary" : "/atlas/brain"} className="read-back" style={{ color: "#C9A45A" }}>← Back to the {isCoverage ? "glossary" : "database"}</Link>
-        <div className="eyebrow" style={{ marginTop: 12 }}>{ent.type === "condition" ? "Condition" : "Ingredient"}{ent.ingredient_type ? ` · ${ent.ingredient_type}` : ""}</div>
-        <h1 style={{ marginTop: 6 }}>{ent.name}</h1>
+        <Link href="/atlas/brain" className="read-back" style={{ color: "#C9A45A" }}>← Back to the database</Link>
+        <div className="eyebrow" style={{ marginTop: 12 }}>
+          {ent.type === "condition" ? "Condition" : "Ingredient"}{ent.ingredient_type ? ` · ${ent.ingredient_type}` : ""}{ent.category ? ` · ${ent.category}` : ""}
+        </div>
+        <h1 style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+          {ent.name}
+          {ent.veteran_priority && <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", background: "#C9A45A", color: "#14233B", borderRadius: 20, padding: "4px 12px" }}>🎖 Veteran priority</span>}
+        </h1>
         {ent.also_known_as && <p style={{ color: "var(--ivory-soft)", fontStyle: "italic", margin: "10px 0 0" }}>Also known as: {ent.also_known_as}</p>}
       </div></div></section>
 
@@ -150,7 +173,7 @@ export default async function IngredientPage({ params, searchParams }: { params:
           {/* graded connections */}
           {conns.length > 0 && (
             <div style={{ marginTop: 26 }}>
-              <div className="eyebrow-ink">{ent.type === "condition" ? "Ingredients graded for this" : "What the evidence links it to"}</div>
+              <div className="eyebrow-ink">🟢 Proven &amp; graded — {ent.type === "condition" ? "ingredients studied for this" : "what real evidence links it to"}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 12 }}>
                 {conns.map((c) => {
                   const ss = sci(c.link.scientific_tier), ts = tradStyle(c.link.traditional_strength);
@@ -171,19 +194,29 @@ export default async function IngredientPage({ params, searchParams }: { params:
             </div>
           )}
 
-          {/* traditional / coverage record */}
-          {(topUses.length > 0 || (ent.coverage_uses ?? 0) > 0) && (
+          {/* traditional / coverage connections */}
+          {covConns.length > 0 && (
             <div style={{ marginTop: 26 }}>
-              <div className="eyebrow-ink">Recorded traditional use</div>
-              <div style={{ color: "#8a7a55", fontSize: 12.5, margin: "6px 0 10px" }}>{ent.coverage_uses ?? 0} use{(ent.coverage_uses ?? 0) === 1 ? "" : "s"} documented across {ent.coverage_countries ?? 0} countr{(ent.coverage_countries ?? 0) === 1 ? "y" : "ies"} · from Dr. Duke&apos;s Ethnobotanical Database (USDA, public domain)</div>
-              {topUses.length > 0 && <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginBottom: 10 }}>{topUses.map((u, i) => <span key={i} style={{ fontSize: 12.5, color: "#5b4a2a", background: "#F3EED9", border: "0.5px solid #e2d8c2", borderRadius: 20, padding: "5px 12px" }}>{u}</span>)}</div>}
-              {topCountries.length > 0 && <div style={{ color: "#98895f", fontSize: 12.5 }}>Traditions recorded in: {topCountries.join(", ")}</div>}
-              <div className="note" style={{ marginTop: 12 }}>This is documented history of how the plant has been used — <strong>not medical evidence and not a health claim.</strong></div>
+              <div className="eyebrow-ink">🟤 Traditional record — {ent.type === "condition" ? `plants recorded for this (${covTotal.toLocaleString()} total)` : `what it's historically been used for (${covTotal.toLocaleString()} total)`}</div>
+              <div className="note" style={{ marginTop: 8 }}>This is documented folk/traditional use from Dr. Duke&apos;s Ethnobotanical Database (USDA, public domain) — <strong>not medical evidence and not a health claim.</strong></div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
+                {covConns.map((c) => (
+                  <Link key={c.link.id} href={`/ingredient/${c.other.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "#F8F3E8", border: "0.5px solid #e2d8c2", borderRadius: 20, padding: "7px 14px", fontSize: 13, color: "#14233B", textDecoration: "none" }}>
+                    {c.other.name}
+                    {typeof c.link.coverage_use_count === "number" && <span style={{ color: "#98895f", fontSize: 11 }}>({c.link.coverage_use_count})</span>}
+                  </Link>
+                ))}
+              </div>
+              {covTotal > COVERAGE_LIMIT && <p style={{ color: "#8a7a55", fontSize: 12.5, marginTop: 10 }}>Showing the top {COVERAGE_LIMIT} of {covTotal.toLocaleString()} — search the database to see more.</p>}
             </div>
           )}
 
+          {covConns.length === 0 && conns.length === 0 && (
+            <div style={{ marginTop: 22 }} className="note">No recorded plants yet for this condition — a frontier gap this project exists to fill. If you have real research or a graded ingredient to contribute, <Link href="/shape" style={{ color: "#B48A2F" }}>add it</Link>.</div>
+          )}
+
           {/* clinical detail */}
-          {ent.summary && !isCoverage && (
+          {ent.summary && !isCoverageOnly && (
             <details style={{ marginTop: 22 }}>
               <summary style={{ color: "#8a7a55", fontSize: 11.5, letterSpacing: 0.5, textTransform: "uppercase", fontWeight: 600, cursor: "pointer" }}>Clinical detail (for your doctor)</summary>
               <p style={{ color: "#5b6472", fontSize: 14, lineHeight: 1.7, margin: "10px 0 0" }}>{ent.summary}</p>

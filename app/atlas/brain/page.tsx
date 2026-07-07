@@ -6,10 +6,19 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "The NAP Brain — private preview", robots: { index: false, follow: false } };
+export const metadata = { title: "The NAP Database — private preview", robots: { index: false, follow: false } };
 
 const AUTH_COOKIE = "nap_preview";
 const COOKIE_PATH = "/atlas/brain";
+
+const CATEGORIES = [
+  "Cancers & tumors", "Brain & nervous system", "Mental & emotional health", "Addiction & recovery",
+  "Sleep", "Heart & circulation", "Blood & immune system", "Infections", "Metabolic & hormonal",
+  "Lungs & breathing", "Digestion, gut & liver", "Kidney & urinary", "Bones, joints & muscles",
+  "Skin, hair & nails", "Eyes & vision", "Ears, nose, mouth & throat", "Reproductive & sexual health",
+  "Pregnancy, child & development", "Pain", "Wounds, injury & first aid", "Energy, fatigue & vitality",
+  "Other traditional & practical uses", "General & other",
+];
 
 async function signIn(formData: FormData): Promise<void> {
   "use server";
@@ -23,69 +32,23 @@ async function signIn(formData: FormData): Promise<void> {
 async function signOut(): Promise<void> {
   "use server";
   const jar = await cookies();
-  jar.delete({ name: AUTH_COOKIE, path: COOKIE_PATH });
+  jar.delete({ name: AUTH_COOKIE, path: "/" });
   redirect(COOKIE_PATH);
 }
 
-interface Ent { id: string; type: string; name: string; slug: string; summary: string | null; ingredient_type: string | null; safety_summary: string | null; plain_summary: string | null }
-interface Lnk { id: string; from_entity: string; to_entity: string; scientific_tier: string | null; traditional_strength: string | null; convergence_count: number | null; safety_note: string | null; status: string }
-
-const SCI_ORDER: Record<string, number> = { established: 5, studied: 4, emerging: 3, minimal: 2, none: 1 };
-const SCI_TIERS = ["established", "studied", "emerging", "minimal", "none"];
-const TRAD_TIERS = ["deep", "moderate", "limited"];
-
-function sciStyle(t: string | null): { bg: string; color: string; label: string } {
-  switch ((t || "").toLowerCase()) {
-    case "established": return { bg: "#E1F0E6", color: "#2f6b45", label: "Established" };
-    case "studied": return { bg: "#F7EAD0", color: "#8a6414", label: "Studied" };
-    case "emerging": return { bg: "#ECEDF1", color: "#4a5568", label: "Emerging" };
-    case "minimal": return { bg: "#F0EBE1", color: "#7a6a45", label: "Minimal" };
-    default: return { bg: "#EEE7D6", color: "#7a6a45", label: t || "—" };
-  }
-}
-function tradStyle(t: string | null): { bg: string; color: string; label: string } {
-  switch ((t || "").toLowerCase()) {
-    case "deep": return { bg: "#EDE4F3", color: "#5b3f7a", label: "Deep tradition" };
-    case "moderate": return { bg: "#F1E9F6", color: "#6b5486", label: "Moderate tradition" };
-    case "limited": return { bg: "#F3EFEA", color: "#7a6a55", label: "Limited tradition" };
-    default: return { bg: "#F3EFEA", color: "#7a6a55", label: t || "—" };
-  }
-}
-function sciPlain(t: string | null): string {
-  switch ((t || "").toLowerCase()) {
-    case "established": return "Backed by strong, repeated research.";
-    case "studied": return "Real studies exist, but the evidence is still mixed or modest.";
-    case "emerging": return "Early research looks promising, but it's not proven yet.";
-    case "minimal": return "Mostly traditional use so far — real science hasn't caught up.";
-    case "none": return "No solid research on this yet.";
-    default: return "";
-  }
-}
-function tradPlain(t: string | null): string {
-  switch ((t || "").toLowerCase()) {
-    case "deep": return "Used for centuries, across multiple healing traditions.";
-    case "moderate": return "Used traditionally in one or two systems of medicine.";
-    case "limited": return "Not a strong traditional history.";
-    default: return "";
-  }
-}
-function statusBadge(s: string) {
-  const map: Record<string, { bg: string; color: string; label: string }> = {
-    published: { bg: "#E1F0E6", color: "#2f6b45", label: "Published" },
-    in_review: { bg: "#FBEEDA", color: "#8a6414", label: "In review" },
-    draft: { bg: "#ECEDF1", color: "#4a5568", label: "Draft" },
-    rejected: { bg: "#F2E3E0", color: "#8a3a2a", label: "Rejected" },
-  };
-  const st = map[s] || map.draft;
-  return <span style={{ fontSize: 9.5, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "2px 8px", borderRadius: 20, background: st.bg, color: st.color, whiteSpace: "nowrap" }}>{st.label}</span>;
-}
-function badge(label: string, bg: string, color: string) {
-  return <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "3px 10px", borderRadius: 20, background: bg, color, whiteSpace: "nowrap" }}>{label}</span>;
-}
-
+interface Ent { id: string; type: string; name: string; slug: string; plain_summary: string | null; ingredient_type: string | null; category: string | null; veteran_priority: boolean | null; publish_status: string | null }
 const selStyle = { border: ".5px solid #d9cdb2", borderRadius: 8, padding: "10px 12px", fontSize: 13.5, background: "#fff", color: "#14233B", fontFamily: "inherit" } as const;
 
-export default async function Brain({ searchParams }: { searchParams: Promise<{ bad?: string; q?: string; cond?: string; sci?: string; trad?: string }> }) {
+function evidenceBadge(hasGraded: boolean) {
+  return hasGraded
+    ? <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "3px 10px", borderRadius: 20, background: "#E1F0E6", color: "#2f6b45" }}>🟢 Proven &amp; graded</span>
+    : <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "3px 10px", borderRadius: 20, background: "#F3EED9", color: "#7a6a45" }}>🟤 Traditional record</span>;
+}
+function vetBadge() {
+  return <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "3px 10px", borderRadius: 20, background: "#C9A45A", color: "#14233B" }}>🎖 Veteran</span>;
+}
+
+export default async function Database({ searchParams }: { searchParams: Promise<{ bad?: string; q?: string; cat?: string; evidence?: string; vet?: string }> }) {
   const sp = await searchParams;
   const expected = process.env.PREVIEW_KEY ?? "";
   const jar = await cookies();
@@ -96,9 +59,9 @@ export default async function Brain({ searchParams }: { searchParams: Promise<{ 
       <>
         <Nav />
         <section className="hero"><div className="hero-in"><div className="hero-copy">
-          <div className="eyebrow">The NAP Brain · Private preview</div>
-          <h1>A private look inside the brain.</h1>
-          <p>The evidence-graded database — every ingredient and condition, graded on two axes: real science and depth of tradition. Not public yet. Enter the view key to explore.</p>
+          <div className="eyebrow">The NAP Database · Private preview</div>
+          <h1>One database. Every plant, every condition.</h1>
+          <p>Graded, evidence-checked ingredients and a 13,000-plant traditional record, side by side — always clearly labeled which is which. Enter the view key to explore.</p>
           {sp?.bad && <div className="note" style={{ borderLeftColor: "#a33", color: "#8a3a2a" }}>That key didn&apos;t match. Try again.</div>}
           <form action={signIn} style={{ marginTop: 18, display: "flex", gap: 10, maxWidth: 420, flexWrap: "wrap" }}>
             <input name="key" type="password" placeholder="View key" autoComplete="off" style={{ flex: 1, minWidth: 180, border: ".5px solid #d9cdb2", borderRadius: 8, padding: "11px 13px", fontSize: 14, background: "#fff" }} />
@@ -111,158 +74,148 @@ export default async function Brain({ searchParams }: { searchParams: Promise<{ 
   }
 
   const sb = supabaseAdmin();
-  let entities: Ent[] = [];
-  let links: Lnk[] = [];
-  const srcByLink = new Map<string, { title: string | null; citation: string | null }[]>();
+  const q = (sp?.q ?? "").trim();
+  const cat = sp?.cat ?? "";
+  const evidence = sp?.evidence ?? ""; // "graded" | "traditional" | ""
+  const vetOnly = sp?.vet === "1";
+  const anyFilter = Boolean(q || cat || evidence || vetOnly);
+
+  let totalConditions = 0, totalIngredients = 0, gradedLinks = 0, coverageLinks = 0;
+  let catCounts = new Map<string, number>();
+  let gradedCondIds = new Set<string>();
+  let resultConditions: Ent[] = [];
+  let resultIngredients: Ent[] = [];
+  let vetConditions: Ent[] = [];
 
   if (sb) {
-    const { data: ld } = await sb.from("atlas_links")
-      .select("id,from_entity,to_entity,scientific_tier,traditional_strength,convergence_count,safety_note,status")
-      .not("scientific_tier", "is", null);
-    links = (ld ?? []) as Lnk[];
-    const entIds = Array.from(new Set(links.flatMap((l) => [l.from_entity, l.to_entity])));
-    if (entIds.length) {
-      const { data: ed } = await sb.from("atlas_entities")
-        .select("id,type,name,slug,summary,ingredient_type,safety_summary,plain_summary")
-        .in("id", entIds);
-      entities = (ed ?? []) as Ent[];
-    }
-    const linkIds = links.map((l) => l.id).filter(Boolean);
-    if (linkIds.length) {
-      const { data: lsd } = await sb.from("atlas_link_sources").select("link_id,source_id").in("link_id", linkIds);
-      const srcIds = Array.from(new Set((lsd ?? []).map((x) => x.source_id)));
-      const { data: sd } = srcIds.length
-        ? await sb.from("atlas_sources").select("id,title,citation").in("id", srcIds)
-        : { data: [] as { id: string; title: string | null; citation: string | null }[] };
-      const srcById = new Map((sd ?? []).map((s) => [s.id, s]));
-      for (const row of lsd ?? []) {
-        const s = srcById.get(row.source_id);
-        if (!s) continue;
-        (srcByLink.get(row.link_id) ?? srcByLink.set(row.link_id, []).get(row.link_id)!).push({ title: s.title, citation: s.citation });
-      }
+    const [{ count: cCount }, { count: iCount }, { count: gCount }, { count: covCount }] = await Promise.all([
+      sb.from("atlas_entities").select("*", { count: "exact", head: true }).eq("type", "condition"),
+      sb.from("atlas_entities").select("*", { count: "exact", head: true }).eq("type", "ingredient"),
+      sb.from("atlas_links").select("*", { count: "exact", head: true }).not("scientific_tier", "is", null),
+      sb.from("atlas_links").select("*", { count: "exact", head: true }).eq("status", "coverage"),
+    ]);
+    totalConditions = cCount ?? 0; totalIngredients = iCount ?? 0; gradedLinks = gCount ?? 0; coverageLinks = covCount ?? 0;
+
+    const { data: gd } = await sb.from("atlas_links").select("to_entity").not("scientific_tier", "is", null);
+    gradedCondIds = new Set((gd ?? []).map((r) => r.to_entity));
+
+    const { data: allConds } = await sb.from("atlas_entities").select("category").eq("type", "condition");
+    for (const r of allConds ?? []) catCounts.set(r.category || "General & other", (catCounts.get(r.category || "General & other") || 0) + 1);
+
+    const { data: vd } = await sb.from("atlas_entities").select("id,type,name,slug,plain_summary,ingredient_type,category,veteran_priority,publish_status").eq("type", "condition").eq("veteran_priority", true).order("name");
+    vetConditions = (vd ?? []) as Ent[];
+
+    if (anyFilter) {
+      let condQuery = sb.from("atlas_entities").select("id,type,name,slug,plain_summary,ingredient_type,category,veteran_priority,publish_status").eq("type", "condition");
+      let ingQuery = sb.from("atlas_entities").select("id,type,name,slug,plain_summary,ingredient_type,category,veteran_priority,publish_status").eq("type", "ingredient");
+      if (q) { condQuery = condQuery.ilike("name", `%${q}%`); ingQuery = ingQuery.or(`name.ilike.%${q}%,also_known_as.ilike.%${q}%`); }
+      if (cat) condQuery = condQuery.eq("category", cat);
+      if (vetOnly) condQuery = condQuery.eq("veteran_priority", true);
+      const { data: rc } = await condQuery.limit(120);
+      let conds = (rc ?? []) as Ent[];
+      if (evidence === "graded") conds = conds.filter((c) => gradedCondIds.has(c.id));
+      if (evidence === "traditional") conds = conds.filter((c) => !gradedCondIds.has(c.id));
+      resultConditions = conds;
+      if (cat) { ingQuery = ingQuery.limit(0); } // category filter only applies to conditions
+      else if (q) { const { data: ri } = await ingQuery.limit(60); resultIngredients = (ri ?? []) as Ent[]; }
     }
   }
 
-  const byId = new Map(entities.map((e) => [e.id, e]));
-  const conditions = entities.filter((e) => e.type === "condition").sort((a, b) => a.name.localeCompare(b.name));
-  const ingredients = entities.filter((e) => e.type === "ingredient");
-  // cross-link count per ingredient
-  const condCount = new Map<string, Set<string>>();
-  for (const l of links) { if (!condCount.has(l.from_entity)) condCount.set(l.from_entity, new Set()); condCount.get(l.from_entity)!.add(l.to_entity); }
-
-  // build a flat, filterable list of graded connections
-  type Row = { link: Lnk; ing: Ent; cond: Ent };
-  let rows: Row[] = [];
-  for (const l of links) {
-    const ing = byId.get(l.from_entity), cond = byId.get(l.to_entity);
-    if (ing && cond) rows.push({ link: l, ing, cond });
-  }
-
-  const q = (sp?.q ?? "").toLowerCase().trim();
-  const fCond = sp?.cond ?? "", fSci = sp?.sci ?? "", fTrad = sp?.trad ?? "";
-  const totalRows = rows.length;
-  rows = rows.filter((r) => {
-    if (fCond && r.cond.slug !== fCond) return false;
-    if (fSci && (r.link.scientific_tier || "").toLowerCase() !== fSci) return false;
-    if (fTrad && (r.link.traditional_strength || "").toLowerCase() !== fTrad) return false;
-    if (q && !(r.ing.name.toLowerCase().includes(q) || r.cond.name.toLowerCase().includes(q) || (r.ing.plain_summary || "").toLowerCase().includes(q))) return false;
-    return true;
-  });
-  rows.sort((a, b) =>
-    (SCI_ORDER[(b.link.scientific_tier || "").toLowerCase()] || 0) - (SCI_ORDER[(a.link.scientific_tier || "").toLowerCase()] || 0)
-    || a.ing.name.localeCompare(b.ing.name));
-
-  const anyFilter = Boolean(q || fCond || fSci || fTrad);
-
-  const card = (r: Row) => {
-    const l = r.link;
-    const ss = sciStyle(l.scientific_tier), ts = tradStyle(l.traditional_strength);
-    const srcs = srcByLink.get(l.id) ?? [];
-    const nCond = condCount.get(l.from_entity)?.size ?? 1;
-    return (
-      <div key={l.id} style={{ background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 11, padding: "16px 18px", display: "flex", flexDirection: "column", gap: 8 }}>
-        <div>
-          <div className="serif" style={{ fontSize: 18, color: "#14233B", fontWeight: 500, display: "flex", alignItems: "center", gap: 7, flexWrap: "wrap" }}>
-            <Link href={`/ingredient/${r.ing.slug}`} style={{ color: "#14233B", textDecoration: "none" }}>{r.ing.name}</Link>{nCond >= 2 && <span title={`appears across ${nCond} conditions`} style={{ fontSize: 12 }}>🔗</span>}
-          </div>
-          <div style={{ color: "#5b6472", fontSize: 13 }}>may help with <Link href={`/ingredient/${r.cond.slug}`} style={{ color: "#14233B", fontWeight: 600, textDecoration: "none" }}>{r.cond.name}</Link></div>
-        </div>
-        <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-          {badge(ss.label, ss.bg, ss.color)}
-          {badge(ts.label, ts.bg, ts.color)}
-          {typeof l.convergence_count === "number" && l.convergence_count > 0 && badge(`${l.convergence_count} traditions`, "#ECEDF1", "#4a5568")}
-          {statusBadge(l.status)}
-        </div>
-        <div style={{ color: "#5b6472", fontSize: 12.5, lineHeight: 1.5 }}><strong style={{ color: "#14233B", fontWeight: 600 }}>In plain terms: </strong>{sciPlain(l.scientific_tier)} {tradPlain(l.traditional_strength)}</div>
-        {r.ing.plain_summary && <p style={{ color: "#5b6472", fontSize: 13, lineHeight: 1.55, margin: 0 }}>{r.ing.plain_summary.length > 200 ? r.ing.plain_summary.slice(0, 200) + "…" : r.ing.plain_summary}</p>}
-        {(r.ing.summary || l.safety_note || srcs.length > 0) && (
-          <details>
-            <summary style={{ color: "#8a7a55", fontSize: 11, letterSpacing: 0.5, textTransform: "uppercase", fontWeight: 600, cursor: "pointer" }}>Clinical detail &amp; sources</summary>
-            {r.ing.summary && <p style={{ color: "#5b6472", fontSize: 12.5, lineHeight: 1.6, margin: "8px 0 0" }}>{r.ing.summary}</p>}
-            {l.safety_note && <div style={{ color: "#8a7a55", fontSize: 11.5, marginTop: 7, lineHeight: 1.45 }}><strong style={{ color: "#7a6a45" }}>Safety: </strong>{l.safety_note}</div>}
-            {srcs.length > 0 && <div style={{ color: "#98895f", fontSize: 11, marginTop: 6, lineHeight: 1.45 }}><strong>{srcs.length} source{srcs.length > 1 ? "s" : ""}:</strong> {srcs.map((s) => s.citation || s.title).filter(Boolean).join("  ·  ")}</div>}
-          </details>
-        )}
+  const condCard = (e: Ent) => (
+    <Link key={e.id} href={`/ingredient/${e.slug}`} style={{ display: "block", background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 11, padding: "14px 16px", textDecoration: "none" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+        <div className="serif" style={{ fontSize: 16.5, color: "#14233B", fontWeight: 500 }}>{e.name}</div>
+        <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>{evidenceBadge(gradedCondIds.has(e.id))}{e.veteran_priority && vetBadge()}</div>
       </div>
-    );
-  };
+      {e.category && <div style={{ color: "#8a7a55", fontSize: 11.5, marginTop: 4 }}>{e.category}</div>}
+      {e.plain_summary && <p style={{ color: "#5b6472", fontSize: 12.5, lineHeight: 1.5, margin: "6px 0 0" }}>{e.plain_summary.slice(0, 140)}{e.plain_summary.length > 140 ? "…" : ""}</p>}
+    </Link>
+  );
+  const ingCard = (e: Ent) => (
+    <Link key={e.id} href={`/ingredient/${e.slug}`} style={{ display: "block", background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 11, padding: "14px 16px", textDecoration: "none" }}>
+      <div className="serif" style={{ fontSize: 16.5, color: "#14233B", fontWeight: 500 }}>{e.name}</div>
+      {e.plain_summary && <p style={{ color: "#5b6472", fontSize: 12.5, lineHeight: 1.5, margin: "6px 0 0" }}>{e.plain_summary.slice(0, 140)}{e.plain_summary.length > 140 ? "…" : ""}</p>}
+    </Link>
+  );
 
   return (
     <>
       <Nav />
       <section className="hero"><div className="hero-in"><div className="hero-copy">
-        <div className="eyebrow">The NAP Brain · Private preview · The graded database</div>
-        <h1>Search the evidence.</h1>
-        <p>Every graded connection between an ingredient and a condition — plain-English for anyone, filterable by evidence level and tradition for clinicians. Draft work, under review; not medical advice.</p>
+        <div className="eyebrow">The NAP Database · Private preview</div>
+        <h1>One database. Every plant, every condition.</h1>
+        <p>🟢 <strong style={{ color: "#fff" }}>Proven &amp; graded</strong> — real evidence, fact-checked, dual-axis scored. 🟤 <strong style={{ color: "#fff" }}>Traditional record</strong> — documented folk history, not a claim. Both live here, always clearly labeled.</p>
         <div className="status" style={{ marginTop: 20 }}>
-          <div><div className="k">Conditions</div><div className="v" style={{ color: "#C9A45A" }}>{conditions.length}</div></div>
-          <div><div className="k">Graded connections</div><div className="v" style={{ color: "#C9A45A" }}>{totalRows}</div></div>
-          <div><div className="k">Ingredients</div><div className="v" style={{ color: "#C9A45A" }}>{ingredients.length}</div></div>
+          <div><div className="k">Conditions</div><div className="v" style={{ color: "#C9A45A" }}>{totalConditions.toLocaleString()}</div></div>
+          <div><div className="k">Ingredients &amp; plants</div><div className="v" style={{ color: "#C9A45A" }}>{totalIngredients.toLocaleString()}</div></div>
+          <div><div className="k">Graded connections</div><div className="v" style={{ color: "#C9A45A" }}>{gradedLinks.toLocaleString()}</div></div>
+          <div><div className="k">Traditional records</div><div className="v" style={{ color: "#C9A45A" }}>{coverageLinks.toLocaleString()}</div></div>
         </div>
-        <div style={{ marginTop: 14, display: "flex", gap: 14, alignItems: "center", flexWrap: "wrap" }}>
-          <Link href="/glossary" style={{ color: "#C9A45A", fontSize: 13 }}>Looking for the full 13,000-plant traditional glossary? →</Link>
-          <form action={signOut}><button className="btn btn-ghost" type="submit" style={{ padding: "6px 14px", fontSize: 12 }}>Sign out</button></form>
-        </div>
+        <div style={{ marginTop: 14 }}><form action={signOut}><button className="btn btn-ghost" type="submit" style={{ padding: "6px 14px", fontSize: 12 }}>Sign out</button></form></div>
       </div></div></section>
 
       <section className="sec sec-ivory">
         <div className="wrap">
-          {/* --- filter / search bar --- */}
           <form method="get" action={COOKIE_PATH} style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 12, padding: "14px 16px" }}>
-            <input name="q" defaultValue={sp?.q ?? ""} placeholder="Search ingredient or condition…" style={{ ...selStyle, flex: 1, minWidth: 200 }} />
-            <select name="cond" defaultValue={fCond} style={selStyle}>
-              <option value="">All conditions</option>
-              {conditions.map((c) => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+            <input name="q" defaultValue={q} placeholder="Search any ingredient or condition…" style={{ ...selStyle, flex: 1, minWidth: 220 }} />
+            <select name="cat" defaultValue={cat} style={selStyle}>
+              <option value="">All categories</option>
+              {CATEGORIES.map((c) => <option key={c} value={c}>{c} ({catCounts.get(c) || 0})</option>)}
             </select>
-            <select name="sci" defaultValue={fSci} style={selStyle}>
-              <option value="">Any evidence level</option>
-              {SCI_TIERS.map((t) => <option key={t} value={t}>{sciStyle(t).label}</option>)}
+            <select name="evidence" defaultValue={evidence} style={selStyle}>
+              <option value="">Proven or traditional</option>
+              <option value="graded">🟢 Proven &amp; graded only</option>
+              <option value="traditional">🟤 Traditional record only</option>
             </select>
-            <select name="trad" defaultValue={fTrad} style={selStyle}>
-              <option value="">Any tradition</option>
-              {TRAD_TIERS.map((t) => <option key={t} value={t}>{tradStyle(t).label}</option>)}
-            </select>
-            <button className="btn btn-gold sm" type="submit">Filter</button>
+            <label style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#5b6472" }}>
+              <input type="checkbox" name="vet" value="1" defaultChecked={vetOnly} /> 🎖 Veteran priority only
+            </label>
+            <button className="btn btn-gold sm" type="submit">Search</button>
             {anyFilter && <Link href={COOKIE_PATH} style={{ color: "#8a7a55", fontSize: 13 }}>Clear</Link>}
           </form>
 
-          <div style={{ color: "#8a7a55", fontSize: 13, margin: "18px 0 12px" }}>
-            Showing <strong style={{ color: "#14233B" }}>{rows.length}</strong>{rows.length !== totalRows ? ` of ${totalRows}` : ""} connection{rows.length === 1 ? "" : "s"}
-            {anyFilter ? ", best evidence first." : ", best evidence first."}
-          </div>
+          {!anyFilter ? (
+            <>
+              <div className="eyebrow-ink" style={{ marginTop: 30 }}>🎖 Veteran-priority conditions</div>
+              <p className="lead" style={{ marginTop: 6, marginBottom: 12 }}>TBI, blast injury, PTSD, and the other conditions this project exists to serve first — many with little to no historical record, which is exactly the frontier ground real research needs to claim.</p>
+              <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))" }}>{vetConditions.map(condCard)}</div>
 
-          {rows.length === 0 ? (
-            <p className="lead">No connections match those filters. Try widening the evidence level, or clear the filters.</p>
+              <div className="eyebrow-ink" style={{ marginTop: 34 }}>Browse by category</div>
+              <div style={{ display: "grid", gap: 10, gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))", marginTop: 12 }}>
+                {CATEGORIES.map((c) => (
+                  <Link key={c} href={`${COOKIE_PATH}?cat=${encodeURIComponent(c)}`} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 10, padding: "12px 15px", textDecoration: "none", color: "#14233B", fontSize: 14 }}>
+                    <span>{c}</span><span style={{ color: "#98895f", fontSize: 12.5 }}>{catCounts.get(c) || 0}</span>
+                  </Link>
+                ))}
+              </div>
+            </>
           ) : (
-            <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fill,minmax(320px,1fr))" }}>{rows.map(card)}</div>
+            <>
+              <div style={{ color: "#8a7a55", fontSize: 13, margin: "20px 0 12px" }}>
+                {resultConditions.length + resultIngredients.length} result{resultConditions.length + resultIngredients.length === 1 ? "" : "s"}{cat ? ` in ${cat}` : ""}{q ? ` for "${q}"` : ""}
+              </div>
+              {resultConditions.length > 0 && (
+                <>
+                  <div className="eyebrow-ink">Conditions</div>
+                  <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", marginTop: 10, marginBottom: 26 }}>{resultConditions.map(condCard)}</div>
+                </>
+              )}
+              {resultIngredients.length > 0 && (
+                <>
+                  <div className="eyebrow-ink">Ingredients &amp; plants</div>
+                  <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", marginTop: 10 }}>{resultIngredients.map(ingCard)}</div>
+                </>
+              )}
+              {resultConditions.length === 0 && resultIngredients.length === 0 && <p className="lead">No matches. Try a different term or clear the filters.</p>}
+            </>
           )}
         </div>
       </section>
 
       <section className="join">
         <h2>See a connection that&apos;s missing — or graded wrong?</h2>
-        <p>The brain is meant to be shaped. Bring the evidence — a study, a tradition, a correction — and help make the map more complete and more honest.</p>
-        <Link className="btn btn-gold" href="/shape" style={{ marginTop: 18 }}>Shape the brain →</Link>
+        <p>The database is meant to be shaped. Bring the evidence — a study, a tradition, a correction — and help make it more complete and more honest.</p>
+        <Link className="btn btn-gold" href="/shape" style={{ marginTop: 18 }}>Shape the database →</Link>
       </section>
       <Footer />
     </>
