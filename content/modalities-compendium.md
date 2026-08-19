@@ -76,7 +76,7 @@ Yoga therapy as a contemporary clinical discipline has developed substantially o
 
 ### Evidence Foundation
 
-[STRONG] Yoga interventions show strong evidence for benefits in depression, hypertension, blood glucose regulation, and fatigue management. A comprehensive umbrella review published in Medical Review (2024) examined 51 systematic reviews encompassing 579 individual studies with 28,403 participants. The review classified evidence strength using rigorous statistical metrics and found strong evidence certainty for yoga interventions in depression, hypertension, blood glucose regulation, and fatigue management. Moderate evidence was found for anxiety and HbA1c improvement. Yoga effects on physical disorders including pain and arthritis showed weaker evidence, with the authors noting that yoga's primary clinical strengths appear to be in mental health, cardiovascular regulation, and metabolic function rather than in direct treatment of physical disorders.
+[STRONG] Yoga interventions show strong evidence for benefits in depression, hypertension, blood glucose regulation, and fatigue management. A comprehensive umbrella review published in Medical Review (2025) examined 51 systematic reviews encompassing 579 individual studies with 28,403 participants. The review classified evidence strength using rigorous statistical metrics and found strong evidence certainty for yoga interventions in depression, hypertension, blood glucose regulation, and fatigue management. Moderate evidence was found for anxiety and HbA1c improvement. Yoga effects on physical disorders including pain and arthritis showed weaker evidence, with the authors noting that yoga's primary clinical strengths appear to be in mental health, cardiovascular regulation, and metabolic function rather than in direct treatment of physical disorders.
 
 Yoga and chronic diseases: an umbrella review of systematic reviews and meta-analyses. PMC12207205. PubMed PMID 40600184.
 
@@ -88,7 +88,7 @@ Cramer H, et al. (2014). Effects of yoga on cardiovascular disease risk factors:
 
 [MODERATE] Yoga therapy for Parkinson's disease produces superior outcomes for anxiety, depression, and quality of life compared to conventional stretching and resistance training.
 
-Kwok et al. (2019) published in JAMA Neurology a randomized clinical trial comparing mindfulness yoga to stretching and resistance training in 187 adults with Parkinson's disease. The yoga group demonstrated significantly better improvements in anxiety, depression, perceived hardship, perceived equanimity, and spiritual wellbeing. This trial demonstrates yoga therapy's specific clinical value in neurodegenerative conditions beyond what conventional exercise interventions provide.
+Kwok et al. (2019) published in JAMA Neurology a randomized clinical trial comparing mindfulness yoga to stretching and resistance training in 187 enrolled adults with Parkinson's disease, not all of whom completed the study. The yoga group showed better improvements in anxiety and depression, with perceived hardship and equanimity reported as components of spiritual well-being. This trial demonstrates yoga therapy's specific clinical value in neurodegenerative conditions beyond what conventional exercise interventions provide.
 
 Kwok JYY, et al. (2019). Effects of mindfulness yoga vs stretching and resistance training exercises on anxiety and depression for people with Parkinson disease: A randomized clinical trial. JAMA Neurology, 76(7), 755-763.
 
@@ -100,7 +100,7 @@ Innes KE, Selfe TK (2016). Yoga for adults with type 2 diabetes: A systematic re
 
 ### Mechanisms of Action
 
-Yoga therapy operates through multiple integrated mechanisms documented in peer reviewed research. The physical postures activate musculoskeletal, cardiovascular, and lymphatic systems while supporting flexibility, strength, and balance. Pranayama practices regulate the autonomic nervous system, particularly enhancing parasympathetic activity and reducing sympathetic dominance. Meditation components affect prefrontal cortex function, default mode network activity, and emotional regulation circuits. Integrated practice produces effects on inflammatory markers, hypothalamic pituitary adrenal axis function, and broader neuroendocrine regulation that mediate the systemic clinical effects observed in research.
+Yoga therapy operates through multiple proposed mechanisms examined in peer reviewed research. The physical postures activate musculoskeletal, cardiovascular, and lymphatic systems while supporting flexibility, strength, and balance. Pranayama practices regulate the autonomic nervous system, particularly enhancing parasympathetic activity and reducing sympathetic dominance. Meditation components affect prefrontal cortex function, default mode network activity, and emotional regulation circuits. Integrated practice has been associated with changes in inflammatory markers and hypothalamic-pituitary-adrenal axis measures, though findings are inconsistent and formal mediation analyses establishing that these changes account for observed clinical effects have not been conducted.
 
 ### Clinical Applications Across the Eight Systems
 
@@ -112,11 +112,11 @@ Yoga therapy operates across all eight NAP biological systems with particular st
 
 · Energetic Production and Metabolism: Improved metabolic flexibility, insulin sensitivity, and energy regulation are documented yoga benefits.
 
-· Hormonal and Endocrine Regulation: HPA axis regulation, cortisol pattern normalization, and reproductive hormone support are documented effects.
+· Hormonal and Endocrine Regulation: Studies have examined effects on HPA axis measures and cortisol, with inconsistent results and generally low evidence quality; effects on reproductive hormones have not been established.
 
 · Neurological and Cognitive Function: Strong evidence for depression, anxiety, cognitive function, and neurological condition support.
 
-· Immune and Inflammatory Response: Inflammatory marker reduction and immune function support are documented yoga effects.
+· Immune and Inflammatory Response: Trials have reported mixed effects on inflammatory markers, with generally low evidence quality and substantial heterogeneity; findings are inconsistent across studies.
 
 · Cardiovascular and Circulatory Health: Strong evidence for cardiovascular risk factor improvement and cardiovascular function support.
 
@@ -140,13 +140,13 @@ Yoga therapy is generally safe when delivered by qualified practitioners with ap
 
 ### Tradition and Heritage
 
-Tai chi and qigong are integrated movement practices originating in Chinese tradition with documented practice spanning over 2,000 years for qigong and approximately 700 years for tai chi as a distinct discipline. Both practices integrate slow deliberate movement with breath regulation and focused awareness, producing physiological effects through the integration of multiple practice components. Qigong encompasses a broader category of energy cultivation practices, while tai chi represents a specific structured form within the broader qigong tradition originally developed as both health practice and martial art.
+Tai chi and qigong are integrated movement practices originating in Chinese tradition with documented practice spanning over 2,000 years for qigong and approximately 350 to 400 years for tai chi as a distinct discipline. Both practices integrate slow deliberate movement with breath regulation and focused awareness, producing physiological effects through the integration of multiple practice components. Qigong encompasses a broader category of energy cultivation practices, while tai chi represents a specific structured form within the broader qigong tradition originally developed as both health practice and martial art.
 
 ### Evidence Foundation
 
-[STRONG] Tai chi and qigong demonstrate clinical effectiveness for fall prevention, balance, and cardiovascular health in older adults. Substantial peer reviewed research has established tai chi and qigong as effective interventions for fall prevention in older adults, balance and proprioception improvement, blood pressure regulation, and cardiovascular function support. The slow controlled movement combined with weight shifting builds proprioceptive function critical to fall prevention while providing cardiovascular conditioning appropriate to older adult populations and to populations with limited capacity for higher intensity exercise.
+[STRONG] Tai chi demonstrates clinical effectiveness for fall prevention and balance in older adults. [MODERATE] Tai chi and qigong show benefit for blood pressure and functional cardiovascular measures. Substantial peer reviewed research has established tai chi and qigong as effective interventions for fall prevention in older adults, balance and proprioception improvement, blood pressure regulation, and cardiovascular function support. The slow controlled movement combined with weight shifting builds proprioceptive function critical to fall prevention while providing cardiovascular conditioning appropriate to older adult populations and to populations with limited capacity for higher intensity exercise.
 
-[MODERATE] Tai chi shows clinical benefit for fibromyalgia and chronic pain conditions. Wang et al. published in New England Journal of Medicine demonstrated that tai chi produced significant improvements in fibromyalgia symptoms compared to wellness education, with benefits sustained at follow up. Subsequent research has extended findings to other chronic pain conditions, with tai chi emerging as a clinically valuable intervention for chronic pain management.
+[MODERATE] Tai chi shows clinical benefit for fibromyalgia and chronic pain conditions. Wang et al. (2010) published in the New England Journal of Medicine a randomized trial in which tai chi produced improvements in fibromyalgia symptoms compared with a wellness education control, with benefits sustained at follow up. Subsequent research has extended findings to other chronic pain conditions, with tai chi emerging as a clinically valuable intervention for chronic pain management.
 
 Wang C, et al. (2010). A randomized trial of tai chi for fibromyalgia. New England Journal of Medicine, 363, 743-754.
 
@@ -192,9 +192,9 @@ Pranayama, the systematic regulation of breath, originates in the yoga tradition
 
 [STRONG] Slow breathing practices produce measurable autonomic nervous system regulation, including heart rate variability improvement and reduced sympathetic activation. Substantial peer reviewed research has documented that slow breathing practices, particularly those targeting approximately six breaths per minute, produce robust effects on heart rate variability, vagal tone, and broader autonomic nervous system regulation. The findings are reproducible across populations and clinical contexts, supporting slow breathing as foundational autonomic regulation tool.
 
-[STRONG] Coherence breathing and resonance frequency breathing produce documented benefits for hypertension, anxiety, and stress related conditions. Resonance frequency breathing, typically performed at approximately 5.5 to 6 breaths per minute, has been studied extensively with documented benefits for blood pressure, anxiety, depression, and stress related cardiovascular and metabolic conditions. The practice has been incorporated into mainstream cardiovascular and behavioral medicine.
+[MODERATE] Resonance frequency breathing, typically performed at approximately 5.5 to 6 breaths per minute, has documented effects on heart rate variability and modest effects on blood pressure and anxiety. Reported benefits for broader stress-related conditions are more limited.
 
-[MODERATE] Specific pranayama practices show clinical benefit for asthma, COPD, and respiratory conditions. Multiple systematic reviews have documented specific pranayama benefits for respiratory conditions, with the practices supporting respiratory muscle function, ventilation efficiency, and broader respiratory health. The integration with broader yoga practice amplifies the benefits.
+[LIMITED] Pranayama and related breathing exercises may improve quality of life in adults with asthma, but the available review evidence indicates they probably do not improve asthma symptoms themselves. In COPD, breathing exercises including pranayama may produce modest gains in exercise capacity. Breathing practices are not a substitute for inhaled controller therapy or any prescribed respiratory medication. The integration with broader yoga practice amplifies the benefits.
 
 ### Mechanisms and Clinical Integration
 
@@ -210,7 +210,7 @@ Meditation practices span multiple traditions including Buddhist mindfulness tra
 
 ### Evidence Foundation
 
-[STRONG] Mindfulness based interventions produce robust clinical benefits for depression, anxiety, and chronic pain.
+[MODERATE] Mindfulness based interventions produce clinical benefits for depression and anxiety. [LIMITED] For chronic pain, evidence indicates a small reduction in pain alongside improvements in depressive symptoms and quality of life.
 
 Mindfulness based stress reduction and mindfulness based cognitive therapy have accumulated substantial peer reviewed evidence demonstrating clinical benefits across mental health conditions. Major systematic reviews and meta-analyses support clinical recommendation of mindfulness based interventions as evidence based treatments.
 
@@ -218,7 +218,7 @@ Hilton L, et al. (2017). Mindfulness Meditation for Chronic Pain: Systematic Rev
 
 [STRONG] Meditation produces documented effects on brain structure and function, including changes in regions associated with attention, emotional regulation, and self awareness.
 
-Neuroimaging research has documented structural and functional brain changes associated with meditation practice, with substantial peer reviewed evidence demonstrating that sustained meditation practice produces measurable neurobiological effects. The findings establish meditation as having genuine neurobiological effects rather than serving as placebo.
+Neuroimaging research has documented structural and functional brain changes associated with meditation practice, with substantial peer reviewed evidence demonstrating that sustained meditation practice produces measurable neurobiological effects. Meditation produces measurable physiological and functional effects, though claims that it produces lasting structural brain changes have not been consistently replicated, and the underlying mechanisms remain under active investigation.
 
 ### Clinical Integration
 
@@ -236,13 +236,13 @@ Yoga nidra is a systematic relaxation and conscious sleep practice originating i
 
 ### Evidence and Applications
 
-[MODERATE] Yoga nidra produces clinical benefits for sleep disorders, anxiety, post traumatic stress, and chronic pain. Peer reviewed research, including military and veteran population studies, has documented yoga nidra benefits across multiple clinical populations. The U.S. Army has investigated yoga nidra protocols for soldier wellness and post traumatic stress applications. Within NAP, yoga nidra represents a specifically valuable integration tool for populations with sleep disturbance, post traumatic stress, and chronic pain conditions.
+[EMERGING] Yoga nidra shows promising results for sleep quality, anxiety, and self-reported post-traumatic stress symptoms, primarily from pilot and uncontrolled studies, including research in military and veteran populations. Randomized controlled evidence remains limited. Yoga nidra is an adjunct to, not a replacement for, evidence-based PTSD treatment. The U.S. Army has investigated yoga nidra protocols for soldier wellness and post traumatic stress applications. Within NAP, yoga nidra represents a specifically valuable integration tool for populations with sleep disturbance, post traumatic stress, and chronic pain conditions.
 
 ## 9. Biofeedback and Neurofeedback
 
 ### Modality and Approach
 
-Biofeedback uses real time physiological monitoring to support patient learning of self regulation, with applications including heart rate variability biofeedback, electromyography for muscle tension, thermal biofeedback, and other physiological modalities. Neurofeedback applies similar principles to brain wave activity, training specific brain patterns associated with therapeutic targets. Both modalities operate as bridges between contemplative practice and contemporary clinical technology, applying technological measurement to support traditional self regulation aims. Evidence and Applications [STRONG] Biofeedback shows clinical evidence for hypertension, headache, chronic pain, anxiety, and various conditions involving autonomic dysregulation. [MODERATE] Neurofeedback shows emerging evidence for ADHD, anxiety, post traumatic stress, and various neurological conditions. Within NAP, biofeedback and neurofeedback operate as specialty technological tools that complement contemplative and breath practice. Credentialed biofeedback and neurofeedback practitioners (typically certified through the Biofeedback Certification International Alliance) deliver these technological modalities within broader NAP protocols.
+Biofeedback uses real time physiological monitoring to support patient learning of self regulation, with applications including heart rate variability biofeedback, electromyography for muscle tension, thermal biofeedback, and other physiological modalities. Neurofeedback applies similar principles to brain wave activity, training specific brain patterns associated with therapeutic targets. Both modalities operate as bridges between contemplative practice and contemporary clinical technology, applying technological measurement to support traditional self regulation aims. Evidence and Applications [MODERATE] Biofeedback shows clinical evidence for tension-type headache and migraine, and for conditions involving autonomic dysregulation. [LIMITED] Neurofeedback for ADHD has not demonstrated efficacy in trials using blinded outcome raters or sham controls, and reported benefits appear largely attributable to unblinded rater expectancy. Evidence for anxiety and post-traumatic stress is preliminary. Within NAP, biofeedback and neurofeedback operate as specialty technological tools that complement contemplative and breath practice. Credentialed biofeedback and neurofeedback practitioners (typically certified through the Biofeedback Certification International Alliance) deliver these technological modalities within broader NAP protocols.
 
 # PART III. MANUAL AND BODYWORK MODALITIES
 
@@ -258,7 +258,7 @@ Therapeutic massage encompasses multiple distinct modalities including Swedish m
 
 ### Evidence and Applications
 
-[MODERATE] Therapeutic massage shows clinical evidence for chronic pain management, particularly for low back pain, neck pain, and shoulder pain. [STRONG] Specific massage modalities including manual lymphatic drainage show clinical evidence for lymphedema management. [MODERATE] Massage therapy supports stress regulation, sleep quality, and general wellbeing across diverse populations. Massage therapy credentialing operates through state licensure (in most U.S. states), the Federation of State Massage Therapy Boards, and the American Massage Therapy Association. Within NAP, licensed massage therapists are recognized as federated practitioners operating under their primary credentialing while integrating with NAP protocols.
+[MODERATE] Therapeutic massage shows clinical evidence for chronic pain management, particularly low back and neck pain. [LIMITED] Manual lymphatic drainage is safe and well tolerated and may add modest benefit when combined with compression therapy for lymphedema. Compression remains the primary intervention. [MODERATE] Massage therapy supports stress regulation, sleep quality, and general wellbeing across diverse populations. Massage therapy credentialing operates through state licensure (in most U.S. states) and the Federation of State Massage Therapy Boards. The American Massage Therapy Association is the profession's principal membership association rather than a credentialing body. Within NAP, licensed massage therapists are recognized as federated practitioners operating under their primary credentialing while integrating with NAP protocols.
 
 ## 11. Structural Integration and Rolfing
 
@@ -274,7 +274,7 @@ Structural integration addresses chronic postural patterns, structural compensat
 
 ### Modality and Tradition
 
-Craniosacral therapy emerged from osteopathic tradition through the work of John Upledger and operates through gentle manual work addressing the craniosacral system including the cranial bones, spinal cord, sacrum, and surrounding membranes and fluid. The approach is gentle in physical force while addressing subtle physiological rhythms.
+Craniosacral therapy emerged from osteopathic tradition through the work of John Upledger. Practitioners use gentle manual contact at the head, spine, and sacrum. The proposed mechanism, a palpable craniosacral rhythm arising from cranial bone motion, is not supported by reliability research, and any benefit is more plausibly attributable to non-specific effects of gentle touch. The approach is gentle in physical force while addressing subtle physiological rhythms.
 
 ### Evidence and Applications
 
@@ -284,17 +284,17 @@ Craniosacral therapy emerged from osteopathic tradition through the work of John
 
 ### Modality and Applications
 
-Manual lymphatic drainage represents specialized manual therapy focused on lymphatic system support, with strong evidence for lymphedema management following cancer treatment, post surgical recovery, and broader lymphatic dysfunction. The technique requires specialized training distinct from general massage therapy. Within NAP, lymphatic therapy supports the detoxification and elimination biological system through direct lymphatic system work that complements broader detoxification protocols.
+Manual lymphatic drainage is a specialized manual therapy used as one component of complex decongestive therapy for lymphedema following cancer treatment. Evidence indicates it is safe and well tolerated and may provide modest additional volume reduction when combined with compression bandaging, which remains the primary intervention. The technique requires specialized training distinct from general massage therapy. Within NAP, lymphatic therapy supports the detoxification and elimination biological system through direct lymphatic system work that complements broader detoxification protocols.
 
 ## 14. Reflexology
 
 ### Modality and Tradition
 
-Reflexology operates through hands on work on specific zones of the feet, hands, and ears that traditional reflexology maps to broader body systems. The modality has substantial cross cultural traditional foundation across multiple healing traditions and growing peer reviewed clinical research, particularly for stress reduction, pain management, and various clinical applications. Reflexology credentialing operates through multiple international and national bodies.
+[LIMITED] Reflexology involves manual work on zones of the feet, hands, and ears that traditional reflexology maps to broader body systems; this mapping has no established anatomical or physiological basis. Trial evidence is limited and at high risk of bias, with reported benefits for relaxation and anxiety not clearly distinguishable from those of general therapeutic touch. Reflexology credentialing operates through multiple international and national bodies.
 
 ## 15. Acupuncture and Acupressure
 
-Acupuncture and acupressure are addressed within NAP as central modalities of the Traditional Chinese Medicine tradition federated within the framework. The substantial peer reviewed evidence for acupuncture in pain management, nausea, and various conditions, combined with the well established credentialing infrastructure through NCCAOM and state licensure, position acupuncture as a foundational manual modality within NAP. Detailed coverage of acupuncture and TCM operates through the TCM tradition specific evidence and credentialing materials maintained by the federated TCM credentialing bodies.
+Acupuncture and acupressure are addressed within NAP as central modalities of the Traditional Chinese Medicine tradition federated within the framework. Acupuncture has a substantial trial literature in pain management and chemotherapy-induced nausea, with effects versus no-treatment or usual care that are more consistent than effects versus sham acupuncture, which are smaller and of contested clinical significance. Combined with well-established credentialing through NCCAOM certification and state licensure, acupuncture functions as a manual modality within NAP. Detailed coverage of acupuncture and TCM operates through the TCM tradition specific evidence and credentialing materials maintained by the federated TCM credentialing bodies.
 
 # PART IV. VIBRATIONAL AND ENERGETIC MODALITIES
 
@@ -310,7 +310,7 @@ Therapeutic sound encompasses multiple modalities including singing bowls (Tibet
 
 ### Evidence and Mechanisms
 
-[EMERGING] Sound healing demonstrates emerging evidence for stress reduction, anxiety management, sleep improvement, and pain management. Peer reviewed research on sound healing has expanded substantially in recent years with multiple studies documenting subjective and objective benefits for stress, anxiety, sleep, and quality of life. The mechanisms remain under investigation with hypotheses including direct autonomic nervous system effects through brainwave entrainment, vagal stimulation through specific frequencies, and broader integrative effects through the combination of sound with relaxation and intention.
+[EMERGING] Sound-based practices show preliminary evidence for subjective stress reduction, anxiety, and sleep quality. Studies are predominantly single-arm with self-reported outcomes and without controls for expectancy; objective physiological benefits distinguishable from general relaxation have not been established. The mechanisms remain under investigation with hypotheses including direct autonomic nervous system effects through brainwave entrainment, vagal stimulation through specific frequencies, and broader integrative effects through the combination of sound with relaxation and intention.
 
 ### Clinical Integration
 
@@ -326,7 +326,7 @@ Tuning fork therapy applies specific calibrated frequencies through tuning forks
 
 ### Technology Based Sound Therapy
 
-Vibroacoustic therapy applies specific sound frequencies through specialized chairs, tables, or beds that deliver vibration directly to the body alongside audible sound. The technology based delivery enables precise frequency application and reproducible clinical protocols. Research has examined applications for fibromyalgia, Parkinson's disease, autism spectrum support, and various clinical applications with emerging evidence base. Vibroacoustic therapy represents the technological evolution of traditional vibrational healing into contemporary clinical practice.
+Vibroacoustic therapy applies specific sound frequencies through specialized chairs, tables, or beds that deliver vibration directly to the body alongside audible sound. The technology based delivery enables precise frequency application and reproducible clinical protocols. Small preliminary studies have examined vibroacoustic therapy in fibromyalgia, Parkinson's disease, and other conditions. Sample sizes are small, controls are limited, and no systematic review has established clinical benefit. Vibroacoustic therapy represents the technological evolution of traditional vibrational healing into contemporary clinical practice.
 
 ## 19. Voice and Vocal Therapy
 
@@ -354,23 +354,23 @@ Photobiomodulation and light therapy modalities have emerged from research origi
 
 ### Modality and Mechanisms
 
-Photobiomodulation, also known as low level light therapy (LLLT) or low level laser therapy, uses non thermal red or near infrared light within the 600 to 1100 nanometer wavelength range. The mechanism involves mitochondrial light absorption, particularly through cytochrome c oxidase, resulting in activation of the mitochondrial respiratory electron transport chain and increased ATP production. Additional mechanisms include reduction of oxidative stress, modulation of inflammatory mediators, and effects on cellular signaling pathways.
+Photobiomodulation, also known as low level light therapy (LLLT) or low level laser therapy, uses non thermal red or near infrared light within the 600 to 1100 nanometer wavelength range. The leading proposed mechanism involves mitochondrial light absorption, particularly by cytochrome c oxidase, with restoration of electron transport and increased ATP production. The relative contribution of proposed mechanisms remains under investigation and appears to vary by wavelength. Additional mechanisms include reduction of oxidative stress, modulation of inflammatory mediators, and effects on cellular signaling pathways.
 
 ### Evidence Foundation
 
-[STRONG] Photobiomodulation has established clinical applications for peripheral neuropathy, androgenic alopecia, wound healing, decubitus ulcers, diabetic foot ulcers, and acute radiation dermatitis.
+[STRONG] Photobiomodulation has established clinical applications for peripheral neuropathy, androgenic alopecia, wound ulcers of multiple etiologies, decubitus ulcers, pain attributed to diabetic foot ulcers, and acute radiation dermatitis.
 
 An evidence based clinical practice guideline published in the Journal of the American Academy of Dermatology in 2025 established consensus on the clinical application of photobiomodulation. The expert panel concluded that PBM is a safe treatment modality for adult patients, that red light PBM does not induce DNA damage, and that PBM is an effective treatment option for the conditions listed. The systematic literature search and structured Delphi consensus approach culminated in evidence based clinical practice guidelines.
 
 Evidence-based consensus on the clinical application of photobiomodulation. Journal of the American Academy of Dermatology (2025). PubMed PMID 40253006.
 
-[STRONG] Photobiomodulation has been included in treatment guidelines for oral mucositis in cancer therapies and approved by the National Comprehensive Cancer Network.
+[STRONG] Photobiomodulation is recommended in the MASCC/ISOO clinical practice guidelines for the prevention of oral mucositis in adults receiving radiotherapy with concomitant chemotherapy for head and neck cancer.
 
 Major clinical guidelines have incorporated photobiomodulation for prevention and treatment of oral mucositis in patients receiving cancer chemotherapy and radiation. This represents mainstream medical recognition of photobiomodulation as evidence based intervention in oncology supportive care.
 
 [EMERGING] Photobiomodulation shows emerging clinical evidence for traumatic brain injury, neurological recovery, and cognitive applications.
 
-Recent research has investigated transcranial photobiomodulation for traumatic brain injury, mild cognitive impairment, Parkinson's disease, and other neurological applications. While the evidence base is developing rather than established, the research trajectory and proposed mechanisms make this an area of substantial emerging clinical interest. A 2023 randomized clinical trial published in EClinicalMedicine investigated transcranial photobiomodulation for Parkinson's disease motor signs with promising preliminary results.
+Recent research has investigated transcranial photobiomodulation for traumatic brain injury, mild cognitive impairment, Parkinson's disease, and other neurological applications. While the evidence base is developing rather than established, the research trajectory and proposed mechanisms make this an area of substantial emerging clinical interest. A 2023 randomised, double-blind, sham-controlled feasibility study published in EClinicalMedicine found transcranial photobiomodulation to be safe, tolerable, and feasible to deliver for Parkinson's disease, but found no significant difference in motor signs between active and sham groups. The study was not powered for efficacy.
 
 Herkes G, et al. (2023). A novel transcranial photobiomodulation device to address motor signs of Parkinson's disease: a parallel randomised feasibility study. EClinicalMedicine, 66, 102338.
 
@@ -390,7 +390,7 @@ Photobiomodulation operates across multiple NAP biological systems with particul
 
 · Structural and Musculoskeletal Integrity: Strong evidence for wound healing, tissue repair, and pain management applications.
 
-· Detoxification and Elimination: Emerging applications through cellular function support and mitochondrial activation.
+
 
 ### Integration Within NAP Protocols
 
@@ -406,7 +406,7 @@ NAP practitioner training in photobiomodulation includes equipment selection, pa
 
 ### Modality and Applications
 
-Bright light therapy uses high intensity full spectrum light typically delivered through specialized light boxes, with established clinical applications for seasonal affective disorder and circadian rhythm disorders. The modality represents one of the earliest light based therapeutic interventions to enter mainstream medical practice. Within NAP, bright light therapy supports circadian rhythm restoration, mood support, and broader sleep architecture restoration as foundational clinical work across multiple territories.
+Bright light therapy uses high-intensity broad-spectrum white light with ultraviolet filtration, typically delivered through specialized light boxes, with established clinical applications for seasonal affective disorder and circadian rhythm disorders. The modality represents one of the earliest light based therapeutic interventions to enter mainstream medical practice. Within NAP, bright light therapy supports circadian rhythm restoration, mood support, and broader sleep architecture restoration as foundational clinical work across multiple territories.
 
 ## 23. UVB and Phototherapy in Dermatology
 
@@ -426,15 +426,15 @@ Sauna and heat therapy modalities include traditional Finnish sauna, infrared sa
 
 ### Evidence Foundation
 
-[STRONG] Regular sauna use is associated with reduced cardiovascular mortality, all cause mortality, and reduced risk of dementia and Alzheimer's disease in long term cohort studies. The Finnish Kuopio Ischaemic Heart Disease (KIHD) Risk Factor Study and related research have documented substantial associations between regular sauna use and reduced cardiovascular mortality, all cause mortality, dementia, and various health outcomes. The findings have been replicated and extended through subsequent research, supporting sauna use as a substantial cardiovascular and longevity intervention.
+[MODERATE] Regular sauna use is associated with reduced cardiovascular mortality, all-cause mortality, and dementia risk in long-term cohort data, principally the Finnish Kuopio Ischaemic Heart Disease (KIHD) study, a prospective cohort of middle-aged Finnish men. These are observational associations, largely from a single cohort and research group; independent replication in other populations, including women and non-Finnish populations, is limited, and causality has not been established.
 
 Laukkanen JA, et al. (2018). Cardiovascular and Other Health Benefits of Sauna Bathing: A Review of the Evidence. Mayo Clinic Proceedings.
 
 [STRONG] Sauna therapy supports cardiovascular function, blood pressure regulation, and exercise capacity.
 
-[MODERATE] Heat therapy supports detoxification through sweat induced excretion of certain heavy metals and toxins.
 
-[EMERGING] Infrared sauna shows specific clinical applications for chronic fatigue syndrome, fibromyalgia, and broader chronic conditions.
+
+[EMERGING] Small preliminary studies have reported symptom improvement with infrared sauna in some chronic conditions. Sample sizes are small and controlled replication is lacking.
 
 ### Clinical Integration
 
@@ -462,21 +462,21 @@ Electromagnetic and bioenergetic modalities address physiological function throu
 
 ### Modality and Mechanisms
 
-PEMF therapy uses pulsed electromagnetic fields applied through coils or mats producing therapeutic effects through cellular and tissue level electromagnetic interaction. The technology has been used clinically for decades with FDA clearance for specific applications including bone fracture healing and depression. Mechanisms include effects on cellular ion channels, mitochondrial function, microcirculation, and broader cellular physiology.
+PEMF therapy uses pulsed electromagnetic fields applied through coils or mats producing therapeutic effects through cellular and tissue level electromagnetic interaction. The technology has been used clinically for decades with FDA clearance for specific applications including nonunion bone fracture healing. Mechanisms include effects on cellular ion channels, mitochondrial function, microcirculation, and broader cellular physiology.
 
 ### Evidence and Applications
 
-[STRONG] PEMF has established clinical applications for non union bone fractures with FDA clearance. [MODERATE] PEMF has FDA clearance for treatment resistant depression through specific protocols. [MODERATE] PEMF shows clinical evidence for chronic pain, particularly musculoskeletal pain conditions. [EMERGING] PEMF shows emerging applications for various conditions including neurological recovery, sleep, and broader integrative applications. Within NAP, PEMF operates as a technological modality with established clinical applications and emerging applications across multiple territories. Practitioner training includes equipment selection, parameter optimization, and clinical application matching.
+[STRONG] PEMF has established clinical applications for nonunion bone fractures with FDA clearance. [MODERATE] PEMF shows clinical evidence for chronic pain, particularly musculoskeletal pain conditions. [EMERGING] PEMF shows emerging applications for various conditions including neurological recovery, sleep, and broader integrative applications. Within NAP, PEMF operates as a technological modality with established clinical applications and emerging applications across multiple territories. Practitioner training includes equipment selection, parameter optimization, and clinical application matching.
 
 ## 28. Grounding and Earthing
 
 ### Modality and Theory
 
-Grounding and earthing involve direct contact with the earth's surface or technologies that conduct earth's electrical potential to the body. The proposed mechanism involves transfer of electrons from the earth to the body with downstream effects on inflammation, oxidative stress, and broader physiological function.
+Grounding and earthing involve direct contact with the earth's surface or technologies that conduct earth's electrical potential to the body. The proposed mechanism, transfer of electrons from the earth to the body, is hypothetical and has not been demonstrated experimentally. No physiological pathway for a clinically meaningful effect has been established.
 
 ### Evidence Position
 
-[EMERGING] Grounding shows emerging research evidence for inflammatory marker reduction, sleep quality, pain management, and various physiological effects. The grounding evidence base remains emerging rather than established, with growing peer reviewed research alongside need for larger studies and standardized protocols. Within NAP, grounding operates as accessible lifestyle intervention with appropriate evidence stratification, supporting patient choice while continuing research that may strengthen or qualify the evidence base.
+[EMERGING] A small body of research reports effects of grounding on inflammatory markers, sleep quality, and pain. Studies are typically small with inconsistent results, and independent replication is lacking. The grounding evidence base remains emerging rather than established, with growing peer reviewed research alongside need for larger studies and standardized protocols. Within NAP, grounding operates as accessible lifestyle intervention with appropriate evidence stratification, supporting patient choice while continuing research that may strengthen or qualify the evidence base.
 
 ## 29. Bioelectric Medicine and Microcurrent Therapy
 
@@ -500,11 +500,11 @@ Botanical medicine including aromatherapy operates as a foundational element of 
 
 ### Tradition and Practice
 
-Aromatherapy uses concentrated essential oils derived from aromatic plants for therapeutic effects through inhalation, topical application, and other routes. The tradition spans multiple cultures with substantial documentation in European, Egyptian, Indian, and Chinese traditions. Modern aromatherapy as a credentialed clinical discipline has developed substantially through organizations including the National Association for Holistic Aromatherapy and the Alliance of International Aromatherapists.
+Aromatherapy uses concentrated essential oils derived from aromatic plants for therapeutic effects through inhalation, topical application, and other routes. The tradition spans multiple cultures with substantial documentation in European, Egyptian, Indian, and Chinese traditions. Aromatherapy practice standards are maintained through voluntary membership organizations including the National Association for Holistic Aromatherapy and the Alliance of International Aromatherapists. Aromatherapy is not a licensed clinical profession in the United States and has no protected scope of practice.
 
 ### Evidence Foundation
 
-[MODERATE] Aromatherapy shows clinical evidence for anxiety reduction, sleep quality improvement, and stress management. [MODERATE] Specific essential oils show clinical evidence for nausea, headache, dermatological applications, and respiratory conditions. [MODERATE] Aromatherapy supports symptom management in oncology supportive care with growing peer reviewed evidence base.
+[LIMITED] Aromatherapy shows modest evidence for short-term anxiety reduction and sleep quality, from small trials in which blinding is inherently difficult. Evidence for nausea, headache, and respiratory applications is preliminary. Aromatherapy may be offered for comfort in oncology supportive care but is not supported by supportive-care guideline recommendations.
 
 ### Clinical Integration
 
@@ -520,7 +520,7 @@ Topical botanical medicine encompasses herbal salves, poultices, compresses, her
 
 ### Modality and Applications
 
-Steam inhalation with botanical aromatics represents accessible respiratory intervention with substantial traditional and contemporary application. Specific aromatics including eucalyptus, peppermint, frankincense, and various respiratory tropic botanicals provide therapeutic respiratory effects through aromatic delivery. Within NAP, steam inhalation supports respiratory health interventions and pulmonary system support across multiple clinical applications.
+Steam inhalation with botanical aromatics represents accessible respiratory intervention with substantial traditional and contemporary application. [LIMITED] Aromatics including eucalyptus and peppermint may produce a subjective sensation of improved nasal airflow, without demonstrated improvement in objective airflow measures. Safety note: eucalyptus, peppermint, camphor, and menthol preparations must not be applied to or inhaled by infants and young children, in whom they can cause serious breathing problems. Within NAP, steam inhalation supports respiratory health interventions and pulmonary system support across multiple clinical applications.
 
 # PART IX. EMERGING AND ADVANCED THERAPEUTIC MODALITIES
 
@@ -536,13 +536,13 @@ Peptides are short chains of amino acids that function as signaling molecules in
 
 ### Regulatory and Evidence Context
 
-[STRONG] FDA approved peptides include established medical applications including specific peptide medications for diabetes, cardiovascular disease, and other conditions. The FDA approved peptide drug landscape includes substantial mainstream medical applications. Over 80 peptide drugs have gained global approval as of 2023, with more than 200 peptides in clinical development. Notable approved peptides include GLP-1 agonists for diabetes (such as semaglutide and tirzepatide), with substantial expansion of approved peptide indications continuing.
+[STRONG] FDA approved peptides include established medical applications including specific peptide medications for diabetes, cardiovascular disease, and other conditions. The FDA approved peptide drug landscape includes substantial mainstream medical applications. Over 80 peptide drugs have gained global approval as of 2023, with more than 200 peptides in clinical development. Notable approved peptides include the GLP-1 receptor agonist semaglutide and the dual GIP/GLP-1 receptor agonist tirzepatide for diabetes, with substantial expansion of approved peptide indications continuing.
 
 Therapeutic Peptides: Recent Advances in Discovery, Synthesis, and Clinical Translation. PMC12154100. [EMERGING] Compounded peptides operate in evolving regulatory landscape requiring careful practitioner navigation. The FDA Pharmacy Compounding Advisory Committee has reviewed multiple peptides for compounding eligibility with category determinations affecting clinical access. Recent regulatory developments have included reclassification of certain peptides with implications for compounding pharmacy access. Practitioners using compounded peptides must navigate the evolving regulatory landscape with appropriate legal and clinical care.
 
-FDA Peptide Reclassification 2026: What It Means for Providers and Patients (2026).
 
-[EMERGING] Specific compounded peptides show clinical evidence for tissue repair, neurological applications, and metabolic effects, though peer reviewed clinical trial data varies substantially across specific compounds.
+
+[EMERGING] Evidence for compounded peptides such as BPC-157 and TB-500 derives largely from animal and in vitro studies, and adequate controlled human clinical trials have not been conducted for these compounds. Peptides with approved indications, such as GLP-1 and dual incretin agonists, should not be conflated with compounded peptides lacking human trial data.
 
 ### NAP Standards Council Position
 
@@ -557,17 +557,17 @@ The Standards Council recognizes peptide therapy as an emerging modality with bo
 
 ### Clinical Applications and Specific Peptide Categories
 
-Peptide therapy applications span multiple categories including tissue repair peptides such as BPC-157 and TB-500 (with developing evidence base and evolving regulatory status), growth hormone secretagogues such as CJC-1295 and ipamorelin (with regulatory considerations), immune modulating peptides, neurological peptides, metabolic peptides, and various other categories. Specific peptide selection for clinical application requires substantial practitioner training, regulatory awareness, and clinical judgment matching specific peptides to specific clinical contexts.
+Peptide therapy applications span multiple categories including tissue repair peptides such as BPC-157 and TB-500, neither of which is FDA-approved for human use and both of which carry evolving regulatory and compounding restrictions; growth hormone secretagogues such as CJC-1295 and ipamorelin, which are also not FDA-approved for these uses; immune modulating peptides, neurological peptides, metabolic peptides, and various other categories. Specific peptide selection for clinical application requires substantial practitioner training, regulatory awareness, and clinical judgment matching specific peptides to specific clinical contexts.
 
 ## 35. Hyperbaric Oxygen Therapy
 
 ### Modality and Applications
 
-Hyperbaric oxygen therapy delivers oxygen at pressures greater than atmospheric pressure, producing therapeutic effects through enhanced oxygen delivery to tissues. The modality has FDA approved applications for specific conditions including decompression sickness, carbon monoxide poisoning, certain wound conditions, and others, with growing applications for traumatic brain injury recovery, stroke recovery, and various integrative applications.
+Hyperbaric oxygen therapy delivers oxygen at pressures greater than atmospheric pressure, producing therapeutic effects through enhanced oxygen delivery to tissues. The modality has FDA-approved applications for a defined list of specific conditions including decompression sickness, carbon monoxide poisoning, gas gangrene, air embolism, and diabetic foot ulcers. Traumatic brain injury and stroke are not FDA-approved indications, and any such use is investigational; FDA has issued consumer warnings regarding off-label marketing of hyperbaric oxygen for these conditions.
 
 ### Evidence and Integration
 
-[STRONG] Hyperbaric oxygen has established applications for FDA approved indications and emerging applications for traumatic brain injury, stroke recovery, and various integrative applications.
+[STRONG] Hyperbaric oxygen therapy has established, FDA-approved applications for a defined list of specific indications including decompression sickness, carbon monoxide poisoning, and diabetic foot ulcers. [INVESTIGATIONAL] Use for traumatic brain injury and stroke recovery remains unproven and is not FDA approved; FDA has warned consumers about off-label marketing for these uses.
 
 [MODERATE] Hyperbaric oxygen therapy is increasingly integrated within integrative practice for conditions including chronic infections, wound healing support, and neurological recovery.
 
@@ -579,13 +579,13 @@ Ozone therapy applies medical ozone through various delivery routes including ma
 
 ### Evidence and Position
 
-[EMERGING] Ozone therapy operates within emerging evidence framework with substantial clinical experience documentation and developing peer reviewed evidence base, particularly in European medical literature. Within NAP, ozone therapy is recognized as specialty modality requiring substantial practitioner training, with applications including chronic infections, immune support, and broader integrative applications. Regulatory status varies by jurisdiction with practitioner responsibility for maintaining appropriate compliance.
+Ozone therapy is not a recognized NAP modality. Under FDA regulation (21 CFR 801.415), ozone is classified as a toxic gas with no known useful medical application in specific, adjunctive, or preventive therapy. NAP practitioners should not offer ozone therapy. Regulatory status varies by jurisdiction with practitioner responsibility for maintaining appropriate compliance.
 
 ## 37. IV Therapy and Nutrient Infusion
 
 ### Modality and Applications
 
-Intravenous nutrient therapy delivers vitamins, minerals, amino acids, and various therapeutic compounds directly through intravenous administration, achieving plasma concentrations and clinical effects unachievable through oral administration. Specific protocols include Myers cocktails, high dose vitamin C, glutathione, and various clinical applications. The modality requires medical practitioner involvement and operates under medical oversight.
+Intravenous nutrient therapy delivers vitamins, minerals, and amino acids directly to the circulation, achieving plasma concentrations unachievable through oral administration. Whether these higher concentrations translate into superior clinical outcomes has not been established for most indications outside documented deficiency states and malabsorption. Specific protocols include Myers cocktails, high dose vitamin C, glutathione, and various clinical applications. The modality requires medical practitioner involvement and operates under medical oversight.
 
 ### Clinical Applications
 
@@ -601,7 +601,7 @@ Stem cell and regenerative therapies represent rapidly evolving therapeutic cate
 
 ### Modality Status
 
-Psychedelic medicine encompasses emerging clinical applications of psilocybin, MDMA, ketamine, ibogaine, and related compounds for mental health and other conditions. The regulatory landscape is evolving rapidly with FDA breakthrough therapy designations, ongoing clinical trials, state level legalization initiatives, and federal regulatory developments. Within NAP, psychedelic medicine is recognized as emerging clinical category with NAP positioning providing the wraparound preparation, integration, and supportive care infrastructure that complements rather than replaces psychedelic therapy itself.
+Psychedelic medicine encompasses emerging clinical applications of psilocybin, MDMA, ketamine, ibogaine, and related compounds for mental health and other conditions. The regulatory landscape is evolving rapidly with FDA breakthrough therapy designations, ongoing clinical trials, state level legalization initiatives, and federal regulatory developments. These compounds remain investigational and are not FDA-approved therapies; in 2024 the FDA declined to approve MDMA-assisted therapy for PTSD, and psilocybin holds Breakthrough Therapy designation but is not approved. Within NAP, psychedelic medicine is recognized as emerging clinical category with NAP positioning providing the wraparound preparation, integration, and supportive care infrastructure that complements rather than replaces psychedelic therapy itself.
 
 ### NAP Wraparound Position
 

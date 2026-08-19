@@ -33,9 +33,9 @@ export const CATEGORY_DESC: Record<Category, string> = {
 
 export const DOCS: DocMeta[] = [
   { slug: "executive-brief", num: "01", title: "NAP Executive Brief", category: "core", desc: "The essential argument in five minutes." },
-  { slug: "manifesto", num: "02", title: "NAP Manifesto", category: "core", desc: "Why terrain-first care is the logical next step.", status: "draft" },
-  { slug: "evidence-compendium", num: "03", title: "NAP Evidence Compendium", category: "core", desc: "The science, with proven and unproven marked.", status: "draft" },
-  { slug: "modalities-compendium", num: "04", title: "NAP Modalities Compendium", category: "core", desc: "The clinical tools, by domain, with evidence tiers.", status: "draft" },
+  { slug: "manifesto", num: "02", title: "NAP Manifesto", category: "core", desc: "Why terrain-first care is the logical next step." },
+  { slug: "evidence-compendium", num: "03", title: "NAP Evidence Compendium", category: "core", desc: "The science, with proven and unproven marked." },
+  { slug: "modalities-compendium", num: "04", title: "NAP Modalities Compendium", category: "core", desc: "The clinical tools, by domain, with evidence tiers." },
   { slug: "standards-council-charter", num: "05", title: "NAP Standards Council Charter", category: "governance", desc: "The governing body, and how it stays independent." },
   { slug: "strategic-infrastructure-architecture", num: "06", title: "NAP Strategic Infrastructure Architecture", category: "governance", desc: "The phased build, from pilot to federation." },
   { slug: "coalition-outreach-playbook", num: "07", title: "NAP Coalition Outreach Playbook", category: "governance", desc: "How to introduce NAP to each audience." },
