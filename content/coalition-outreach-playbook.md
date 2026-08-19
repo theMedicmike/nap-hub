@@ -50,11 +50,11 @@ The Academic Consortium for Integrative Medicine and Health (ACIMH), formerly th
 
 ### National Institutes of Health Centers of Excellence
 
-Two academic centers have been designated by the NIH as Centers of Excellence for research in complementary medicine, representing the highest tier of research recognition in integrative medicine. These institutions are foundational priorities for NAP outreach.
+ These institutions are foundational priorities for NAP outreach.
 
 ### University of Maryland Center for Integrative Medicine
 
-Founded in 1991, the University of Maryland Center for Integrative Medicine (CIM) is an inter- departmental center within the University of Maryland School of Medicine. The CIM is an NIH Center of Excellence for research in complementary medicine and an NIH International Center for traditional Chinese medicine research. The Center conducts substantial research, clinical care, education, and training in integrative medicine.
+Founded in 1991, the University of Maryland Center for Integrative Medicine (CIM) is an inter- departmental center within the University of Maryland School of Medicine. The CIM describes itself as having held NIH Center of Excellence and NIH international center awards for complementary medicine and traditional Chinese medicine research. The Center conducts substantial research, clinical care, education, and training in integrative medicine.
 
 Strategic Significance: The CIM represents one of the most established academic integrative medicine programs globally, with substantial research output, federal funding standing, and TCM research expertise specifically relevant to NAP's federation of TCM. CIM endorsement of NAP would carry substantial weight across academic integrative medicine.
 
@@ -62,7 +62,7 @@ Engagement Approach: Initial outreach through the Director of the CIM, with enga
 
 ### UCSF Osher Center for Integrative Medicine
 
-The UCSF Osher Center for Integrative Medicine, part of the broader Osher Center network funded by the Bernard Osher Foundation, is the second NIH Center of Excellence for integrative medicine research. The Osher Center conducts multi million dollar research programs across integrative medicine.
+The UCSF Osher Center for Integrative Medicine is part of the broader Osher Center network funded by the Bernard Osher Foundation and conducts research programs across integrative medicine.
 
 Strategic Significance: The Osher Center represents both the substantial Osher Foundation philanthropic commitment to integrative medicine and the West Coast academic integrative medicine establishment. Osher Center endorsement signals both institutional academic standing and philanthropic mission alignment.
 
@@ -80,7 +80,7 @@ Engagement Approach: Initial outreach through the Center's leadership, with emph
 
 ### Duke Integrative Medicine
 
-Founded in 2000, Duke Integrative Medicine is among the most established academic integrative medicine programs, with substantial research, clinical, and educational programs. Duke Integrative Medicine has been particularly influential in developing comprehensive integrative health assessment and treatment models.
+Duke Integrative Medicine is among the most established academic integrative medicine programs, with clinical and educational programs. Duke Integrative Medicine has been particularly influential in developing comprehensive integrative health assessment and treatment models.
 
 Strategic Significance: Duke's institutional reputation provides substantial credibility multiplier for any partner. Duke Integrative Medicine's clinical model parallels many features of the NAP framework, suggesting genuine partnership potential rather than purely strategic alignment.
 
@@ -88,7 +88,7 @@ Engagement Approach: Engagement through Duke Integrative Medicine leadership wit
 
 ### Cleveland Clinic Center for Functional Medicine
 
-The Cleveland Clinic Center for Functional Medicine, established under the leadership of Mark Hyman, MD, brought functional medicine into mainstream academic medical center practice in a substantial way. The Center conducts research demonstrating the clinical effectiveness of functional medicine approaches and operates substantial clinical programs.
+The Cleveland Clinic Center for Functional Medicine, established under the leadership of Mark Hyman, MD, brought functional medicine into an academic medical center setting. The Center conducts research on functional medicine approaches and operates clinical programs.
 
 Strategic Significance: Cleveland Clinic's institutional weight is substantial. Bringing functional medicine into Cleveland Clinic was a watershed moment for the integrative medicine field. The Center's research has produced peer reviewed publications including JAMA Network Open documentation of functional medicine outcomes.
 
@@ -114,7 +114,7 @@ Engagement Approach: Engagement through Mayo Clinic Integrative Medicine leaders
 
 Additional academic integrative medicine centers warranting Foundation Phase or Expansion Phase engagement include the following.
 
-· Brigham and Women's Hospital and Harvard Medical School Osher Center for Integrative Medicine, Chestnut Hill, MA · University of Massachusetts Center for Mindfulness in Medicine, Health Care and Society · University of Minnesota Center for Spirituality and Healing, designated as one of five NIH Developmental Centers for Research on Complementary and Alternative Medicine · University of Michigan Integrative Family Medicine Program · Vanderbilt Center for Integrative Health · OHSU Center for Women's Health Integrative Medicine Program · Jefferson Marcus Institute of Integrative Health · MD Anderson Cancer Center Integrative Medicine · Penn Medicine Integrative Health and Wellness · Stanford Center for Integrative Medicine · Boston Medical Center Program for Integrative Medicine and Healthcare Disparities · George Washington University Medical Center Center for Integrative Medicine · University of Wisconsin Integrative Medicine Program · Oregon Health and Science University ORCCAMIND, focused on neurological CAM research · Allina Health Penny George Institute for Health and Healing · Mount Sinai Integrative Medicine Program · Columbia University Medical Center Center for Comprehensive Wellness
+· Brigham and Women's Hospital and Harvard Medical School Osher Center for Integrative Medicine, Chestnut Hill, MA · University of Massachusetts Center for Mindfulness in Medicine, Health Care and Society · University of Minnesota Center for Spirituality and Healing · University of Michigan Integrative Family Medicine Program · Vanderbilt Center for Integrative Health · OHSU Center for Women's Health Integrative Medicine Program · Jefferson Marcus Institute of Integrative Health · MD Anderson Cancer Center Integrative Medicine · Penn Medicine Integrative Health and Wellness · Stanford Center for Integrative Medicine · Boston Medical Center Program for Integrative Medicine and Healthcare Disparities · George Washington University Medical Center Center for Integrative Medicine · University of Wisconsin Integrative Medicine Program · Oregon Health and Science University ORCCAMIND, focused on neurological CAM research · Allina Health Penny George Institute for Health and Healing · Mount Sinai Integrative Medicine Program · Columbia University Medical Center Center for Comprehensive Wellness
 
 ### Outreach Strategy and Sample Communication
 
@@ -180,7 +180,7 @@ Engagement Approach: Direct engagement through NAMA and NAMACB leadership with e
 
 ### National Consortium of Ayurveda Medicine (NCAM)
 
-The National Consortium of Ayurveda Medicine represents another organizational structure for Ayurvedic practice in the United States, with relationships to international Ayurvedic credentialing including connections to Indian Ayurvedic medical institutions.
+The National Consortium of Ayurveda Medicine represents another organizational structure for Ayurvedic practice in the United States.
 
 Strategic Significance: NCAM represents perspectives within the Ayurvedic community that may differ from NAMA on specific institutional questions. Engagement with NCAM ensures that NAP's Ayurvedic federation reflects the diversity within the Ayurvedic community rather than aligning with a single Ayurvedic organizational position.
 
@@ -188,7 +188,7 @@ Engagement Approach: Parallel engagement to NAMA, with attention to the distinct
 
 ### Indian Ayurvedic Credentialing Bodies
 
-As NAP expands internationally, engagement with Indian Ayurvedic credentialing bodies becomes important given that India is the historical and current center of Ayurvedic education and credentialing. Relevant Indian institutions include the All India Institute of Ayurveda, the Central Council of Indian Medicine, the Ministry of AYUSH (Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homoeopathy), and major Ayurvedic universities.
+As NAP expands internationally, engagement with Indian Ayurvedic credentialing bodies becomes important given that India is the historical and current center of Ayurvedic education and credentialing. Relevant Indian institutions include the All India Institute of Ayurveda, the Ministry of AYUSH (Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homoeopathy), and major Ayurvedic universities.
 
 Engagement Approach: Indian institutional engagement is appropriate during Expansion Phase rather than Foundation Phase, after United States Ayurvedic federation arrangements are established. International engagement requires substantial cultural and institutional sensitivity, with emphasis on respecting Indian sovereignty over Ayurvedic tradition.
 
@@ -200,7 +200,7 @@ Strategic Significance: NCCAOM holds the credentialing infrastructure for TCM pr
 
 Engagement Approach: Direct engagement through NCCAOM leadership with positioning of NAP as adding framework leverage to NCCAOM certified practitioners while respecting NCCAOM's authority over TCM credentialing. The conversation emphasizes that NAP credentials are in addition to NCCAOM credentials, never in replacement, and that NAP standards are designed to interoperate with NCCAOM standards rather than override them.
 
-National Certification Board for Acupuncture and Herbal Medicine (NCBAHM) NCBAHM represents the credentialing structure that has emerged following organizational developments in the TCM credentialing space. NCBAHM operates with similar authority to historical NCCAOM credentialing in many states. Both organizations are addressed in NAP coalition outreach to ensure broad TCM community engagement.
+National Certification Board for Acupuncture and Herbal Medicine (NCBAHM)  Both organizations are addressed in NAP coalition outreach to ensure broad TCM community engagement.
 
 ### Accreditation Commission for Acupuncture and Herbal Medicine (ACAHM)
 
@@ -216,7 +216,7 @@ CCAOM represents the educational institutions providing TCM credentialing pathwa
 
 ### American Association of Naturopathic Physicians (AANP)
 
-The AANP represents licensed naturopathic physicians in the United States and Canada. Naturopathic physicians practice as primary care physicians in approximately 23 states with naturopathic licensing, while operating without licensed scope in other states. The AANP advocates for naturopathic licensing expansion and provides professional support for member naturopathic physicians.
+The AANP represents licensed naturopathic physicians in the United States and Canada. Naturopathic physicians are licensed in a number of states, with scope of practice varying by jurisdiction, while operating without licensed scope in other states. The AANP advocates for naturopathic licensing expansion and provides professional support for member naturopathic physicians.
 
 Strategic Significance: AANP membership represents the established naturopathic medicine community in North America. Federation with AANP positions naturopathic medicine as a core NAP tradition with appropriate respect for naturopathic clinical autonomy. AANP licensing advocacy aligns with NAP's broader policy interests in expanded scope for credentialed natural medicine practice.
 
@@ -234,7 +234,7 @@ CNME accredits naturopathic medical education programs, determining which instit
 
 ### Institute for Functional Medicine (IFM)
 
-The IFM is the primary credentialing and educational organization for functional medicine globally. IFM offers certification through multi year clinician training programs and operates the Certified Functional Medicine Practitioner credential. The IFM has trained tens of thousands of practitioners across multiple healthcare professional categories.
+The IFM is the primary credentialing and educational organization for functional medicine globally. IFM offers certification through a multi-year clinician training program and operates a certified-practitioner credential. The IFM has trained practitioners across multiple healthcare professional categories.
 
 Strategic Significance: IFM is the closest analog to what NAP is being established to become at global scale, with the difference that IFM operates as a single educational and credentialing organization rather than as the federated multi tradition framework that NAP establishes. IFM federation with NAP creates the partnership through which functional medicine practitioners maintain their IFM credentials while gaining NAP framework leverage.
 
@@ -292,7 +292,7 @@ Engagement with research and government agencies positions NAP within legitimate
 
 ### National Center for Complementary and Integrative Health (NCCIH)
 
-NCCIH is the National Institutes of Health center responsible for research on complementary and integrative health interventions. NCCIH funds research, publishes clinical guidance, and serves as the primary federal scientific authority on integrative medicine. NCCIH director and program officers are key contacts for any organization operating in integrative medicine research and clinical practice.
+NCCIH is the National Institutes of Health center responsible for research on complementary and integrative health interventions. NCCIH funds research and publishes evidence summaries and health information for the public and clinicians. NCCIH director and program officers are key contacts for any organization operating in integrative medicine research and clinical practice.
 
 Strategic Significance: NCCIH is the primary federal scientific authority relevant to NAP. Productive working relationships with NCCIH program officers establish NAP within federal integrative medicine conversation. NCCIH grant funding is a potential resource for specific NAP research initiatives during Expansion and Integration phases.
 
@@ -300,7 +300,7 @@ Engagement Approach: Engagement is conducted through formal scientific channels 
 
 ### Office of Dietary Supplements (ODS)
 
-The NIH Office of Dietary Supplements coordinates federal research on dietary supplements and provides authoritative scientific information about supplement safety and efficacy. ODS engagement is relevant for the dietary supplement and nutraceutical components of NAP practice.
+The NIH Office of Dietary Supplements coordinates federal research on dietary supplements and publishes scientific information about dietary supplements. ODS engagement is relevant for the dietary supplement and nutraceutical components of NAP practice.
 
 ### Veterans Health Administration (VHA) Whole Health
 
@@ -310,7 +310,7 @@ Engagement Approach: Engagement through VHA Office of Patient Centered Care and 
 
 ### Centers for Medicare and Medicaid Services (CMS)
 
-CMS engagement is appropriate during Integration Phase as NAP develops payer relationships. CMS innovation programs including value based care initiatives may provide pathways for integrative medicine reimbursement that NAP credentialed practitioners and accredited centers could access. Food and Drug Administration (FDA) FDA engagement is appropriate around dietary supplement regulation, clinical decision support software regulation as the NAP Practitioner Platform develops AI assisted features, and adjacent regulatory matters affecting NAP practice. FDA engagement is conducted through formal regulatory channels with experienced regulatory counsel. World Health Organization Traditional, Complementary, and Integrative Medicine The WHO maintains the Traditional, Complementary and Integrative Medicine unit which coordinates international policy on traditional and integrative medicine. WHO engagement is appropriate as NAP develops international scope, positioning NAP within international integrative medicine policy infrastructure. State Regulatory Bodies State medical boards, naturopathic licensing boards, acupuncture licensing boards, and other state regulatory bodies are essential engagement targets for NAP practitioners and centers operating within their jurisdictions. State engagement is necessarily conducted on a state by state basis and is appropriate as NAP credentialed practitioner and accredited center networks develop in each state.
+CMS engagement is appropriate during Integration Phase as NAP develops payer relationships. CMS innovation programs including value based care initiatives may provide pathways for integrative medicine reimbursement that NAP credentialed practitioners and accredited centers could access. Food and Drug Administration (FDA) FDA engagement is appropriate around dietary supplement regulation, clinical decision support software regulation as the NAP Practitioner Platform develops AI assisted features, and adjacent regulatory matters affecting NAP practice. FDA engagement is conducted through formal regulatory channels with experienced regulatory counsel. World Health Organization Traditional, Complementary, and Integrative Medicine The WHO addresses traditional and integrative medicine through its Traditional, Complementary and Integrative Medicine work. WHO engagement is appropriate as NAP develops international scope, positioning NAP within international integrative medicine policy infrastructure. State Regulatory Bodies State medical boards, naturopathic licensing boards, acupuncture licensing boards, and other state regulatory bodies are essential engagement targets for NAP practitioners and centers operating within their jurisdictions. State engagement is necessarily conducted on a state by state basis and is appropriate as NAP credentialed practitioner and accredited center networks develop in each state.
 
 # PART IV. PROFESSIONAL NETWORKS AND INTEGRATIVE MEDICINE ORGANIZATIONS
 
@@ -350,7 +350,7 @@ Patient advocacy and community organizations represent the patient populations w
 
 ### Chronic Disease Patient Organizations
 
-Patient organizations focused on chronic conditions where NAP offers substantial clinical value are priority engagement targets. Specific examples include patient organizations focused on autoimmune conditions including the Autoimmune Association, mental health advocacy organizations, chronic fatigue and fibromyalgia patient communities, and emerging condition specific advocacy in areas including long COVID, Lyme disease, mold illness, and similar conditions where conventional medicine has produced inadequate clinical outcomes.
+Patient organizations focused on chronic conditions where NAP offers substantial clinical value are priority engagement targets. Specific examples include patient organizations focused on autoimmune conditions including the Autoimmune Association, mental health advocacy organizations, chronic fatigue and fibromyalgia patient communities, and emerging condition specific advocacy in areas including long COVID and Lyme disease.
 
 ### Integrative Medicine Patient Communities
 
@@ -364,11 +364,11 @@ Organizations representing consumer interests in holistic health include various
 
 ### Autoimmune Association
 
-The Autoimmune Association advocates for the more than 50 million Americans living with autoimmune disease. Autoimmune conditions are a major focus area within NAP given the multifactorial nature of autoimmune disease and the limited clinical options offered by conventional autoimmune treatment in many cases.
+The Autoimmune Association advocates for Americans living with autoimmune disease, a population the Association estimates at more than 50 million. Autoimmune conditions are a focus area within NAP given the multifactorial nature of autoimmune disease; NAP approaches are framed as adjunctive to, not substitutes for, conventional care.
 
 ### National Alliance on Mental Illness (NAMI)
 
-NAMI represents mental health patient advocacy nationally. While NAMI's primary focus is conventional mental health treatment access, NAMI engagement around integrative mental health approaches creates connection to mental health patient populations who may benefit from NAP framework practitioners. Patient Centered Outcomes Research Institute (PCORI) PCORI is an independent organization conducting research guided by patients, caregivers, and the broader healthcare community. PCORI research priorities and methodology align with NAP's emphasis on patient outcomes and integrated care. PCORI engagement creates research partnership opportunities and patient centered methodology validation for NAP outcome research.
+NAMI represents mental health patient advocacy nationally. While NAMI's primary focus is conventional mental health treatment access, NAMI engagement around integrative mental health approaches creates connection to mental health patient populations interested in whole-person approaches alongside conventional psychiatric care. Patient Centered Outcomes Research Institute (PCORI) PCORI is an independent organization conducting research guided by patients, caregivers, and the broader healthcare community. PCORI research priorities and methodology align with NAP's emphasis on patient outcomes and integrated care. PCORI engagement creates research partnership opportunities and patient centered methodology validation for NAP outcome research.
 
 ### Outreach Strategy for Patient Organizations
 
@@ -394,7 +394,7 @@ Engagement Approach: Foundation philanthropic engagement is conducted through fo
 
 ### Robert Wood Johnson Foundation
 
-The Robert Wood Johnson Foundation funds substantial healthcare innovation including some integrative medicine and whole health initiatives. RWJF strategic interests align with NAP's whole person health approach and substantial clinical innovation potential.
+The Robert Wood Johnson Foundation funds healthcare innovation initiatives.
 
 ### Other Health Focused Foundations
 
@@ -488,7 +488,7 @@ NAP communication operates around several core messages that remain consistent a
 
 ### The Convergence Message
 
-Multiple independent medical and scientific disciplines have been converging toward integrated systems based clinical practice for decades. Functional medicine, integrative psychiatry, environmental medicine, lifestyle medicine, systems biology, and broader natural medicine traditions have all been moving toward similar conclusions about the multifactorial nature of chronic disease and the inadequacy of single agent pharmaceutical management. NAP provides the unifying framework toward which this convergence has been moving but which has lacked institutional infrastructure to coalesce. NAP is not a fringe alternative; it is the organizing framework for the most advanced direction in medicine.
+Multiple independent medical and scientific disciplines have been converging toward integrated systems based clinical practice for decades. Functional medicine, integrative psychiatry, environmental medicine, lifestyle medicine, and systems biology share a premise that much chronic disease is multifactorial rather than isolated single-organ pathology. NAP proposes that this premise warrants clinical frameworks that address multiple contributing systems alongside, not instead of, targeted pharmacotherapy. NAP provides the unifying framework toward which this convergence has been moving but which has lacked institutional infrastructure to coalesce. NAP is not a fringe alternative; it is the organizing framework for the most advanced direction in medicine.
 
 ### The Federation Message
 
@@ -500,7 +500,7 @@ NAP is offered to the world as a public good. Substantial portions of the framew
 
 ### The Evidence Message
 
-NAP operates with explicit evidence stratification distinguishing strong, moderate, emerging, and traditional evidence streams transparently. The framework is supported by peer reviewed research across twelve research territories. The framework is honest about what is established, what is emerging, and what requires additional research. This evidence integrity distinguishes NAP from less disciplined integrative practice and from overclaim in adjacent commercial wellness.
+NAP operates with explicit evidence stratification distinguishing strong, moderate, and emerging evidence streams transparently. The framework is supported by peer reviewed research across twelve research territories. The framework is honest about what is established, what is emerging, and what requires additional research. This evidence integrity distinguishes NAP from less disciplined integrative practice and from overclaim in adjacent commercial wellness.
 
 ### The Patient Centered Message
 

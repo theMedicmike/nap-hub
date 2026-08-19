@@ -31,7 +31,7 @@ The Charter is designed to accomplish four foundational objectives. First, to es
 
 This Charter is grounded in several premises that inform every subsequent provision.
 
-The first premise is that no clinical category of global scope can sustain itself credibly under single founder control. History demonstrates that personality dependent organizations either fail when their founder departs or become commercially captured under pressure of growth and resource needs. The Council is structured to avoid both fates by establishing independent governance from the founding moment.
+The first premise is that no clinical category of global scope can sustain itself credibly under single founder control. Founder-dependent organizations carry documented governance risks, including abrupt discontinuity at founder departure and pressure toward commercial accommodation as resource needs grow. These risks are not inevitable, but they are best addressed structurally and early. The Council is structured to avoid both fates by establishing independent governance from the founding moment.
 
 The second premise is that the integrity of any clinical category depends on the rigor of its conflict of interest management. The Council operates under explicit conflict of interest provisions that apply to every member regardless of seniority or contribution, including the founder.
 
@@ -45,7 +45,7 @@ The fifth premise is that transparency is the foundation of public trust. The Co
 
 ## Section 1.1 Establishment
 
-The NAP Standards Council, hereafter referred to as the Council, is established as the independent governing body of the Nutraceutical Assisted Programs category, hereafter referred to as NAP. The Council operates as a multi stakeholder international body with the authority and responsibilities set forth in this Charter.
+Upon ratification, this Charter shall establish the NAP Standards Council as the governing body of the Nutraceutical Assisted Programs framework. As of the date of publication the Council has not been ratified and holds no seated members; this document is a proposed governance instrument, not a description of an operating body.
 
 ## Section 1.2 Legal Status
 
@@ -53,15 +53,15 @@ The Council is established with the intent to be incorporated as an independent 
 
 ## Section 1.3 Mission
 
-The mission of the Council is to steward the NAP category as a global independent clinical paradigm. This stewardship encompasses the establishment and maintenance of clinical protocol standards, the credentialing of NAP practitioners, the accreditation of NAP centers, the integrity of the NAP knowledge infrastructure, the direction of the NAP research agenda, the engagement with regulators and policymakers across multiple jurisdictions, and the protection of NAP's intellectual independence against commercial, political, ideological, or geographic capture.
+The mission of the Council is to develop and publish open practice standards for nutraceutical approaches as adjuncts within licensed clinical care. This stewardship encompasses the establishment and maintenance of clinical protocol standards, the credentialing of NAP practitioners, the accreditation of NAP centers, the integrity of the NAP knowledge infrastructure, the direction of the NAP research agenda, the engagement with regulators and policymakers across multiple jurisdictions, and the protection of NAP's intellectual independence against commercial, political, ideological, or geographic capture.
 
 ## Section 1.4 Vision
 
-The vision of the Council is a global healthcare landscape in which the foundational paradigm of medicine is terrain first, natural first, system oriented, integration based, and community grounded, with pharmaceutical interventions integrated as situational tools within this foundational framework. The Council operates to advance this vision through institutional credibility, evidence based practice, federated tradition representation, and the long term institutional permanence necessary to translate paradigm change into durable global standard of care.
+The vision of the Council is a healthcare landscape in which natural, system oriented, integration based, and community grounded approaches are considered alongside pharmaceutical interventions rather than positioned above them. The Council operates to advance this vision through institutional credibility, evidence based practice, federated tradition representation, and the long term institutional permanence necessary to translate paradigm change into durable global standard of care.
 
 ## Section 1.5 Public Good Commitment
 
-The Council holds the NAP category as a public good. The intellectual content of the NAP framework, as articulated in The NAP Manifesto, the NAP Evidence Compendium, the NAP Standards Library, and derivative public reference materials, is offered to the world without proprietary restriction beyond what is necessary to maintain the integrity of the credentialing and accreditation systems. The Council does not exist to extract value from the framework. The Council exists to steward the framework for the benefit of the populations it serves.
+The Council holds the NAP category as a public good. The intellectual content of the NAP framework, as articulated in The NAP Manifesto and the NAP Evidence Compendium, is offered to the world without proprietary restriction beyond what is necessary to maintain the integrity of the framework. The Council does not exist to extract value from the framework. The Council exists to steward the framework for the benefit of the populations it serves.
 
 # ARTICLE II. AUTHORITY AND RESPONSIBILITIES
 
@@ -70,8 +70,8 @@ The Council holds the NAP category as a public good. The intellectual content of
 The Council holds and exercises the following authorities on behalf of the NAP category.
 
 1. Maintenance of the NAP Standards Library, including the establishment, periodic review, and revision of clinical protocol standards across all clinical territories within the NAP framework.
-2. Oversight of the NAP Practitioner credentialing program, including the establishment of training requirements, examination standards, continuing education requirements, and ethical conduct standards for credentialed practitioners.
-3. Oversight of the NAP Center accreditation program, including the establishment of facility standards, staffing standards, outcome measurement requirements, and operational standards for accredited centers.
+2. Publication of open, non-credentialing educational standards describing the knowledge base NAP practice draws on. The Council issues no credential, no certificate of competency, and no continuing-education credit, and does not represent that any practitioner meets any standard. A practitioner's statement that they follow NAP standards is a claim, not a credential.
+3. Publication of voluntary, self-attested facility practice standards. The Council does not accredit, inspect, approve, or endorse any facility, issues no seal or tier, and maintains no registry of approved centers. Listed is not endorsed.
 4. Direction of the NAP research agenda, including identification of research priorities, oversight of outcome data collection across accredited centers, partnership with academic and clinical research institutions, and validation of the framework's foundational claims.
 5. Stewardship of the NAP Evidence Compendium and supporting evidence appendices, including periodic review, updates as new research emerges, and maintenance of evidence classification standards.
 6. Engagement with regulatory bodies, governmental agencies, and policymakers across jurisdictions to advocate for appropriate recognition and integration of NAP within national and regional healthcare frameworks.
@@ -93,7 +93,7 @@ The Council operates within explicit limits that protect the integrity of the ca
 
 The Council recognizes that its authority operates within and alongside other legitimate authorities affecting the practice of medicine.
 
-The Council respects the regulatory authority of national, regional, and state or provincial governments over healthcare practice within their jurisdictions. NAP credentialed practitioners and accredited centers operate in compliance with the regulatory frameworks of the jurisdictions in which they practice. NAP standards are designed to interoperate with regulatory frameworks rather than to supersede them.
+The Council respects the regulatory authority of national, regional, and state or provincial governments over healthcare practice within their jurisdictions. NAP standards do not authorize any clinical act. Every practitioner and facility is solely responsible for compliance with the licensure, scope-of-practice and facility regulations of their own jurisdiction, and the Council makes no representation that any practitioner or facility is in compliance. Where a NAP standard conflicts with law, the law governs. NAP standards are designed to interoperate with regulatory frameworks rather than to supersede them.
 
 The Council respects the credentialing authority of established medical and natural medicine professional bodies. The NAP credential supplements rather than replaces primary credentials issued by such bodies.
 
@@ -396,7 +396,7 @@ The Council shall not accept financial resources from sources that would comprom
 
 The Council operates under substantial financial transparency requirements.
 
-1. Annual External Audit: An external audit firm, engaged on a periodic rotation basis, conducts an annual audit of Council finances with the audit report made publicly available.
+1. Annual External Audit: Once the Council is incorporated and operating, it shall engage an independent audit firm on a rotating basis and publish the resulting report. No such audit has been conducted to date.
 2. Annual Financial Report: The Annual Report includes a financial section documenting revenue sources, expenditure categories, financial position, and significant financial decisions of the year.
 3. Significant Donor Disclosure: Contributions exceeding a defined threshold are disclosed publicly in the Annual Report, identifying the donor and amount, with appropriate protection for individual donor preferences within consistent disclosure standards.
 4. Financial Controls: The Council operates under documented financial controls including separation of authorization and execution authorities, expenditure approval thresholds, and procurement procedures.
@@ -415,7 +415,7 @@ The Council operates under a presumption of transparency. Information about Coun
 
 ## Section 10.2 Categories of Public Information
 
-The following categories of information are routinely made public.
+Upon the Council being seated, the following categories of information are intended to be published on a defined schedule. None are currently published, because the Council has not yet convened.
 
 · This Charter and all governance documents derivative from it · Council member roster, biographies, and conflict of interest disclosures · Meeting agendas and minutes, with appropriate executive session protection · Substantive decisions including standards, credentialing decisions in summary form, and accreditation decisions in summary form · The NAP Standards Library and Evidence Compendium · The Annual Report including financial information and outcome data aggregations · External audit reports · Public comments received on matters under deliberation
 
@@ -440,7 +440,7 @@ Beyond transparency, the Council operates under specific accountability mechanis
 
 This Charter may be amended through the following procedure.
 
-1. Proposed amendments may be initiated by any voting Council member, by petition of fifteen percent of credentialed NAP Practitioners, or by petition of one third of accredited NAP Centers.
+1. Proposed amendments may be initiated by any voting Council member. Should practitioner or center participation programs later be established, additional petition-based initiation routes may be defined through Council Rules.
 2. Proposed amendments are reviewed by the Ethics and Conflict Committee for governance integrity implications and by the Legal Counsel Advisor for legal implications.
 3. Proposed amendments are presented at a regular Council meeting for first reading and discussion, followed by a public comment period of not less than ninety days.
 4. Following the public comment period, proposed amendments are deliberated at a subsequent regular Council meeting and submitted to vote.
@@ -471,7 +471,7 @@ In the event of governance crisis, dispute over Council legitimacy, or other cir
 
 ## Section 12.1 Adoption
 
-This Charter is adopted by the Founding Membership of the NAP Standards Council on the date of its formal ratification. The Founding Membership consists of Michael Andrew Feller Jones as Founder and the initial cohort of voting members invited and confirmed through the Founding Membership process.
+This Charter takes effect only upon ratification by a Founding Membership consisting of the Founder, Michael Andrew Feller Jones, and a confirmed cohort of voting members invited through the Founding Membership process. As of publication, no voting members have been confirmed and the Charter has not been ratified.
 
 ## Section 12.2 Effective Date
 
@@ -511,13 +511,13 @@ The seat held in perpetuity by Michael Andrew Feller Jones following the Inaugur
 The transitional position held by the founder during the founding period of the Council, not to exceed three years from Council establishment.
 
 **Standards Library**
-The codified collection of NAP clinical protocols, maintained and updated by the Council under authority granted in this Charter.
+The planned collection of NAP clinical protocols, to be developed and maintained by the Council under authority granted in this Charter. As of this Charter's publication no protocols have been drafted and the Library does not yet exist.
 
 **Evidence Compendium**
-The peer reviewed research foundation supporting the NAP framework, maintained as a living reference document.
+A synthesis of published research relevant to the NAP framework, intended to be maintained as a living reference document. It is not itself peer reviewed.
 
 **Credentialed Practitioner**
-An individual clinician who has earned a NAP Practitioner credential through the Council's credentialing program.
+A licensed clinician who states that their practice follows published NAP standards. The Council does not verify, credential, or endorse any such statement.
 
 **Accredited Center**
 A clinical facility that has earned NAP Center accreditation through the Council's accreditation program.

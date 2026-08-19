@@ -12,9 +12,9 @@ _Nutraceutical Assisted Programs_
 
 ## About This Document
 
-The NAP Evidence Compendium establishes that each link in the NAP cascade is supported in the peer reviewed literature. It also states, plainly, what is not yet proven: the integrated cascade as a unified clinical hypothesis, and the comparative effectiveness of comprehensive NAP protocols against single intervention care. This document is how NAP answers those open questions — not with argument, but with data.
+The NAP Evidence Compendium sets out the evidence behind each link in the NAP cascade, noting where support in the peer reviewed literature is stronger and where it is more limited. It also states, plainly, what is not yet proven: the integrated cascade as a unified clinical hypothesis, and the comparative effectiveness of comprehensive NAP protocols against single intervention care. This document is how NAP answers those open questions — not with argument, but with data.
 
-It defines the **NAP Outcome Registry**: the standardized system through which every accredited NAP center and credentialed practitioner contributes real-world clinical outcomes to a shared, governed, scientifically rigorous evidence base. It is the single most important infrastructure NAP can build, because it converts the three audiences NAP must win — skeptical clinicians, regulators, and funders — at once. An argument persuades none of them durably. A published outcome persuades all three.
+It defines the **NAP Outcome Registry**: the standardized system through which participating NAP centers and practitioners will contribute real-world clinical outcomes to a shared, governed evidence base. The NAP center and practitioner programs referenced here do not yet exist and are planned future functions. It is the single most important infrastructure NAP can build, because it converts the three audiences NAP must win — skeptical clinicians, regulators, and funders — at once. An argument persuades none of them durably. A published outcome persuades all three.
 
 This framework is offered in the same spirit as every NAP document: evidence first, honest about the limits of its own methods, and product neutral. It describes how outcomes are measured, governed, and reported, not which agents produce them.
 
@@ -48,11 +48,11 @@ The registry is designed around one falsifiable question: do patients who receiv
 
 ## 5. Standardized Outcome Instruments
 
-Every NAP engagement captures a common set of validated, recognized instruments at baseline and at defined intervals, so that outcomes are comparable across centers, practitioners, and conditions.
+The registry specifies a common set of validated, recognized instruments that each participating NAP engagement will capture at baseline and at defined intervals, so that outcomes are comparable across centers, practitioners, and conditions. No NAP engagement is collecting these data yet.
 
 - **Validated functional and psychological instruments** appropriate to presentation — for example PCL-5, PHQ-9, GAD-7, recognized cognitive screens, AUDIT or DAST, and validated sleep, pain, and quality-of-life measures.
-- **Biomarker panels** — the objective markers the NAP assessment already collects, re-tested on schedule to document terrain restoration.
-- **Functional milestones** — the patient-meaningful outcomes that matter most: sleep restored, energy returned, work and relationships re-engaged, medication burden reduced under supervision.
+- **Biomarker panels** — a defined set of objective laboratory markers, drawn at baseline and re-tested on schedule to track change in those markers over time.
+- **Functional milestones** — the patient-meaningful outcomes: sleep, energy, and re-engagement with work and relationships. Any change in prescribed medication is recorded only as an observation, initiated and managed solely by the patient's prescriber; reducing medication is not a goal of a NAP protocol or an outcome the registry seeks to move.
 - **Safety signals** — adverse events, tolerability, and any deterioration, captured with equal rigor (see the NAP Clinical Safety and Practice Standards).
 
 ## 6. Common Data Elements
@@ -65,19 +65,19 @@ To be analyzable, data must be standardized. The registry defines a **minimum vi
 
 ## 7. A Prospective, Pragmatic, Real-World Design
 
-The registry is a prospective observational registry of real-world NAP practice, not a controlled trial. This is the appropriate starting design: it reflects how care is actually delivered, it generates hypotheses and effect-size estimates that justify later controlled studies, and it can begin immediately with the patients NAP already serves. Its limitations — the absence of randomization and control — are stated openly and are the reason the proof pathway (Part VI) progresses toward controlled designs.
+The registry is a prospective observational registry of real-world NAP practice, not a controlled trial. This is the appropriate starting design: it reflects how care is actually delivered, it is intended to generate hypotheses and effect-size estimates that could justify later controlled studies, and it is designed to begin with the patients NAP already serves once ethics review and consent are in place. Its limitations — the absence of randomization and control — are stated openly and are the reason the proof pathway (Part VI) progresses toward controlled designs.
 
 ## 8. The Three-Phase Build
 
-**Phase One — Single-Site Pilot.** The registry begins at the founding pilot center, Operation Whole Health, within the Veterans At Ease program. A single site, a defined cohort, the common dataset, and a pre-specified analysis plan. The goal of Phase One is the first credible readout and the first peer-reviewed publication. This phase can begin now.
+**Phase One — Single-Site Pilot.** The registry will begin at a single founding pilot site, Operation Whole Health, within the Veterans At Ease program, once ethics review and participant consent are in place. A single site, a defined cohort, the common dataset, and a pre-specified analysis plan. The goal of Phase One is the first credible readout and the first peer-reviewed publication. This phase can begin now.
 
-**Phase Two — Multi-Site Accredited Network.** As centers earn NAP accreditation, each joins the registry as a condition of accreditation. Multi-site data tests whether outcomes replicate across practitioners and settings — the first real evidence of generalizability.
+**Phase Two — Multi-Site Accredited Network.** When a NAP center program is established, participating centers will be expected to contribute to the registry as a term of participation. This never overrides individual patient consent: no patient's data enters the registry without that patient's separate, withdrawable consent, and no patient's care depends on it. Multi-site data tests whether outcomes replicate across practitioners and settings — the first real evidence of generalizability.
 
 **Phase Three — Comparative and Controlled Studies.** With effect-size estimates from Phases One and Two, NAP partners with academic centers to design controlled studies comparing NAP protocols to standard care, beginning in the populations where the signal is strongest. This is where the cascade hypothesis is formally tested.
 
 ## 9. Data Governance and Privacy
 
-Patient data is held to the highest applicable standard across every jurisdiction NAP operates in — informed consent, de-identification for research use, secure storage, and compliance with the relevant data-protection regimes (including HIPAA and GDPR-equivalent frameworks). Patients own their data and consent explicitly to its de-identified research use; participation is never a condition of care. Data sovereignty is respected: data collected in a jurisdiction is governed by that jurisdiction's law.
+Patient data is intended to be held to a high standard of privacy and data protection across every jurisdiction NAP operates in — informed consent, de-identification for research use, secure storage, and adherence to the relevant data-protection regimes (including HIPAA and GDPR-equivalent frameworks). This privacy program is not yet fully in place, and identifiable health data will not be collected for research use until it is. Patients control how their data is used and consent explicitly and separately to its de-identified research use; they may withdraw that consent at any time without any effect on their care. Participation is never a condition of care. The registry seeks to comply with the data-protection laws that apply in each jurisdiction it operates in, recognizing that more than one jurisdiction's law may govern the same data.
 
 ---
 
@@ -85,11 +85,11 @@ Patient data is held to the highest applicable standard across every jurisdictio
 
 ## 10. Pre-Specification and Honest Reporting
 
-Every registry analysis is pre-specified: the endpoints, the cohort definition, and the analysis plan are registered before the data is examined. Results are reported whether favorable or not. Protocols that underperform are published and revised. This single commitment — to publish what does not work as readily as what does — is what separates a scientific registry from a marketing instrument, and it is non-negotiable.
+Every registry analysis will be pre-specified: the endpoints, the cohort definition, and the analysis plan are to be publicly registered before the data are examined. No analysis has been registered yet. Results are reported whether favorable or not. Protocols that underperform are published and revised. This single commitment — to publish what does not work as readily as what does — is what separates a scientific registry from a marketing instrument, and it is non-negotiable.
 
 ## 11. Independent Analysis
 
-To be credible, NAP's outcome data cannot be analyzed only by NAP. The registry commits to independent and academic-partner analysis of its data, open access to de-identified datasets for qualified researchers, and publication in peer-reviewed venues. The founder and any commercially interested party are firewalled from the analysis and interpretation of outcomes, consistent with the Charter's conflict-of-interest provisions.
+To be credible, NAP's outcome data cannot be analyzed only by NAP. The registry intends to have its data analyzed by independent and academic partners, to provide controlled access to de-identified datasets for qualified researchers, and to publish in peer-reviewed venues regardless of result. No academic partners are engaged yet. The founder and any commercially interested party are firewalled from the analysis and interpretation of outcomes, consistent with the Charter's conflict-of-interest provisions.
 
 ## 12. Stating the Limits
 
@@ -101,7 +101,7 @@ Observational registry data establishes association and real-world effectiveness
 
 ## 13. Oversight
 
-The registry operates under ethics and institutional review oversight appropriate to human-subjects research. A registry governance committee of the NAP Standards Council — including independent scientific and ethics members — oversees the dataset, approves analyses, and protects the integrity and independence of the evidence from any commercial or founder influence. The Charter's founder-specific conflict provisions apply in full.
+The registry is intended to operate under ethics and institutional review oversight appropriate to human-subjects research, and no data will be collected for research use until that oversight is in place. A registry governance committee of the NAP Standards Council — including independent scientific and ethics members — is intended to oversee the dataset, approve analyses, and protect the integrity and independence of the evidence from any commercial or founder influence. That committee is not yet constituted; until it is, the registry will not analyze or publish outcome data. The Charter's founder-specific conflict provisions apply in full.
 
 ## 14. The Patient at the Center
 

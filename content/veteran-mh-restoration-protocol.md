@@ -26,9 +26,9 @@ It is also a **mental health** protocol for a population at elevated risk of sui
 
 ## 1. Clinical Scope and Indication
 
-This protocol addresses the veteran mental health symptom cluster — post-traumatic stress, depression, anxiety, suicidal ideation, the cognitive and mood sequelae of traumatic brain injury, substance use disorder, sleep collapse, and the chronic pain that so often accompanies them — as the surface expression of an underlying, multi-system biological cascade, per the NAP Veteran Health Specialty Track.
+This protocol is organized around a working hypothesis — not an established finding — that these conditions (post-traumatic stress, depression, anxiety, suicidal ideation, the cognitive and mood sequelae of traumatic brain injury, substance use disorder, sleep collapse, and chronic pain) frequently co-occur in veterans and may share contributing biological factors. The integrated cascade model has not been validated, and each condition retains its own first-line evidence-based treatment.
 
-It is indicated for veterans and active service members presenting with one or more of these conditions, particularly where conventional pharmaceutical management has produced incomplete or non-durable results. It is designed to be delivered alongside VA, military, and community mental health care, never as a replacement for it, and it is explicitly aligned with the VA Whole Health model and PACT Act toxic-exposure recognition.
+It is indicated for veterans and active service members presenting with one or more of these conditions, particularly where conventional pharmaceutical management has produced incomplete or non-durable results. It is designed to be delivered alongside VA, military, and community mental health care, never as a replacement for it, and to be compatible with the self-care aims of the VA Whole Health model and to document toxic-exposure history relevant to a veteran's PACT Act claim. It has not been reviewed, approved, or endorsed by the Department of Veterans Affairs, and no affiliation with VA is claimed or implied.
 
 It is not a stand-alone treatment for acute psychiatric emergency. Active suicidal crisis, acute psychosis, acute intoxication or withdrawal, and acute medical instability are stabilized through emergency and conventional channels first.
 
@@ -37,7 +37,7 @@ It is not a stand-alone treatment for acute psychiatric emergency. Active suicid
 This protocol operationalizes the principles of the NAP Manifesto in a single population.
 
 - **Terrain before intervention.** The biological substrate is assessed and restored before, and underneath, symptom-directed work.
-- **Cascade-aware sequencing.** The five pillars of the veteran cascade — toxic burden, microbial and barrier disruption, mineral and essential fatty acid depletion, hormonal dysregulation, and pharmaceutical iatrogenesis — are addressed in an order that prevents harm and compounds benefit.
+- **Cascade-aware sequencing.** The framework organizes care around five domains — toxic exposure, gastrointestinal function, nutritional status, endocrine function, and medication burden reviewed with the prescriber. The ordering reflects the framework's clinical reasoning and has not been compared to alternative sequences in any trial.
 - **Natural first, pharmaceutical when necessary.** Pharmaceuticals remain available and appropriate; de-prescribing, where indicated, is gradual and supervised.
 - **The patient is a system.** Body, brain, spirit, family, and community are treated as one.
 - **Function over perfection.** Progress is measured by restored capacity, not by the elimination of every symptom.
@@ -81,40 +81,40 @@ The restoration sequence is the heart of the protocol. Each phase has an objecti
 *Cornerstones One and Three.* Objective: shift the veteran out of chronic sympathetic activation and restore the sleep on which all repair depends.
 
 - **Clinical targets:** autonomic regulation, sleep architecture, acute anxiety load.
-- **Intervention classes:** magnesium and glycine repletion for nervous-system regulation and sleep; calming botanical classes (for example, adaptogenic and nervine herbs) selected to patient presentation; circadian and sleep-hygiene restructuring; breathwork and parasympathetic-activating somatic practice from Cornerstone Three.
+- **Intervention classes:** circadian and sleep-hygiene restructuring; breathwork and parasympathetic-activating somatic practice from Cornerstone Three; magnesium and glycine, which may support sleep; and calming botanicals selected to patient presentation and used symptomatically.
 - **Safety:** screen for interactions with sedating medications; coordinate with any prescribed sleep agents.
 - **Tracked:** sleep quality and duration, GAD-7, subjective regulation.
 
 ## 6. Phase Two — Replenish the Foundational Substrate
 
-*Cornerstone One.* Objective: restore the raw materials the brain and nervous system are built from and run on. This phase often produces the first durable symptomatic improvement.
+*Cornerstone One.* Objective: restore the raw materials the brain and nervous system are built from and run on. Response to repletion varies and has not been characterized in this population.
 
-- **Clinical targets:** mineral status (magnesium, zinc, selenium, iodine, and ratio balance), essential fatty acid status (raising the omega-3 index, lowering the omega-6 to omega-3 ratio), B-vitamin complex, vitamin D.
-- **Intervention classes:** bioavailable mineral repletion with attention to antagonist pairs; clinical-grade EPA and DHA repletion (third-party tested for purity, given that some marine products themselves carry metal contamination); methylated B-vitamins where indicated; vitamin D restoration.
+- **Clinical targets:** mineral status (magnesium, zinc, selenium, iodine) interpreted against established laboratory reference ranges; essential fatty acid status by omega-3 index; B-vitamin complex; vitamin D.
+- **Intervention classes:** bioavailable mineral repletion with attention to antagonist pairs; clinical-grade EPA and DHA repletion (third-party tested for purity and freshness); methylated B-vitamins where indicated; vitamin D restoration.
 - **Rationale and calibration:** essential fatty acid status is a structural substrate of the brain, and low DHA status has been *associated* with elevated suicide risk in active-duty service members (an association, not proof of causation; see the Evidence Compendium). Repletion is foundational substrate restoration, not a stand-alone antidepressant claim.
 - **Tracked:** serial mineral and omega-3 index testing; PHQ-9; energy and cognition.
 
 ## 7. Phase Three — Repair the Gut and Restore the Barrier
 
-*Cornerstone One.* Objective: restore the absorptive surface and the barrier whose failure drives neuroinflammation, so that everything replenished in Phase Two can actually be absorbed and the inflammatory load on the brain falls.
+*Cornerstone One.* Objective: support gastrointestinal function and nutrient absorption. A working hypothesis of this framework is that intestinal barrier dysfunction may contribute to systemic inflammation; this has not been shown to change brain inflammatory load in humans.
 
 - **Clinical targets:** microbial balance, intestinal barrier integrity, where indicated parasitic and fungal clearance.
-- **Intervention classes:** antimicrobial and antiparasitic botanical protocols where the assessment indicates; biofilm and barrier-repair nutrient classes; microbiome restoration through targeted probiotics, prebiotic and fermented foods; dietary modification.
-- **Safety:** parasitic clearance and toxic-burden mobilization are coordinated, never run in conflict (see Phase Four); monitor for die-off reactions and adjust pace.
-- **Tracked:** digestive function, intestinal-permeability and inflammatory markers, cognitive and mood response via the gut–brain axis.
+- **Intervention classes:** where a parasitic or bacterial infection is clinically suspected, the patient is referred to a physician for evaluation and standard treatment; this protocol does not treat infections. Nutritional support: targeted probiotics, prebiotic and fermented foods, and dietary modification.
+- **Safety:** any new or worsening symptom during this phase is treated as a possible adverse reaction rather than a sign of progress; the intervention is stopped and the patient's physician consulted.
+- **Tracked:** digestive symptoms; inflammatory markers where indicated; mood and cognitive scores tracked as outcomes, without attributing change to a specific mechanism.
 
 ## 8. Phase Four — Reduce Toxic Burden
 
-*Cornerstone One.* Objective: lower the accumulated toxic and heavy-metal load that drives the cascade — at a rate the body can safely bind and eliminate.
+*Cornerstone One.* Objective: document the veteran's exposure history, reduce ongoing exposures where identified, and support normal hepatic and renal elimination. This protocol makes no claim to reduce accumulated body burden.
 
-- **The cardinal safety rule:** burden is never mobilized faster than drainage and binding capacity allow, and never before microbial and barrier integrity (Phase Three) are established, because mobilizing stored metals into a compromised gut re-circulates them and can worsen the patient. Mobilization is paired with binding and with microbial clearance, not run in isolation.
-- **Intervention classes:** drainage-pathway optimization (hepatic, renal, lymphatic, bowel) first; natural binding agents; cofactor support for the body's own detoxification pathways; staged, monitored mobilization only after drainage is open.
-- **Safety:** contraindicated or modified in pregnancy, significant renal or hepatic impairment, and other flagged conditions; serial testing detects redistribution events requiring a change of pace.
+- **The cardinal safety rule:** this protocol does not attempt to mobilize, bind, or chelate stored metals. Chelation for confirmed metal poisoning is a physician-directed treatment and is outside the scope of this protocol. Mobilization is paired with binding and with microbial clearance, not run in isolation.
+- **Intervention classes:** support for normal hepatic and renal function through hydration, adequate protein and fiber, and reducing ongoing exposure. This protocol does not attempt to mobilize or chelate stored metals.
+- **Safety:** contraindicated or modified in pregnancy, significant renal or hepatic impairment, and other flagged conditions; any new or worsening symptom is reviewed with the patient's physician.
 - **Tracked:** serial toxic-burden testing, symptom response, tolerance.
 
 ## 9. Phase Five — Restore Cellular Energy
 
-*Cornerstones One and Two.* Objective: restore mitochondrial function and metabolic flexibility, lifting the fatigue and exercise intolerance that block engagement with the rest of the protocol.
+*Cornerstones One and Two.* Objective: address fatigue and exercise intolerance where present, through graded activity, sleep, and correction of documented nutrient deficiencies. This protocol does not claim to restore mitochondrial function or metabolic flexibility, neither of which is measured here.
 
 - **Clinical targets:** mitochondrial function, oxidative-stress load, metabolic flexibility.
 - **Intervention classes:** mitochondrial cofactor support; oxidative-stress reduction; graded movement and recovery; dietary pattern toward metabolic flexibility.
@@ -122,11 +122,11 @@ The restoration sequence is the heart of the protocol. Each phase has an objecti
 
 ## 10. Phase Six — Restore Hormonal and Metabolic Function
 
-*Cornerstones One and Two.* Objective: restore the endocrine signaling that governs mood, drive, sleep, and metabolism, much of which improves on its own once the prior phases are complete.
+*Cornerstones One and Two.* Objective: identify endocrine dysfunction through appropriate testing and refer for treatment where indicated. Whether earlier phases improve endocrine function has not been studied and should not be assumed.
 
 - **Clinical targets:** HPA-axis and cortisol rhythm, thyroid, sex hormones, insulin and metabolic markers.
-- **Intervention classes:** adaptogenic and botanical endocrine support matched to the dysfunctional axis; cofactor optimization; sleep and resistance-training support for endogenous hormone production; where natural support is insufficient, bioidentical hormone therapy through a qualified prescriber as a NAP-compatible intervention.
-- **Rationale:** sleep restoration alone measurably raises testosterone, so this phase builds directly on Phase One.
+- **Intervention classes:** cofactor optimization; sleep and resistance training, which support endogenous hormone production; botanical support used symptomatically only, as no botanical has been shown to correct a specific endocrine axis. Where hormone therapy is clinically indicated, it is prescribed and monitored by a qualified physician.
+- **Rationale:** sleep is addressed first for its own well-established benefits. Whether restoring or extending sleep raises testosterone has not been established, and this phase does not rely on such an effect.
 - **Tracked:** serial hormonal panels; mood, drive, body composition.
 
 ## 11. Phase Seven — Restore the Brain and Process the Trauma
@@ -134,12 +134,12 @@ The restoration sequence is the heart of the protocol. Each phase has an objecti
 *Cornerstones Two and Three.* Objective: with the substrate now restored, support neurological regeneration and undertake the trauma-processing work that could not consolidate on a collapsing terrain.
 
 - **Clinical targets:** neuroinflammation, neuroregeneration and neuroplasticity, neurotransmitter substrate, the trauma itself.
-- **Intervention classes:** neuro-supportive and nootropic botanical classes; anti-inflammatory neuroprotection; the structured somatic and trauma-resolution modalities of Cornerstone Three (breathwork, meditation and yoga nidra, sound and vibrational practice, structured emotional processing); and, where lawful and clinically supervised, the wraparound infrastructure for psychedelic-assisted therapy. *The order matters: the breakthroughs of trauma and psychedelic work fade without the restored biological substrate to consolidate them, which is why this phase follows rather than precedes terrain restoration.*
+- **Intervention classes:** general nutritional support for brain health, with no claim that any botanical improves cognition, protects neurons, or treats the cognitive effects of traumatic brain injury; the structured somatic and trauma-resolution modalities of Cornerstone Three (breathwork, meditation and yoga nidra, sound and vibrational practice, structured emotional processing); and, only in the limited settings where it is currently lawful, the wraparound preparation and integration support around psychedelic-assisted therapy — this protocol supplies readiness and safety screening, not the therapy itself. *This ordering reflects clinical convention within the framework rather than evidence of superiority; no trial has compared sequencing. Trauma-focused therapy is not deferred by this protocol and may begin or continue at any phase.*
 - **Tracked:** PCL-5, cognitive measures, durability of gains.
 
 ## 12. Phase Eight — Reintegration, Purpose, and Community
 
-*Cornerstone Four.* Objective: restore the belonging, mission, and meaning whose loss is itself a clinical condition, and without which biological gains relapse in isolation.
+*Cornerstone Four.* Objective: rebuild belonging, mission, and meaning. Social isolation is associated with worse health outcomes, which is why reintegration is treated as a clinical priority — though loss of purpose is not itself a diagnosis, and it is not established that biological gains reverse without it.
 
 - **Intervention classes (prescribed, tracked):** structured peer community; mentorship; service projects; intergenerational engagement; purpose-discovery work; spiritual community honoring the patient's tradition or supporting its discovery; and family-system repair, recognizing that the family served too.
 - **Tracked:** purpose, community-engagement, and quality-of-life measures alongside the biomedical outcomes.
@@ -153,13 +153,13 @@ The restoration sequence is the heart of the protocol. Each phase has an objecti
 The phased sequence is the shared spine. The dominant presentation tunes the emphasis, not the foundation:
 
 - **Post-traumatic stress:** heavier investment in Phase One regulation and Phase Seven somatic and trauma processing.
-- **Depression and suicidality:** priority on Phase Two essential fatty acid and mineral restoration and Phase One sleep, with continuous crisis monitoring.
+- **Depression and suicidality:** first-line care is the patient's VA or community mental health treatment, including safety planning, evidence-based psychotherapy, and medication as prescribed. This protocol contributes adjunctive sleep and nutritional support only, never substituting for or delaying that care, with continuous crisis monitoring throughout.
 - **Traumatic brain injury:** emphasis on Phase Five energy and Phase Seven neuroregeneration and neuroinflammation.
-- **Substance use disorder:** integration with addiction care, with Phases One through Four reducing the biological drivers of use and Phase Eight rebuilding the life that sustains recovery.
+- **Substance use disorder:** this protocol is adjunctive only and never a substitute for established addiction treatment, which remains first-line. Nutritional and sleep support may aid general recovery; they do not treat the disorder.
 
 ## 14. Integration with Conventional Care and Supervised De-Prescribing
 
-This protocol interoperates with VA, military, and community care. Where the pharmaceutical burden inventory and restoration progress indicate, **de-prescribing is gradual, monitored, and authorized and supervised by the prescribing clinician** — never abrupt, never unilateral, and always with supportive substrate in place. The goal is not the absence of medication; it is the restoration of the terrain to the point where the underlying need for a given medication diminishes, as judged by the prescriber.
+This protocol interoperates with VA, military, and community care. Where the pharmaceutical burden inventory and restoration progress indicate, **de-prescribing is gradual, monitored, and authorized and supervised by the prescribing clinician** — never abrupt, never unilateral, and always with supportive substrate in place. This protocol does not aim to reduce or discontinue any medication. Medication decisions belong solely to the prescribing clinician, and patients should not adjust or stop a psychiatric medication based on how they feel during this protocol.
 
 ## 15. Outcome Measurement
 
@@ -178,7 +178,7 @@ Outcome data, de-identified and consented, feeds the NAP outcome registry, where
 
 ## 16. Evidence Basis and Calibration
 
-The mechanisms this protocol acts on are documented link by link and are consolidated, classified by strength, and cited in the NAP Evidence Compendium. What is not yet proven — and what this protocol states plainly — is the integrated cascade as a unified clinical hypothesis and the comparative effectiveness of this comprehensive sequence against single-intervention care. Those are precisely the questions the NAP outcome registry exists to answer. This protocol is therefore offered as a structured, evidence-informed, falsifiable clinical model, not as a closed finding. Associations are labeled as associations; the essential fatty acid and suicide-risk relationship in particular is presented as the case-control association the evidence supports, not as a prevalence claim.
+Individual mechanisms are cited and graded in the NAP Evidence Compendium using an explicit strength hierarchy. Where a component rests on mechanistic rationale or preclinical data alone, the Compendium says so; not every element of this protocol has human clinical evidence. What is not yet proven — and what this protocol states plainly — is the integrated cascade as a unified clinical hypothesis and the comparative effectiveness of this comprehensive sequence against single-intervention care. Those are precisely the questions the NAP outcome registry exists to answer. This protocol is therefore offered as a structured, evidence-informed, falsifiable clinical model, not as a closed finding. The essential fatty acid and suicide-risk relationship is presented as the retrospective case-control association the evidence supports, not as a causal or prevalence claim.
 
 ## 17. Safety, Contraindications, and Scope of Practice
 

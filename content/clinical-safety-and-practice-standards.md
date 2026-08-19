@@ -23,7 +23,7 @@ This document is product neutral. It defines the standard, not the product.
 
 ## 1. The Licensed-Clinician Requirement
 
-The NAP credential is an **added qualification layered atop a primary clinical license — never a substitute for one.** A NAP practitioner must hold a recognized clinical license in their jurisdiction (for example, physician, nurse practitioner, physician assistant, naturopathic physician where licensed, or another regulated clinical profession with the relevant scope), and the NAP credential certifies additional competency within that existing license.
+The NAP credential is an **added qualification layered atop a primary clinical license — never a substitute for one.** A NAP practitioner must hold a recognized clinical license in their jurisdiction (for example, physician, nurse practitioner, physician assistant, naturopathic physician where licensed, or another regulated clinical profession with the relevant scope), and the NAP credential, once established, is intended to recognize additional training within that existing license. NAP is not an accrediting body and confers no license, scope, or legal authority of any kind; the credential reflects training completed, not a certification of competence.
 
 The governing rule is simple and absolute: **scope follows your license.** A practitioner may do within NAP only what their primary license already permits them to do. The NAP credential confers no independent legal authority to diagnose, order or interpret laboratory testing, prescribe, or de-prescribe. Where an activity is a licensed medical act in a jurisdiction, only a clinician licensed for that act may perform it under NAP.
 
@@ -31,11 +31,11 @@ This requirement protects patients, protects practitioners from practicing outsi
 
 ## 2. De-Prescribing Authority
 
-De-prescribing — the structured reduction or discontinuation of a medication — is a medical act. Within NAP it is governed by one rule: **only the clinician who can lawfully prescribe a medication may reduce or discontinue it, and only they may supervise that process.** A NAP practitioner who is not a prescriber may identify de-prescribing opportunities, document them, and coordinate with the patient's prescribing clinician — but may never instruct a patient to alter a medication. De-prescribing is always gradual, always prescriber-supervised, and always undertaken with supportive terrain restoration in place.
+De-prescribing — the structured reduction or discontinuation of a medication — is a medical act. Within NAP it is governed by one rule: **only the clinician who can lawfully prescribe a medication may reduce or discontinue it, and only they may supervise that process.** A NAP practitioner who is not a prescriber may identify de-prescribing opportunities, document them, and coordinate with the patient's prescribing clinician — but may never instruct a patient to alter a medication. De-prescribing is always prescriber-supervised. Whether a medication is tapered gradually or stopped is a clinical judgment for the prescriber, and terrain-supportive care may accompany de-prescribing but is never a precondition for discontinuing a medication that is harming the patient.
 
 ## 3. Jurisdictional Compliance
 
-NAP operates across many legal systems, and medicine is regulated locally. Every NAP practitioner and center practices in full compliance with the laws of their jurisdiction. Where local law is more restrictive than this standard, local law governs. The NAP Standards Council maintains guidance on jurisdictional variation, but the responsibility to practice lawfully rests with the credentialed practitioner. NAP accreditation is contingent on lawful practice and is withdrawn where it is absent.
+NAP is designed for use across many legal systems, and medicine is regulated locally. Every NAP practitioner and center is required, as a condition of participation, to practice in full compliance with the laws of their jurisdiction. Where local law is more restrictive than this standard, local law governs. The responsibility to practice lawfully rests with the practitioner. NAP does not provide legal advice, and no NAP standard should be read as a determination that a given practice is lawful in a given jurisdiction. NAP accreditation is contingent on lawful practice and is withdrawn where it is absent.
 
 ---
 
@@ -43,7 +43,7 @@ NAP operates across many legal systems, and medicine is regulated locally. Every
 
 ## 4. Terrain-First Is Not Terrain-Only
 
-NAP is the foundational paradigm for **chronic, multifactorial, terrain-driven conditions.** It is not a model for acute, emergent, or immediately dangerous presentations, and it never delays the care those presentations require. The terrain-first principle applies to the chronic disease cascade. It does not apply to the patient in front of you who needs an emergency department now. In every NAP assessment, the first clinical act is to rule out the conditions that require immediate conventional or emergency care.
+NAP is the foundational paradigm for **chronic, multifactorial, terrain-driven conditions.** It is not a model for acute, emergent, or immediately dangerous presentations, and it never delays the care those presentations require. The terrain-first principle applies to chronic, multifactorial disease, which NAP treats as a clinical hypothesis under test rather than an established mechanism. It does not apply to the patient in front of you who needs an emergency department now. In every NAP assessment, the first clinical act is to rule out the conditions that require immediate conventional or emergency care.
 
 ## 5. The Red-Flag Rule
 
@@ -73,11 +73,11 @@ Every credentialed NAP practitioner has an affirmative duty to report adverse ev
 
 ## 8. Herb–Drug Interaction Surveillance
 
-Because NAP patients frequently take pharmaceuticals alongside botanical and nutraceutical interventions, herb–drug and nutrient–drug interactions are a primary safety concern. The NAP Standards Library maintains and continuously updates interaction guidance, every assessment includes a full medication and supplement reconciliation, and suspected interactions are reported to the safety registry like any other adverse event.
+Because NAP patients may take pharmaceuticals alongside botanical and nutraceutical interventions, herb–drug and nutrient–drug interactions are a primary safety concern. Full medication and supplement reconciliation is a required element of every NAP assessment, and any suspected interaction is reported through the same pathway as any other adverse event. The NAP Standards Library's interaction guidance is under development.
 
 ## 9. The Safety Signal Loop
 
-Adverse-event data does not sit in a file. The NAP safety system operates a closed loop: reports are aggregated and reviewed by the Standards Council's safety function, signals trigger review and, where warranted, revision of protocols and contraindications in the Standards Library, and updated guidance and alerts are pushed to all credentialed practitioners. This is the mechanism by which NAP gets safer over time rather than merely larger. The safety registry interoperates with the Outcome Registry: harms are measured with the same rigor as benefits.
+Adverse-event data does not sit in a file. The NAP safety system operates a closed loop: reports are aggregated and reviewed by the Standards Council's safety function, signals trigger review and, where warranted, revision of protocols and contraindications in the Standards Library, and updated guidance and alerts are pushed to all credentialed practitioners. This is the mechanism by which NAP gets safer over time rather than merely larger. The safety registry is designed to share the Outcome Registry's common dataset and identifiers, so that when both are operating, harms would be measured with the same rigor as benefits.
 
 ---
 
@@ -95,7 +95,7 @@ NAP does not certify products, but it does define the quality standard any produ
 
 ## 11. The Contamination Standard Exists for a Reason
 
-The natural products industry is a documented source of the very contaminants NAP works to remove — heavy metals, undisclosed adulterants, and inconsistent potency appear in commercial supplements with troubling frequency. A framework that reduces toxic burden cannot, in good conscience, deliver interventions that add to it. The quality floor is therefore not bureaucratic; it is clinical. A NAP protocol delivered through an untested product is not a NAP protocol.
+The natural products industry has been a documented source of the very contaminants NAP works to remove — heavy metals, undisclosed adulterants, and inconsistent potency have been reported in some commercial supplements. A framework whose central hypothesis is the reduction of cumulative toxic exposure cannot, in good conscience, deliver interventions that add to it. The quality floor is therefore not bureaucratic; it is clinical. A NAP protocol delivered through an untested product is not a NAP protocol.
 
 ## 12. Product Neutrality and Quality Together
 
@@ -105,7 +105,7 @@ NAP certifies the standard, not the brand. No product, manufacturer, or organiza
 
 # PART V. SCOPE OF THIS STANDARD
 
-These standards are the safety **floor** of NAP practice, not its ceiling. They are binding on every credentialed practitioner and accredited center, they are enforced through the credentialing and accreditation process governed by the Charter, and they are maintained and updated by the NAP Standards Council as evidence and experience accumulate. They integrate with the Clinical Assessment Framework, the Standards Library protocols, and the Outcome Registry, which together define how NAP is practiced, measured, and kept safe.
+These standards are the safety **floor** of NAP practice, not its ceiling. They are intended to bind everyone practicing within the NAP framework, and adherence will be a condition of the NAP credential and of center participation once those programs are established. They are maintained and updated by the NAP Standards Council, convened under the Charter, as evidence and experience accumulate. They integrate with the Clinical Assessment Framework, the Standards Library protocols, and the Outcome Registry, which together define how NAP is practiced, measured, and kept safe.
 
 A practitioner who honors the evidence but not the safety floor is not practicing NAP. Both are the standard.
 

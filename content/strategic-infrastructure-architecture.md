@@ -188,7 +188,7 @@ AI functions within the Knowledge Infrastructure include the following.
 
 ### AI Governance and Quality
 
-AI integration is governed by explicit standards that protect framework integrity. AI models are evaluated against accuracy benchmarks specific to the NAP framework before deployment. AI outputs undergo periodic audit by clinical experts to identify and correct error patterns. AI bias is actively monitored, particularly with respect to potential biases against specific traditions, populations, or clinical territories. AI training data is restricted to authorized NAP Knowledge Infrastructure content rather than including potentially compromised broader internet content. AI governance is ultimately under the authority of the NAP Standards Council with technical implementation overseen by qualified AI ethics and clinical decision support experts.
+AI integration is governed by explicit standards that protect framework integrity. AI models are evaluated against accuracy benchmarks specific to the NAP framework before deployment. AI outputs undergo periodic audit by clinical experts to identify and correct error patterns. AI bias is actively monitored, particularly with respect to potential biases against specific traditions, populations, or clinical territories. AI responses are grounded in authorized NAP Knowledge Infrastructure content rather than in potentially compromised broader internet content. AI governance is ultimately under the authority of the NAP Standards Council with technical implementation overseen by qualified AI ethics and clinical decision support experts.
 
 # PART II. THE PRACTITIONER PLATFORM
 
@@ -206,7 +206,7 @@ The Practitioner Platform is organized around the following core modules, each a
 
 The Patient Intake and Assessment module supports the standardized five component NAP Veteran Assessment Protocol established in The NAP Manifesto, applied to the broader population through appropriate adaptation. The module guides practitioners through structured intake covering comprehensive history, symptom and functional mapping, biomarker panel ordering and interpretation, pharmaceutical burden inventory, and lifestyle and environmental assessment.
 
-The module integrates with laboratory ordering systems where regulatory frameworks permit, with biomarker results auto populating into the patient's NAP assessment. Validated psychological and functional instruments are administered through the module with automatic scoring and documentation. The module produces the integrated diagnostic picture that maps the patient across the eight systems and seven dysfunction categories, providing the foundation for treatment planning.
+The module integrates with laboratory ordering systems where regulatory frameworks permit, with biomarker results auto populating into the patient's NAP assessment. Validated psychological and functional instruments are administered through the module with automatic scoring and documentation, subject to each instrument's licensing terms. The module produces the integrated diagnostic picture that maps the patient across the eight systems and seven dysfunction categories, providing the foundation for treatment planning.
 
 ### Treatment Planning and Protocol Customization
 
@@ -218,7 +218,7 @@ Treatment plans are explicitly multi cornerstone, including Cornerstone One terr
 
 The Ongoing Care Delivery module supports the day to day workflow of caring for active patients. The module provides patient progress tracking with biomarker trending, symptom progression, functional outcome measures, and patient reported outcomes. It supports follow up appointment scheduling and preparation, clinical communication with patients between appointments, coordination with conventional medical providers when concurrent care is occurring, and documentation of clinical decisions and rationale.
 
-The module includes appointment based clinical decision support that surfaces relevant Knowledge Infrastructure resources at the point of care. A practitioner reviewing a patient's progress on a thyroid restoration protocol can access updated clinical guidance, recent research, and peer practitioner case discussion within the workflow rather than navigating to separate reference systems.
+The module includes appointment based clinical decision support that surfaces relevant Knowledge Infrastructure resources at the point of care. A practitioner reviewing a patient's progress on a hormonal-system terrain protocol can access updated clinical guidance, recent research, and peer practitioner case discussion within the workflow rather than navigating to separate reference systems.
 
 ### Outcome Tracking and Reporting
 
@@ -240,11 +240,11 @@ The Platform supports rather than constrains practitioner clinical judgment. Whi
 
 ### Patient Privacy and Data Sovereignty
 
-The Platform operates under explicit patient privacy protections aligned with applicable jurisdictional regulations including HIPAA in the United States, GDPR in the European Union, and equivalent frameworks elsewhere. Patient data is owned by the patient with the practitioner serving as data steward. Data sharing for research purposes operates under explicit informed consent procedures. Patients can access, export, and request deletion of their data subject to legitimate clinical retention requirements.
+The Platform is designed to apply explicit patient privacy protections aligned with applicable jurisdictional regulations including HIPAA in the United States, GDPR in the European Union, and equivalent frameworks elsewhere. Patient data is owned by the patient with the practitioner serving as data steward. Data sharing for research purposes operates under explicit informed consent procedures. Patients can access, export, and request deletion of their data subject to legitimate clinical retention requirements.
 
 ### Interoperability and Standards
 
-The Platform operates under interoperability standards that enable connection with other healthcare information systems where appropriate. NAP assessment data can be exported to conventional electronic health records when patients receive integrated NAP and conventional care. Laboratory ordering integrates with major laboratory networks. Continuing education credits transfer to relevant credentialing bodies. These interoperability features prevent the Platform from becoming a walled garden that isolates NAP practice from broader healthcare.
+The Platform operates under interoperability standards that enable connection with other healthcare information systems where appropriate. NAP assessment data is intended to be exportable to conventional electronic health records when patients receive integrated NAP and conventional care. Laboratory ordering is planned to integrate with major laboratory networks. NAP will seek the accreditation needed for continuing education credits to transfer to relevant credentialing bodies. These interoperability features prevent the Platform from becoming a walled garden that isolates NAP practice from broader healthcare.
 
 ### Security and Resilience
 
@@ -298,11 +298,11 @@ Content is presented at multiple levels of medical literacy to serve populations
 
 ### Disability Accessibility
 
-The Patient Engagement Layer meets accessibility standards for users with visual, hearing, motor, and cognitive disabilities. Implementation includes screen reader compatibility, video captioning, alternative text for images, keyboard navigation support, and cognitive accessibility considerations in content presentation.
+The Patient Engagement Layer is being built to meet accessibility standards for users with visual, hearing, motor, and cognitive disabilities. Implementation includes screen reader compatibility, video captioning, alternative text for images, keyboard navigation support, and cognitive accessibility considerations in content presentation.
 
 ### Economic Accessibility
 
-Public access to the Patient Engagement Layer is free, supporting the public good commitment. Practitioner directory listings, educational content, and self assessment tools require no payment. This contrasts with the practitioner directories of some healthcare platforms that charge consumers for access. NAP's commitment is to free public access as a foundational expression of the public good positioning.
+Public access to the Patient Engagement Layer is free, supporting the public good commitment. Practitioner directory listings, educational content, and self assessment tools require no payment.  NAP's commitment is to free public access as a foundational expression of the public good positioning.
 
 # PART IV. RESEARCH AND OUTCOME DATA SYSTEM
 
@@ -310,7 +310,7 @@ Public access to the Patient Engagement Layer is free, supporting the public goo
 
 The Research and Outcome Data System is the infrastructure that aggregates clinical outcomes from accredited NAP Centers into the research base that validates, refines, and extends the NAP framework. It is the mechanism through which NAP becomes a learning healthcare system rather than a static set of standards.
 
-The strategic significance of the Research and Outcome Data System cannot be overstated. NAP's claims to clinical effectiveness will be validated or invalidated by the outcome data accumulating across credentialed practitioners delivering NAP protocols to real patients in real clinical settings. A NAP that does not systematically capture, analyze, and respond to outcome data is a NAP that cannot evolve based on what actually works. A NAP that does capture outcome data systematically becomes one of the largest integrative medicine research platforms in the world by virtue of accumulated clinical activity.
+The strategic significance of the Research and Outcome Data System cannot be overstated. NAP's claims to clinical effectiveness will be validated or invalidated by the outcome data accumulating across credentialed practitioners delivering NAP protocols to real patients in real clinical settings. A NAP that does not systematically capture, analyze, and respond to outcome data is a NAP that cannot evolve based on what actually works. A NAP that captures outcome data systematically could, over time, accumulate a substantial multi-site integrative medicine outcome dataset. That scale would be a consequence of network growth rather than a present capability, and the framework's claims to effectiveness remain untested until such data accumulates.
 
 ## 13. Outcome Data Architecture
 
@@ -346,7 +346,7 @@ Comparative effectiveness research compares NAP protocols to standard care for s
 
 ### Real World Evidence Generation
 
-The substantial volume of real world clinical data generated through NAP practice supports real world evidence generation that complements traditional randomized controlled trial evidence. Real world evidence is increasingly recognized by regulatory bodies including the FDA as legitimate evidence for clinical decisions when properly generated. NAP's outcome data infrastructure positions the framework to contribute substantially to integrative medicine evidence base through real world evidence generation.
+The substantial volume of real world clinical data generated through NAP practice supports real world evidence generation that complements traditional randomized controlled trial evidence. Real world evidence is increasingly accepted by regulatory bodies including the FDA for specific regulatory purposes when it is properly generated. NAP's outcome data infrastructure positions the framework to contribute substantially to integrative medicine evidence base through real world evidence generation.
 
 ### Academic Partnership
 
@@ -534,7 +534,7 @@ Where existing systems provide either fragmented natural medicine information or
 
 ### Credentialed Quality
 
-Where existing natural medicine practice operates with widely varying credentialing standards across different traditions and platforms, NAP provides the unified credential that signals consistent quality across the federated traditions. Patients seeking credentialed practitioners find NAP credentials more meaningful as quality signals than the fragmented credentials of separate traditions because NAP credentials operate under unified standards while respecting tradition autonomy.
+Where existing natural medicine practice operates with widely varying credentialing standards across different traditions and platforms, NAP provides the unified credential that signals consistent quality across the federated traditions. NAP credentials are designed to function as a clearer quality signal than the fragmented credentials of separate traditions, because they operate under unified standards while respecting tradition autonomy. Whether patients read them that way is an open question that NAP intends to test as the credential enters the field.
 
 ### Public Good Positioning
 
@@ -542,17 +542,17 @@ Where existing healthcare reference systems operate primarily as commercial subs
 
 ### Federated Tradition Respect
 
-Where existing integrative medicine frameworks frequently appropriate or absorb traditional medicine knowledge without appropriate respect for source traditions, NAP federates traditions explicitly with documented respect for tradition autonomy and indigenous knowledge sovereignty.
+NAP federates traditions explicitly rather than absorbing them, with documented respect for tradition autonomy and indigenous knowledge sovereignty.
 
 ### Evidence Stratification
 
-Where existing natural medicine references either overclaim evidence or fail to engage seriously with available research, NAP operates with explicit evidence stratification that distinguishes strong, moderate, emerging, and traditional evidence streams transparently. This stratification supports both rigorous practice and intellectual honesty about what is and is not yet established.
+NAP operates with explicit evidence stratification that distinguishes strong, moderate, emerging, and traditional evidence streams transparently. This stratification supports both rigorous practice and intellectual honesty about what is and is not yet established.
 
 ## 25. Regulatory Strategy
 
 ### Healthcare Information Privacy
 
-The Practitioner Platform and Patient Engagement Layer comply with healthcare information privacy regulations including HIPAA in the United States, GDPR in the European Union, and equivalent frameworks in other jurisdictions. Compliance is built into the architecture from the foundation rather than retrofitted later. Patient data sovereignty principles exceed regulatory minimums in protecting patient agency over personal health information.
+The Practitioner Platform and Patient Engagement Layer are being designed to meet healthcare information privacy requirements including HIPAA in the United States, GDPR in the European Union, and equivalent frameworks in other jurisdictions. Formal compliance assessment is a Foundation Phase deliverable completed before any patient data is entered. Compliance is built into the architecture from the foundation rather than retrofitted later. Patient data sovereignty principles exceed regulatory minimums in protecting patient agency over personal health information.
 
 ### Practitioner Scope of Practice
 
@@ -562,7 +562,7 @@ Where NAP develops standards or protocols that practitioners might wish to deliv
 
 ### Dietary Supplement and Nutraceutical Regulation
 
-NAP standards address dietary supplements and nutraceuticals within the regulatory frameworks of each jurisdiction. In the United States, this includes operation under the Dietary Supplement Health and Education Act of 1994 with appropriate respect for the regulatory distinctions between dietary supplements and pharmaceutical drugs. NAP standards do not characterize dietary supplements as drugs or claim to treat, prevent, or cure specific diseases through specific products in ways that exceed regulatory permissions. NAP does discuss the clinical mechanisms by which dietary patterns, nutraceuticals, and integrated protocols affect health, consistent with established regulatory frameworks for educational and clinical practice content. Medical Device and Decision Support Regulation As the Practitioner Platform develops AI assisted clinical decision support functions, the platform engages with applicable medical device and clinical decision support regulations. In the United States, this includes engagement with FDA frameworks for clinical decision support software. The Council's regulatory strategy operates conservatively, ensuring compliance with current regulations while engaging in the policy conversation about appropriate regulation of integrative medicine clinical decision support. International Operations As NAP expands internationally, the Council engages with regulatory frameworks of operating jurisdictions through partnership with local credentialing bodies, legal counsel familiar with each jurisdiction, and conservative approach to expansion that prioritizes compliance over speed. NAP operates as a global category but respects the regulatory authority of each jurisdiction over healthcare practice within its borders.
+NAP standards address dietary supplements and nutraceuticals within the regulatory frameworks of each jurisdiction. In the United States, this includes operation under the Dietary Supplement Health and Education Act of 1994 with appropriate respect for the regulatory distinctions between dietary supplements and pharmaceutical drugs. NAP standards do not characterize dietary supplements as drugs or claim to treat, prevent, or cure specific diseases through specific products in ways that exceed regulatory permissions. NAP discusses the clinical mechanisms by which dietary patterns, nutraceuticals, and integrated protocols affect biological function rather than their effect on named diseases. Medical Device and Decision Support Regulation As the Practitioner Platform develops AI assisted clinical decision support functions, the platform engages with applicable medical device and clinical decision support regulations. In the United States, this includes engagement with FDA frameworks for clinical decision support software. The Council's regulatory strategy operates conservatively, ensuring compliance with current regulations while engaging in the policy conversation about appropriate regulation of integrative medicine clinical decision support. International Operations As NAP expands internationally, the Council engages with regulatory frameworks of operating jurisdictions through partnership with local credentialing bodies, legal counsel familiar with each jurisdiction, and conservative approach to expansion that prioritizes compliance over speed. NAP operates as a global category but respects the regulatory authority of each jurisdiction over healthcare practice within its borders.
 
 # PART VIII. PHASED BUILD ROADMAP
 

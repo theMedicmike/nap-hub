@@ -35,12 +35,12 @@ The sequencing is not avoidance. It is the recognition that a founding-stage cat
 ## Addressed Now
 
 **1. The integrated cascade is not yet proven by NAP's own outcome data.**
-*Current position:* Each link in the cascade is documented in peer-reviewed research; the integrated cascade as a unified clinical hypothesis, and the comparative effectiveness of comprehensive NAP protocols, are not. NAP states this openly.
-*Status: Addressed now.* The NAP Outcome Registry and Evidence-Generation Framework establishes the proof engine, beginning at the founding pilot center. This is the category's first operational priority.
+*Current position:* The individual mechanistic links of the cascade are documented in peer-reviewed research to varying degrees; the integrated cascade as a unified clinical hypothesis, and the comparative effectiveness of comprehensive NAP protocols, are not. NAP states this openly.
+*Status: Addressed now.* The NAP Outcome Registry and Evidence-Generation Framework is designed to establish the proof engine, beginning at the founding pilot center. This is the category's first operational priority.
 
 **2. NAP uses some diagnostic tests that conventional science contests.**
 *Current position:* Certain tests used in integrative practice — notably hair tissue mineral analysis and provoked urine metal testing — lack validated reference standards and are contested.
-*Status: Addressed now.* The Evidence Compendium's Diagnostic Validity standard classifies every test by validity tier, requires that assessment lead with validated assays, and bars contested tests from ever standing alone. NAP gets ahead of the criticism by making it first.
+*Status: Addressed now.* The Evidence Compendium's Diagnostic Validity standard classifies tests by validity tier, requires that assessment lead with validated assays, and bars contested tests from ever standing alone. NAP gets ahead of the criticism by making it first.
 
 **3. The legal authority to practice NAP was not explicitly bounded.**
 *Current position:* Ordering and interpreting laboratory testing and de-prescribing are licensed medical acts. NAP must not appear to authorize the unlicensed practice of medicine.
@@ -57,7 +57,7 @@ The sequencing is not avoidance. It is the recognition that a founding-stage cat
 *Status: Positioned.* The Clinical Safety and Practice Standards establish the duty to report, the adverse-event registry design, herb–drug interaction surveillance, and the safety signal loop now. The full pharmacovigilance capability scales as the accredited network grows — there is no global system to operate until there is a network to monitor.
 
 **6. Product quality cannot yet be enforced across a supply chain NAP does not control.**
-*Current position:* Natural products are a documented source of the very contaminants NAP works to remove; a quality floor is therefore clinical, not optional.
+*Current position:* Natural products are a documented source of contaminants; a quality floor is therefore clinical, not optional.
 *Status: Positioned.* The product-quality and sourcing standard — identity, contaminant, potency, GMP, and third-party verification — is published now and is product-neutral. Enforcement deepens as accreditation and supplier relationships mature.
 
 ## On the Roadmap (sequenced to a later development phase)
@@ -67,7 +67,7 @@ The sequencing is not avoidance. It is the recognition that a founding-stage cat
 *Status: Roadmap — Expansion phase.* NAP will define an essential-NAP minimum-viable protocol, sliding-scale and access models, and adaptations for low-resource and global-south settings. This is deferred deliberately: an access model is built once a validated, affordable core protocol exists to make accessible.
 
 **8. The model is adult, individual, and treatment-focused; it lacks a prevention and next-generation arm.**
-*Current position:* The cascade is driven by environmental, food, and water exposures that treating one adult at a time cannot fix, and "the next generation" implies children, who are not yet served.
+*Current position:* The cascade is hypothesized to be driven by environmental, food, and water exposures that treating one adult at a time cannot fix, and "the next generation" implies children, who are not yet served.
 *Status: Roadmap — Integration phase.* NAP will develop a developmental-origins (prenatal, maternal, pediatric) arm and a population and environmental-policy layer that addresses toxic burden at its source. This is the largest expansion of the model and is correctly sequenced after the adult clinical model is proven and safe.
 
 **9. The model is built largely on the United States regulatory landscape.**
