@@ -101,7 +101,7 @@ export default function Home() {
           or help you add something new. Contributors join the founding members.
         </p>
         <div className="avatars">
-          <span className="av">MJ</span><span className="av">DR</span><span className="av">LK</span>
+          <span className="av" aria-hidden="true">+</span>
           <span className="av-note">the founding wall begins with you</span>
         </div>
         <Link className="btn btn-gold" href="/founders">Add your name to the founders →</Link>

@@ -10,6 +10,9 @@ export function Footer() {
         </div>
         <div className="disc">
           An open, early-stage framework offered for review and discussion — not medical advice.
+          These statements have not been evaluated by the Food and Drug Administration. Nothing here
+          is intended to diagnose, treat, cure, or prevent any disease. Always work with a licensed
+          clinician before making any change to your care or medication.
         </div>
       </div>
     </footer>

@@ -39,9 +39,14 @@ async function signOut(): Promise<void> {
 interface Ent { id: string; type: string; name: string; slug: string; plain_summary: string | null; ingredient_type: string | null; category: string | null; veteran_priority: boolean | null; publish_status: string | null }
 const selStyle = { border: ".5px solid #d9cdb2", borderRadius: 8, padding: "10px 12px", fontSize: 13.5, background: "#fff", color: "#14233B", fontFamily: "inherit" } as const;
 
+// "Evidence-graded" means the link carries a scientific tier that has been reviewed — NOT that it
+// is proven. The actual tier (Established / Studied / Emerging / Minimal) is shown on the detail
+// page. It used to read "Proven & graded", which was false for the Minimal and None tiers ("science
+// hasn't caught up" / "no solid research"). Links graded "none" are excluded from the graded set
+// upstream, so they no longer show green.
 function evidenceBadge(hasGraded: boolean) {
   return hasGraded
-    ? <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "3px 10px", borderRadius: 20, background: "#E1F0E6", color: "#2f6b45" }}>🟢 Proven &amp; graded</span>
+    ? <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "3px 10px", borderRadius: 20, background: "#E1F0E6", color: "#2f6b45" }}>🟢 Evidence-graded</span>
     : <span style={{ fontSize: 10, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 700, padding: "3px 10px", borderRadius: 20, background: "#F3EED9", color: "#7a6a45" }}>🟤 Traditional record</span>;
 }
 function vetBadge() {
@@ -91,12 +96,14 @@ export default async function Database({ searchParams }: { searchParams: Promise
     const [{ count: cCount }, { count: iCount }, { count: gCount }, { count: covCount }] = await Promise.all([
       sb.from("atlas_entities").select("*", { count: "exact", head: true }).eq("type", "condition"),
       sb.from("atlas_entities").select("*", { count: "exact", head: true }).eq("type", "ingredient"),
-      sb.from("atlas_links").select("*", { count: "exact", head: true }).not("scientific_tier", "is", null),
+      sb.from("atlas_links").select("*", { count: "exact", head: true }).not("scientific_tier", "is", null).neq("scientific_tier", "none"),
       sb.from("atlas_links").select("*", { count: "exact", head: true }).eq("status", "coverage"),
     ]);
     totalConditions = cCount ?? 0; totalIngredients = iCount ?? 0; gradedLinks = gCount ?? 0; coverageLinks = covCount ?? 0;
 
-    const { data: gd } = await sb.from("atlas_links").select("to_entity").not("scientific_tier", "is", null);
+    // A "none" tier means the evidence was reviewed and no support was found — it must NOT count as
+    // graded/green. Only tiers carrying actual signal (established/studied/emerging/minimal) do.
+    const { data: gd } = await sb.from("atlas_links").select("to_entity").not("scientific_tier", "is", null).neq("scientific_tier", "none");
     gradedCondIds = new Set((gd ?? []).map((r) => r.to_entity));
 
     const { data: allConds } = await sb.from("atlas_entities").select("category").eq("type", "condition");
@@ -144,7 +151,7 @@ export default async function Database({ searchParams }: { searchParams: Promise
       <section className="hero"><div className="hero-in"><div className="hero-copy">
         <div className="eyebrow">The NAP Database · Private preview</div>
         <h1>One database. Every plant, every condition.</h1>
-        <p>🟢 <strong style={{ color: "#fff" }}>Proven &amp; graded</strong> — real evidence, fact-checked, dual-axis scored. 🟤 <strong style={{ color: "#fff" }}>Traditional record</strong> — documented folk history, not a claim. Both live here, always clearly labeled.</p>
+        <p>🟢 <strong style={{ color: "#fff" }}>Evidence-graded</strong> — research reviewed and tier-scored (Established to Minimal), never called proven unless it is. 🟤 <strong style={{ color: "#fff" }}>Traditional record</strong> — documented folk history, not a claim. Both live here, always clearly labeled.</p>
         <div className="status" style={{ marginTop: 20 }}>
           <div><div className="k">Conditions</div><div className="v" style={{ color: "#C9A45A" }}>{totalConditions.toLocaleString()}</div></div>
           <div><div className="k">Ingredients &amp; plants</div><div className="v" style={{ color: "#C9A45A" }}>{totalIngredients.toLocaleString()}</div></div>
@@ -164,7 +171,7 @@ export default async function Database({ searchParams }: { searchParams: Promise
             </select>
             <select name="evidence" defaultValue={evidence} style={selStyle}>
               <option value="">Proven or traditional</option>
-              <option value="graded">🟢 Proven &amp; graded only</option>
+              <option value="graded">🟢 Evidence-graded only</option>
               <option value="traditional">🟤 Traditional record only</option>
             </select>
             <label style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#5b6472" }}>

@@ -189,7 +189,8 @@ export default async function IngredientPage({ params, searchParams }: { params:
           {/* graded connections */}
           {conns.length > 0 && (
             <div style={{ marginTop: 26 }}>
-              <div className="eyebrow-ink">🟢 Proven &amp; graded — {ent.type === "condition" ? "ingredients studied for this" : "what real evidence links it to"}</div>
+              <div className="eyebrow-ink">🟢 Evidence-graded — {ent.type === "condition" ? "ingredients studied for this" : "what research has been reviewed"}</div>
+              <div className="note" style={{ marginTop: 6, fontSize: 12 }}>&quot;Studied for&quot; means research has looked at this relationship — not that it is proven or FDA-approved. Not evaluated by the FDA; not intended to diagnose, treat, cure, or prevent any disease.</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 12 }}>
                 {conns.map((c) => {
                   const ss = sci(c.link.scientific_tier), ts = tradStyle(c.link.traditional_strength);
@@ -197,7 +198,7 @@ export default async function IngredientPage({ params, searchParams }: { params:
                   return (
                     <Link key={c.link.id} href={`/ingredient/${c.other.slug}`} style={{ display: "block", background: "#fff", border: "0.5px solid #e2d8c2", borderRadius: 10, padding: "13px 15px", textDecoration: "none" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-                        <span style={{ fontSize: 15.5, color: "#14233B" }}>{c.asIngredient ? "may help with " : "← "}<strong style={{ fontWeight: 600 }}>{c.other.name}</strong></span>
+                        <span style={{ fontSize: 15.5, color: "#14233B" }}>{c.asIngredient ? "studied for " : "← "}<strong style={{ fontWeight: 600 }}>{c.other.name}</strong></span>
                         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>{badge(ss.label, ss.bg, ss.color)}{badge(ts.label, ts.bg, ts.color)}</div>
                       </div>
                       <div style={{ color: "#5b6472", fontSize: 12.5, marginTop: 6 }}>{ss.plain}</div>
