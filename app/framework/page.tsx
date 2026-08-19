@@ -5,7 +5,7 @@ import { Category, CATEGORY_NAME, CATEGORY_DESC, docsByCategory } from "@/lib/ca
 
 export const metadata = {
   title: "The framework — NAP",
-  description: "The twelve founding documents of the NAP framework — open for review and shaping.",
+  description: "The founding documents of the NAP framework — open for review and shaping.",
 };
 
 const ORDER: Category[] = ["core", "governance", "clinical", "integrity"];
@@ -18,7 +18,7 @@ export default function Framework() {
         <div className="hero-in">
           <div className="hero-copy">
             <div className="eyebrow">The framework</div>
-            <h1>The twelve founding documents.</h1>
+            <h1>The founding documents.</h1>
             <p>
               This is the full canon — formed enough to examine, unfinished enough to need you. Read any
               document, then suggest a change or add something new. Every accepted contribution is credited to

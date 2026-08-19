@@ -10,6 +10,11 @@ export interface DocMeta {
   title: string;
   category: Category;
   desc: string;
+  // "draft" = pulled from public view pending an accuracy rebuild. A draft document is not listed,
+  // not rendered (a "being revised" notice shows instead), and not narrated. The Aug 2026 audit
+  // flagged the three "core" documents below for fabricated citations, mis-cited sources, and
+  // disease/treatment claims; they stay draft until rebuilt on verified sources. Default: published.
+  status?: "published" | "draft";
 }
 
 export const CATEGORY_NAME: Record<Category, string> = {
@@ -28,9 +33,9 @@ export const CATEGORY_DESC: Record<Category, string> = {
 
 export const DOCS: DocMeta[] = [
   { slug: "executive-brief", num: "01", title: "NAP Executive Brief", category: "core", desc: "The essential argument in five minutes." },
-  { slug: "manifesto", num: "02", title: "NAP Manifesto", category: "core", desc: "Why terrain-first care is the logical next step." },
-  { slug: "evidence-compendium", num: "03", title: "NAP Evidence Compendium", category: "core", desc: "The science, with proven and unproven marked." },
-  { slug: "modalities-compendium", num: "04", title: "NAP Modalities Compendium", category: "core", desc: "The clinical tools, by domain, with evidence tiers." },
+  { slug: "manifesto", num: "02", title: "NAP Manifesto", category: "core", desc: "Why terrain-first care is the logical next step.", status: "draft" },
+  { slug: "evidence-compendium", num: "03", title: "NAP Evidence Compendium", category: "core", desc: "The science, with proven and unproven marked.", status: "draft" },
+  { slug: "modalities-compendium", num: "04", title: "NAP Modalities Compendium", category: "core", desc: "The clinical tools, by domain, with evidence tiers.", status: "draft" },
   { slug: "standards-council-charter", num: "05", title: "NAP Standards Council Charter", category: "governance", desc: "The governing body, and how it stays independent." },
   { slug: "strategic-infrastructure-architecture", num: "06", title: "NAP Strategic Infrastructure Architecture", category: "governance", desc: "The phased build, from pilot to federation." },
   { slug: "coalition-outreach-playbook", num: "07", title: "NAP Coalition Outreach Playbook", category: "governance", desc: "How to introduce NAP to each audience." },
@@ -41,12 +46,20 @@ export const DOCS: DocMeta[] = [
   { slug: "known-limitations-and-roadmap", num: "12", title: "NAP Known Limitations and Roadmap", category: "integrity", desc: "An honest ledger of what is not yet done." },
 ];
 
+export function isDraft(d: DocMeta): boolean {
+  return d.status === "draft";
+}
+
+// Documents safe to list, link, prerender, and narrate. Excludes anything pulled to draft.
+export const PUBLISHED_DOCS: DocMeta[] = DOCS.filter((d) => !isDraft(d));
+
 export function getDoc(slug: string): DocMeta | undefined {
   return DOCS.find((d) => d.slug === slug);
 }
 
+// Only published documents are listed on the framework index.
 export function docsByCategory(category: Category): DocMeta[] {
-  return DOCS.filter((d) => d.category === category);
+  return DOCS.filter((d) => d.category === category && !isDraft(d));
 }
 
 export function getDocHtml(slug: string): string {

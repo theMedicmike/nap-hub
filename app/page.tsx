@@ -65,10 +65,10 @@ export default function Home() {
       <section className="sec sec-ivory2">
         <div className="wrap">
           <div className="eyebrow-ink">The framework</div>
-          <h2 className="serif" style={{ margin: "10px 0 4px" }}>Twelve founding documents. A starting point, not a finish line.</h2>
+          <h2 className="serif" style={{ margin: "10px 0 4px" }}>The founding documents. A starting point, not a finish line.</h2>
           <p className="lead">The system is formed enough to examine — and unfinished enough to need you. Everything here is open to revision.</p>
           <div className="grid g4">
-            <Link className="card" href="/framework#core"><div className="cat">Core framework</div><h3>The thesis</h3><p>The manifesto, the evidence, and the modalities.</p></Link>
+            <Link className="card" href="/framework#core"><div className="cat">Core framework</div><h3>The thesis</h3><p>What NAP is, and the case for terrain-first care.</p></Link>
             <Link className="card" href="/framework#governance"><div className="cat">Governance &amp; build</div><h3>How it&apos;s governed</h3><p>The council, the architecture, and the coalition.</p></Link>
             <Link className="card" href="/framework#clinical"><div className="cat">Clinical application</div><h3>At the bedside</h3><p>Where the framework meets a real patient.</p></Link>
             <Link className="card" href="/framework#integrity"><div className="cat">Integrity &amp; proof</div><h3>Honest limits</h3><p>Safety, outcomes, and what we haven&apos;t proven yet.</p></Link>
