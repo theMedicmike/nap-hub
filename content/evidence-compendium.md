@@ -723,7 +723,7 @@ The following is a consolidated list of primary sources cited in this Evidence C
 
 ## Convergence of Medical Disciplines
 
-- Lake J (2015). The integrative management of PTSD. Mental Health Clinician.
+- Lake J (2015). The integrative management of PTSD: A review of conventional and CAM approaches used to prevent and treat PTSD with emphasis on military personnel. Advances in Integrative Medicine.
 - Lianov L, Johnson M (2010). Physician competencies for prescribing lifestyle medicine. JAMA.
 - Barab\xE1si AL, et al. (2011). Network medicine. Nature Reviews Genetics.
 - Hood L, et al. (2013). Systems biology and P4 medicine. Rambam Maimonides Medical Journal.

@@ -24,9 +24,9 @@ It is offered in the same spirit as every NAP document: as a public good, eviden
 
 ## 1. The Veteran Health Crisis
 
-The United States has more than eighteen million living veterans, and it is losing them to chronic, multi system decline that the dominant medical paradigm has not reversed.
+The United States has nearly eighteen million living veterans, and it is losing them to chronic, multi system decline that the dominant medical paradigm has not reversed.
 
-The most visible measure is suicide. The Department of Veterans Affairs documented 6,407 veteran suicides in 2022, an average of roughly 17.6 per day, and suicide is the second leading cause of death among veterans under the age of 45 (VA, 2024 National Veteran Suicide Prevention Annual Report). These deaths have not declined despite a generation of expanded screening, increased prescribing, and significant investment.
+The most visible measure is suicide. The Department of Veterans Affairs documented 6,398 veteran suicides in 2023, an average of roughly 17.5 per day, and suicide is the second leading cause of death among veterans under the age of 45 (VA, 2025 National Veteran Suicide Prevention Annual Report). These deaths have not declined despite a generation of expanded screening, increased prescribing, and significant investment.
 
 The less visible measures point to the same underlying reality. Chronic pain is substantially more prevalent among veterans than nonveterans — 31.5 percent versus 20.1 percent among adults overall, and 27.1 percent versus 9.4 percent among adults aged 20 to 34 (CDC/NCHS, National Health Interview Survey 2019). Post-traumatic stress, traumatic brain injury, sleep disorders, and substance use disorder occur at higher rates among veterans than in the age- and sex-matched civilian population, and frequently co-occur in the same patient. Cost follows the same pattern: within the VA system, patients with three or more chronic conditions represent roughly a third of patients but account for roughly two thirds of total cost (Yoon et al., Medical Care, 2014).
 
@@ -215,7 +215,7 @@ This document follows the evidence discipline of the NAP Evidence Compendium. Th
 
 ## Verified Sources
 
-- Veteran suicide — 6,407 in 2022; ~17.6 per day; second leading cause of death in veterans under 45. **VA, 2024 National Veteran Suicide Prevention Annual Report.** ✅
+- Veteran suicide — 6,398 in 2023; ~17.5 per day; second leading cause of death in veterans under 45. **VA, 2025 National Veteran Suicide Prevention Annual Report.** ✅
 - Veteran chronic pain — 31.5% vs 20.1% (adults ≥20); 27.1% vs 9.4% (ages 20-34). **CDC/NCHS, MMWR QuickStats, National Health Interview Survey 2019.** ✅
 - VA cost concentration — patients with 3+ chronic conditions ≈ one third of patients but ≈ 65-67% of total VA cost. **Yoon et al., _Medical Care_, 2014.** ✅
 - Camp Lejeune / TCE and Parkinson's — ~70% higher risk vs an uncontaminated base. **Goldman et al., _JAMA Neurology_, 2023.** ✅
