@@ -132,7 +132,7 @@ Subject: Founding Coalition Invitation - Nutraceutical Assisted Programs Categor
 
 I am writing to invite the [Institution Name] to participate in the founding coalition of a new globally independent clinical category that may align meaningfully with [Center Name]'s ongoing work.
 
-My name is Michael Andrew Feller Jones. I am a certified Ayurvedic practitioner with over twenty five years in the healing arts and the founder of the Nutraceutical Assisted Programs (NAP) category, which establishes the unified clinical framework for natural medicine globally.
+My name is Michael Andrew Feller Jones. I am a certified holistic wellness practitioner with over twenty five years in the healing arts and the founder of the Nutraceutical Assisted Programs (NAP) category, which establishes the unified clinical framework for natural medicine globally.
 
 NAP is the federation of the natural medicine traditions, including the integrative medicine practices that [Center Name] has developed, under shared standards, credentialing, evidence architecture, and research infrastructure. NAP does not absorb or replace existing tradition specific practices and credentials. It adds the unified layer that allows the federated traditions to function together as a coherent global clinical category for the first time.
 
@@ -174,9 +174,9 @@ The National Ayurvedic Medical Association is the primary professional organizat
 
 The NAMACB was established by NAMA to develop, administer, and maintain certification examinations and certification standards for the Ayurvedic profession. NAMACB has launched the Ayurvedic Health Counselor exam, the Ayurvedic Practitioner exam, and is developing the Certified Advanced Ayurvedic Practitioner certification (formerly Ayurvedic Doctor).
 
-Strategic Significance: NAMA and NAMACB together represent the formal credentialing infrastructure for Ayurveda in the United States. As the Founder personally holds Ayurvedic credentialing, the relationship to NAMA and NAMACB is both strategic and personal. NAMA's federation with NAP positions Ayurveda as a foundational tradition within the unified framework with appropriate respect for Ayurvedic credentialing autonomy.
+Strategic Significance: NAMA and NAMACB together represent the formal credentialing infrastructure for Ayurveda in the United States. NAMA's federation with NAP would position Ayurveda as a foundational tradition within the unified framework with appropriate respect for Ayurvedic credentialing autonomy.
 
-Engagement Approach: Direct engagement through NAMA and NAMACB leadership with explicit positioning of NAP as adding unified framework leverage to Ayurvedic practitioners while respecting the sovereignty of NAMACB credentialing. The conversation includes recognition that the Founder is himself credentialed within the Ayurvedic tradition and operates within the broader Ayurvedic community.
+Engagement Approach: Direct engagement through NAMA and NAMACB leadership with explicit positioning of NAP as adding unified framework leverage to Ayurvedic practitioners while respecting the sovereignty of NAMACB credentialing.
 
 ### National Consortium of Ayurveda Medicine (NCAM)
 
@@ -268,7 +268,7 @@ Subject: Federation Partnership Invitation - Nutraceutical Assisted Programs Cat
 
 I am writing to invite [Body Name] to consider a federation partnership with a new globally independent clinical category called Nutraceutical Assisted Programs, or NAP.
 
-My name is Michael Andrew Feller Jones. I am a certified [tradition specific] practitioner with over twenty five years in the healing arts. I write to you with deep respect for [Body Name]'s decades of work establishing rigorous credentialing and professional standards for [tradition name].
+My name is Michael Andrew Feller Jones. I am a certified holistic wellness practitioner with over twenty five years in the healing arts. I write to you with deep respect for [Body Name]'s decades of work establishing rigorous credentialing and professional standards for [tradition name].
 
 NAP is the federation framework for natural medicine globally. Its founding principle is that traditional medicine credentialing bodies retain full authority over their tradition's credentialing, terminology, and clinical autonomy within the unified NAP framework. NAP does not absorb [tradition name]. It adds a unified layer above [tradition name] that allows [tradition specific] practitioners to gain shared standards, outcome data infrastructure, and unified policy voice while their primary credentialing remains under [Body Name]'s authority.
 
