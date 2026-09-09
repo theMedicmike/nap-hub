@@ -182,7 +182,7 @@ Individual mechanisms are cited and graded in the NAP Evidence Compendium using 
 
 ## 17. Safety, Contraindications, and Scope of Practice
 
-- This protocol is delivered only by a credentialed NAP practitioner holding the Veteran Health Specialty, working within scope and in coordination with the patient's medical and mental health providers.
+- This protocol is designed to be delivered only by a NAP practitioner trained in the Veteran Health Specialty, working within scope and in coordination with the patient's medical and mental health providers.
 - Crisis stabilization supersedes restoration at every point.
 - Toxic-burden mobilization follows the cardinal safety rule (Phase Four) without exception.
 - De-prescribing is prescriber-authorized and supervised.

@@ -141,9 +141,9 @@ Mixture toxicity revisited: A translational review of experimental evidence (202
 
 [MODERATE] Long term exposure to chlorinated industrial solvents is associated with elevated risk of neurodegenerative disease decades after exposure. A large retrospective cohort study of a population exposed to trichloroethylene in contaminated drinking water found an approximately seventy percent higher risk of Parkinson's disease relative to an unexposed comparison population. Trichloroethylene is a volatile organic solvent with widespread historical industrial, occupational, and environmental use, and its association with parkinsonism is supported both by this cohort evidence and by experimental models of mitochondrial and dopaminergic injury. *CALIBRATION: this is a retrospective cohort association in a specifically exposed population, not a controlled trial. It establishes solvent exposure as a credible, latent contributor to neurodegenerative risk decades after exposure, and it supports the framework's emphasis on lifetime exposure history as a clinical variable.*
 
-Goldman SM, et al. (2023). Trichloroethylene exposure and Parkinson's disease risk in a contaminated water cohort. JAMA Neurology.
+Goldman SM, et al. (2023). Risk of Parkinson Disease Among Service Members at Marine Corps Base Camp Lejeune. JAMA Neurology.
 
-[STRONG] Per- and polyfluoroalkyl substances persist in the body and the environment, and authoritative regulatory bodies now recognize no established safe exposure threshold. PFAS are a class of thousands of synthetic compounds, often called forever chemicals, that resist environmental and metabolic breakdown and bioaccumulate across the lifespan. In 2024 the United States Environmental Protection Agency finalized the first enforceable national drinking water limits for several PFAS at four parts per trillion, while setting the non enforceable public health goal at zero, a formal regulatory acknowledgment that for these compounds no level of exposure is established as safe. PFAS exposure is associated in the peer reviewed literature with immune, lipid, thyroid, hepatic, and renal effects and with certain cancers. This is the clearest contemporary example of a persistent synthetic exposure whose body burden cannot be assumed to have a safe threshold, directly supporting the framework's emphasis on cumulative toxic burden reduction.
+[STRONG] Per- and polyfluoroalkyl substances persist in the body and the environment, and authoritative regulatory bodies now recognize no established safe exposure threshold. PFAS are a class of thousands of synthetic compounds, often called forever chemicals, that resist environmental and metabolic breakdown and bioaccumulate across the lifespan. In 2024 the United States Environmental Protection Agency finalized the first enforceable national drinking water limits for PFAS, setting a maximum contaminant level of four parts per trillion for PFOA and PFOS while setting the non enforceable public health goal for those two compounds at zero, a formal regulatory acknowledgment that for these compounds no level of exposure is established as safe. PFAS exposure is associated in the peer reviewed literature with immune, lipid, thyroid, hepatic, and renal effects and with certain cancers. This is the clearest contemporary example of a persistent synthetic exposure whose body burden cannot be assumed to have a safe threshold, directly supporting the framework's emphasis on cumulative toxic burden reduction.
 
 U.S. Environmental Protection Agency (2024). PFAS National Primary Drinking Water Regulation. First enforceable national limits, four parts per trillion PFOA and PFOS; maximum contaminant level goal set at zero.
 
@@ -630,7 +630,7 @@ The following is a consolidated list of primary sources cited in this Evidence C
 - Mixture toxicity revisited: A translational review (2025). Toxicology.
 - Cumulative Risk Assessment: An Overview (2012). PMC3315252.
 - Cumulative Health Risk from Exposure Load (CHREL) (2024). PubMed PMID 39341379.
-- Goldman SM, et al. (2023). Trichloroethylene exposure and Parkinson's disease risk in a contaminated water cohort. JAMA Neurology.
+- Goldman SM, et al. (2023). Risk of Parkinson Disease Among Service Members at Marine Corps Base Camp Lejeune. JAMA Neurology.
 - U.S. Environmental Protection Agency (2024). PFAS National Primary Drinking Water Regulation (first enforceable national limits; MCLG = 0).
 - International Agency for Research on Cancer. Benzene. IARC Monographs (Group 1 carcinogen). American Cancer Society, Benzene and cancer risk.
 
@@ -748,7 +748,7 @@ Sources marked *(format at publication)* are landmark references whose final cit
 
 **Detoxification and Environmental Toxin Burden**
 
-- Goldman SM, et al. (2023). Trichloroethylene exposure and Parkinson's disease risk in a contaminated water cohort. JAMA Neurology.
+- Goldman SM, et al. (2023). Risk of Parkinson Disease Among Service Members at Marine Corps Base Camp Lejeune. JAMA Neurology.
 - U.S. Environmental Protection Agency (2024). PFAS National Primary Drinking Water Regulation (first enforceable national limits; MCLG = 0).
 - International Agency for Research on Cancer. Benzene (Group 1 carcinogen). IARC Monographs; American Cancer Society.
 
@@ -781,4 +781,4 @@ Sources marked *(format at publication)* are landmark references whose final cit
 
 - U.S. Department of Veterans Affairs. Whole Health system and complementary and integrative health modalities.
 
-Representative reviews cited in territory and finalized at publication: adult neuroplasticity (Territory Seven); inflammaging (Territory Eight); skeletal muscle myokine biology (Territory Ten).
+Representative review topics identified for citation in territory, with references to be finalized before publication: adult neuroplasticity (Territory Seven); inflammaging (Territory Eight); skeletal muscle myokine biology (Territory Ten).

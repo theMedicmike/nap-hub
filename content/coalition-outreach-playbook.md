@@ -194,11 +194,11 @@ Engagement Approach: Indian institutional engagement is appropriate during Expan
 
 ### Traditional Chinese Medicine
 
-National Certification Commission for Acupuncture and Oriental Medicine (NCCAOM) The NCCAOM is the primary national certification body for acupuncture and Oriental medicine practice in the United States. NCCAOM certification is recognized for licensure by 46 states plus the District of Columbia, representing approximately 98% of states regulating acupuncture practice. NCCAOM administers four examinations covering Foundations of Oriental Medicine, Acupuncture with Point Location, Chinese Herbology, and Biomedicine.
+National Certification Board for Acupuncture and Herbal Medicine (NCBAHM), formerly the National Certification Commission for Acupuncture and Oriental Medicine. The NCBAHM is the primary national certification body for acupuncture and herbal medicine practice in the United States. NCBAHM certification is recognized for licensure by 46 states plus the District of Columbia, representing approximately 98% of states regulating acupuncture practice. The board administers examinations covering Foundations of Oriental Medicine, Acupuncture with Point Location, Chinese Herbology, and Biomedicine.
 
-Strategic Significance: NCCAOM holds the credentialing infrastructure for TCM practice in the United States. NCCAOM certification or successful completion of NCCAOM examinations is documentation of competency for licensure across nearly all regulating states. NCCAOM federation with NAP positions TCM as a foundational tradition within the unified framework with appropriate respect for NCCAOM credentialing authority.
+Strategic Significance: NCBAHM holds the credentialing infrastructure for TCM practice in the United States. NCBAHM certification or successful completion of NCBAHM examinations is documentation of competency for licensure across nearly all regulating states. NCBAHM federation with NAP positions TCM as a foundational tradition within the unified framework with appropriate respect for NCBAHM credentialing authority.
 
-Engagement Approach: Direct engagement through NCCAOM leadership with positioning of NAP as adding framework leverage to NCCAOM certified practitioners while respecting NCCAOM's authority over TCM credentialing. The conversation emphasizes that NAP credentials are in addition to NCCAOM credentials, never in replacement, and that NAP standards are designed to interoperate with NCCAOM standards rather than override them.
+Engagement Approach: Direct engagement through NCBAHM leadership with positioning of NAP as adding framework leverage to NCBAHM certified practitioners while respecting NCBAHM's authority over TCM credentialing. The conversation emphasizes that NAP credentials are in addition to NCBAHM credentials, never in replacement, and that NAP standards are designed to interoperate with NCBAHM standards rather than override them.
 
 National Certification Board for Acupuncture and Herbal Medicine (NCBAHM)  Both organizations are addressed in NAP coalition outreach to ensure broad TCM community engagement.
 
@@ -324,9 +324,9 @@ Professional networks and integrative medicine organizations represent the estab
 
 The ACIMH organizes more than 75 academic medical centers and health systems engaged in integrative medicine. ACIMH membership criteria include accredited academic health centers, hospitals, health systems, osteopathic medical centers, and nursing schools with active integrative medicine programs in at least two of the three areas: Education, Research, and Clinical Care. Strategic Significance: ACIMH is the gateway organization for academic integrative medicine engagement. Partnership relationship with ACIMH creates efficient pathway to engagement with member institutions. ACIMH conferences and Grand Rounds webinars provide platforms for NAP framework presentation to substantial portions of the academic integrative medicine community simultaneously. Engagement Approach: Direct engagement with ACIMH leadership through formal channels, with focus on potential NAP presentation at ACIMH conferences, NAP framework integration into ACIMH educational resources, and NAP outcome data infrastructure availability for ACIMH member institution research.
 
-### International Society for Complementary Medicine Research (ISCMR)
+### International Society for Traditional, Complementary & Integrative Medicine Research (ISCMR)
 
-ISCMR is the international professional association for researchers in complementary, alternative, and integrative medicine. ISCMR engagement extends NAP's research credibility internationally and creates research partnership opportunities.
+ISCMR is the international professional association for researchers in traditional, complementary, and integrative medicine. ISCMR engagement extends NAP's research credibility internationally and creates research partnership opportunities.
 
 ### American Holistic Health Association (AHHA)
 
@@ -442,7 +442,7 @@ Year One outreach operates with deliberate sequencing that builds momentum acros
 
 ### Months 4-6: Foundation Expansion
 
-· Outreach extended to Andrew Weil Center, Duke Integrative Medicine, Mayo Clinic Integrative Medicine · TCM credentialing engagement (NCCAOM, NCBAHM) · Initial AANP and naturopathic credentialing engagement · Founding capital relationships expand to additional foundations and investors · Founding Standards Council membership invitations issued and accepted
+· Outreach extended to Andrew Weil Center, Duke Integrative Medicine, Mayo Clinic Integrative Medicine · TCM credentialing engagement (NCBAHM) · Initial AANP and naturopathic credentialing engagement · Founding capital relationships expand to additional foundations and investors · Founding Standards Council membership invitations issued and accepted
 
 ### Months 7-9: Coalition Activation
 
