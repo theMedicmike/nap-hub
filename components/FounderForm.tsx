@@ -22,7 +22,7 @@ export function FounderForm() {
   }
 
   if (status === "done") {
-    return <p style={{ color: "var(--ivory-soft)", marginTop: 20 }}>Thank you — your name is recorded for review. Welcome to the founders.</p>;
+    return <p style={{ color: "var(--ivory-soft)", marginTop: 20 }}>Thank you — your name has been added. Welcome to the founders.</p>;
   }
 
   return (
@@ -34,7 +34,7 @@ export function FounderForm() {
       </button>
       {status === "error" && (
         <p style={{ color: "var(--ivory-faint)", fontSize: 12, width: "100%", marginTop: 8 }}>
-          Storage isn&apos;t connected yet — once Supabase is linked, sign-ons are saved for review.
+          That didn&apos;t save. Please try again in a moment.
         </p>
       )}
     </form>

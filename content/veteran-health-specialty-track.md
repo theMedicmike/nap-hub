@@ -122,7 +122,7 @@ This specialty is not a separate framework. It is the Manifesto's framework, wit
 | Essential fatty acid depletion | Neurological; Immune/Inflammatory; Cardiovascular | Inflammatory Cascade
 | Pharmaceutical iatrogenesis | Detox/Elimination; Hormonal; Energetic | (compounds all of the above)
 
-A NAP practitioner credentialed in the Veteran Health Specialty assesses every veteran across all eight universal systems, exactly as in general NAP practice — but enters the assessment already knowing which systems the veteran's exposure history makes most likely to be involved.
+A clinician applying the Veteran Health Specialty would assess every veteran across all eight universal systems, exactly as in general NAP practice — but enters the assessment already knowing which systems the veteran's exposure history makes most likely to be involved.
 
 ---
 
@@ -174,7 +174,7 @@ Veterans At Ease is a program of Operation Whole Health, a 501(c)(3) nonprofit, 
 
 ## 14. Operation Whole Health — The Founding Pilot Center
 
-**Operation Whole Health serves as the founding pilot center of the Veteran Health Specialty** — the first site at which the assessment protocol, the four cornerstones, and the outcome measurement framework are deployed, instrumented, and improved. As an accredited NAP center of this specialty, it is the reference environment where the Standards Library protocols for veterans are tested against real outcomes and fed back into the category's evidence base.
+**Operation Whole Health is the intended founding pilot site for the Veteran Health Specialty** — the first place the assessment protocol, the four cornerstones, and the outcome measurement framework would be deployed, instrumented, and improved. No NAP center recognition program exists, and Operation Whole Health holds no NAP designation of any kind. If the pilot proceeds, it is where the veteran protocols would first be tested against real outcomes.
 
 Operation Whole Health is a registered 501(c)(3) nonprofit, and Veterans At Ease is one of its programs. Neither is a personal commercial holding of the founder. This structure strengthens rather than complicates NAP's independence: the founding pilot of the category's first specialty is a charitable, mission driven nonprofit, not a private business. The founder's affiliation with Operation Whole Health is disclosed in full, consistent with the Charter's transparency provisions, and any commercial product used within the program remains outside the scope of this standards document, consistent with NAP's product neutrality. Operation Whole Health and Veterans At Ease are identified as the first deployed application and founding pilot of this specialty because that is the factual record — and the category grants no organization preferential standing within the NAP framework.
 
@@ -199,9 +199,9 @@ This specialty earns its standing through evidence, and it states its open quest
 - Validate the five component Veteran Assessment Protocol as a clinical instrument against functional outcomes.
 - Test cascade sequenced terrain restoration against standard care in controlled veteran cohorts.
 - Confirm the essential fatty acid / suicide risk association in prospective, interventional designs.
-- Quantify outcomes and cost across accredited centers using the standardized outcome framework.
+- Quantify outcomes and cost across participating sites using the standardized outcome framework.
 
-The natural federal and academic partners are the **National Center for Complementary and Integrative Health (NCCIH)**, the VA's **War Related Illness and Injury Study Center (WRIISC)**, the **Department of Defense Congressionally Directed Medical Research Programs (CDMRP)**, and the academic integrative medicine centers identified in the NAP Coalition Outreach Playbook. NAP brings them an organized, credentialed, standards based veteran population in which to generate the evidence — the unified interface the fragmented integrative sector has never previously offered.
+The natural federal and academic partners are the **National Center for Complementary and Integrative Health (NCCIH)**, the VA's **War Related Illness and Injury Study Center (WRIISC)**, the **Department of Defense Congressionally Directed Medical Research Programs (CDMRP)**, and the academic integrative medicine centers identified in the NAP Coalition Outreach Playbook. NAP aims to bring them a defined veteran cohort, assessed under a written, pre-specified protocol, in which to generate the evidence — the unified interface the fragmented integrative sector has never previously offered.
 
 ---
 

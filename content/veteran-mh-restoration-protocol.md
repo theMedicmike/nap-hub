@@ -14,7 +14,7 @@ _Nutraceutical Assisted Programs_
 
 This is the first complete protocol published to the NAP Standards Library, and it is offered as the **reference exemplar** of what every NAP protocol looks like: a forensic assessment, a terrain-first phased restoration sequence, condition-specific intervention, somatic and spiritual integration, community reintegration, defined outcome measurement, and explicit safety governance — all interoperating with conventional care.
 
-It is written at the **standards level**. It specifies the clinical logic, the sequence, the intervention *classes*, the clinical targets, the outcome instruments, and the safety rules. It does **not** specify proprietary formulations or fixed doses. Agent selection, dosing, and titration are individualized by the credentialed NAP practitioner for the specific patient, within the safety boundaries defined here. This is a clinical framework, not a prescription, and not medical advice.
+It is written at the **standards level**. It specifies the clinical logic, the sequence, the intervention *classes*, the clinical targets, the outcome instruments, and the safety rules. It does **not** specify proprietary formulations or fixed doses. Agent selection, dosing, and titration are individualized by the treating licensed clinician for the specific patient, within the safety boundaries defined here. This is a clinical framework, not a prescription, and not medical advice.
 
 It is also a **mental health** protocol for a population at elevated risk of suicide. Crisis safety governs everything that follows. A veteran in crisis is stabilized first; restoration proceeds second.
 

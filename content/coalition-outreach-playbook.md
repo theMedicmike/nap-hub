@@ -1,5 +1,7 @@
 # The NAP Coalition Outreach Playbook
 
+> **Status of this document (draft, October 2026):** This is a founding outreach plan, not a record of partnerships; no coalition partner has yet signed on. NAP issues no credential, accredits or recognizes no center, charges no fees, and takes no investors. The investor sections and any credential or accreditation offers below are superseded by this note; NAP approaches philanthropic foundations and grant funders only.
+
 _THE NAP COALITION_
 
 **OUTREACH PLAYBOOK**
@@ -148,7 +150,7 @@ With respect for [Institution Name]'s substantial contributions to integrative m
 
 ### Founder, Nutraceutical Assisted Programs Category
 
-### Inaugural Chair, NAP Standards Council
+### Chair (designate), NAP Standards Council (in formation)
 
 ### Follow-Up and Relationship Development
 
@@ -560,5 +562,5 @@ This Coalition Outreach Playbook provides the strategic framework through which 
 
 ### Founder, Nutraceutical Assisted Programs Category
 
-Inaugural Chair, NAP Standards Council
+Chair (designate), NAP Standards Council (in formation)
 

@@ -36,19 +36,19 @@ The sequencing is not avoidance. It is the recognition that a founding-stage cat
 
 **1. The integrated cascade is not yet proven by NAP's own outcome data.**
 *Current position:* The individual mechanistic links of the cascade are documented in peer-reviewed research to varying degrees; the integrated cascade as a unified clinical hypothesis, and the comparative effectiveness of comprehensive NAP protocols, are not. NAP states this openly.
-*Status: Addressed now.* The NAP Outcome Registry and Evidence-Generation Framework is designed to establish the proof engine, beginning at the founding pilot center. This is the category's first operational priority.
+*Status: Named and designed — not yet done.* The NAP Outcome Registry and Evidence-Generation Framework is designed to establish the proof engine, beginning at the founding pilot center. This is the category's first operational priority.
 
 **2. NAP uses some diagnostic tests that conventional science contests.**
 *Current position:* Certain tests used in integrative practice — notably hair tissue mineral analysis and provoked urine metal testing — lack validated reference standards and are contested.
-*Status: Addressed now.* The Evidence Compendium's Diagnostic Validity standard classifies tests by validity tier, requires that assessment lead with validated assays, and bars contested tests from ever standing alone. NAP gets ahead of the criticism by making it first.
+*Status: Named and designed — not yet done.* The Evidence Compendium's Diagnostic Validity standard classifies tests by validity tier, requires that assessment lead with validated assays, and bars contested tests from ever standing alone. NAP gets ahead of the criticism by making it first.
 
 **3. The legal authority to practice NAP was not explicitly bounded.**
 *Current position:* Ordering and interpreting laboratory testing and de-prescribing are licensed medical acts. NAP must not appear to authorize the unlicensed practice of medicine.
-*Status: Addressed now.* The NAP Clinical Safety and Practice Standards make a primary clinical license a hard requirement, establish that scope follows that license, and confine de-prescribing to the supervising prescriber.
+*Status: Named and designed — not yet done.* The NAP Clinical Safety and Practice Standards make a primary clinical license a hard requirement, establish that scope follows that license, and confine de-prescribing to the supervising prescriber.
 
 **4. The boundary with acute and emergency care was not stated as a universal rule.**
 *Current position:* Terrain-first care is for chronic, multifactorial conditions and must never delay care for acute or dangerous presentations.
-*Status: Addressed now.* The Clinical Safety and Practice Standards establish a universal red-flag rule and an explicit acute-care boundary, binding on every practitioner.
+*Status: Named and designed — not yet done.* The Clinical Safety and Practice Standards establish a universal red-flag rule and an explicit acute-care boundary, binding on every practitioner.
 
 ## Positioned (stance set; full system scales with the category)
 
@@ -91,4 +91,4 @@ These items map to the phased build roadmap defined in the Strategic Infrastruct
 
 A category of medicine is not trusted because it claims to be complete. It is trusted because it knows, precisely and without flinching, what it is not yet — and because it has a credible, sequenced plan to close the distance. This document is that knowledge and that plan, stated openly.
 
-The gaps named here are real. They are also, every one of them, addressed now, positioned, or scheduled. That is the difference between a framework with weaknesses and a framework with a roadmap. NAP is the second.
+The gaps named here are real. Every one of them is named here with a plan — designed, positioned, or scheduled — and none is yet solved. That is the difference between a framework with weaknesses and a framework with a roadmap. NAP is the second.

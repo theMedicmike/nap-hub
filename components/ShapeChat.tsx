@@ -15,7 +15,7 @@ export function ShapeChat() {
   useEffect(() => {
     const welcome = docCtx
       ? `You’re proposing a change to the "${docCtx.replace(/-/g, " ")}" document. Tell me your idea in your own words — I’ll check it against the framework and help you shape it into a clear contribution.`
-      : "Welcome. Bring an idea, a question, or a critique about the NAP framework. I’ll show you where it already lives in the canon, or help you shape something new — and route it to the founders for review. What’s on your mind?";
+      : "Welcome. Bring an idea, a question, or a critique about the NAP framework. I’ll help you sharpen it into a clear proposal. I can’t search the framework documents yet, and nothing here is saved — so copy anything you want to keep. What’s on your mind?";
     setMessages([{ role: "assistant", content: welcome }]);
   }, [docCtx]);
 
@@ -46,7 +46,7 @@ export function ShapeChat() {
         {
           role: "assistant",
           content:
-            "The guide isn’t connected to its knowledge base in this preview yet — that goes live once the Claude API key is added and the site is deployed. Your idea has been captured. Want it credited to you? Add your name on the Founders page.",
+            "The guide couldn’t respond just now, and your message was not saved. Please copy your idea and try again in a moment.",
         },
       ]);
     } finally {

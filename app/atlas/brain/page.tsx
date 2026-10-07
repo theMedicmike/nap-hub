@@ -66,7 +66,7 @@ export default async function Database({ searchParams }: { searchParams: Promise
         <section className="hero"><div className="hero-in"><div className="hero-copy">
           <div className="eyebrow">The NAP Database · Private preview</div>
           <h1>One database. Every plant, every condition.</h1>
-          <p>Graded, evidence-checked ingredients and a 13,000-plant traditional record, side by side — always clearly labeled which is which. Enter the view key to explore.</p>
+          <p>Graded ingredients (review in progress) and a 13,000-plant traditional record, side by side — always clearly labeled which is which. Enter the view key to explore.</p>
           {sp?.bad && <div className="note" style={{ borderLeftColor: "#a33", color: "#8a3a2a" }}>That key didn&apos;t match. Try again.</div>}
           <form action={signIn} style={{ marginTop: 18, display: "flex", gap: 10, maxWidth: 420, flexWrap: "wrap" }}>
             <input name="key" type="password" placeholder="View key" autoComplete="off" style={{ flex: 1, minWidth: 180, border: ".5px solid #d9cdb2", borderRadius: 8, padding: "11px 13px", fontSize: 14, background: "#fff" }} />
@@ -151,7 +151,7 @@ export default async function Database({ searchParams }: { searchParams: Promise
       <section className="hero"><div className="hero-in"><div className="hero-copy">
         <div className="eyebrow">The NAP Database · Private preview</div>
         <h1>One database. Every plant, every condition.</h1>
-        <p>🟢 <strong style={{ color: "#fff" }}>Evidence-graded</strong> — research reviewed and tier-scored (Established to Minimal), never called proven unless it is. 🟤 <strong style={{ color: "#fff" }}>Traditional record</strong> — documented folk history, not a claim. Both live here, always clearly labeled.</p>
+        <p>🟢 <strong style={{ color: "#fff" }}>Evidence-graded</strong> — research graded in-house and tier-scored (Established to Minimal) — not yet independently reviewed, and never called proven. 🟤 <strong style={{ color: "#fff" }}>Traditional record</strong> — documented folk history, not a claim. Both live here, always clearly labeled.</p>
         <div className="status" style={{ marginTop: 20 }}>
           <div><div className="k">Conditions</div><div className="v" style={{ color: "#C9A45A" }}>{totalConditions.toLocaleString()}</div></div>
           <div><div className="k">Ingredients &amp; plants</div><div className="v" style={{ color: "#C9A45A" }}>{totalIngredients.toLocaleString()}</div></div>
@@ -170,7 +170,7 @@ export default async function Database({ searchParams }: { searchParams: Promise
               {CATEGORIES.map((c) => <option key={c} value={c}>{c} ({catCounts.get(c) || 0})</option>)}
             </select>
             <select name="evidence" defaultValue={evidence} style={selStyle}>
-              <option value="">Proven or traditional</option>
+              <option value="">All</option>
               <option value="graded">🟢 Evidence-graded only</option>
               <option value="traditional">🟤 Traditional record only</option>
             </select>

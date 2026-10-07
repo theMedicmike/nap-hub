@@ -38,7 +38,7 @@ export default async function Founders() {
           <div className="hero-copy">
             <div className="eyebrow">The founders</div>
             <h1>Built by many hands. Yours can be one of them.</h1>
-            <p>NAP is a prototype for a shared standard. The people who examine it, challenge it, and improve it are its founders — and they&apos;re named for it. This is how a framework earns the trust to become real.</p>
+            <p>NAP is a draft framework — a standard in formation that no one has adopted yet. The people who examine it, challenge it, and improve it are its founders — and they&apos;re named for it. This is how a framework earns the trust to become real.</p>
           </div>
         </div>
       </section>
@@ -50,9 +50,9 @@ export default async function Founders() {
           <div className="tiers">
             <div className="tier"><div className="tname">Founding Signatory</div><div className="tdesc">You&apos;ve added your name in support of the framework and its mission. The public record of who stood here at the beginning.</div></div>
             <div className="tier"><div className="tname">Contributor</div><div className="tdesc">You brought an idea that was reviewed and accepted into the framework. Your name appears on the principle you shaped.</div></div>
-            <div className="tier"><div className="tname">Architect</div><div className="tdesc">You made a major, sustained contribution to the canon. Reserved for the few who help build whole sections of the standard.</div></div>
+            <div className="tier"><div className="tname">Architect</div><div className="tdesc">You made a major, sustained contribution to the canon. Reserved for the few who help build whole sections of the framework.</div></div>
           </div>
-          <div className="note" style={{ marginTop: 22 }}>A real bar, on purpose. You join the wall after a verified endorsement or an accepted contribution — never just an email. A small wall of real builders is worth more than a long list of names.</div>
+          <div className="note" style={{ marginTop: 22 }}>Signatories appear on the wall when they sign; we remove anything that isn&apos;t a real person. No contribution has been accepted yet, so no one holds the Contributor or Architect tier today.</div>
         </div>
       </section>
 
@@ -61,7 +61,6 @@ export default async function Founders() {
           <div className="eyebrow-ink">The founding wall</div>
           <h2 className="serif" style={{ margin: "10px 0 14px" }}>It begins here.</h2>
           <div className="wall">
-            <div className="wav">MJ</div>
             {founders.map((f, i) => (
               <div key={i} className="wav" title={f.display_name ?? undefined}>{initials(f.display_name)}</div>
             ))}

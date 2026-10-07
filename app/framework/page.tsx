@@ -52,7 +52,7 @@ export default function Framework() {
 
       <section className="join">
         <h2>See something missing, or something to sharpen?</h2>
-        <p>Bring it to the guide. It will show you where your idea already lives in the canon, or help you shape something new.</p>
+        <p>Bring it to the guide. It will help you sharpen it into a clear proposal.</p>
         <Link className="btn btn-gold" href="/shape" style={{ marginTop: 18 }}>Open Shape It →</Link>
       </section>
       <Footer />

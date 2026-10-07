@@ -1,5 +1,7 @@
 # The NAP Strategic Infrastructure Architecture
 
+> **Status of this document (draft, October 2026):** This is a founding design, not a description of anything operating. NAP issues no credential, accredits or recognizes no center, charges no fees, licenses no platform, and takes no investors; the revenue streams and credential and center programs described below are superseded by this note. NAP is funded by philanthropy and grants only.
+
 _THE NAP_
 
 **STRATEGIC INFRASTRUCTURE**
@@ -10,7 +12,7 @@ _THE NAP_
 **Authored by**
 **Michael Andrew Feller Jones**
 **Founder, Nutraceutical Assisted Programs Category**
-**Inaugural Chair, NAP Standards Council**
+**Chair (designate), NAP Standards Council (in formation)**
 
 ---
 
@@ -626,4 +628,4 @@ This Strategic Infrastructure Architecture is the operational blueprint that tra
 
 ### Founder, Nutraceutical Assisted Programs Category
 
-Inaugural Chair, NAP Standards Council
+Chair (designate), NAP Standards Council (in formation)

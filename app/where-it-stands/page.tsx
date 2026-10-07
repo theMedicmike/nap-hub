@@ -36,12 +36,12 @@ export default function WhereItStands() {
         <div className="wrap" style={{ maxWidth: 760 }}>
           <div className="doc">
             <h2 style={{ border: "none", paddingTop: 0 }}>What exists today</h2>
-            <p>A complete founding library of twelve documents — the philosophy, the supporting science, the governance, the clinical application, and an honest accounting of the limits. A clinical pilot study has been fully designed, with validated instruments and a pre-specified analysis plan, ready for review.</p>
+            <p>A complete founding library of twelve documents — the philosophy, the supporting science, the governance, the clinical application, and an honest accounting of the limits. A clinical pilot protocol has been drafted, using validated instruments and a pre-specified analysis plan. It is not yet registered, and no participants have been enrolled.</p>
             <h2>What does not exist yet</h2>
-            <p>Outcome data of our own. The integrated framework is a hypothesis built on established science — each link supported in the peer-reviewed literature — but the combined effect, delivered as a complete program, has not yet been measured. We say this plainly everywhere, because it is the truth, and because a framework that names this honestly is one worth trusting to close the gap.</p>
+            <p>Outcome data of our own. The integrated framework is a hypothesis assembled from individually studied mechanisms. So far NAP has graded 184 ingredient–condition links (4 established, 87 studied, 59 emerging, 31 minimal, 3 with no support found). That grading was done in-house and has not yet been reviewed by an independent clinician, pharmacist, or regulatory attorney. The combined effect, delivered as a complete program, has not yet been measured. We say this plainly everywhere, because it is the truth, and because a framework that names this honestly is one worth trusting to close the gap.</p>
             <h2>What comes next</h2>
             <p>Run the first pilot and report its results — favorable or not. Open the framework to the contributors and clinicians who can strengthen it. Build the outcome registry that turns practice into published evidence. None of this is a claim that NAP is proven. It is a claim that NAP is worth building, in the open, with many hands.</p>
-            <blockquote>This is not something we are trying to push into law or onto doctors. It is the beginning of a prototype for a shared standard in natural health care — offered for review, and built to be shaped.</blockquote>
+            <blockquote>This is not something we are trying to push into law or onto doctors. It is a draft framework for natural health care — a standard in formation, adopted by no one yet, offered for review, and built to be shaped.</blockquote>
           </div>
         </div>
       </section>

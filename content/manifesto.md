@@ -1,12 +1,11 @@
 # The NAP Manifesto
 
+> **Status of this document (draft, October 2026):** This is a founding argument offered for review. Nothing it describes as an institution is operating yet. NAP issues no credential, accredits or recognizes no center, charges no fees, and takes no investors; passages describing credential tiers, training programs, accredited centers, fees, or for-profit operations are superseded by this note.
+
 _Nutraceutical Assisted Programs_
 
-**The Foundational Paradigm of Twenty First Century Medicine**
-**A Global Independent Category**
-**A Founding Document**
-**Establishing the Universal Framework for**
-**Nutraceutical and Natural Medicine Worldwide**
+**A terrain-first framework for natural health care — a draft offered for review**
+**A Founding Document (draft)**
 **Michael Andrew Feller Jones**
 **Founder, Nutraceutical Assisted Programs Category**
 
@@ -24,7 +23,7 @@ For over a century, Western medicine has operated on a single dominant paradigm.
 
 NAP does not reject that paradigm. NAP completes it.
 
-> "Nutraceutical Assisted Programs are the natural, terrain first paradigm of medicine. Pharmaceutical interventions are situational tools within that paradigm, used when clinically necessary, never as the default. NAP is the unifying global framework for natural medicine across every tradition, every condition, and every population."
+> "Nutraceutical Assisted Programs proposes a natural, terrain-first framework in which pharmaceutical care is used alongside, not instead of, natural approaches whenever it is clinically necessary. Whether an integrated restorative program improves outcomes is a hypothesis NAP is designed to test; it is not yet established."
 
 This manifesto is the constitutional text of the NAP movement. It defines what NAP is, what it is not, how it is organized, how it is practiced, how it is measured, how it integrates with existing medical systems, and how it will become the foundational standard of care for the twenty first century. It does so as a global independent document, unaligned with any company, any political agenda, any single nation, or any single tradition of medicine. NAP exists to serve every human being who would benefit from a more complete, more humane, more rigorous, and more effective approach to health than the dominant pharmaceutical model alone provides.
 
@@ -74,7 +73,7 @@ NAP operates on the principle that every clinical encounter should begin with a 
 
 ## 4. Formal Definition
 
-Nutraceutical Assisted Programs, abbreviated NAP, refers to the codified clinical paradigm in which nutraceuticals, botanical medicines, mineral and nutrient repletion strategies, essential fatty acid restoration, hormonal balancing through natural means, neurological regeneration support, foundational systems repair, terrain restoration practices, somatic and contemplative integration modalities, environmental medicine, and lifestyle intervention are organized, administered, and measured as the foundational layer of medical care. NAP is practiced by credentialed NAP practitioners, delivered through accredited NAP centers, measured by standardized NAP outcome instruments, and governed by a NAP standards council that operates as a multi stakeholder international body.
+Nutraceutical Assisted Programs, abbreviated NAP, refers to the codified clinical paradigm in which nutraceuticals, botanical medicines, mineral and nutrient repletion strategies, essential fatty acid restoration, hormonal balancing through natural means, neurological regeneration support, foundational systems repair, terrain restoration practices, somatic and contemplative integration modalities, environmental medicine, and lifestyle intervention are organized, administered, and measured as the foundational layer of medical care. NAP is designed to be applied by licensed clinicians, measured with standardized outcome instruments, and governed by a NAP standards council that is still in formation. NAP issues no credential and accredits no center.
 
 A NAP intervention is distinguished from general wellness recommendations and from unsystematized integrative practice by seven defining features.
 
@@ -543,9 +542,9 @@ To every person who has been told that the best they can expect is a rotating cy
 
 To every elected official, regulatory leader, healthcare administrator, and policy expert across the populated world, the invitation is to engage with NAP as the organized, accountable, standards based clinical category you have not previously had available to regulate and integrate. The natural medicine sector has long frustrated regulators because of its fragmentation. NAP provides the unified interface. The category publishes its protocols. It credentials its practitioners. It accredits its centers. It measures its outcomes. It engages regulators in good faith. Your policy work can now address a coherent international category rather than a thousand disconnected practices.
 
-## 62. To Investors and Philanthropists
+## 62. To Philanthropists
 
-To every mission aligned investor, impact fund, family office, and philanthropic foundation across the populated world, the invitation is to participate in the capitalization of a category at the moment of its founding. The financial architecture of NAP combines public good infrastructure, for profit operational scale, and federated research and standards governance. The category's first decade requires capital for practitioner training programs, center accreditation infrastructure, research partnerships, legislative advocacy, and public education across multiple regions. Early capital commitments from mission aligned partners will establish the institutional foundation that determines the category's long term character.
+To every philanthropic foundation and grant funder who shares this mission, the invitation is to help NAP do the one thing that would make it real: generate honest, independently reviewed evidence of whether terrain-first care helps people, beginning with veterans. NAP is a nonprofit public good. It seeks no investors, offers no return, and charges no fees for credentials or recognition, because it issues none.
 
 # PART XII. THE FOUNDER'S DECLARATION
 
@@ -577,7 +576,7 @@ Signed,
 
 **Michael Andrew Feller Jones**
 Founder, Nutraceutical Assisted Programs Category
-Inaugural Chair, NAP Standards Council
+Chair (designate), NAP Standards Council (in formation)
 
 # APPENDIX A. GLOSSARY OF KEY TERMS
 
@@ -606,10 +605,10 @@ The NAP clinical methodology that begins with comprehensive terrain assessment r
 The NAP relationship to existing natural medicine traditions. NAP federates rather than absorbs. Each tradition retains its credentialing, terminology, and clinical autonomy while interoperating within the unified NAP framework.
 
 **NAP Practitioner**
-A credentialed clinician qualified to deliver NAP protocols, with tiered certifications at the Foundational, Advanced, and Master levels and optional specialty credentials in defined clinical territories.
+A licensed clinician who chooses to apply the NAP framework. NAP issues no credential, certification, or tier; a practitioner's statement that they follow NAP is a claim, not a credential.
 
 **NAP Center**
-A clinical facility accredited by the NAP Standards Council to deliver NAP protocols, with tiered accreditation at the Associate, Full, and Center of Excellence levels.
+A clinical facility that chooses to apply the NAP framework. NAP accredits, recognizes, and endorses no center.
 
 **NAP Standards Council**
 The multi stakeholder international governing body responsible for maintenance of protocol standards, oversight of credentialing and accreditation, direction of research, engagement with regulators, and stewardship of the category's intellectual integrity.

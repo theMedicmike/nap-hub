@@ -35,7 +35,7 @@ De-prescribing â€” the structured reduction or discontinuation of a medication â
 
 ## 3. Jurisdictional Compliance
 
-NAP is designed for use across many legal systems, and medicine is regulated locally. Every NAP practitioner and center is required, as a condition of participation, to practice in full compliance with the laws of their jurisdiction. Where local law is more restrictive than this standard, local law governs. The responsibility to practice lawfully rests with the practitioner. NAP does not provide legal advice, and no NAP standard should be read as a determination that a given practice is lawful in a given jurisdiction. NAP accreditation is contingent on lawful practice and is withdrawn where it is absent.
+NAP is designed for use across many legal systems, and medicine is regulated locally. Anyone applying the NAP framework is expected to practice in full compliance with the laws of their jurisdiction. Where local law is more restrictive than this standard, local law governs. The responsibility to practice lawfully rests with the practitioner. NAP does not provide legal advice, and no NAP standard should be read as a determination that a given practice is lawful in a given jurisdiction. NAP issues no accreditation; a practice that is not lawful has no basis to claim it follows NAP, where it is absent.
 
 ---
 
@@ -77,7 +77,7 @@ Because NAP patients may take pharmaceuticals alongside botanical and nutraceuti
 
 ## 9. The Safety Signal Loop
 
-Adverse-event data does not sit in a file. The NAP safety system operates a closed loop: reports are aggregated and reviewed by the Standards Council's safety function, signals trigger review and, where warranted, revision of protocols and contraindications in the Standards Library, and updated guidance and alerts are pushed to all credentialed practitioners. This is the mechanism by which NAP gets safer over time rather than merely larger. The safety registry is designed to share the Outcome Registry's common dataset and identifiers, so that when both are operating, harms would be measured with the same rigor as benefits.
+Adverse-event data must not sit in a file. The NAP safety system is designed as a closed loop, not yet operating: reports would be aggregated and reviewed by the Standards Council's safety function, signals would trigger review and, where warranted, revision of protocols and contraindications in the Standards Library, and updated guidance and alerts would be published for everyone applying the framework. This is the mechanism by which NAP gets safer over time rather than merely larger. The safety registry is designed to share the Outcome Registry's common dataset and identifiers, so that when both are operating, harms would be measured with the same rigor as benefits.
 
 ---
 

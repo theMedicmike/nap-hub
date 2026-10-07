@@ -1,5 +1,7 @@
 # The NAP Modalities Compendium
 
+> **Status of this document (draft, October 2026):** Where this document refers to NAP-credentialed practitioners or accredited centers, read "a licensed clinician applying the framework." NAP issues no credential and accredits no center.
+
 _THE NAP_
 
 **MODALITIES COMPENDIUM**
@@ -10,7 +12,7 @@ _THE NAP_
 **Authored by**
 **Michael Andrew Feller Jones**
 **Founder, Nutraceutical Assisted Programs Category**
-**Inaugural Chair, NAP Standards Council**
+**Chair (designate), NAP Standards Council (in formation)**
 
 ---
 
@@ -646,5 +648,5 @@ This Modalities Compendium provides comprehensive coverage of the natural medici
 
 ### Founder, Nutraceutical Assisted Programs Category
 
-Inaugural Chair, NAP Standards Council
+Chair (designate), NAP Standards Council (in formation)
 

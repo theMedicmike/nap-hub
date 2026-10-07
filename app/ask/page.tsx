@@ -127,7 +127,7 @@ export default function Ask() {
       setMessages((m) => [...m, { role: "assistant", content: reply }]);
       void speak(reply);
     } catch {
-      setMessages((m) => [...m, { role: "assistant", content: "The guide isn't connected to its knowledge yet in this preview — that goes live once the Claude key is set. Check back shortly." }]);
+      setMessages((m) => [...m, { role: "assistant", content: "The guide couldn't answer just now. Please try again in a moment. In an emergency call 911; for thoughts of suicide or crisis, call or text 988 (veterans press 1)." }]);
     } finally {
       setBusy(false);
     }
@@ -201,7 +201,7 @@ export default function Ask() {
 
         <p style={{ color: "var(--slate)", fontSize: 12.5, marginTop: 14 }}>
           {micSupported
-            ? "Tap the microphone and speak; the guide answers out loud in the NAP Practitioner's voice. "
+            ? "Tap the microphone and speak; the guide answers out loud. "
             : "Voice input works best in Chrome, Edge, or Safari. "}
           In an emergency call 911. For thoughts of suicide or crisis, call or text 988 (veterans press 1).
         </p>

@@ -14,7 +14,7 @@ export default function Home() {
             <div className="eyebrow">An open framework · offered for review</div>
             <h1>A new foundation for natural health care — and an invitation to help build it.</h1>
             <p>
-              NAP is an early-stage framework for treating the root causes of chronic illness, not only its
+              NAP is an early-stage framework for understanding and addressing the upstream drivers of chronic illness, not only its
               symptoms. It isn&apos;t finished, and it isn&apos;t trying to become law or doctrine. It&apos;s a
               beginning — offered openly so the right minds can examine it, challenge it, and shape it.
             </p>
@@ -35,12 +35,12 @@ export default function Home() {
       <section className="sec sec-ivory">
         <div className="wrap">
           <div className="eyebrow-ink">The idea</div>
-          <h2 className="serif" style={{ margin: "10px 0 4px" }}>Treat the terrain, not just the symptom.</h2>
+          <h2 className="serif" style={{ margin: "10px 0 4px" }}>Look at the terrain, not just the symptom.</h2>
           <p className="lead">
             Chronic illness rarely has a single cause. NAP looks upstream — at the accumulated toxic burden,
-            nutritional gaps, hormonal disruption, and inflammation that drive disease — and asks what it would
-            take to restore the body&apos;s foundation. Every claim is sourced. What&apos;s proven is marked
-            proven; what&apos;s still a question is marked a question.
+            nutritional gaps, hormonal disruption, and inflammation that sit beneath chronic illness — and asks what it would
+            take to restore the body&apos;s foundation. Every claim is graded by how strongly the research supports it —
+            established, studied, emerging, minimal, or none — and what&apos;s still a question is marked a question.
           </p>
           <div className="grid g3" style={{ marginTop: 8 }}>
             <div className="card" style={{ cursor: "default" }}>
@@ -50,13 +50,13 @@ export default function Home() {
             </div>
             <div className="card" style={{ cursor: "default" }}>
               <div className="cat">Honest</div>
-              <h3>Proven vs. proposed</h3>
+              <h3>Graded vs. proposed</h3>
               <p>A framework that names its own limits is one you can actually trust.</p>
             </div>
             <div className="card" style={{ cursor: "default" }}>
               <div className="cat">Open</div>
               <h3>Built by many hands</h3>
-              <p>This is a prototype for a shared standard — and you&apos;re invited to shape it.</p>
+              <p>A draft framework — a standard in formation, adopted by no one yet — and you&apos;re invited to shape it.</p>
             </div>
           </div>
         </div>
@@ -97,8 +97,8 @@ export default function Home() {
       <section className="join">
         <h2>This is the beginning. Help shape it.</h2>
         <p>
-          Bring an idea and our guide will help you sharpen it, show you where it already lives in the framework,
-          or help you add something new. Contributors join the founding members.
+          Bring an idea and our guide will help you sharpen it into a clear proposal. The framework changes
+          only by hand, by a person, and every accepted change is credited to whoever brought it.
         </p>
         <div className="avatars">
           <span className="av" aria-hidden="true">+</span>

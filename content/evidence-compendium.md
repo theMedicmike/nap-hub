@@ -1,13 +1,13 @@
 # The NAP Evidence Compendium
 
-_The Universal Peer Reviewed Research Foundation of_
+_The Research Foundation (draft) of_
 
 **Nutraceutical Assisted Programs**
 **Companion Document to The NAP Manifesto**
 **A Living Research Reference for the Global Category**
 **Michael Andrew Feller Jones**
 **Founder, Nutraceutical Assisted Programs Category**
-**Inaugural Chair, NAP Standards Council**
+**Chair (designate), NAP Standards Council (in formation)**
 
 ---
 
@@ -33,7 +33,7 @@ The NAP framework is strongest when it is honest about the limits of current evi
 
 The integrated cascade architecture, in which all eight biological systems and all seven dysfunction categories interact as a unified clinical system in any individual patient, is supported by the individual links between systems and dysfunctions but has not been comprehensively tested as a unified clinical hypothesis in large prospective trials. This is acknowledged as a research priority for the NAP Standards Council.
 
-The clinical effectiveness of comprehensive multi-domain NAP protocols compared to single intervention approaches is supported by emerging integrative medicine research but lacks the volume of large randomized controlled trials that characterizes pharmaceutical intervention research. Prospective NAP outcome data collection across accredited centers is the priority research program for establishing this evidence base.
+The clinical effectiveness of comprehensive multi-domain NAP protocols compared to single intervention approaches is supported by emerging integrative medicine research but lacks the volume of large randomized controlled trials that characterizes pharmaceutical intervention research. Prospective NAP outcome data collection, across participating sites once any exist, is the priority research program for establishing this evidence base.
 
 Specific botanical and nutraceutical protocols for specific clinical conditions vary in evidence strength from well established to emerging to traditional knowledge based. The condition specific protocols in the NAP Standards Library will be supported by their own evidence appendices that classify each component by evidence strength, allowing transparent practitioner and patient understanding of the foundation for each clinical recommendation.
 

@@ -1,5 +1,7 @@
 # The NAP Standards Council Founding Charter
 
+> **Status of this document (draft, October 2026):** The Council described here is in formation; it has no seated members and has not been ratified. NAP issues no credential, accredits or recognizes no center, charges no fees, and takes no investors. Where any passage below describes credentials, accreditation, fees, or investment, it is superseded by this note.
+
 _THE NAP_
 
 **STANDARDS COUNCIL**
@@ -11,7 +13,7 @@ _THE NAP_
 **Authored by**
 **Michael Andrew Feller Jones**
 **Founder, Nutraceutical Assisted Programs Category**
-**Inaugural Chair, NAP Standards Council**
+**Chair (designate), NAP Standards Council (in formation)**
 
 ---
 
@@ -53,7 +55,7 @@ The Council is established with the intent to be incorporated as an independent 
 
 ## Section 1.3 Mission
 
-The mission of the Council is to develop and publish open practice standards for nutraceutical approaches as adjuncts within licensed clinical care. This stewardship encompasses the establishment and maintenance of clinical protocol standards, the credentialing of NAP practitioners, the accreditation of NAP centers, the integrity of the NAP knowledge infrastructure, the direction of the NAP research agenda, the engagement with regulators and policymakers across multiple jurisdictions, and the protection of NAP's intellectual independence against commercial, political, ideological, or geographic capture.
+The mission of the Council is to develop and publish open practice standards for nutraceutical approaches as adjuncts within licensed clinical care. This stewardship encompasses the establishment and maintenance of clinical protocol standards, the integrity of the NAP knowledge infrastructure, the direction of the NAP research agenda, the engagement with regulators and policymakers across multiple jurisdictions, and the protection of NAP's intellectual independence against commercial, political, ideological, or geographic capture.
 
 ## Section 1.4 Vision
 
@@ -72,11 +74,11 @@ The Council holds and exercises the following authorities on behalf of the NAP c
 1. Maintenance of the NAP Standards Library, including the establishment, periodic review, and revision of clinical protocol standards across all clinical territories within the NAP framework.
 2. Publication of open, non-credentialing educational standards describing the knowledge base NAP practice draws on. The Council issues no credential, no certificate of competency, and no continuing-education credit, and does not represent that any practitioner meets any standard. A practitioner's statement that they follow NAP standards is a claim, not a credential.
 3. Publication of voluntary, self-attested facility practice standards. The Council does not accredit, inspect, approve, or endorse any facility, issues no seal or tier, and maintains no registry of approved centers. Listed is not endorsed.
-4. Direction of the NAP research agenda, including identification of research priorities, oversight of outcome data collection across accredited centers, partnership with academic and clinical research institutions, and validation of the framework's foundational claims.
+4. Direction of the NAP research agenda, including identification of research priorities, oversight of outcome data collection across participating sites, partnership with academic and clinical research institutions, and validation of the framework's foundational claims.
 5. Stewardship of the NAP Evidence Compendium and supporting evidence appendices, including periodic review, updates as new research emerges, and maintenance of evidence classification standards.
 6. Engagement with regulatory bodies, governmental agencies, and policymakers across jurisdictions to advocate for appropriate recognition and integration of NAP within national and regional healthcare frameworks.
-7. Adjudication of ethics complaints against credentialed practitioners and accredited centers, including the establishment of due process procedures and the imposition of sanctions including credential revocation where warranted.
-8. Protection of the NAP name, the NAP credential designations, and the NAP center accreditation designations against misuse, dilution, or misappropriation.
+7. Handling of ethics complaints about misuse of the NAP name or misrepresentation of the framework, including due process procedures. Because NAP issues no credential and accredits no center, there is nothing to revoke; the remedy is a public correction.
+8. Protection of the NAP name against misuse, including any claim that NAP has credentialed, certified, accredited, or endorsed a person or facility.
 9. Publication of an Annual Report documenting Council activities, financial position, outcome data aggregations, governance changes, and strategic direction for the coming year.
 
 ## Section 2.2 Limits of Authority
@@ -258,7 +260,7 @@ Responsible for oversight of the NAP Center accreditation program, including rev
 
 ### Research Committee
 
-Responsible for direction of the NAP research agenda, oversight of outcome data collection across accredited centers, partnership with academic and clinical research institutions, periodic review of the NAP Evidence Compendium, and identification of research priorities. The Research Committee operates with substantial input from academic researchers and from clinical outcome data.
+Responsible for direction of the NAP research agenda, oversight of outcome data collection across participating sites, partnership with academic and clinical research institutions, periodic review of the NAP Evidence Compendium, and identification of research priorities. The Research Committee operates with substantial input from academic researchers and from clinical outcome data.
 
 ### Ethics and Conflict Committee
 
@@ -485,7 +487,7 @@ By adoption of this Charter, the Founding Membership establishes the NAP Standar
 
 # ADOPTION AND SIGNATURE
 
-By adoption of this Charter on the date below, the Founder of the Nutraceutical Assisted Programs Category establishes the NAP Standards Council and commits to operating under the provisions of this Charter, including the Founder Specific Provisions of Section 7.5. _____________________________________________ Michael Andrew Feller Jones Founder, Nutraceutical Assisted Programs Category Inaugural Chair, NAP Standards Council Date of Adoption: _______________________ Witness: _____________________________________________ Founding Member of the NAP Standards Council
+By adoption of this Charter on the date below, the Founder of the Nutraceutical Assisted Programs Category establishes the NAP Standards Council and commits to operating under the provisions of this Charter, including the Founder Specific Provisions of Section 7.5. _____________________________________________ Michael Andrew Feller Jones Founder, Nutraceutical Assisted Programs Category Chair (designate), NAP Standards Council (in formation) Date of Adoption: _______________________ Witness: _____________________________________________ Founding Member of the NAP Standards Council
 
 # APPENDIX A. GLOSSARY OF KEY TERMS
 

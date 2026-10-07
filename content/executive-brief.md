@@ -1,13 +1,13 @@
 # The NAP Executive Brief
 
-_THE NAP MANIFESTO_
+_A five-minute summary · Companion to The NAP Manifesto_
 
 **Nutraceutical Assisted Programs**
-**The Foundational Paradigm of Twenty First Century Medicine**
+**A terrain-first framework for natural health care — a draft offered for review**
 
 ---
 
-"Nutraceutical Assisted Programs are the natural, terrain first paradigm of medicine. Pharmaceutical interventions are situational tools within that paradigm, used when clinically necessary, never as the default. NAP is the unifying global framework for natural medicine across every tradition, every condition, and every population."
+"Nutraceutical Assisted Programs proposes a natural, terrain-first framework in which pharmaceutical care is used alongside, not instead of, natural approaches whenever it is clinically necessary. Whether an integrated restorative program improves outcomes is a hypothesis NAP is designed to test; it is not yet established."
 
 # THE CRISIS
 
@@ -52,11 +52,11 @@ This diagnostic inversion is the core of the NAP design. NAP also proposes a fed
 
 # THE FEDERATION OF TRADITIONS
 
-NAP federates rather than absorbs. The framework is designed so that Ayurveda, Traditional Chinese Medicine, naturopathy, functional medicine, clinical herbalism, environmental medicine, somatic and contemplative traditions, and integrative endocrine practice would each retain their credentialing, terminology, and clinical autonomy within the framework. The NAP credential is designed to be added to a practitioner's primary credentials rather than replace them, and NAP standards are intended to interoperate with primary tradition standards. The category gains coherent global voice while the traditions retain their integrity.
+NAP federates rather than absorbs. The framework is designed so that Ayurveda, Traditional Chinese Medicine, naturopathy, functional medicine, clinical herbalism, environmental medicine, somatic and contemplative traditions, and integrative endocrine practice would each retain their credentialing, terminology, and clinical autonomy within the framework. NAP adds no credential of its own, and NAP standards are intended to interoperate with primary tradition standards. The category gains coherent global voice while the traditions retain their integrity.
 
 # THE INFRASTRUCTURE
 
-NAP is designed to add a unifying framework that natural medicine has historically lacked — a shared clinical taxonomy, a common evidence standard, and comparable outcome measurement across traditions. The NAP Standards Council is designed to govern the category as a multi stakeholder international body, and is not yet operating. The NAP Standards Library is designed to codify clinical protocols across a range of conditions and populations, and does not yet cover all conditions or all populations. The NAP Practitioner credential is designed around three tiers (Foundational, Advanced, Master) and twelve clinical specialty tracks, and is not yet operating. A NAP Center recognition program is designed around three tiers (Associate, Full, Center of Excellence), and is not yet operating. The NAP Knowledge Infrastructure provides the public reference resource for ingredients, protocols, conditions, and clinical reasoning.
+NAP is designed to add a unifying framework that natural medicine has historically lacked — a shared clinical taxonomy, a common evidence standard, and comparable outcome measurement across traditions. The NAP Standards Council is designed to govern the category as a multi stakeholder international body, and is not yet operating. The NAP Standards Library is designed to codify clinical protocols across a range of conditions and populations, and does not yet cover all conditions or all populations. NAP does not credential practitioners and does not accredit or recognize centers, and it will not. Adoption is by reference: a practice may state, in its own words, that it follows a published version of the framework; that statement is a claim, not a credential, and no one vouches for it. The NAP Knowledge Infrastructure is designed to provide a public reference resource; a graded ingredient–condition reference is in private preview and will open publicly once its grades have been independently reviewed.
 
 # THE EVIDENCE
 
@@ -64,7 +64,7 @@ The NAP framework draws on peer reviewed research across twelve research territo
 
 # THE CALL TO COALITION
 
-NAP is offered to the world as a public good. It belongs to no one and to everyone who advances its mission with integrity. The founding coalition NAP seeks includes practitioners across natural medicine traditions, clinical and academic researchers, integrative physicians and allied health professionals, patient and advocacy organizations, and mission aligned investors and philanthropists. The coalition is open and forming, and NAP does not claim any regulatory or governmental endorsement. The category's first decade requires coalition building, practitioner credentialing infrastructure, center accreditation systems, research partnerships, legislative advocacy, and public education across multiple regions and traditions.
+NAP is offered to the world as a public good. It belongs to no one and to everyone who advances its mission with integrity. The founding coalition NAP seeks includes practitioners across natural medicine traditions, clinical and academic researchers, integrative physicians and allied health professionals, patient and advocacy organizations, and philanthropic and grant funders. The coalition is open and forming, and NAP does not claim any regulatory or governmental endorsement. The work ahead is coalition building, independent review of the evidence, research partnerships, and public education.
 
 > "The category is Nutraceutical Assisted Programs. The framework is terrain first across eight foundational systems, cascade aware in its diagnostic logic, natural first across all clinical territories, evidence informed in its methodology, federated in its relationship to existing traditions, integrated in its approach to the whole person, and global in its scope. The coalition begins today."
 
