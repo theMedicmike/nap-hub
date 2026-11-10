@@ -23,9 +23,9 @@ This document is product neutral. It defines the standard, not the product.
 
 ## 1. The Licensed-Clinician Requirement
 
-The NAP credential is an **added qualification layered atop a primary clinical license — never a substitute for one.** A NAP practitioner must hold a recognized clinical license in their jurisdiction (for example, physician, nurse practitioner, physician assistant, naturopathic physician where licensed, or another regulated clinical profession with the relevant scope), and the NAP credential, once established, is intended to recognize additional training within that existing license. NAP is not an accrediting body and confers no license, scope, or legal authority of any kind; the credential reflects training completed, not a certification of competence.
+NAP issues no credential, certification, or license, and it never will. Anyone applying the NAP framework to a patient must already hold a recognized clinical license in their jurisdiction (for example, physician, nurse practitioner, physician assistant, naturopathic physician where licensed, or another regulated clinical profession with the relevant scope). Following NAP adds no qualification and confers no license, scope, or legal authority of any kind. A practitioner's statement that they follow NAP is a claim, not a credential, and no one vouches for it.
 
-The governing rule is simple and absolute: **scope follows your license.** A practitioner may do within NAP only what their primary license already permits them to do. The NAP credential confers no independent legal authority to diagnose, order or interpret laboratory testing, prescribe, or de-prescribe. Where an activity is a licensed medical act in a jurisdiction, only a clinician licensed for that act may perform it under NAP.
+The governing rule is simple and absolute: **scope follows your license.** A practitioner may do within NAP only what their primary license already permits them to do. Following NAP confers no legal authority to diagnose, order or interpret laboratory testing, prescribe, or de-prescribe. Where an activity is a licensed medical act in a jurisdiction, only a clinician licensed for that act may perform it under NAP.
 
 This requirement protects patients, protects practitioners from practicing outside their lawful scope, and protects the category from the single gravest legal risk a new clinical framework faces: the appearance of authorizing the unlicensed practice of medicine. NAP authorizes no such thing.
 
@@ -69,7 +69,7 @@ For serious psychiatric illness — psychosis, bipolar disorder, acute suicidali
 
 ## 7. The Duty to Report
 
-Every credentialed NAP practitioner has an affirmative duty to report adverse events — any harm, suspected harm, or unexpected deterioration associated with a NAP intervention — to the NAP safety registry, promptly and completely. Reporting is a condition of credentialing, not an option. A category that cannot see its own harms cannot prevent them, and cannot be trusted by the regulators it asks to recognize it.
+Anyone applying the NAP framework should report adverse events — any harm, suspected harm, or unexpected deterioration associated with a NAP-informed approach — promptly and completely, through the reporting channels their own jurisdiction provides (in the United States, the FDA's MedWatch program), and to the product's manufacturer where a product is involved. NAP's own public safety registry is planned and does not yet exist. A framework that cannot see its own harms cannot prevent them.
 
 ## 8. Herb–Drug Interaction Surveillance
 
@@ -105,7 +105,7 @@ NAP certifies the standard, not the brand. No product, manufacturer, or organiza
 
 # PART V. SCOPE OF THIS STANDARD
 
-These standards are the safety **floor** of NAP practice, not its ceiling. They are intended to bind everyone practicing within the NAP framework, and adherence will be a condition of the NAP credential and of center participation once those programs are established. They are maintained and updated by the NAP Standards Council, convened under the Charter, as evidence and experience accumulate. They integrate with the Clinical Assessment Framework, the Standards Library protocols, and the Outcome Registry, which together define how NAP is practiced, measured, and kept safe.
+These standards are the safety **floor** of NAP practice, not its ceiling. Anyone who states that they follow NAP is expected to meet them in full; NAP issues no credential and accredits no center, so adherence is a public commitment, not a condition of any status. They are to be maintained and updated by the NAP Standards Council (in formation, convened under the Charter), as evidence and experience accumulate. They integrate with the Clinical Assessment Framework, the Standards Library protocols, and the Outcome Registry, which together define how NAP is practiced, measured, and kept safe.
 
 A practitioner who honors the evidence but not the safety floor is not practicing NAP. Both are the standard.
 

@@ -93,9 +93,9 @@ NAP is organized around six philosophical commitments that govern every clinical
 
 The body does not heal in a toxic, depleted, dysbiotic, hormonally collapsed, energetically dysregulated, or structurally compromised terrain. Before any symptomatic intervention is considered, the terrain must be assessed across all eight foundational systems. Restoration of terrain is the first clinical act, not the last.
 
-### Principle Two: Natural First, Pharmaceutical When Necessary
+### Principle Two: Evidence Decides — Natural Alongside, Never Instead Of
 
-Nutraceutical, botanical, nutritional, hormonal balancing through natural means, and somatic interventions are the first line response for any condition where they have demonstrated efficacy and safety. Pharmaceutical intervention is reserved for situations where the natural first response is insufficient, unavailable, or contraindicated. Pharmaceutical intervention is never the default. It is always the tool of last resort. Any change to prescribed medication is a decision for the prescribing physician alone. Where a patient and their prescriber jointly decide to review medication, NAP protocols are designed to be compatible with that process. NAP never recommends reducing or discontinuing a prescribed medication, and patients should not alter any prescription based on this document.
+NAP prefers neither natural nor conventional care. It prefers whatever the best available evidence supports for the person in front of it, and it does no harm first. Nutraceutical, botanical, nutritional, and somatic approaches are offered where they have evidence of safety and benefit, alongside — never instead of — necessary conventional care, including pharmaceutical treatment. Any change to prescribed medication is a decision for the prescribing clinician alone. Where a patient and their prescriber jointly decide to review medication, NAP approaches are designed to be compatible with that process. NAP never recommends reducing or discontinuing a prescribed medication, and patients should not alter any prescription based on this document.
 
 ### Principle Three: The Patient is a System, Not a Symptom
 
