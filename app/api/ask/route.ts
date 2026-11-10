@@ -37,7 +37,40 @@ TONE AND FORMAT: Write like a caring practitioner talking with someone across a 
 // one to the model as an evidence grade. The traditional-is-not-evidence firewall existed only on
 // the display pages; this is the one place a human actually asks a health question, so it must be
 // enforced here first. Filter: scientific_tier NOT NULL (a real graded claim) AND status != coverage.
-async function atlasKnowledge(): Promise<string> {
+//
+// SAFETY NOTES: every graded claim carries a full safety note (interactions, who must avoid it).
+// They used to be cut to 200 characters here — after the database had already cut them to 500 —
+// so the guide was reasoning from half-sentences (e.g. a sedation warning that stopped mid-word).
+// The full notes are ~1-2k characters each, too large to send all 184 on every request, so the
+// FULL note is attached to every claim whose ingredient or condition is mentioned in the recent
+// conversation (loose stem match, so "anxious" finds Anxiety; a false match only adds safety text).
+// Claims that are not mentioned carry no safety text, and the model is told not to discuss any
+// ingredient in detail without its full note.
+const STOP = new Set(["and", "the", "for", "with", "root", "leaf", "seed", "oral", "extract", "health"]);
+
+// Substring keys (full name, stems of long words) plus whole-word keys (short words like "gut", "fish").
+function mentionKeys(name: string): { sub: string[]; word: string[] } {
+  const sub = new Set<string>();
+  const word = new Set<string>();
+  for (const part of name.split(";")) {
+    const base = part.replace(/\([^)]*\)/g, " ").toLowerCase().replace(/[^a-z0-9\s'-]/g, " ").replace(/\s+/g, " ").trim();
+    if (base.length >= 3) sub.add(base);
+    for (const w of base.split(/[\s/-]+/)) {
+      if (STOP.has(w)) continue;
+      if (w.length >= 5) sub.add(w.slice(0, Math.max(4, w.length - 3)));
+      else if (w.length >= 3 && /[a-z]/.test(w)) word.add(w);
+    }
+  }
+  return { sub: Array.from(sub), word: Array.from(word) };
+}
+
+async function atlasKnowledge(conversation: string): Promise<string> {
+  const convo = conversation.toLowerCase();
+  const convoWords = new Set(convo.split(/[^a-z0-9]+/));
+  const mentioned = (name: string) => {
+    const k = mentionKeys(name);
+    return k.sub.some((s) => convo.includes(s)) || k.word.some((w) => convoWords.has(w));
+  };
   const sb = supabaseAdmin();
   if (!sb) return "";
   const { data: links } = await sb
@@ -48,7 +81,7 @@ async function atlasKnowledge(): Promise<string> {
   const L = (links ?? []) as any[];
   if (!L.length) return "";
   const ids = Array.from(new Set(L.flatMap((l) => [l.from_entity, l.to_entity])));
-  const { data: ents } = await sb.from("atlas_entities").select("id,name").in("id", ids);
+  const { data: ents } = await sb.from("atlas_entities").select("id,name,also_known_as").in("id", ids);
   const byId: Record<string, any> = {};
   ((ents ?? []) as any[]).forEach((e) => (byId[e.id] = e));
   const lines = L.map((l) => {
@@ -57,11 +90,12 @@ async function atlasKnowledge(): Promise<string> {
     if (!a || !b) return "";
     const sci = String(l.scientific_tier || "").toUpperCase();
     const trad = l.traditional_strength ? `, traditional use: ${l.traditional_strength}` : "";
-    const safety = l.safety_note ? ` SAFETY: ${String(l.safety_note).slice(0, 200)}` : "";
+    const relevant = mentioned(`${a.name};${a.also_known_as ?? ""}`) || mentioned(`${b.name};${b.also_known_as ?? ""}`);
+    const safety = l.safety_note && relevant ? ` FULL SAFETY NOTE: ${String(l.safety_note)}` : "";
     return `[scientific evidence: ${sci}${trad}] ${a.name} — ${l.relation} — ${b.name}.${safety}`;
   }).filter(Boolean);
-  const header = `\n\nNAP ATLAS — GRADED CLAIMS ONLY (${lines.length} reviewed claims; ground answers in these and nowhere else):\n`;
-  const footer = `\n\nThese are the ONLY graded claims that exist. The Atlas also contains a large historical folk-use record which is deliberately EXCLUDED here because traditional use is not evidence of effectiveness. If a question is not covered by the graded claims above, say plainly that NAP has not reviewed evidence on it yet — never fill the gap from general knowledge and never present traditional use as evidence.`;
+  const header = `\n\nNAP ATLAS — GRADED CLAIMS ONLY (${lines.length} claims, graded in-house and not yet independently reviewed; ground answers in these and nowhere else):\n`;
+  const footer = `\n\nThese are the ONLY graded claims that exist. The Atlas also contains a large historical folk-use record which is deliberately EXCLUDED here because traditional use is not evidence of effectiveness. If a question is not covered by the graded claims above, say plainly that NAP has not reviewed evidence on it yet — never fill the gap from general knowledge and never present traditional use as evidence.\n\nSAFETY NOTES: a FULL SAFETY NOTE is attached to every claim whose ingredient or condition appears in this conversation. Whenever you discuss an ingredient, carry its most important safety points (who should avoid it, key medication interactions) into your reply, early. Do NOT discuss any ingredient in detail if its FULL SAFETY NOTE is not shown above — instead, ask the person to name the specific ingredient they are curious about so its safety guidance can be included.`;
   return header + lines.join("\n") + footer;
 }
 
@@ -124,7 +158,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "guide not connected" }, { status: 503 });
   }
   try {
-    const knowledge = await atlasKnowledge();
+    const recent = messages.slice(-6).map((m) => m.content).join("\n");
+    const knowledge = await atlasKnowledge(recent);
     const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
