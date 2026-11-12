@@ -44,7 +44,7 @@ export const HEALERS: Healer[] = [
     plant: "Turmeric root", plantKey: "turmeric", focal: 46,
     sky: ["#3a2a3e", "#f0b048", "#4a3218"],
     story:
-      "Classical Ayurvedic texts, compiled over centuries around 2,000 years ago, used turmeric as part of caring for the whole person. Today scientists study turmeric's compounds closely, and so far the results are mixed and unproven.",
+      "Classical Ayurvedic texts, compiled over centuries around 2,000 years ago, used turmeric as part of caring for the whole person. Today it is one of the most-studied plants on Earth, with thousands of research papers; some human trials are encouraging, and scientists are still working out how strong the evidence is.",
   },
   {
     id: "ge-lan", portrait: "P3", scene: "T3", name: "Ge Lan",
