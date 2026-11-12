@@ -3,6 +3,12 @@ import { Seal } from "./Seal";
 export function Footer() {
   return (
     <footer className="foot">
+      <div className="foot-crisis">
+        <p>
+          In crisis or worried about someone? Call or text <a href="tel:988">988</a>, then press 1 for the Veterans
+          Crisis Line. In an emergency, call <a href="tel:911">911</a>.
+        </p>
+      </div>
       <div className="foot-in">
         <div className="org">
           <Seal size={22} />
