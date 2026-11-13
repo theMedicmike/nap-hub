@@ -15,6 +15,7 @@ export function Nav({ overlay = false }: { overlay?: boolean }) {
         </Link>
         <div className="nav-links">
           <Link href="/ask">Ask</Link>
+          <Link className="nav-keep" href="/traditions">Traditions</Link>
           <Link href="/framework">The framework</Link>
           <Link href="/atlas/brain">The database</Link>
           <Link href="/founders">Founders</Link>
