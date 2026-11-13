@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 // Sticky "in this chapter" contents with a thread that lights the section being read.
-export function ChapterToc({ items }: { items: { id: string; title: string; kind: string }[] }) {
+export function ChapterToc({ items, heading = "In this chapter" }: { items: { id: string; title: string; kind: string }[]; heading?: string }) {
   const [active, setActive] = useState(items[0]?.id ?? "");
 
   useEffect(() => {
@@ -22,8 +22,8 @@ export function ChapterToc({ items }: { items: { id: string; title: string; kind
 
   const idx = Math.max(0, items.findIndex((i) => i.id === active));
   return (
-    <nav className="toc" aria-label="In this chapter">
-      <p className="toc-h">In this chapter</p>
+    <nav className="toc" aria-label={heading}>
+      <p className="toc-h">{heading}</p>
       <ol style={{ ["--p" as string]: items.length > 1 ? idx / (items.length - 1) : 0 }}>
         {items.map((it, i) => (
           <li key={it.id} className={`${i < idx ? "past" : ""}${i === idx ? " now" : ""} toc-${it.kind}`}>

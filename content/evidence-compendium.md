@@ -570,7 +570,7 @@ The credibility of the NAP framework depends not only on the evidence for its in
 3. **Contested tests never stand alone.** ADJUNCTIVE/CONTESTED tests may inform clinical reasoning but never independently justify an intervention. A clinical decision rests on validated data integrated with the clinical picture.
 4. **Provoked urine metal testing, specifically,** is acknowledged as contested. Where used, it is used transparently, with the patient informed of the controversy, and never as the sole justification for mobilization or chelation.
 5. **Disclose test status to the patient.** Patients are told which tier a given test occupies.
-6. **Let the data decide.** The NAP Outcome Registry tracks which tests actually predict outcomes. Over time, a test earns or loses its tier on the basis of NAP's own evidence, not assertion.
+6. **Let the data decide.** The proposed NAP Outcome Registry, which is not yet operating and has no participants, is designed to track which tests actually predict outcomes. If it runs, a test would earn or lose its tier on the basis of evidence, not assertion.
 
 This standard is not a retreat from the tests integrative practitioners value. It is the discipline that lets NAP use them credibly — by being the first to say, clearly, which ones are proven and which ones are not.
 

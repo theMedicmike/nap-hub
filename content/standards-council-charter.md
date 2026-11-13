@@ -1,6 +1,6 @@
 # The NAP Standards Council Founding Charter
 
-> **Status of this document (draft, October 2026):** The Council described here is in formation; it has no seated members and has not been ratified. NAP issues no credential, accredits or recognizes no center, charges no fees, and takes no investors. Where any passage below describes credentials, accreditation, fees, or investment, it is superseded by this note.
+> **Status of this document (draft, October 2026):** The Council described here is in formation; it has no seated members and has not been ratified. NAP issues no credential, accredits or recognizes no center, charges no fees, and takes no investors. Earlier passages that described credentials, accreditation, fees, or investment were removed in November 2026; if any such wording remains below, it is superseded by this note.
 
 _THE NAP_
 
@@ -74,7 +74,7 @@ The Council holds and exercises the following authorities on behalf of the NAP c
 1. Maintenance of the NAP Standards Library, including the establishment, periodic review, and revision of clinical protocol standards across all clinical territories within the NAP framework.
 2. Publication of open, non-credentialing educational standards describing the knowledge base NAP practice draws on. The Council issues no credential, no certificate of competency, and no continuing-education credit, and does not represent that any practitioner meets any standard. A practitioner's statement that they follow NAP standards is a claim, not a credential.
 3. Publication of voluntary, self-attested facility practice standards. The Council does not accredit, inspect, approve, or endorse any facility, issues no seal or tier, and maintains no registry of approved centers. Listed is not endorsed.
-4. Direction of the NAP research agenda, including identification of research priorities, oversight of outcome data collection across participating sites, partnership with academic and clinical research institutions, and validation of the framework's foundational claims.
+4. Direction of the NAP research agenda, including identification of research priorities, oversight of any voluntary outcome data collection the Council may later propose (none operates today), partnership with academic and clinical research institutions, and validation of the framework's foundational claims.
 5. Stewardship of the NAP Evidence Compendium and supporting evidence appendices, including periodic review, updates as new research emerges, and maintenance of evidence classification standards.
 6. Engagement with regulatory bodies, governmental agencies, and policymakers across jurisdictions to advocate for appropriate recognition and integration of NAP within national and regional healthcare frameworks.
 7. Handling of ethics complaints about misuse of the NAP name or misrepresentation of the framework, including due process procedures. Because NAP issues no credential and accredits no center, there is nothing to revoke; the remedy is a public correction.
@@ -85,8 +85,8 @@ The Council holds and exercises the following authorities on behalf of the NAP c
 
 The Council operates within explicit limits that protect the integrity of the category and the autonomy of the traditions and practitioners federated within it.
 
-1. The Council shall not absorb, replace, or diminish the credentialing systems of existing traditions of natural medicine. The NAP credential is added to primary credentials. NAP standards interoperate with primary tradition standards. The Council respects the sovereignty of existing tradition credentialing bodies.
-2. The Council shall not establish exclusive licensing arrangements or commercial partnerships that grant any single entity preferential access to NAP infrastructure, credentials, or recognition.
+1. The Council shall not absorb, replace, or diminish the credentialing systems of existing traditions of natural medicine. NAP adds no credential of its own; a clinician's own license and scope of practice govern their practice. NAP standards interoperate with primary tradition standards. The Council respects the sovereignty of existing tradition credentialing bodies.
+2. The Council shall not establish exclusive licensing arrangements or commercial partnerships that grant any single entity preferential access to NAP infrastructure or recognition.
 3. The Council shall not endorse, recommend, or otherwise grant preferential treatment to any specific commercial product, brand, or company within the broader nutraceutical, botanical, or related industries. Specific ingredients, compounds, and intervention modalities may be incorporated into NAP standards based on peer reviewed evidence and traditional knowledge, but specific commercial implementations remain neutral within the framework.
 4. The Council shall not align with, advocate for, or oppose specific political parties, candidates, or ideological positions outside of the policy advocacy directly relevant to the recognition and integration of natural medicine within healthcare frameworks.
 5. The Council shall not concentrate authority in any single individual, geographic region, or stakeholder bloc. All major decisions require multi stakeholder deliberation and authorized voting procedures as established in this Charter.
@@ -97,7 +97,7 @@ The Council recognizes that its authority operates within and alongside other le
 
 The Council respects the regulatory authority of national, regional, and state or provincial governments over healthcare practice within their jurisdictions. NAP standards do not authorize any clinical act. Every practitioner and facility is solely responsible for compliance with the licensure, scope-of-practice and facility regulations of their own jurisdiction, and the Council makes no representation that any practitioner or facility is in compliance. Where a NAP standard conflicts with law, the law governs. NAP standards are designed to interoperate with regulatory frameworks rather than to supersede them.
 
-The Council respects the credentialing authority of established medical and natural medicine professional bodies. The NAP credential supplements rather than replaces primary credentials issued by such bodies.
+The Council respects the credentialing authority of established medical and natural medicine professional bodies. NAP issues no credential of its own; the licenses and credentials issued by such bodies are the only ones that apply.
 
 The Council respects the autonomy of patients to make informed decisions about their own healthcare. NAP standards inform clinical practice but do not override patient autonomy or informed consent. The Council operates with explicit commitment to patient agency and engagement throughout its standards.
 
@@ -216,7 +216,7 @@ A quorum for Council meetings consists of two thirds of voting members or ten me
 
 Substantive Council decisions are made through the following voting procedures.
 
-1. Standard Decisions: Most Council decisions including approval of standards, credentialing decisions, accreditation decisions, financial decisions within established budget parameters, and routine governance matters require a simple majority of voting members present.
+1. Standard Decisions: Most Council decisions including approval of standards, financial decisions within established budget parameters, and routine governance matters require a simple majority of voting members present.
 2. Supermajority Decisions: Charter amendments, removal of members, dissolution of the Council, and other matters specified in this Charter or Council Rules require a two thirds vote of the full voting membership.
 3. Unanimous Consent Items: Routine procedural matters and uncontested administrative items may be addressed through unanimous consent without formal vote, recorded in meeting minutes as such.
 
@@ -229,7 +229,7 @@ The Council operates under the following standards for substantive deliberation.
 1. Information Sufficiency: Substantive decisions are not conducted without adequate information including, where applicable, peer reviewed evidence, traditional knowledge consultation, stakeholder input, financial impact analysis, and legal review.
 2. Deliberation Time: Substantive matters are typically deliberated across at least two meetings, with first reading and discussion at one meeting and decision at a subsequent meeting, allowing time for member reflection and stakeholder consultation. Urgent matters may be addressed in single meeting under expedited procedures established in Council Rules.
 3. Minority Voice: Members holding minority positions on substantive matters have the right to record dissenting positions in official minutes and to provide written dissent statements that accompany majority decisions in published Council records.
-4. Stakeholder Input: Major decisions affecting practitioners, accredited centers, or patients are typically preceded by formal public comment periods during which the broader stakeholder community provides input that is documented and considered in deliberations.
+4. Stakeholder Input: Major decisions affecting practitioners, facilities, or patients are typically preceded by formal public comment periods during which the broader stakeholder community provides input that is documented and considered in deliberations.
 
 ## Section 5.5 Public and Stakeholder Engagement
 
@@ -237,7 +237,7 @@ The Council operates with substantial public and stakeholder engagement to maint
 
 1. Open Meeting Provisions: Quarterly Council Meetings include public observation periods during which non Council participants may observe deliberations on matters of broad interest, with executive sessions limited to specific categories of confidential matters as established in Council Rules.
 2. Annual Plenary Stakeholder Sessions: The Annual Plenary Meeting includes formal stakeholder engagement sessions during which representatives of practitioner communities, patient advocacy organizations, and partner institutions may address the Council on matters of common interest.
-3. Public Comment Periods: Major decisions affecting practitioners, accredited centers, or patients are preceded by formal public comment periods of at least sixty days during which the broader stakeholder community may submit input.
+3. Public Comment Periods: Major decisions affecting practitioners, facilities, or patients are preceded by formal public comment periods of at least sixty days during which the broader stakeholder community may submit input.
 4. Annual Report: The Council publishes an Annual Report each year documenting Council activities, financial position, governance changes, outcome data, and strategic direction. The Annual Report is freely available to the public.
 
 # ARTICLE VI. COMMITTEES AND WORKING GROUPS
@@ -248,23 +248,19 @@ The Council establishes the following standing committees to manage ongoing oper
 
 ### Standards Committee
 
-Responsible for the maintenance of the NAP Standards Library, including periodic review of clinical protocols, evaluation of proposed protocol additions or modifications, and recommendations to the full Council on Library evolution. Standards Committee composition reflects the multi tradition representation of the Council. The Standards Committee operates with substantial input from credentialed practitioners actively delivering NAP protocols and from research partners generating outcome data.
+Responsible for the maintenance of the NAP Standards Library, including periodic review of clinical protocols, evaluation of proposed protocol additions or modifications, and recommendations to the full Council on Library evolution. Standards Committee composition reflects the multi tradition representation of the Council. The Standards Committee seeks input from licensed clinicians and from academic research partners.
 
-### Credentialing Committee
+### No Credentialing or Accreditation Function
 
-Responsible for oversight of the NAP Practitioner credentialing program, including review of training program standards, examination procedures, continuing education requirements, and individual credentialing decisions. The Credentialing Committee operates due process procedures for credentialing decisions including denial and revocation, with appeal rights to the full Council.
-
-### Accreditation Committee
-
-Responsible for oversight of the NAP Center accreditation program, including review of facility standards, accreditation site visits, accreditation tier decisions, and ongoing compliance monitoring. The Accreditation Committee operates due process procedures for accreditation decisions including denial and revocation, with appeal rights to the full Council.
+The Council has no credentialing committee and no accreditation committee, because NAP has no credentialing or accreditation function. NAP certifies no one, credentials no practitioner, accredits no center, runs no examination, and conducts no site visits. Any future proposal to create such a function would require a public Charter amendment under Article XI and review by outside counsel, and no such proposal is planned.
 
 ### Research Committee
 
-Responsible for direction of the NAP research agenda, oversight of outcome data collection across participating sites, partnership with academic and clinical research institutions, periodic review of the NAP Evidence Compendium, and identification of research priorities. The Research Committee operates with substantial input from academic researchers and from clinical outcome data.
+Responsible for direction of the NAP research agenda, oversight of any voluntary outcome data collection the Council may later propose, partnership with academic and clinical research institutions, periodic review of the NAP Evidence Compendium, and identification of research priorities. The Research Committee operates with substantial input from academic researchers and from clinical outcome data.
 
 ### Ethics and Conflict Committee
 
-Responsible for adjudication of ethics complaints against credentialed practitioners and accredited centers, oversight of Council member compliance with the Conflict of Interest Policy, and recommendations to the full Council on ethics matters affecting the broader category. The Ethics and Conflict Committee operates due process procedures for ethics matters with appeal rights to the full Council.
+Responsible for handling ethics complaints about misuse of the NAP name or misrepresentation of the framework (remedied by public correction, since there is no credential or accreditation to revoke), oversight of Council member compliance with the Conflict of Interest Policy, and recommendations to the full Council on ethics matters affecting the broader category. The Ethics and Conflict Committee operates due process procedures for ethics matters with appeal rights to the full Council.
 
 ### Nominating Committee
 
@@ -340,8 +336,8 @@ The founder of the NAP category, Michael Andrew Feller Jones, holds the Founder 
 1. The Founder Emeritus is non voting and therefore does not vote on any Council matters.
 2. The Founder Emeritus must disclose all commercial activities, business interests, organizational affiliations, and professional relationships that relate to the broader natural medicine, nutraceutical, or holistic health space. This disclosure is updated annually and is publicly available.
 3. The Founder Emeritus must recuse from any deliberation in which products, companies, organizations, or initiatives connected to the founder's commercial or professional activities would be specifically affected by Council decisions.
-4. The Council shall not grant preferential treatment within NAP standards, credentialing, accreditation, or research priorities to any product, company, organization, or initiative connected to the founder. This commitment is enforced through the Ethics and Conflict Committee with appeal rights to the full Council.
-5. The Founder Emeritus may not serve simultaneously as a credentialed NAP Practitioner without explicit Council determination that the dual role does not create unmanageable conflicts. Such determination would be reviewed annually. "The integrity of the NAP category requires that the founder's other activities receive no preferential treatment within the framework. This Charter binds the founder to the same standards every other practitioner and organization must meet. The founder accepts these constraints as the condition of building a category that the world can trust."
+4. The Council shall not grant preferential treatment within NAP standards or research priorities to any product, company, organization, or initiative connected to the founder. This commitment is enforced through the Ethics and Conflict Committee with appeal rights to the full Council.
+5. The Founder Emeritus may not serve simultaneously as a licensed clinician who states they follow NAP without explicit Council determination that the dual role does not create unmanageable conflicts. Such determination would be reviewed annually. "The integrity of the NAP category requires that the founder's other activities receive no preferential treatment within the framework. This Charter binds the founder to the same standards every other practitioner and organization must meet. The founder accepts these constraints as the condition of building a category that the world can trust."
 
 # ARTICLE VIII. ETHICAL COMMITMENTS AND CODE OF CONDUCT
 
@@ -356,34 +352,30 @@ All Council members agree to the following ethical commitments.
 1. Mission Primacy: Council members serve the mission of the Council and the populations it serves. Personal interests, organizational interests, and tradition specific interests are subordinate to the mission.
 2. Evidence and Integrity: Council members support evidence based deliberation, transparent reasoning, and intellectual honesty about the limits of current knowledge. Members do not advocate positions inconsistent with the available evidence or fail to disclose limitations of evidence underlying their advocacy.
 3. Tradition Respect: Council members respect the integrity of the natural medicine traditions federated within NAP. Members do not denigrate other traditions, appropriate practices without authorization, or undermine the autonomy of tradition specific credentialing and practice frameworks.
-4. Patient Centeredness: Council members maintain patient welfare as the ultimate referent of Council decisions. Decisions are evaluated against their impact on the patients NAP serves, not against narrow institutional or commercial interests.
+4. Patient Centeredness: Council members maintain patient welfare as the ultimate referent of Council decisions. Decisions are evaluated against their impact on the patients the framework is meant to serve, not against narrow institutional or commercial interests.
 5. Cultural Humility: Council members operate with awareness of the cultural, social, and economic factors that affect access to healthcare globally. Members support framework decisions that promote equitable access rather than concentrating benefit in privileged populations.
-6. Confidentiality: Council members maintain appropriate confidentiality regarding deliberations, individual credentialing matters, ethics complaints, and other matters where confidentiality is required for due process or other legitimate reasons. Confidentiality obligations continue beyond Council service.
+6. Confidentiality: Council members maintain appropriate confidentiality regarding deliberations, ethics complaints, and other matters where confidentiality is required for due process or other legitimate reasons. Confidentiality obligations continue beyond Council service.
 7. Public Conduct: Council members conduct themselves in public, including in publications, presentations, and statements identifying themselves with the Council, in a manner consistent with the dignity and credibility of the Council. Members do not use Council affiliation to lend authority to commercial activities or personal positions outside the scope of their Council role.
 8. Whistleblower Protection: Council members support and protect those who in good faith raise concerns about ethics, conflicts, or governance failures within the Council. Retaliation against such persons is prohibited and is itself a violation of the Code of Conduct.
 
 ## Section 8.3 Patient and Practitioner Ethical Commitments
 
-Through the credentialing and accreditation programs, the Council extends ethical commitments to credentialed practitioners and accredited centers.
+NAP has no credentialing or accreditation program and no practitioners or centers who sign anything with it. The Council may instead publish voluntary ethical guidance that anyone may read and choose to follow.
 
-1. Credentialed practitioners agree to a NAP Practitioner Code of Ethics that articulates obligations to patients, to professional integrity, to evidence based practice, to appropriate referral and integration with conventional medical care, and to ongoing continuing education and competency maintenance.
-2. Accredited centers agree to a NAP Center Code of Ethics that articulates obligations to patient welfare, to truthful representation of the center's capabilities and limitations, to appropriate fee practices, to non discrimination in patient access, and to participation in outcome data collection that supports broader category research.
+1. A voluntary Practitioner Ethics Guide describing obligations to patients, to professional integrity, to evidence based practice, and to appropriate referral and integration with conventional medical care. Following it is a clinician's own choice; the Council does not verify or enforce it.
+2. A voluntary Facility Ethics Guide describing obligations to patient welfare, to truthful representation of a facility's capabilities and limitations, and to non discrimination in patient access. No facility is required to adopt it, report to NAP, or contribute data.
 
-These secondary codes are established through the standard Council deliberation procedures and may be amended by the Council in response to evolving understanding of ethical obligations.
+These voluntary guides are established through the standard Council deliberation procedures and may be amended by the Council in response to evolving understanding of ethical obligations.
 
 # ARTICLE IX. FINANCIAL OPERATIONS AND TRANSPARENCY
 
 ## Section 9.1 Financial Sources
 
-The Council derives its financial resources from sources that are compatible with its independence and mission. Permitted sources include the following.
+The Council derives its financial resources from sources that are compatible with its independence and mission. The Council charges no credentialing, accreditation, certification, membership, or participation fees, because it has none of those programs, and it takes no investors. Permitted sources include the following.
 
-1. Practitioner credentialing fees, set at levels reflecting the operational cost of credentialing rather than as profit centers.
-2. Center accreditation fees, similarly set at operational cost levels.
-3. Educational program fees for NAP related training, certification, and continuing education programs.
-4. Publication revenue from the NAP Standards Library, the NAP Evidence Compendium, and derivative reference materials, with substantial portions remaining freely available consistent with the public good commitment.
-5. Research grants from foundations, governmental agencies, and other funders aligned with the Council's mission, with funding agreements reviewed by the Ethics and Conflict Committee for any provisions that could affect Council independence.
-6. Philanthropic contributions from individuals, foundations, and organizations supporting the Council's mission, with contributions over a defined threshold subject to review by the Ethics and Conflict Committee for conflict implications.
-7. Membership dues from individual or organizational members of the broader NAP community, where such membership structures are established.
+1. Publication revenue, if any, from printed or bound editions of the NAP Standards Library, the NAP Evidence Compendium, and derivative reference materials, with the content itself remaining freely available consistent with the public good commitment.
+2. Research grants from foundations, governmental agencies, and other funders aligned with the Council's mission, with funding agreements reviewed by the Ethics and Conflict Committee for any provisions that could affect Council independence.
+3. Philanthropic contributions from individuals, foundations, and organizations supporting the Council's mission, with contributions over a defined threshold subject to review by the Ethics and Conflict Committee for conflict implications.
 
 ## Section 9.2 Prohibited Financial Sources
 
@@ -407,7 +399,7 @@ The Council operates under substantial financial transparency requirements.
 
 Council financial resources are allocated according to priorities established annually through the budgeting process. Major allocation categories include the following.
 
-· Standards Library development and maintenance · Credentialing and accreditation program operations · Research program funding and partnerships · Knowledge infrastructure development and maintenance · Coalition building and stakeholder engagement · Legislative and regulatory advocacy · Public education and communication · Council governance operations · Reserve fund development for institutional sustainability
+· Standards Library development and maintenance · Research program funding and partnerships · Knowledge infrastructure development and maintenance · Coalition building and stakeholder engagement · Legislative and regulatory advocacy · Public education and communication · Council governance operations · Reserve fund development for institutional sustainability
 
 # ARTICLE X. TRANSPARENCY AND ACCOUNTABILITY
 
@@ -419,22 +411,22 @@ The Council operates under a presumption of transparency. Information about Coun
 
 Upon the Council being seated, the following categories of information are intended to be published on a defined schedule. None are currently published, because the Council has not yet convened.
 
-· This Charter and all governance documents derivative from it · Council member roster, biographies, and conflict of interest disclosures · Meeting agendas and minutes, with appropriate executive session protection · Substantive decisions including standards, credentialing decisions in summary form, and accreditation decisions in summary form · The NAP Standards Library and Evidence Compendium · The Annual Report including financial information and outcome data aggregations · External audit reports · Public comments received on matters under deliberation
+· This Charter and all governance documents derivative from it · Council member roster, biographies, and conflict of interest disclosures · Meeting agendas and minutes, with appropriate executive session protection · Substantive decisions including standards · The NAP Standards Library and Evidence Compendium · The Annual Report including financial information and outcome data aggregations · External audit reports · Public comments received on matters under deliberation
 
 ## Section 10.3 Categories of Protected Information
 
 The following categories of information may be appropriately protected from public disclosure.
 
-· Individual personnel and credentialing decisions, except in summary or aggregate form · Patient information and case details from clinical research, in compliance with applicable privacy regulations · Pre decisional deliberations on matters involving individual due process rights · Confidential information received under nondisclosure provisions of partnerships or research agreements · Personal information about Council members beyond what is necessary for accountability · Litigation strategy and other appropriately privileged matters
+· Individual personnel decisions, except in summary or aggregate form · Patient information and case details from clinical research, in compliance with applicable privacy regulations · Pre decisional deliberations on matters involving individual due process rights · Confidential information received under nondisclosure provisions of partnerships or research agreements · Personal information about Council members beyond what is necessary for accountability · Litigation strategy and other appropriately privileged matters
 
 ## Section 10.4 Accountability Mechanisms
 
 Beyond transparency, the Council operates under specific accountability mechanisms.
 
-1. Stakeholder Petition Process: Members of the broader NAP community, including credentialed practitioners, accredited centers, patient advocacy organizations, and partner institutions, may petition the Council on matters of common concern. Petitions meeting threshold support requirements receive formal Council consideration with response within defined timeframes.
-2. Appeal Rights: Practitioners and centers subject to credentialing or accreditation decisions have defined appeal rights through the Ethics and Conflict Committee with ultimate appeal to the full Council.
+1. Stakeholder Petition Process: Members of the public, including clinicians, patient advocacy organizations, and partner institutions, may petition the Council on matters of common concern. Petitions meeting threshold support requirements receive formal Council consideration with response within defined timeframes.
+2. Appeal Rights: Anyone named in a public correction about misuse of the NAP name has defined appeal rights through the Ethics and Conflict Committee with ultimate appeal to the full Council.
 3. Whistleblower Process: Persons within or outside the Council may raise concerns about ethics, conflicts, or governance failures through documented confidential procedures with explicit retaliation prohibition.
-4. Independent Review: Specific Council decisions affecting standards, credentialing, or accreditation are subject to independent review procedures established in Council Rules, providing additional accountability beyond internal Council deliberation.
+4. Independent Review: Specific Council decisions affecting standards are subject to independent review procedures established in Council Rules, providing additional accountability beyond internal Council deliberation.
 
 # ARTICLE XI. AMENDMENT AND DISSOLUTION
 
@@ -518,11 +510,11 @@ The planned collection of NAP clinical protocols, to be developed and maintained
 **Evidence Compendium**
 A synthesis of published research relevant to the NAP framework, intended to be maintained as a living reference document. It is not itself peer reviewed.
 
-**Credentialed Practitioner**
-A licensed clinician who states that their practice follows published NAP standards. The Council does not verify, credential, or endorse any such statement.
+**Clinician Who States They Follow NAP**
+A licensed clinician who states that their practice follows published NAP standards. The Council does not verify, credential, or endorse any such statement; NAP has no credentialed practitioners.
 
-**Accredited Center**
-A clinical facility that has earned NAP Center accreditation through the Council's accreditation program.
+**Facility**
+A clinical facility that may choose to read and follow NAP's voluntary, self-attested practice standards. NAP accredits no center and maintains no list of approved facilities.
 
 **Standing Committee**
 A committee of the Council with continuing operational responsibilities as established in Article VI.
@@ -548,7 +540,7 @@ This Charter is organized into twelve articles plus appendices. The structure is
 
 **Articles**
 
-Article I: Establishment, Name, and Purpose - Establishes the Council and its mission, vision, and public good commitment. Article II: Authority and Responsibilities - Defines the scope and limits of Council authority and its relationship to other authorities. Article III: Council Composition and Representation - Establishes the fifteen voting seat structure with multi tradition, multi region representation. Article IV: Terms, Elections, and Succession - Defines four year terms with two consecutive term limits and staggered rotation. Article V: Meetings, Deliberation, and Decisions - Establishes meeting cadence, quorum, voting, and deliberation procedures. Article VI: Committees and Working Groups - Establishes the seven standing committees and working group framework. Article VII: Conflict of Interest Policy - Establishes disclosure, management, and founder specific conflict provisions. Article VIII: Ethical Commitments and Code of Conduct - Articulates the ethical foundation of Council service and practitioner expectations. Article IX: Financial Operations and Transparency - Defines permitted and prohibited funding sources and transparency requirements. Article X: Transparency and Accountability - Establishes information access and accountability mechanisms. Article XI: Amendment and Dissolution - Defines amendment procedures with special protection for foundational provisions. Article XII: Adoption and Effective Date - Establishes the founding adoption procedure.
+Article I: Establishment, Name, and Purpose - Establishes the Council and its mission, vision, and public good commitment. Article II: Authority and Responsibilities - Defines the scope and limits of Council authority and its relationship to other authorities. Article III: Council Composition and Representation - Establishes the fifteen voting seat structure with multi tradition, multi region representation. Article IV: Terms, Elections, and Succession - Defines four year terms with two consecutive term limits and staggered rotation. Article V: Meetings, Deliberation, and Decisions - Establishes meeting cadence, quorum, voting, and deliberation procedures. Article VI: Committees and Working Groups - Establishes the five standing committees and working group framework, and states that NAP has no credentialing or accreditation function. Article VII: Conflict of Interest Policy - Establishes disclosure, management, and founder specific conflict provisions. Article VIII: Ethical Commitments and Code of Conduct - Articulates the ethical foundation of Council service and practitioner expectations. Article IX: Financial Operations and Transparency - Defines permitted and prohibited funding sources and transparency requirements. Article X: Transparency and Accountability - Establishes information access and accountability mechanisms. Article XI: Amendment and Dissolution - Defines amendment procedures with special protection for foundational provisions. Article XII: Adoption and Effective Date - Establishes the founding adoption procedure.
 
 **Appendices**
 

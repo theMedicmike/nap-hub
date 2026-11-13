@@ -99,7 +99,7 @@ The natural products industry has been a documented source of the very contamina
 
 ## 12. Product Neutrality and Quality Together
 
-NAP certifies the standard, not the brand. No product, manufacturer, or organization — including any under the founder's direction — receives preferential standing within the NAP framework, consistent with the Manifesto's Pledge and the Charter's conflict-of-interest provisions. Any product, from any source, that meets the quality floor may be used in NAP practice; any product that does not, may not, regardless of its origin.
+NAP publishes the standard; it certifies no brand. No product, manufacturer, or organization — including any under the founder's direction — receives preferential standing within the NAP framework, consistent with the Manifesto's Pledge and the Charter's conflict-of-interest provisions. Any product, from any source, that meets the quality floor may be used in NAP practice; any product that does not, may not, regardless of its origin.
 
 ---
 

@@ -11,7 +11,7 @@ const TONE: Record<Category, { bg: string; edge: string }> = {
   integrity: { bg: "#123a40", edge: "#1f5a60" },
 };
 
-function Emblem({ category }: { category: Category }) {
+export function Emblem({ category }: { category: Category }) {
   const s = { stroke: "#e2c271", fill: "none", strokeWidth: 1.4 } as const;
   if (category === "core")
     return (

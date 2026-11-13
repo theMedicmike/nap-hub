@@ -14,9 +14,9 @@ _Nutraceutical Assisted Programs_
 
 This is a companion document to the NAP Manifesto. The Manifesto establishes Nutraceutical Assisted Programs as a global, independent category of medicine — terrain first, cascade aware, natural first, federated, and evidence informed — across all populations and all clinical conditions. This document establishes the first **population specialty** within that category: the care of veterans and active service members.
 
-It does not restate the Manifesto. It assumes it. Where the Manifesto defines the eight universal biological systems, the seven dysfunction categories, the diagnostic inversion, the practitioner credential, and the governance structure, this document applies that architecture to a single population whose biology has been shaped by service.
+It does not restate the Manifesto. It assumes it. Where the Manifesto defines the eight universal biological systems, the seven dysfunction categories, the diagnostic inversion, the practitioner training curriculum, and the governance structure, this document applies that architecture to a single population whose biology has been shaped by service.
 
-It is offered in the same spirit as every NAP document: as a public good, evidence informed, honest about what is established and what remains a clinical hypothesis under investigation, and product neutral. Where this document references the Veterans At Ease program and Operation Whole Health — a registered 501(c)(3) nonprofit organization — it does so to identify the first deployed application and the founding pilot center of this specialty, not to advance any commercial product. Specific formulations are out of scope by design. This document describes the clinical approach, not any proprietary preparation.
+It is offered in the same spirit as every NAP document: as a public good, evidence informed, honest about what is established and what remains a clinical hypothesis under investigation, and product neutral. Where this document references the Veterans At Ease program and Operation Whole Health — a registered 501(c)(3) nonprofit organization — it does so because Operation Whole Health is the nonprofit that publishes NAP and Veterans At Ease is its veteran program, not to advance any commercial product. Neither is a NAP pilot center, and no one is enrolled in this specialty. Specific formulations are out of scope by design. This document describes the clinical approach, not any proprietary preparation.
 
 ---
 
@@ -54,7 +54,7 @@ The conventional system does not fail veterans through malice or individual inco
 
 **Referral.** Even clinicians who recognize the limits of pharmaceutical management often have no credentialed pathway to refer a veteran for comprehensive biological assessment, because the integrative community has historically operated outside recognized credentialing. The veteran falls through the gap between systems.
 
-NAP is built to close all four gaps: it builds the training conventional education omits, standardizes the assessment conventional workups skip, creates credentialing and documentation that can integrate with reimbursement as it evolves, and builds the referral infrastructure that bridges conventional and restorative care. The Veteran Health Specialty Track is where that bridge is built first.
+NAP is built to close all four gaps: it builds the training conventional education omits, standardizes the assessment conventional workups skip, publishes documentation standards that licensed clinicians can use within reimbursement systems as they evolve, and builds the referral infrastructure that bridges conventional and restorative care. The Veteran Health Specialty Track is where that bridge is built first.
 
 ---
 
@@ -94,7 +94,7 @@ The toxic and heavy metal burden described in Pillar One is not theoretical or i
 
 **Asbestos.** Asbestos exposure was pervasive in twentieth century military construction, shipbuilding, and vehicle maintenance. Asbestos is the dominant cause of mesothelioma, and veterans are substantially over-represented among mesothelioma patients because of Navy and shipyard asbestos exposure. (VA; occupational medicine literature.)
 
-This record is the reason the NAP Veteran Assessment Protocol begins with a structured Exposure History as its first component. It is also why this specialty is aligned with federal policy rather than adversarial to it: in recognizing these exposures through the PACT Act, the Radiation Exposure Compensation Act, the Camp Lejeune Justice Act, and the burn pit registry, the United States government has already affirmed the central premise of the veteran cascade, that service produces a measurable, consequential, and compensable biological burden. NAP's contribution is the credentialed clinical framework to assess and restore it.
+This record is the reason the NAP Veteran Assessment Protocol begins with a structured Exposure History as its first component. It is also why this specialty is aligned with federal policy rather than adversarial to it: in recognizing these exposures through the PACT Act, the Radiation Exposure Compensation Act, the Camp Lejeune Justice Act, and the burn pit registry, the United States government has already affirmed the central premise of the veteran cascade, that service produces a measurable, consequential, and compensable biological burden. NAP's contribution is an open clinical framework that licensed clinicians may use to assess and restore it.
 
 ## 6. The Cascade Architecture
 
@@ -158,25 +158,25 @@ This specialty is explicitly **aligned, not adversarial**. It does not ask a vet
 
 ---
 
-# PART IV. CREDENTIAL, FLAGSHIP, AND INSTITUTIONAL HOME
+# PART IV. CURRICULUM, FLAGSHIP, AND INSTITUTIONAL HOME
 
-## 12. The NAP Veteran Health Specialty Credential
+## 12. The NAP Veteran Health Specialty Curriculum
 
-The Manifesto establishes a three tier NAP practitioner credential — Foundational, Advanced, and Master — with optional specialty credentials in defined clinical territories. **Veteran Health is hereby designated the founding specialty credential of the NAP category.**
+NAP issues no credential, at any tier. **Veteran Health is designated the first specialty curriculum of the NAP category** — a training curriculum that any clinician or member of the public may read and use. NAP verifies and certifies no one; completing or following the curriculum confers no title, and a clinician's own license and scope of practice govern what they may do.
 
-The Veteran Health Specialty is earned atop the general NAP credential and adds defined competencies: military exposure toxicology and the exposure history interview; the five component Veteran Assessment Protocol; cascade sequenced terrain restoration across the eight systems with veteran specific safety considerations; trauma informed somatic and spiritual integration; supervised de-prescribing in coordination with VA and military prescribers; and the cultural competence required to serve service members, veterans, and their families with credibility. Credentialing standards, required clinical hours, and supervised case requirements are set and maintained by the NAP Standards Council through its credentialing committee, consistent with the Charter.
+The Veteran Health curriculum builds on the general NAP curriculum and describes defined competencies: military exposure toxicology and the exposure history interview; the five component Veteran Assessment Protocol; cascade sequenced terrain restoration across the eight systems with veteran specific safety considerations; trauma informed somatic and spiritual integration; supervised de-prescribing in coordination with VA and military prescribers; and the cultural competence required to serve service members, veterans, and their families with credibility. The curriculum content is maintained by the NAP Standards Council once it is seated, consistent with the Charter, which provides for no credentialing committee. Clinical hours and supervised practice remain matters for each clinician's own licensing body.
 
 ## 13. Veterans At Ease — The Flagship Deployed Program
 
-**Veterans At Ease is the first deployed application of the NAP category** — the program in which the Veteran Health Specialty is delivered as an integrated, end to end veteran restoration pathway: forensic assessment, cascade sequenced terrain restoration, condition specific intervention, somatic and spiritual integration through Complement Theory, and community and purpose reintegration. It is architected with the critical intervention window as a strategic target while remaining open to veterans at any point in their service history.
+**Veterans At Ease is the intended first application of the NAP category** — the program through which the Veteran Health Specialty is meant to be offered as an integrated, end to end veteran restoration pathway: forensic assessment, cascade sequenced terrain restoration, condition specific intervention, somatic and spiritual integration through Complement Theory, and community and purpose reintegration. It is architected with the critical intervention window as a strategic target while remaining open to veterans at any point in their service history.
 
-Veterans At Ease is a program of Operation Whole Health, a 501(c)(3) nonprofit, and is not a personal commercial holding of the founder. Consistent with NAP's product neutrality, this document describes Veterans At Ease as a clinical **program and proof of concept** — the WHO and the HOW — and does not specify or promote any proprietary formulation that may be used within it. The program's value to the category is as living evidence that the model can be delivered, measured, and refined in the field.
+Veterans At Ease is a program of Operation Whole Health, a 501(c)(3) nonprofit, and is not a personal commercial holding of the founder. Consistent with NAP's product neutrality, this document describes Veterans At Ease as a clinical **program and proof of concept** (who it serves and how) and does not specify or promote any proprietary formulation that may be used within it. The program's value to the category is as a place where it can be tested whether the model can be delivered, measured, and refined in the field; no outcome data exists yet.
 
-## 14. Operation Whole Health — The Founding Pilot Center
+## 14. Operation Whole Health — The Publisher of NAP
 
-**Operation Whole Health is the intended founding pilot site for the Veteran Health Specialty** — the first place the assessment protocol, the four cornerstones, and the outcome measurement framework would be deployed, instrumented, and improved. No NAP center recognition program exists, and Operation Whole Health holds no NAP designation of any kind. If the pilot proceeds, it is where the veteran protocols would first be tested against real outcomes.
+**Operation Whole Health is the nonprofit that publishes NAP.** It is not a NAP pilot center, there is no NAP pilot center, and no NAP center recognition program exists; Operation Whole Health holds no NAP designation of any kind. Nothing and no one is enrolled. Any future test of the assessment protocol, the four cornerstones, and the outcome measurement framework would first require a written protocol, independent ethics review, and informed consent.
 
-Operation Whole Health is a registered 501(c)(3) nonprofit, and Veterans At Ease is one of its programs. Neither is a personal commercial holding of the founder. This structure strengthens rather than complicates NAP's independence: the founding pilot of the category's first specialty is a charitable, mission driven nonprofit, not a private business. The founder's affiliation with Operation Whole Health is disclosed in full, consistent with the Charter's transparency provisions, and any commercial product used within the program remains outside the scope of this standards document, consistent with NAP's product neutrality. Operation Whole Health and Veterans At Ease are identified as the first deployed application and founding pilot of this specialty because that is the factual record — and the category grants no organization preferential standing within the NAP framework.
+Operation Whole Health is a registered 501(c)(3) nonprofit, and Veterans At Ease is one of its programs. Neither is a personal commercial holding of the founder. This structure strengthens rather than complicates NAP's independence: the publisher of the category's first specialty is a charitable, mission driven nonprofit, not a private business. The founder's affiliation with Operation Whole Health is disclosed in full, consistent with the Charter's transparency provisions, and any commercial product used within the program remains outside the scope of this standards document, consistent with NAP's product neutrality. Operation Whole Health and Veterans At Ease are identified here because that is the factual record of who publishes NAP — and the category grants no organization preferential standing within the NAP framework.
 
 ---
 
@@ -184,7 +184,7 @@ Operation Whole Health is a registered 501(c)(3) nonprofit, and Veterans At Ease
 
 ## 15. The Department of Veterans Affairs as Partner
 
-The VA has already opened the door. The **VA Whole Health** system reorients care around what matters to the veteran and includes complementary and integrative health modalities in the benefits package. The **PACT Act** establishes federal recognition of toxic exposure and presumptive conditions. **Toxic Exposure Screening** is now part of VA care. The NAP Veteran Health Specialty is the scientific standards layer that complements these initiatives — the credentialed framework, assessment protocol, and outcome architecture that can give Whole Health's restorative intent a rigorous, measurable clinical backbone. The ask to the VA is partnership: pilot the assessment protocol, evaluate outcomes against existing care, and co develop the evidence.
+The VA has already opened the door. The **VA Whole Health** system reorients care around what matters to the veteran and includes complementary and integrative health modalities in the benefits package. The **PACT Act** establishes federal recognition of toxic exposure and presumptive conditions. **Toxic Exposure Screening** is now part of VA care. The NAP Veteran Health Specialty is the scientific standards layer that complements these initiatives — the open curriculum, assessment protocol, and outcome architecture that can give Whole Health's restorative intent a rigorous, measurable clinical backbone. The ask to the VA is partnership: pilot the assessment protocol, evaluate outcomes against existing care, and co develop the evidence.
 
 The VA's own history establishes the precedent for taking exposure biology seriously across generations: the VA already recognizes intergenerational harm, providing benefits for spina bifida and other covered birth defects in the children of certain exposed veterans (VA, VA Form 21-0304). The cascade model is a continuation of that logic, not a departure from it.
 
@@ -199,7 +199,7 @@ This specialty earns its standing through evidence, and it states its open quest
 - Validate the five component Veteran Assessment Protocol as a clinical instrument against functional outcomes.
 - Test cascade sequenced terrain restoration against standard care in controlled veteran cohorts.
 - Confirm the essential fatty acid / suicide risk association in prospective, interventional designs.
-- Quantify outcomes and cost across participating sites using the standardized outcome framework.
+- Quantify outcomes and cost across any sites that later volunteer, using the standardized outcome framework (none participate today).
 
 The natural federal and academic partners are the **National Center for Complementary and Integrative Health (NCCIH)**, the VA's **War Related Illness and Injury Study Center (WRIISC)**, the **Department of Defense Congressionally Directed Medical Research Programs (CDMRP)**, and the academic integrative medicine centers identified in the NAP Coalition Outreach Playbook. NAP aims to bring them a defined veteran cohort, assessed under a written, pre-specified protocol, in which to generate the evidence — the unified interface the fragmented integrative sector has never previously offered.
 
@@ -228,7 +228,7 @@ This document follows the evidence discipline of the NAP Evidence Compendium. Th
 - Army Holistic Health and Fitness — soldier as integrated system across five readiness domains. **U.S. Army, FM 7-22.** ✅
 - Obstructive sleep apnea in veterans vs nonveterans (~21% vs ~9%); post-9/11 TBI prevalence (~17.3%); women veteran demographics (~2.1M; ~17.2% by 2043). 📌 *PIN at publication — sources named in the program's master source trail (Goldstein et al.; Lindquist et al.; VA Women Veterans Health Care).*
 
-> A NAP practitioner is bound by the data verification standard of the category: every statistic must trace to a primary source read directly, never to a paraphrase. The figures above meet that standard or are flagged where final formatting is required.
+> Anyone writing under the NAP name is bound by the data verification standard of the category: every statistic must trace to a primary source read directly, never to a paraphrase. The figures above meet that standard or are flagged where final formatting is required.
 
 ---
 
