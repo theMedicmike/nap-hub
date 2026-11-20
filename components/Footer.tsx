@@ -19,6 +19,7 @@ export function Footer() {
           These statements have not been evaluated by the Food and Drug Administration. Nothing here
           is intended to diagnose, treat, cure, or prevent any disease. Always work with a licensed
           clinician before making any change to your care or medication.
+          <span className="foot-art">The paintings on this site are AI-generated illustrations; the people in them are fictional.</span>
         </div>
       </div>
     </footer>

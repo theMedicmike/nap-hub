@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 import type { Healer } from "@/lib/universe";
-import { AiTag } from "./AiTag";
 import { Painting } from "./Painting";
 import { PlantArt } from "./PlantArt";
 
@@ -92,7 +91,6 @@ export function Timeline({ eras }: { eras: Era[] }) {
               </div>
             </div>
             <div className="era-shade" />
-            {e.src && <AiTag className="ai-hero" />}
             <span className="era-knot" aria-hidden="true" />
             <div className="era-copy">
               <p className="era-when">{e.era}</p>

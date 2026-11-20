@@ -1,6 +1,5 @@
 import type { PlantKey } from "@/lib/universe";
 import { PlantArt } from "./PlantArt";
-import { AiTag } from "./AiTag";
 
 // Shows the real painting when the file exists; otherwise a painted-feeling placeholder in the
 // same world: a dusk sky in the healer's palette, a low sun, layered hills in atmospheric haze,
@@ -31,7 +30,6 @@ export function Painting({
         decoding="async"
         style={{ objectPosition: `${focal}% 40%` }}
       />
-      {tag && <AiTag />}
       </>
     );
   }

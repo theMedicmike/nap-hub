@@ -50,7 +50,7 @@ export function Circle({ healers }: { healers: Era[] }) {
           ))}
         </ul>
         <p className="uc-fine">
-          The portraits are AI-generated images, not real people. The healers of the Circle are fictional composites, inspired by real traditions and eras. The plant histories
+          The healers of the Circle are fictional composites, painted with AI and inspired by real traditions and eras. The plant histories
           they carry are real and sourced. Traditional use is honored here as history, never offered as evidence.
         </p>
       </div>

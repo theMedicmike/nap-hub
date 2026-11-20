@@ -1,6 +1,5 @@
 import type { Emblem as EmblemKey } from "@/lib/traditions";
 import { Emblem } from "./Emblem";
-import { AiTag } from "@/components/universe/AiTag";
 
 // A tradition's picture: the real universe painting where one fits the chapter, otherwise a
 // painted dusk landscape in that tradition's own colours with its emblem glowing at the centre.
@@ -12,7 +11,6 @@ export function TradArt({
     return (
       <>
       <img className={`pt-img ${className}`} src={src} alt="" loading={eager ? "eager" : "lazy"} decoding="async" style={{ objectPosition: `${focal}% 40%` }} />
-      {tag && <AiTag />}
       </>
     );
   }
