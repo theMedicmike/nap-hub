@@ -4,6 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Fireflies } from "@/components/universe/Fireflies";
 import { ChapterToc } from "@/components/traditions/ChapterToc";
+import { AiTag } from "@/components/universe/AiTag";
 import { TradArt } from "@/components/traditions/TradArt";
 import { Emblem } from "@/components/traditions/Emblem";
 import { Blocks, Inline, plainText, type InlineOpts } from "@/lib/md";
@@ -90,7 +91,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
       <main>
         <header className="chh" style={{ ["--glow" as string]: c.sky[1] }}>
           <div className="chh-art" aria-hidden="true">
-            <TradArt src={src} sky={c.sky} emblem={c.emblem} eager focal={src ? 45 : 50} />
+            <TradArt src={src} sky={c.sky} emblem={c.emblem} eager focal={src ? 45 : 50} tag={false} />
           </div>
           <div className="chh-shade" />
           <Fireflies className="chh-ff" density={0.5} />
@@ -102,6 +103,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
             <p className="chh-hook"><Inline text={c.hook} /></p>
             <p className="chh-meta"><span>{c.era}</span><span>{minutes} min read</span><span>{c.sources.length} sources</span></p>
           </div>
+          {src && <AiTag className="ai-hero ai-top" />}
         </header>
 
         <div className="chb">

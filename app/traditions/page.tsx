@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Fireflies } from "@/components/universe/Fireflies";
 import { FamilyTree } from "@/components/traditions/FamilyTree";
+import { AiTag } from "@/components/universe/AiTag";
 import { TradArt } from "@/components/traditions/TradArt";
 import { Blocks, Inline } from "@/lib/md";
 import { art } from "@/lib/universe-assets";
@@ -96,6 +97,7 @@ export default function TraditionsPage() {
             <span>Begin</span>
             <svg viewBox="0 0 20 40" aria-hidden="true"><path d="M10 2 C 4 12 16 20 10 30 M5 25 l5 8 5-8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg>
           </a>
+          {hero && <AiTag className="ai-hero" />}
         </header>
 
         {/* ---------- Remembered, carried, branched ---------- */}

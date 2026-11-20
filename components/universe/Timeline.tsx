@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import type { Healer } from "@/lib/universe";
+import { AiTag } from "./AiTag";
 import { Painting } from "./Painting";
 import { PlantArt } from "./PlantArt";
 
@@ -87,10 +88,11 @@ export function Timeline({ eras }: { eras: Era[] }) {
           <article key={e.id} className={`era ${i % 2 ? "era-l" : "era-r"}`} aria-label={`${e.name}, ${e.era}`}>
             <div className="era-art">
               <div className="era-par">
-                <Painting src={e.src} alt={`${e.name}, ${e.role.toLowerCase()}, ${e.place}`} focal={e.focal} sky={e.sky} plant={e.plantKey} name={e.name} label={false} />
+                <Painting src={e.src} alt={`${e.name}, ${e.role.toLowerCase()}, ${e.place}`} focal={e.focal} sky={e.sky} plant={e.plantKey} name={e.name} label={false} tag={false} />
               </div>
             </div>
             <div className="era-shade" />
+            {e.src && <AiTag className="ai-hero" />}
             <span className="era-knot" aria-hidden="true" />
             <div className="era-copy">
               <p className="era-when">{e.era}</p>

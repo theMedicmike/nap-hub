@@ -39,7 +39,7 @@ export function Circle({ healers }: { healers: Era[] }) {
                 aria-haspopup="dialog"
               >
                 <span className="uc-frame">
-                  <Painting src={p.src} alt={`Portrait of ${p.name}`} focal={p.focal} sky={p.sky} plant={p.plantKey} name={p.name} label={!p.src} />
+                  <Painting src={p.src} alt={`Portrait of ${p.name}`} focal={p.focal} sky={p.sky} plant={p.plantKey} name={p.name} label={!p.src} tag={false} />
                 </span>
                 <span className="uc-meta">
                   <span className="uc-name">{p.name}</span>
@@ -50,7 +50,7 @@ export function Circle({ healers }: { healers: Era[] }) {
           ))}
         </ul>
         <p className="uc-fine">
-          The healers of the Circle are fictional composites, inspired by real traditions and eras. The plant histories
+          The portraits are AI-generated images, not real people. The healers of the Circle are fictional composites, inspired by real traditions and eras. The plant histories
           they carry are real and sourced. Traditional use is honored here as history, never offered as evidence.
         </p>
       </div>

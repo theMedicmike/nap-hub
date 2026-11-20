@@ -1,5 +1,6 @@
 import { Fireflies } from "./Fireflies";
 import { PlantArt } from "./PlantArt";
+import { AiTag } from "./AiTag";
 
 // The opening: the Circle of healers around the glowing willow, drifting slowly, with the
 // golden-green thread drawing itself up out of the roots.
@@ -49,6 +50,7 @@ export function Hero({ src }: { src: string | null }) {
         <span>Follow the thread</span>
         <svg viewBox="0 0 20 40" aria-hidden="true"><path d="M10 2 C 4 12 16 20 10 30 M5 25 l5 8 5-8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg>
       </a>
+      {src && <AiTag className="ai-hero" />}
     </header>
   );
 }

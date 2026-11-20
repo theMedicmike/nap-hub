@@ -1,12 +1,13 @@
 import type { PlantKey } from "@/lib/universe";
 import { PlantArt } from "./PlantArt";
+import { AiTag } from "./AiTag";
 
 // Shows the real painting when the file exists; otherwise a painted-feeling placeholder in the
 // same world: a dusk sky in the healer's palette, a low sun, layered hills in atmospheric haze,
 // a willow branch drifting in from the corner, canvas grain, and their plant drawn as a
 // luminous botanical plate.
 export function Painting({
-  src, alt, focal = 50, sky, plant, name, label = true, className = "", eager = false,
+  src, alt, focal = 50, sky, plant, name, label = true, className = "", eager = false, tag = true,
 }: {
   src: string | null;
   alt: string;
@@ -17,9 +18,11 @@ export function Painting({
   label?: boolean;
   className?: string;
   eager?: boolean;
+  tag?: boolean;
 }) {
   if (src) {
     return (
+      <>
       <img
         className={`pt-img ${className}`}
         src={src}
@@ -28,6 +31,8 @@ export function Painting({
         decoding="async"
         style={{ objectPosition: `${focal}% 40%` }}
       />
+      {tag && <AiTag />}
+      </>
     );
   }
   const [hi, glow, ground] = sky;

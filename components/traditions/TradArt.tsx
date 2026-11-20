@@ -1,15 +1,19 @@
 import type { Emblem as EmblemKey } from "@/lib/traditions";
 import { Emblem } from "./Emblem";
+import { AiTag } from "@/components/universe/AiTag";
 
 // A tradition's picture: the real universe painting where one fits the chapter, otherwise a
 // painted dusk landscape in that tradition's own colours with its emblem glowing at the centre.
 // Decorative: the chapter title always carries the meaning.
 export function TradArt({
-  src, sky, emblem, className = "", eager = false, focal = 50,
-}: { src: string | null; sky: [string, string, string]; emblem: EmblemKey; className?: string; eager?: boolean; focal?: number }) {
+  src, sky, emblem, className = "", eager = false, focal = 50, tag = true,
+}: { tag?: boolean; src: string | null; sky: [string, string, string]; emblem: EmblemKey; className?: string; eager?: boolean; focal?: number }) {
   if (src) {
     return (
+      <>
       <img className={`pt-img ${className}`} src={src} alt="" loading={eager ? "eager" : "lazy"} decoding="async" style={{ objectPosition: `${focal}% 40%` }} />
+      {tag && <AiTag />}
+      </>
     );
   }
   const [hi, glow, ground] = sky;

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AiTag } from "./AiTag";
 import type { Category, DocMeta } from "@/lib/canon";
 import { CATEGORY_NAME } from "@/lib/canon";
 
@@ -63,7 +64,7 @@ export function Library({ volumes }: { volumes: Volume[] }) {
             <Link className="book" href={`/framework/${v.slug}`} style={{ ["--bk" as string]: t.bg, ["--bk-edge" as string]: t.edge }}>
               <span className="book-stand"><span className="book-body">
                 {v.cover ? (
-                  <img className="book-art" src={v.cover} alt="" loading="lazy" decoding="async" />
+                  <><img className="book-art" src={v.cover} alt="" loading="lazy" decoding="async" /><AiTag person={false} className="ai-book" /></>
                 ) : (
                   <span className="book-gen" aria-hidden="true">
                     <span className="book-frame" />
