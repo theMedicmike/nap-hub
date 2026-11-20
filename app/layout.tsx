@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Figtree } from "next/font/google";
 import "./globals.css";
+import "./nav.css";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
