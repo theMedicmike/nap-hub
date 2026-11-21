@@ -1,12 +1,12 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+import { PageShell } from "@/components/PageShell";
+import "../pages.css";
 
 interface Msg { role: "user" | "assistant"; content: string }
 
 const WELCOME =
-  "Hi — I'm your NAP guide. Ask me anything about health through the terrain-first lens: root causes, the biological drivers of chronic illness, what the evidence says, and how the body's systems connect. You can type, or tap the microphone and just talk to me. I'm educational, not a doctor — and for anything specific to you, I'll always point you to a licensed clinician. What's on your mind?";
+  "Hi, I'm the NAP guide. Ask me anything about health: root causes, the biological drivers of chronic illness, what the evidence says, and how the body's systems connect. You can type, or tap the microphone and just talk to me. I'm educational, not a doctor — and for anything specific to you, I'll always point you to a licensed clinician. What's on your mind?";
 
 function cleanText(s: string): string {
   return String(s)
@@ -139,79 +139,73 @@ export default function Ask() {
   }
 
   return (
-    <>
-      <Nav />
-      <section className="hero">
-        <div className="hero-in">
-          <div className="hero-copy" style={{ flex: 1 }}>
-            <div className="eyebrow">Ask · your terrain-first health guide</div>
-            <h1 style={{ fontSize: 32 }}>Talk with the NAP guide.</h1>
-            <p>Ask about root causes, the drivers of chronic illness, and what the evidence actually says — grounded in the NAP framework and Atlas. Type or speak; it can talk back. Educational, evidence-graded, and always honest about its limits.</p>
-          </div>
-        </div>
-      </section>
-
-      <main className="shape-wrap">
-        <div className="note">
-          This guide is educational, not medical advice. For anything urgent or serious it will point you to a doctor or emergency care — and you should always work with a licensed clinician for your own health.
-        </div>
-
-        <div style={{ display: "flex", gap: 10, alignItems: "center", margin: "0 0 12px", flexWrap: "wrap" }}>
+    <PageShell
+      title="Ask the NAP guide."
+      lede={
+        <>
+          Ask about root causes, the drivers of chronic illness, and what the graded evidence actually says. Type or
+          speak, and it can answer out loud. It is educational, never a substitute for your own clinician, and honest
+          about what is not yet known.
+        </>
+      }
+    >
+      <section className="pgs pgs-wide ask" aria-label="Conversation with the NAP guide">
+        <div className="ask-bar">
           <button
             type="button"
+            className={`ask-tog${voiceOn ? " on" : ""}`}
+            aria-pressed={voiceOn}
             onClick={() => { const n = !voiceOn; setVoiceOn(n); if (!n) stopSpeaking(); }}
-            className="btn"
-            style={{ background: voiceOn ? "var(--ink)" : "transparent", color: voiceOn ? "var(--ivory)" : "var(--ink)", border: "1px solid var(--ink)", padding: "7px 15px", fontSize: 13 }}
           >
-            {voiceOn ? "🔊 Voice on" : "🔇 Voice off"}
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" />{voiceOn ? <path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /> : <path d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />}</svg>
+            {voiceOn ? "Voice on" : "Voice off"}
           </button>
           {speaking && (
-            <button type="button" onClick={stopSpeaking} className="btn" style={{ background: "transparent", color: "var(--slate)", border: "1px solid var(--slate)", padding: "7px 15px", fontSize: 13 }}>
-              ■ Stop speaking
+            <button type="button" className="ask-tog" onClick={stopSpeaking}>
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" /></svg>
+              Stop speaking
             </button>
           )}
-          {speaking && <span style={{ color: "var(--gold)", fontSize: 12.5 }}>The guide is speaking…</span>}
+          {speaking && <span className="ask-live" role="status">The guide is speaking…</span>}
         </div>
 
-        <div className="chat">
-          <div className="chat-log" ref={logRef}>
-            {messages.map((m, i) => (
-              <div key={i} className={`msg ${m.role === "user" ? "msg-user" : "msg-ai"}`}>{m.content}</div>
-            ))}
-            {busy && <div className="msg msg-ai">Thinking…</div>}
-          </div>
-          <form className="chat-in" onSubmit={(e) => { e.preventDefault(); submit(input); }}>
-            {micSupported && (
-              <button
-                type="button"
-                onClick={toggleMic}
-                aria-label={listening ? "Stop listening" : "Speak"}
-                title={listening ? "Listening — tap to stop" : "Tap and speak"}
-                className="btn"
-                style={{ background: listening ? "#B48A2F" : "var(--ink)", color: listening ? "#14233B" : "var(--ivory)", padding: "0 14px", fontSize: 17, minWidth: 46 }}
-              >
-                {listening ? "●" : "🎤"}
-              </button>
-            )}
-            <input
-              type="text"
-              placeholder={listening ? "Listening…" : "Ask about your health…"}
-              aria-label="Your question"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-            />
-            <button className="btn btn-gold" type="submit" disabled={busy}>Send</button>
-          </form>
+        <div className="ask-log" ref={logRef} aria-live="polite">
+          {messages.map((m, i) => (
+            <div key={i} className={`ask-msg ${m.role === "user" ? "ask-you" : "ask-ai"}`}>{m.content}</div>
+          ))}
+          {busy && <div className="ask-msg ask-ai ask-think">Thinking…</div>}
         </div>
 
-        <p style={{ color: "var(--slate)", fontSize: 12.5, marginTop: 14 }}>
+        <form className="ask-in" onSubmit={(e) => { e.preventDefault(); submit(input); }}>
+          {micSupported && (
+            <button
+              type="button"
+              onClick={toggleMic}
+              aria-label={listening ? "Stop listening" : "Speak your question"}
+              title={listening ? "Listening — tap to stop" : "Tap and speak"}
+              className={`ask-mic${listening ? " on" : ""}`}
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor" /><path d="M6 11a6 6 0 0 0 12 0M12 17v4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
+            </button>
+          )}
+          <input
+            type="text"
+            placeholder={listening ? "Listening…" : "Ask about your health…"}
+            aria-label="Your question"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button className="btn btn-gold" type="submit" disabled={busy}>Send</button>
+        </form>
+
+        <p className="pg-fine ask-foot">
           {micSupported
             ? "Tap the microphone and speak; the guide answers out loud. "
             : "Voice input works best in Chrome, Edge, or Safari. "}
-          In an emergency call 911. For thoughts of suicide or crisis, call or text 988 (veterans press 1).
+          This guide is educational, not medical advice. In an emergency call 911. For thoughts of suicide or crisis,
+          call or text 988 (veterans press 1).
         </p>
-      </main>
-      <Footer />
-    </>
+      </section>
+    </PageShell>
   );
 }
