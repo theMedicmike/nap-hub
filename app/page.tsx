@@ -7,6 +7,8 @@ import { Circle } from "@/components/universe/Circle";
 import { Garden } from "@/components/universe/Garden";
 import { Library, type Volume } from "@/components/universe/Library";
 import { Fireflies } from "@/components/universe/Fireflies";
+import { StartHere } from "@/components/universe/StartHere";
+import "./start.css";
 import { HEALERS, GRADE_TOTAL } from "@/lib/universe";
 import { art } from "@/lib/universe-assets";
 import { DOCS, CATEGORY_NAME, isDraft, type Category } from "@/lib/canon";
@@ -44,6 +46,8 @@ export default function Home() {
       <Nav overlay />
       <main>
         <Hero src={art("K1")} />
+
+        <StartHere />
 
         <Timeline eras={eras} />
 

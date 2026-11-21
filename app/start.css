@@ -1,0 +1,27 @@
+/* Homepage: "Start where you are" — four doors, one per kind of visitor. */
+.start{position:relative;padding:96px 0 104px;background:linear-gradient(180deg,var(--dusk) 0%,#0f1a36 100%);border-top:1px solid rgba(214,230,138,.14)}
+.start-h{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(38px,4.6vw,64px);line-height:1.02;letter-spacing:-.014em;color:#fbf5e6}
+.start-lede{margin:18px 0 52px;max-width:600px;font-size:18px;line-height:1.65;color:var(--ivory-soft);text-wrap:pretty}
+.start-doors{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(214,230,138,.25)}
+.start-door{padding:30px 26px 6px 0;display:flex;flex-direction:column}
+.start-door+.start-door{padding-left:26px;border-left:1px solid rgba(244,238,223,.1)}
+.start-who{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.1vw,29px);line-height:1.15;color:#fbf5e6;text-wrap:balance}
+.start-why{margin:10px 0 22px;font-size:15.5px;line-height:1.6;color:var(--ivory-soft);text-wrap:pretty}
+.start-links{list-style:none;margin:auto 0 0;padding:0;display:grid;gap:2px}
+.start-links a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:8px 0;border-top:1px solid rgba(244,238,223,.08);font-size:15.5px;color:var(--ivory);text-decoration:none;transition:color .2s}
+.start-links svg{flex:none;color:var(--thread);opacity:.55;transition:transform .25s cubic-bezier(.16,1,.3,1),opacity .2s}
+.start-links a:hover{color:var(--thread)}
+.start-links a:hover svg{transform:translateX(3px);opacity:1}
+.start-links a:focus-visible{outline:2px solid var(--thread);outline-offset:3px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){.start-links svg{transition:none}.start-links a:hover svg{transform:none}}
+@media(max-width:1000px){
+  .start-doors{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .start-door:nth-child(3){padding-left:0;border-left:0}
+  .start-door:nth-child(n+3){border-top:1px solid rgba(244,238,223,.1);margin-top:22px}
+}
+@media(max-width:600px){
+  .start{padding:72px 0 80px}
+  .start-doors{grid-template-columns:1fr}
+  .start-door,.start-door+.start-door{padding:26px 0 4px;border-left:0}
+  .start-door+.start-door{border-top:1px solid rgba(244,238,223,.1);margin-top:18px}
+}
