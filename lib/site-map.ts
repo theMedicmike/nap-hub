@@ -16,7 +16,7 @@ export const NAV_GROUPS: NavGroup[] = [
     label: "Evidence",
     items: [
       { label: "The database", href: "/atlas/brain", note: "Every graded ingredient, side by side with history" },
-      { label: "How we grade", href: null, note: "What each grade means and how it is decided" },
+      { label: "How we grade", href: "/how-we-grade", note: "What each grade means and how it is decided" },
     ],
   },
   {
@@ -24,14 +24,14 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { label: "Where it stands", href: "/where-it-stands", note: "What exists, what doesn't, what comes next" },
       { label: "Founders", href: "/founders", note: "The people building it" },
-      { label: "Who governs NAP", href: null, note: "Governance, funding and conflicts of interest" },
-      { label: "Contact", href: null, note: "Reach the team" },
+      { label: "Who governs NAP", href: "/governance", note: "Governance, funding and conflicts of interest" },
+      { label: "Contact", href: "/contact", note: "Reach the team" },
     ],
   },
 ];
 
 export const LEGAL: NavItem[] = [
-  { label: "Privacy", href: null, note: "" },
-  { label: "Accessibility", href: null, note: "" },
-  { label: "Changelog", href: null, note: "" },
+  { label: "Privacy", href: "/privacy", note: "" },
+  { label: "Accessibility", href: "/accessibility", note: "" },
+  { label: "Changelog", href: "/changelog", note: "" },
 ];
