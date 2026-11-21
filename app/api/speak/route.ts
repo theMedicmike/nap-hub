@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { checkLimit } from "@/lib/limits";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -12,6 +13,8 @@ const ELEVEN_MODEL = "eleven_turbo_v2_5";
 export async function POST(req: NextRequest) {
   const key = process.env.ELEVENLABS_API_KEY;
   if (!key) return new Response("voice not connected", { status: 503 });
+  // Over the cap, the page falls back to the browser's own free voice.
+  if (!(await checkLimit(req, "speak")).ok) return new Response("limit", { status: 429 });
   try {
     const { text } = await req.json();
     if (!text || typeof text !== "string") return new Response("no text", { status: 400 });

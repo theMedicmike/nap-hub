@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { checkLimit, BUSY_MESSAGE } from "@/lib/limits";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -55,9 +56,15 @@ export async function POST(req: NextRequest) {
   if (!process.env.ANTHROPIC_API_KEY) {
     return NextResponse.json({ error: "guide not connected" }, { status: 503 });
   }
+  const lim = await checkLimit(req, "shape");
+  if (!lim.ok) return NextResponse.json({ error: "limit", reply: BUSY_MESSAGE[lim.scope] + " Please copy your idea so it is not lost." }, { status: 429 });
   try {
     const body = await req.json();
-    const messages: Msg[] = body.messages || [];
+    // Cap turn count and message length, so one request cannot run up a large bill.
+    const messages: Msg[] = ((body.messages ?? []) as any[])
+      .slice(-20)
+      .map((m) => ({ role: m?.role === "assistant" ? "assistant" : "user", content: String(m?.content ?? "").slice(0, 4000) }))
+      .filter((m) => m.content.trim().length > 0);
     const lastUser = [...messages].reverse().find((m) => m.role === "user");
     const query = lastUser ? lastUser.content : "";
 

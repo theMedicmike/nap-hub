@@ -37,6 +37,11 @@ export function ShapeChat() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: next, doc: docCtx }),
       });
+      if (r.status === 429) {
+        const d = await r.json().catch(() => ({}));
+        setMessages((m) => [...m, { role: "assistant", content: d.reply || "The guide has reached its limit for now. Please copy your idea and try again later." }]);
+        return;
+      }
       if (!r.ok) throw new Error("not connected");
       const data = await r.json();
       setMessages((m) => [...m, { role: "assistant", content: data.reply || "Noted for review." }]);

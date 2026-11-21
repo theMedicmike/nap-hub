@@ -121,6 +121,11 @@ export default function Ask() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: next }),
       });
+      if (r.status === 429) {
+        const d = await r.json().catch(() => ({}));
+        setMessages((m) => [...m, { role: "assistant", content: d.reply || "The guide has reached its limit for now. Please try again later. In an emergency call 911; for thoughts of suicide or crisis, call or text 988 (veterans press 1)." }]);
+        return;
+      }
       if (!r.ok) throw new Error("not connected");
       const data = await r.json();
       const reply = cleanText(data.reply || "I'm here — could you say a bit more?");

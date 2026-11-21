@@ -39,7 +39,9 @@ export default function Privacy() {
             <dt>Reading the site</dt>
             <dd>
               Our host, Vercel, keeps standard server logs, such as your IP address and the pages requested, to run and
-              protect the site. We do not use them to build a profile of you.
+              protect the site. We do not use them to build a profile of you. To keep the AI guide, voice and forms from
+              being overused, we count requests using a scrambled code made from your IP address, never the address
+              itself, and delete those counts within two days.
             </dd>
           </div>
           <div className="pg-row">

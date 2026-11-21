@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
+import { checkLimit, BUSY_MESSAGE } from "@/lib/limits";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -153,6 +154,13 @@ export async function POST(req: NextRequest) {
   const userText = lastUserText(messages);
   if (CRISIS_RE.test(userText)) return NextResponse.json({ reply: CRISIS_REPLY, safety: "crisis" });
   if (EMERGENCY_RE.test(userText)) return NextResponse.json({ reply: EMERGENCY_REPLY, safety: "emergency" });
+
+  // Usage cap: after the safety floor, so a person in crisis is never turned away by a limit.
+  const lim = await checkLimit(req, "ask");
+  if (!lim.ok) {
+    const reply = `${BUSY_MESSAGE[lim.scope]} If this is an emergency, call 911. For thoughts of suicide or crisis, call or text 988 (veterans press 1).`;
+    return NextResponse.json({ error: "limit", reply }, { status: 429 });
+  }
 
   if (!process.env.ANTHROPIC_API_KEY) {
     return NextResponse.json({ error: "guide not connected" }, { status: 503 });
