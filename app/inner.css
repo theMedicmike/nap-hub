@@ -369,3 +369,18 @@
   .fdr-knot{animation:none;opacity:1}
   .fws-spine,.fwp-card,.fwv,.at-card,.at-cat{transition:none}
 }
+
+/* ---------- Database home: the graded topics ---------- */
+.at-topics{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.at-topic{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:16px 18px;border-radius:14px;text-decoration:none;background:rgba(214,230,138,.05);border:1px solid rgba(214,230,138,.18);transition:border-color .2s,background .2s}
+.at-topic:hover{border-color:rgba(214,230,138,.5);background:rgba(214,230,138,.09)}
+.at-topic:focus-visible{outline:2px solid var(--thread);outline-offset:3px}
+.at-topic-n{font-family:var(--serif);font-size:21px;line-height:1.2;color:#fbf5e6}
+.at-topic-c{align-self:center;font-size:13px;color:var(--ivory-faint);white-space:nowrap;font-variant-numeric:tabular-nums}
+.at-topic-bar{grid-column:1/-1;display:flex;gap:2px;height:6px;margin-top:6px;border-radius:3px;overflow:hidden}
+.at-tb{display:block;min-width:4px}
+.at-tb-established{background:#E8F2A6}
+.at-tb-studied{background:#C9DB6E}
+.at-tb-emerging{background:rgba(201,219,110,.6)}
+.at-tb-minimal{background:rgba(226,194,113,.55)}
+.at-tb-none{background:rgba(244,238,223,.22)}

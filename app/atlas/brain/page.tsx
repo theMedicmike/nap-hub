@@ -162,6 +162,8 @@ export default async function Database({ searchParams }: { searchParams: Promise
   let resultConditions: Ent[] = [];
   let resultIngredients: Ent[] = [];
   let vetConditions: Ent[] = [];
+  // The graded topics: every condition with at least one graded finding, with its grade mix.
+  let topics: { id: string; name: string; slug: string; n: number; tiers: Record<string, number> }[] = [];
 
   if (sb) {
     const [{ count: cCount }, { count: iCount }, { count: gCount }, { count: covCount }] = await Promise.all([
@@ -176,6 +178,14 @@ export default async function Database({ searchParams }: { searchParams: Promise
     // graded/green. Only tiers carrying actual signal (established/studied/emerging/minimal) do.
     const { data: gd } = await sb.from("atlas_links").select("to_entity").not("scientific_tier", "is", null).neq("scientific_tier", "none");
     gradedCondIds = new Set((gd ?? []).map((r) => r.to_entity));
+
+    const { data: tl } = await sb.from("atlas_links").select("to_entity,scientific_tier").not("scientific_tier", "is", null);
+    const byCond = new Map<string, Record<string, number>>();
+    for (const r of tl ?? []) { const m = byCond.get(r.to_entity) ?? {}; const k = String(r.scientific_tier).toLowerCase(); m[k] = (m[k] || 0) + 1; byCond.set(r.to_entity, m); }
+    if (byCond.size) {
+      const { data: te } = await sb.from("atlas_entities").select("id,name,slug").in("id", Array.from(byCond.keys()));
+      topics = (te ?? []).map((e) => { const tiers = byCond.get(e.id) || {}; return { id: e.id, name: e.name, slug: e.slug, tiers, n: Object.values(tiers).reduce((a, b) => a + b, 0) }; }).sort((a, b) => b.n - a.n || a.name.localeCompare(b.name));
+    }
 
     const { data: allConds } = await sb.from("atlas_entities").select("category").eq("type", "condition");
     for (const r of allConds ?? []) catCounts.set(r.category || "General & other", (catCounts.get(r.category || "General & other") || 0) + 1);
@@ -273,8 +283,27 @@ export default async function Database({ searchParams }: { searchParams: Promise
             {!anyFilter ? (
               <>
                 <div className="at-sec">
+                  <h2 className="at-h2">The graded topics</h2>
+                  <p className="at-sub">Every finding in these {topics.length} areas carries a grade, a full safety note and its studies. The bar shows the mix of grades, strongest on the left. <Link href="/how-we-grade">How a grade is decided</Link>.</p>
+                  <ul className="at-topics">
+                    {topics.map((t) => (
+                      <li key={t.id}>
+                        <Link href={`/ingredient/${t.slug}`} className="at-topic">
+                          <span className="at-topic-n">{t.name}</span>
+                          <span className="at-topic-c">{t.n} graded</span>
+                          <span className="at-topic-bar" aria-label={["established", "studied", "emerging", "minimal", "none"].filter((k) => t.tiers[k]).map((k) => `${t.tiers[k]} ${k}`).join(", ")}>
+                            {["established", "studied", "emerging", "minimal", "none"].map((k) => t.tiers[k] ? <i key={k} className={`at-tb at-tb-${k}`} style={{ flexGrow: t.tiers[k] }} /> : null)}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="at-fine">Strongest to weakest: Established, Studied, Emerging, Minimal, None.</p>
+                </div>
+
+                <div className="at-sec">
                   <h2 className="at-h2">Veteran-priority conditions</h2>
-                  <p className="at-sub">TBI, blast injury, PTSD, and the other conditions this project exists to serve first — many with little to no historical record, which is exactly the frontier ground real research needs to claim.</p>
+                  <p className="at-sub">TBI, blast injury, PTSD, and the other conditions this project exists to serve first. None of these eight has a graded finding or a historical record yet. This is the frontier the next research has to claim.</p>
                   <ul className="at-grid">{vetConditions.map(condCard)}</ul>
                 </div>
 
