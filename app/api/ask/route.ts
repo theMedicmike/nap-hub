@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
 import { checkLimit, BUSY_MESSAGE } from "@/lib/limits";
+import { safetyFloor, replyNamesWho, WHO_REPLY } from "@/lib/ask-safety";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -22,13 +23,16 @@ HARD SAFETY RULES — absolute, and they override everything above:
 2. RED FLAGS — route immediately and warmly to professional care, and do NOT offer natural or terrain approaches as a treatment:
    - Cancer or suspected cancer: urge them to work with their oncologist and medical team; you may explain general terrain concepts only as supportive context, never as a treatment or cure.
    - Chest pain, signs of stroke, severe shortness of breath, severe bleeding, or any acute severe symptom: tell them to call 911 or emergency services now.
-   - Thoughts of suicide or self-harm: the 988 Suicide and Crisis Lifeline — call or text 988 (veterans press 1) — right now. Be caring and direct.
+   - Thoughts of suicide or self-harm: the 988 Suicide and Crisis Lifeline — call or text 988 (veterans and their families press 1) — right now. Be caring and direct.
    - Signs of serious infection or sepsis, pregnancy complications, or a child with serious symptoms: urgent professional care.
 3. Never claim that NAP, or any nutrient, botanical, or terrain approach, cures, treats, or prevents any disease. Do not use the words cure, treat, reverse, or prevent in connection with any specific disease. Speak only about supporting the body's own systems, and about what research has or has not studied.
 4. Be product-neutral: never name or recommend specific products, brands, supplements to buy, or where to buy anything.
 5. DRUG AND SUPPLEMENT INTERACTIONS — treat this as a primary safety concern, not an afterthought. Botanicals and nutrients interact with prescription medication. Whenever the conversation touches any nutrient, botanical, or terrain support, say plainly that these can interact with prescription medications and that a pharmacist or prescribing clinician should review anything they are considering alongside what they already take. Be especially direct if they mention blood thinners, blood pressure or heart medication, diabetes medication, thyroid medication, psychiatric medication, immunosuppressants, chemotherapy, transplant medication, seizure medication, or surgery. Never suggest reducing, stopping, or replacing a prescribed medication — that is the prescribing clinician's decision alone.
 6. Additional red flags requiring immediate professional care: severe or sudden abdominal pain, high fever with confusion or stiff neck, a head injury with confusion or vomiting, sudden vision loss, inability to urinate, a fall in an older adult, any symptom in an infant or young child, and any pregnancy complication or bleeding in pregnancy.
 7. Always frame your help as education, and encourage working with a licensed clinician for anything specific to their situation.
+8. NAP CERTIFIES NO ONE. NAP issues no certificate, credential, or license, accredits no clinic or center, has no seal or badge, charges no fees, and takes no investors. If anyone asks how to become NAP-certified, whether they can call themselves NAP-accredited or NAP-approved, or whether they can use a NAP seal, say plainly that no such thing exists and that claiming it would not be true. Never send them to the NAP team or any other channel to ask about it.
+9. Never mention, cite, or compare NAP with any international health agency, intergovernmental body, or their strategies, even to deny a link. If someone asks, say NAP is its own independent framework, and move on to how NAP grades the evidence.
+10. For veterans' exposure benefits (burn pits, Camp Lejeune, Agent Orange, and others), point them to the VA and an accredited veterans service officer. Do not name filing deadlines or specific claim programs, because those change; the VA and a service officer will have the current ones.
 
 TONE AND FORMAT: Write like a caring practitioner talking with someone across a table — warm, clear, humble, never preachy. Use natural, flowing sentences and short paragraphs. Do NOT use any markdown or formatting symbols: no asterisks, no bold, no bullet points, no dashes or hyphens used as bullets, no "---" dividers, and no headings. It must read like a real person speaking, because your words are often read aloud. When you draw on the Atlas, weave the evidence grade into a sentence naturally — for example, "the evidence here is strong" or "this one is still emerging" — rather than labeling it. LEAD with the safety guidance when a topic is serious: put the referral to professional care and any interaction warning EARLY in your reply, not at the end, because a long answer can be cut off before the end is ever reached. Keep replies reasonably short for the same reason. Remember: this is an early-stage educational tool, not medical advice.`;
 
@@ -96,35 +100,13 @@ async function atlasKnowledge(conversation: string): Promise<string> {
     return `[scientific evidence: ${sci}${trad}] ${a.name} — ${l.relation} — ${b.name}.${safety}`;
   }).filter(Boolean);
   const header = `\n\nNAP ATLAS — GRADED CLAIMS ONLY (${lines.length} claims, graded in-house and not yet independently reviewed; ground answers in these and nowhere else):\n`;
-  const footer = `\n\nThese are the ONLY graded claims that exist. The Atlas also contains a large historical folk-use record which is deliberately EXCLUDED here because traditional use is not evidence of effectiveness. If a question is not covered by the graded claims above, say plainly that NAP has not reviewed evidence on it yet — never fill the gap from general knowledge and never present traditional use as evidence.\n\nSAFETY NOTES: a FULL SAFETY NOTE is attached to every claim whose ingredient or condition appears in this conversation. Whenever you discuss an ingredient, carry its most important safety points (who should avoid it, key medication interactions) into your reply, early. Do NOT discuss any ingredient in detail if its FULL SAFETY NOTE is not shown above — instead, ask the person to name the specific ingredient they are curious about so its safety guidance can be included.`;
+  const footer = `\n\nThese are the ONLY graded claims that exist. The Atlas also contains a large historical folk-use record which is deliberately EXCLUDED here because traditional use is not evidence of effectiveness. If a question is not covered by the graded claims above, say plainly that NAP has not reviewed evidence on it yet — never fill the gap from general knowledge and never present traditional use as evidence.\n\nSAFETY NOTES: a FULL SAFETY NOTE is attached to every claim whose ingredient or condition appears in this conversation. Whenever you discuss an ingredient, carry its most important safety points (who should avoid it, key medication interactions) into your reply, early. Do NOT name any ingredient whose FULL SAFETY NOTE is not shown above, not even in passing or as one item in a list. Talk about the body system instead (for example liver clearance, the gut lining, or sleep regulation), and invite the person to name an ingredient they are curious about so its safety guidance can be included.`;
   return header + lines.join("\n") + footer;
 }
 
-/* ------------------------------------------------------------------------------------------
- * DETERMINISTIC SAFETY FLOOR — runs in CODE, before any model call.
- * Previously the ONLY crisis routing lived inside the model's system prompt, so every failure
- * path bypassed it: missing API key (503), model error (502), model drift, or a truncated reply
- * (max_tokens with the safety referral instructed to come LAST). A crisis response must never
- * depend on a network call succeeding or a model choosing to comply.
- * Mirrors the same code-level interception already used on the book site and the CtD app.
- * ---------------------------------------------------------------------------------------- */
-const CRISIS_RE = /\b(suicid\w*|kill (?:myself|me)|hurt (?:myself|me)|harm (?:myself|me)|end (?:it all|my life)|take my life|want to die|better off dead|no reason to live|not worth living|can'?t go on|can'?t do this anymore|don'?t want to (?:be here|live)|self[- ]harm|cutting myself|overdose on)\b/i;
-
-const EMERGENCY_RE = /\b(chest pain|crushing chest|heart attack|can'?t breathe|cannot breathe|trouble breathing|severe shortness of breath|stroke|face drooping|slurred speech|sudden numbness|anaphyla\w*|severe bleeding|bleeding heavily|won'?t stop bleeding|unconscious|unresponsive|seizure|overdosed|poison(?:ed|ing)|sepsis|coughing up blood|vomiting blood)\b/i;
-
-const CRISIS_REPLY = [
-  "I'm really glad you told me, and I want to make sure you're talking to a person who can help right now — not a website.",
-  "Please reach the Veterans Crisis Line: call or text 988, then press 1. You can also text 838255. It's free, confidential, and available any time, day or night. If you're outside the US, please contact your local emergency number or crisis line.",
-  "If you're in immediate danger, please call 911.",
-  "You don't have to carry this by yourself, and reaching out was the right thing to do. I'm an educational tool and I'm not equipped to help with this — a real person is, and they're there right now.",
-].join("\n\n");
-
-const EMERGENCY_REPLY = [
-  "What you're describing could be a medical emergency, so I'm not going to talk about anything else first.",
-  "Please call 911 now, or get to an emergency room. If you're not in the US, call your local emergency number.",
-  "Please don't wait to see if it passes, and please don't look for a natural or supportive approach for this — this needs emergency medical care right now. I'm an educational tool and I can't assess symptoms.",
-].join("\n\n");
-
+/* DETERMINISTIC SAFETY FLOOR — lives in lib/ask-safety.ts (crisis, emergency, child emergency, and
+ * the no-WHO rule). It runs in CODE before the usage cap, the API-key check and the model, so a
+ * crisis reply never depends on a network call, a key, a model choosing to comply, or the cap. */
 function lastUserText(messages: any[]): string {
   for (let i = messages.length - 1; i >= 0; i--) {
     if (messages[i]?.role === "user") return String(messages[i]?.content ?? "");
@@ -150,20 +132,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "server error" }, { status: 500 });
   }
 
-  // SAFETY FLOOR — before the API-key check, before the model, before anything else.
-  const userText = lastUserText(messages);
-  if (CRISIS_RE.test(userText)) return NextResponse.json({ reply: CRISIS_REPLY, safety: "crisis" });
-  if (EMERGENCY_RE.test(userText)) return NextResponse.json({ reply: EMERGENCY_REPLY, safety: "emergency" });
+  // SAFETY FLOOR — before the usage cap, the API-key check, the model, before anything else.
+  const floor = safetyFloor(lastUserText(messages));
+  if (floor) return NextResponse.json(floor);
+
+  // Key check before the cap: a request the guide cannot answer must not use up the visitor's hour.
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return NextResponse.json({ error: "guide not connected" }, { status: 503 });
+  }
 
   // Usage cap: after the safety floor, so a person in crisis is never turned away by a limit.
   const lim = await checkLimit(req, "ask");
   if (!lim.ok) {
-    const reply = `${BUSY_MESSAGE[lim.scope]} If this is an emergency, call 911. For thoughts of suicide or crisis, call or text 988 (veterans press 1).`;
+    const reply = `${BUSY_MESSAGE[lim.scope]} If this is an emergency, call 911. For thoughts of suicide or crisis, call or text 988 (veterans and their families press 1).`;
     return NextResponse.json({ error: "limit", reply }, { status: 429 });
-  }
-
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return NextResponse.json({ error: "guide not connected" }, { status: 503 });
   }
   try {
     const recent = messages.slice(-6).map((m) => m.content).join("\n");
@@ -183,6 +165,8 @@ export async function POST(req: NextRequest) {
     }
     const j = await r.json();
     const reply = j.content?.[0]?.text || "I'm here to help — could you say a bit more about what you're wondering?";
+    // Standing rule, enforced in code as well as in the prompt: a reply that names the WHO never ships.
+    if (replyNamesWho(reply)) return NextResponse.json({ reply: WHO_REPLY, safety: "who" });
     return NextResponse.json({ reply });
   } catch {
     return NextResponse.json({ error: "server error" }, { status: 500 });

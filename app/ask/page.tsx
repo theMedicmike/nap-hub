@@ -123,7 +123,7 @@ export default function Ask() {
       });
       if (r.status === 429) {
         const d = await r.json().catch(() => ({}));
-        setMessages((m) => [...m, { role: "assistant", content: d.reply || "The guide has reached its limit for now. Please try again later. In an emergency call 911; for thoughts of suicide or crisis, call or text 988 (veterans press 1)." }]);
+        setMessages((m) => [...m, { role: "assistant", content: d.reply || "The guide has reached its limit for now. Please try again later. In an emergency call 911; for thoughts of suicide or crisis, call or text 988 (veterans and their families press 1)." }]);
         return;
       }
       if (!r.ok) throw new Error("not connected");
@@ -132,7 +132,7 @@ export default function Ask() {
       setMessages((m) => [...m, { role: "assistant", content: reply }]);
       void speak(reply);
     } catch {
-      setMessages((m) => [...m, { role: "assistant", content: "The guide couldn't answer just now. Please try again in a moment. In an emergency call 911; for thoughts of suicide or crisis, call or text 988 (veterans press 1)." }]);
+      setMessages((m) => [...m, { role: "assistant", content: "The guide couldn't answer just now. Please try again in a moment. In an emergency call 911; for thoughts of suicide or crisis, call or text 988 (veterans and their families press 1)." }]);
     } finally {
       setBusy(false);
     }
@@ -203,7 +203,7 @@ export default function Ask() {
             ? "Tap the microphone and speak; the guide answers out loud. "
             : "Voice input works best in Chrome, Edge, or Safari. "}
           This guide is educational, not medical advice. In an emergency call 911. For thoughts of suicide or crisis,
-          call or text 988 (veterans press 1).
+          call or text 988 (veterans and their families press 1).
         </p>
       </section>
     </PageShell>
