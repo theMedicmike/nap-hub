@@ -78,9 +78,9 @@ export function Nav({ overlay = false }: { overlay?: boolean }) {
         <div className="nav-links">
           <Group g={learn} open={open} setOpen={setOpen} active={inGroup(learn.items)} />
           <Group g={evidence} open={open} setOpen={setOpen} active={inGroup(evidence.items)} />
-          <Link className={`nl${path.startsWith("/ask") ? " on" : ""}`} href="/ask">Ask</Link>
           <Group g={about} open={open} setOpen={setOpen} active={inGroup(about.items)} />
-          <Link className="btn btn-thread sm" href="/shape">Join the build</Link>
+          <Link className={`nl${path.startsWith("/shape") ? " on" : ""}`} href="/shape">Join the build</Link>
+          <Link className="btn btn-thread sm" href="/ask" aria-current={path.startsWith("/ask") ? "page" : undefined}>Ask the guide</Link>
         </div>
 
         <button className="nav-burger" aria-expanded={sheet} aria-controls="nav-sheet" onClick={() => setSheet((s) => !s)}>
@@ -99,7 +99,7 @@ export function Nav({ overlay = false }: { overlay?: boolean }) {
                 {g.items.map((it) => <Item key={it.label} it={it} onGo={() => setSheet(false)} />)}
               </section>
             ))}
-            <Link className="btn btn-thread" href="/shape" onClick={() => setSheet(false)}>Join the build</Link>
+            <Link className="btn btn-glass" href="/shape" onClick={() => setSheet(false)}>Join the build</Link>
             <p className="sheet-crisis">In crisis? Call or text <a href="tel:988">988</a>, then press 1.</p>
           </div>
         </div>,

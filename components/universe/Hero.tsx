@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Fireflies } from "./Fireflies";
 import { PlantArt } from "./PlantArt";
 
@@ -41,9 +42,13 @@ export function Hero({ src }: { src: string | null }) {
         <h1 className="uh-h1">Every healer pulled the same&nbsp;thread.</h1>
         <p className="uh-sub">5,000 years of healing. One thread. NAP grades it.</p>
         <div className="uh-cta">
-          <a className="btn btn-thread" href="#circle">Meet the Circle</a>
+          <Link className="btn btn-thread lg" href="/ask">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.5 5.5h15a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H10l-4.5 3.5V16.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" /></svg>
+            Ask the guide
+          </Link>
           <a className="btn btn-glass" href="#library">Enter the Library</a>
         </div>
+        <p className="uh-note">Plain answers from the graded evidence. Educational, not medical advice.</p>
       </div>
       <a className="uh-scroll" href="#thread" aria-label="Follow the thread through history">
         <span>Follow the thread</span>
