@@ -265,8 +265,29 @@ export function pharmacistLine(names: string[]): string {
   return `\n\nOne more safety point: this answer mentioned ${listNames(names)}, and NAP's full safety notes for ${them} were not part of it. Before you try ${them}, please run ${them} past a pharmacist or your prescriber, especially if you take any medication.`;
 }
 
-export type SafetyCheck = { named: string[]; revised: boolean; appended: string[] };
+// Prompt rule 5: whenever a reply touches a nutrient or botanical it must say these can interact
+// with prescription medication and that a pharmacist or prescribing clinician should review it.
+// The 2026-11-27 live run (#4, "tired all the time") named B12, iron and magnesium with their
+// notes in hand and still left that line out. So it is enforced here as well: a reply that names
+// any Atlas ingredient and never names a pharmacist or prescriber gets the line added.
+const REVIEWER_RE = /pharmacist|prescriber|prescribing (?:clinician|doctor|physician|provider)/i;
+export const INTERACTION_LINE =
+  "\n\nOne more safety point: any nutrient or botanical, including the ones named here, can interact with prescription medication. Before you add anything, please run it past a pharmacist or your prescriber alongside what you already take.";
+
+export function needsInteractionLine(reply: string, matchers: IngredientMatcher[]): boolean {
+  return ingredientsNamed(reply, matchers).some((m) => m.trigger) && !REVIEWER_RE.test(reply);
+}
+
+export type SafetyCheck = { named: string[]; revised: boolean; appended: string[]; interactionLine: boolean };
 export type ModelCall = (system: string) => Promise<string | null>; // null = the call failed
+
+function finish(reply: string, check: SafetyCheck, matchers: IngredientMatcher[]): { reply: string; check: SafetyCheck } {
+  if (needsInteractionLine(reply, matchers)) {
+    check.interactionLine = true;
+    return { reply: reply + INTERACTION_LINE, check };
+  }
+  return { reply, check };
+}
 
 // Runs after the first answer. `system` is the full system prompt WITHOUT the knowledge block.
 export async function ensureSafetyNotes(opts: {
@@ -279,21 +300,21 @@ export async function ensureSafetyNotes(opts: {
   const { atlas, system, conversation, first, ask } = opts;
   const named1 = ingredientsNamed(first.reply, atlas.matchers);
   const missing1 = named1.filter((m) => m.trigger && !first.shown.has(m.id));
-  const check: SafetyCheck = { named: named1.map((m) => m.short), revised: false, appended: [] };
-  if (!missing1.length) return { reply: first.reply, check };
+  const check: SafetyCheck = { named: named1.map((m) => m.short), revised: false, appended: [], interactionLine: false };
+  if (!missing1.length) return finish(first.reply, check, atlas.matchers);
 
   const force = new Set(missing1.map((m) => m.id));
   const k2 = buildKnowledge(atlas, conversation, force);
   const second = await ask(system + k2.text + revisionInstruction(first.reply, missing1.map((m) => m.short)));
   if (!second || !second.trim()) {
     check.appended = missing1.map((m) => m.short);
-    return { reply: first.reply + pharmacistLine(check.appended), check };
+    return finish(first.reply + pharmacistLine(check.appended), check, atlas.matchers);
   }
   const named2 = ingredientsNamed(second, atlas.matchers);
   const missing2 = named2.filter((m) => m.trigger && !k2.shown.has(m.id));
   check.named = named2.map((m) => m.short);
   check.revised = true;
-  if (!missing2.length) return { reply: second, check };
+  if (!missing2.length) return finish(second, check, atlas.matchers);
   check.appended = missing2.map((m) => m.short);
-  return { reply: second + pharmacistLine(check.appended), check };
+  return finish(second + pharmacistLine(check.appended), check, atlas.matchers);
 }
