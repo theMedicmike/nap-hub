@@ -297,3 +297,165 @@ export async function ensureSafetyNotes(opts: {
   check.appended = missing2.map((m) => m.short);
   return { reply: second + pharmacistLine(check.appended), check };
 }
+
+/* ---------- 4. The structured safety layer: shared vocabulary ---------- */
+
+// Two tables (db/2026-11-27_safety_layer.sql) turn the prose of the safety notes into fields:
+// atlas_population_flags (ingredient x population -> avoid | caution) and atlas_drug_interactions
+// (ingredient x drug class -> avoid | caution | monitor). The words below are the ONE vocabulary
+// both sides use: scripts/draft-safety-rows.mjs matches `terms` / `drugs` inside the safety notes
+// to draft rows, and the guide matches the same words (plus the everyday `said` words) in what the
+// visitor wrote to decide which rows apply. Each term is matched as whole words in norm() text
+// (lower case, apostrophes dropped, punctuation -> spaces); a trailing * allows any ending.
+
+export type Population = "pregnancy" | "breastfeeding" | "children" | "kidney" | "liver" | "elderly" | "surgery" | "bleeding_risk";
+export type PopulationDef = { slug: Population; label: string; terms: string[]; said: string[] };
+export type DrugClassDef = { slug: string; label: string; drugs: string[]; said: string[] };
+
+// `label` completes the sentence "<ingredient> should be avoided ...".
+export const POPULATIONS: PopulationDef[] = [
+  { slug: "pregnancy", label: "in pregnancy",
+    terms: ["pregnan*", "prenatal", "trying to conceive", "trying to get pregnant", "trying for a baby", "expecting a baby", "first trimester", "second trimester", "third trimester", "uterine stimulant", "abortifacient", "emmenagogue", "teratogen*"],
+    said: ["ttc", "ivf", "fertility treatment*"] },
+  { slug: "breastfeeding", label: "while breastfeeding",
+    terms: ["breastfeed*", "breast feed*", "breastfed", "breast fed", "lactat*", "nursing mother*", "nursing a baby", "nursing my baby", "while nursing", "still nursing", "breast milk", "chestfeed*"],
+    said: ["pumping milk", "my milk supply"] },
+  { slug: "children", label: "in children",
+    terms: ["child*", "kid", "kids", "toddler*", "infant*", "baby", "babies", "newborn*", "teen", "teens", "teenager*", "adolescen*", "pediatric*", "paediatric*", "prepubertal", "boys", "girls"],
+    said: ["my son", "my daughter", "my grandson", "my granddaughter", "my little one", "my little ones", "my youngest", "my oldest"] },
+  // Kidney and liver: in the notes only a DISEASE context counts ("liver disease", "renal impairment"),
+  // because the organ word alone appears in "metabolized by the liver" and "no change in liver function".
+  // In the visitor's own words the bare organ is enough ("I want to support my liver").
+  { slug: "kidney", label: "by people with kidney disease",
+    terms: ["kidney disease*", "kidney impairment", "kidney failure", "kidney problem*", "kidney condition*", "kidney injury", "kidney stone*", "kidney transplant*", "renal impairment", "renal failure", "renal disease*", "renal insufficiency", "renal burden", "renal irritation", "dialysis", "ckd", "nephrotox*", "nephropathy", "stone former*"],
+    said: ["kidney", "kidneys", "renal"] },
+  { slug: "liver", label: "by people with liver disease",
+    terms: ["liver disease*", "liver impairment", "liver failure", "liver problem*", "liver condition*", "liver injury", "liver damage", "liver toxicity", "liver transplant*", "existing liver", "advanced liver", "active liver", "hepatic impairment", "hepatic encephalopathy", "hepatic failure", "hepatic injury", "hepatic disease*", "hepatic dysfunction", "hepatic burden", "hepatitis", "cirrhosis", "cirrhotic", "fatty liver", "nafld", "hepatotox*", "dili", "abnormal lft*", "elevated liver enzymes"],
+    said: ["liver", "livers", "hepatic", "liver enzymes"] },
+  { slug: "elderly", label: "by older adults",
+    terms: ["elderly", "older adult*", "older people", "older patients", "older men", "older women", "geriatric*", "frail*", "seniors", "senior citizen*", "nursing home*"],
+    said: ["my grandmother", "my grandfather", "grandma", "grandpa", "in his 70s", "in her 70s", "in their 70s", "in his 80s", "in her 80s", "in their 80s", "in his 90s", "in her 90s", "in their 90s"] },
+  { slug: "surgery", label: "around surgery",
+    terms: ["surgery", "surgeries", "surgical", "surgeon*", "anesthe*", "anaesthe*", "perioperative", "preoperative", "postoperative", "pre op", "post op", "preop", "postop", "elective procedure*"],
+    said: ["having an operation", "an operation on", "my operation", "going under", "dental extraction*", "wisdom teeth", "tooth pulled", "colonoscopy", "endoscopy", "biopsy"] },
+  { slug: "bleeding_risk", label: "by people with a bleeding disorder",
+    terms: ["bleeding disorder*", "clotting disorder*", "hemophilia", "haemophilia", "von willebrand", "thrombocytopenia", "low platelet*", "active bleeding", "peptic ulcer*", "bleeding ulcer*", "gi bleed*", "bleed easily", "bleeds easily", "bruise easily", "bruises easily", "easy bruising"],
+    said: ["hemorrhag*", "haemorrhag*"] },
+];
+
+// `drugs`: medicine names and class words, matched in the notes AND in the conversation.
+// `said`: conversation only (conditions and everyday phrases that imply the class).
+// `label` completes "<ingredient> should be avoided with ...". No product brands in labels.
+export const DRUG_CLASSES: DrugClassDef[] = [
+  { slug: "anticoagulants", label: "blood thinners",
+    drugs: ["blood thinner*", "anticoagul*", "antiplatelet*", "anti platelet*", "warfarin", "coumadin", "jantoven", "eliquis", "apixaban", "xarelto", "rivaroxaban", "pradaxa", "dabigatran", "savaysa", "edoxaban", "heparin", "enoxaparin", "lovenox", "fondaparinux", "plavix", "clopidogrel", "brilinta", "ticagrelor", "effient", "prasugrel", "aspirin", "doac", "doacs", "noac", "noacs"],
+    said: ["blood clot*", "a clot", "afib", "atrial fibrillation", "stent", "stents", "dvt", "pulmonary embolism"] },
+  { slug: "nsaids", label: "anti-inflammatory painkillers (NSAIDs)",
+    drugs: ["nsaid*", "ibuprofen", "advil", "motrin", "naproxen", "aleve", "naprosyn", "diclofenac", "voltaren", "meloxicam", "mobic", "celecoxib", "celebrex", "indomethacin", "ketorolac", "toradol", "etodolac"],
+    said: [] },
+  { slug: "antidepressants", label: "antidepressants and other serotonin-acting medicines",
+    drugs: ["antidepressant*", "ssri", "ssris", "snri", "snris", "maoi", "maois", "mao inhibitor*", "monoamine oxidase inhibitor*", "serotonergic*", "serotonin syndrome", "sertraline", "zoloft", "fluoxetine", "prozac", "escitalopram", "lexapro", "citalopram", "celexa", "paroxetine", "paxil", "fluvoxamine", "luvox", "venlafaxine", "effexor", "duloxetine", "cymbalta", "desvenlafaxine", "pristiq", "vilazodone", "vortioxetine", "trintellix", "bupropion", "wellbutrin", "trazodone", "mirtazapine", "remeron", "amitriptyline", "nortriptyline", "imipramine", "tricyclic*", "tramadol", "triptan*", "sumatriptan", "rizatriptan", "lithium", "buspirone", "buspar", "phenelzine", "nardil", "selegiline", "tranylcypromine", "linezolid", "dextromethorphan"],
+    said: ["my antidepressant", "depression medication*", "depression med*", "anxiety medication*", "anxiety med*", "psych med*", "psychiatric medication*", "bipolar", "mood stabilizer*"] },
+  { slug: "sedatives", label: "sedatives, sleep medicines, opioids or alcohol",
+    drugs: ["sedative*", "cns depressant*", "benzodiazepine*", "benzo", "benzos", "alprazolam", "xanax", "diazepam", "valium", "lorazepam", "ativan", "clonazepam", "klonopin", "temazepam", "restoril", "zolpidem", "ambien", "eszopiclone", "lunesta", "zaleplon", "z drug*", "sleeping pill*", "sleep aid*", "sleep medication*", "sleep med*", "hypnotic*", "opioid*", "opiate*", "oxycodone", "oxycontin", "percocet", "hydrocodone", "vicodin", "norco", "morphine", "fentanyl", "methadone", "buprenorphine", "suboxone", "codeine", "tapentadol", "barbiturate*", "phenobarbital", "gabapentin", "neurontin", "pregabalin", "lyrica", "muscle relaxant*", "cyclobenzaprine", "flexeril", "baclofen", "tizanidine", "carisoprodol", "hydroxyzine", "diphenhydramine", "benadryl", "alcohol"],
+    said: ["drink alcohol", "drinks alcohol", "heavy drinker", "beers", "wine", "whiskey", "vodka", "bourbon", "liquor", "nightcap", "hangover*"] },
+  { slug: "antidiabetics", label: "diabetes medicines",
+    drugs: ["antidiabetic*", "anti diabetic*", "diabetes medication*", "diabetes med*", "diabetic medication*", "glucose lowering drug*", "glucose lowering medication*", "blood sugar medication*", "hypoglycemic agent*", "hypoglycaemic agent*", "oral hypoglycemic*", "insulin", "metformin", "glucophage", "glipizide", "glyburide", "glimepiride", "sulfonylurea*", "pioglitazone", "actos", "sitagliptin", "januvia", "linagliptin", "tradjenta", "empagliflozin", "jardiance", "dapagliflozin", "farxiga", "canagliflozin", "invokana", "sglt2*", "semaglutide", "ozempic", "wegovy", "rybelsus", "liraglutide", "victoza", "saxenda", "dulaglutide", "trulicity", "tirzepatide", "mounjaro", "zepbound", "glp 1*", "exenatide", "acarbose"],
+    said: ["diabetes", "diabetic", "prediabetes", "prediabetic", "a1c", "blood sugar"] },
+  { slug: "antihypertensives", label: "blood pressure or heart medicines",
+    drugs: ["antihypertensive*", "anti hypertensive*", "blood pressure medication*", "blood pressure med*", "blood pressure pill*", "blood pressure lowering drug*", "bp med*", "heart medication*", "heart med*", "cardiac medication*", "ace inhibitor*", "lisinopril", "zestril", "enalapril", "ramipril", "benazepril", "losartan", "cozaar", "valsartan", "diovan", "olmesartan", "irbesartan", "telmisartan", "arbs", "amlodipine", "norvasc", "nifedipine", "diltiazem", "verapamil", "calcium channel blocker*", "metoprolol", "lopressor", "toprol", "atenolol", "propranolol", "carvedilol", "coreg", "bisoprolol", "nebivolol", "beta blocker*", "hydrochlorothiazide", "hctz", "chlorthalidone", "furosemide", "lasix", "torsemide", "bumetanide", "spironolactone", "aldactone", "eplerenone", "diuretic*", "water pill*", "thiazide*", "potassium sparing", "clonidine", "prazosin", "minipress", "doxazosin", "hydralazine", "nitroglycerin", "isosorbide", "digoxin", "lanoxin", "amiodarone", "flecainide", "sotalol", "entresto", "sacubitril", "ivabradine"],
+    said: ["high blood pressure", "hypertension", "heart failure", "arrhythmia", "afib", "atrial fibrillation"] },
+  { slug: "thyroid", label: "thyroid medicines",
+    drugs: ["thyroid medication*", "thyroid med*", "thyroid hormone replacement", "levothyroxine", "synthroid", "levoxyl", "unithroid", "tirosint", "euthyrox", "liothyronine", "cytomel", "armour thyroid", "np thyroid", "desiccated thyroid", "methimazole", "tapazole", "propylthiouracil", "antithyroid*"],
+    said: ["thyroid", "hypothyroid*", "hyperthyroid*", "hashimoto*", "graves disease"] },
+  { slug: "immunosuppressants", label: "immune-suppressing medicines",
+    drugs: ["immunosuppressant*", "immunosuppressive*", "immunosuppressed", "immunocompromised", "transplant patient*", "transplant recipient*", "transplant medication*", "transplant drug*", "organ transplant*", "after a transplant", "post transplant", "anti rejection", "tacrolimus", "prograf", "cyclosporin*", "ciclosporin*", "sirolimus", "everolimus", "mycophenolate", "cellcept", "azathioprine", "imuran", "methotrexate", "prednisone", "prednisolone", "methylprednisolone", "dexamethasone", "corticosteroid*", "glucocorticoid*", "budesonide", "humira", "adalimumab", "enbrel", "etanercept", "remicade", "infliximab", "rituximab", "rituxan", "ocrevus", "biologics", "biologic drug*", "biologic therap*", "tnf inhibitor*", "tnf blocker*", "anti tnf", "jak inhibitor*", "rinvoq", "xeljanz", "tofacitinib", "upadacitinib", "abatacept", "ustekinumab", "stelara", "secukinumab", "dupixent", "dupilumab", "hydroxychloroquine", "plaquenil", "leflunomide", "sulfasalazine"],
+    said: ["transplant", "transplanted", "autoimmune*", "lupus", "rheumatoid", "crohns", "crohn", "ulcerative colitis", "multiple sclerosis", "psoriasis", "on steroids", "steroids"] },
+  { slug: "chemotherapy", label: "cancer treatments",
+    drugs: ["chemotherap*", "chemo", "oncolog*", "cancer treatment*", "cancer therap*", "cancer drug*", "anticancer drug*", "radiation therap*", "radiotherap*", "tamoxifen", "letrozole", "anastrozole", "exemestane", "aromatase inhibitor*", "imatinib", "gleevec", "irinotecan", "cyclophosphamide", "doxorubicin", "cisplatin", "carboplatin", "paclitaxel", "docetaxel", "capecitabine", "immunotherap*", "checkpoint inhibitor*", "keytruda", "pembrolizumab", "opdivo", "nivolumab", "ipilimumab", "enzalutamide", "abiraterone", "lupron", "leuprolide"],
+    said: ["cancer", "tumor", "tumour", "lymphoma", "leukemia", "melanoma", "in remission"] },
+  { slug: "antiepileptics", label: "seizure medicines",
+    drugs: ["antiepileptic*", "anti epileptic*", "anticonvulsant*", "anti seizure*", "antiseizure*", "seizure medication*", "seizure med*", "epilepsy medication*", "carbamazepine", "tegretol", "phenytoin", "dilantin", "valproate", "valproic acid", "divalproex", "depakote", "lamotrigine", "lamictal", "levetiracetam", "keppra", "topiramate", "topamax", "oxcarbazepine", "trileptal", "lacosamide", "vimpat", "zonisamide", "clobazam", "onfi", "primidone"],
+    said: ["epilepsy", "epileptic", "seizure disorder", "my seizures", "seizures"] },
+  { slug: "statins", label: "cholesterol medicines (statins)",
+    drugs: ["statin", "statins", "atorvastatin", "lipitor", "simvastatin", "zocor", "rosuvastatin", "crestor", "pravastatin", "lovastatin", "pitavastatin", "cholesterol medication*", "cholesterol med*", "ezetimibe", "zetia"],
+    said: ["high cholesterol", "cholesterol"] },
+  { slug: "hormonal", label: "hormone therapies or birth control",
+    drugs: ["oral contraceptive*", "contraceptive pill*", "contraceptives", "hormonal contracept*", "birth control*", "the pill", "estrogen therap*", "estrogen replacement*", "estradiol", "progestin*", "hormone replacement therap*", "menopausal hormone replacement", "hrt", "menopausal hormone therapy", "testosterone therap*", "testosterone replacement*", "trt", "testosterone injection*", "testosterone gel", "androgen therap*", "anabolic steroid*", "hormone therap*"],
+    said: ["estrogen", "estrogens", "oestrogen", "progesterone", "iud", "nexplanon", "depo provera", "on hormones"] },
+  { slug: "antiretrovirals", label: "HIV medicines",
+    drugs: ["antiretroviral*", "hiv medication*", "hiv med*", "hiv drug*", "protease inhibitor*", "saquinavir", "ritonavir", "indinavir", "lopinavir", "darunavir", "atazanavir", "efavirenz", "nevirapine", "dolutegravir", "bictegravir", "biktarvy", "truvada", "descovy", "genvoya", "triumeq", "tenofovir", "emtricitabine", "hepatitis c treatment*", "sofosbuvir", "epclusa", "harvoni", "mavyret"],
+    said: ["hiv", "hiv positive"] },
+  { slug: "stimulants", label: "stimulant medicines (ADHD medicines)",
+    drugs: ["stimulant medication*", "stimulant medicine*", "stimulant drug*", "prescription stimulant*", "with stimulants", "and stimulants", "or stimulants", "other stimulants", "adhd medication*", "adhd med*", "adhd stimulant*", "amphetamine*", "adderall", "vyvanse", "lisdexamfetamine", "dextroamphetamine", "dexedrine", "methylphenidate", "ritalin", "concerta", "focalin", "dexmethylphenidate", "modafinil", "provigil", "armodafinil", "nuvigil", "phentermine", "atomoxetine", "strattera"],
+    said: ["adhd", "stimulants", "my stimulant"] },
+  { slug: "antibiotics", label: "antibiotics",
+    drugs: ["antibiotic*", "antibacterial drug*", "fluoroquinolone*", "quinolone*", "ciprofloxacin", "cipro", "levofloxacin", "levaquin", "moxifloxacin", "tetracycline*", "doxycycline", "minocycline", "amoxicillin", "augmentin", "penicillin*", "cephalexin", "keflex", "azithromycin", "zithromax", "z pak", "clarithromycin", "erythromycin", "metronidazole", "flagyl", "nitrofurantoin", "macrobid", "sulfamethoxazole", "bactrim", "rifampin", "rifampicin", "isoniazid"],
+    said: ["on antibiotics", "a course of antibiotics", "uti"] },
+  { slug: "antifungals", label: "antifungal medicines",
+    drugs: ["antifungal*", "fluconazole", "diflucan", "ketoconazole", "itraconazole", "voriconazole", "terbinafine", "lamisil", "nystatin", "amphotericin", "clotrimazole", "miconazole", "griseofulvin"],
+    said: [] },
+  { slug: "acid_reducers", label: "acid-reducing medicines",
+    drugs: ["proton pump inhibitor*", "ppi", "ppis", "omeprazole", "prilosec", "esomeprazole", "nexium", "pantoprazole", "protonix", "lansoprazole", "prevacid", "rabeprazole", "dexlansoprazole", "h2 blocker*", "h2 antagonist*", "famotidine", "pepcid", "ranitidine", "zantac", "cimetidine", "tagamet", "antacid*", "tums", "acid reducer*", "acid blocker*", "heartburn medication*", "reflux medication*"],
+    said: ["reflux medicine", "gerd medication*"] },
+  { slug: "antipsychotics", label: "antipsychotic or Parkinson's medicines",
+    drugs: ["antipsychotic*", "neuroleptic*", "levodopa", "l dopa", "carbidopa", "sinemet", "dopamine agonist*", "pramipexole", "mirapex", "ropinirole", "requip", "rasagiline", "parkinsons medication*", "parkinson medication*", "quetiapine", "seroquel", "olanzapine", "zyprexa", "risperidone", "risperdal", "aripiprazole", "abilify", "haloperidol", "haldol", "clozapine", "clozaril", "ziprasidone", "lurasidone", "latuda", "paliperidone", "invega", "chlorpromazine"],
+    said: ["parkinsons", "parkinson", "schizophrenia", "bipolar", "mood stabilizer*"] },
+  { slug: "pde5_inhibitors", label: "erectile dysfunction medicines",
+    drugs: ["sildenafil", "viagra", "revatio", "tadalafil", "cialis", "vardenafil", "levitra", "avanafil", "pde5 inhibitor*", "pde 5 inhibitor*", "phosphodiesterase inhibitor*", "erectile dysfunction medication*", "ed medication*", "ed med*", "ed pill*"],
+    said: ["erectile dysfunction"] },
+  { slug: "acetaminophen", label: "acetaminophen (paracetamol)",
+    drugs: ["acetaminophen", "tylenol", "paracetamol"],
+    said: [] },
+];
+
+// One regular expression for a term list, to run on norm() text: whole words, * = any ending.
+export function termsRe(terms: string[]): RegExp | null {
+  const parts = terms
+    .map((t) => {
+      const star = t.endsWith("*");
+      const n = norm(star ? t.slice(0, -1) : t).trim();
+      if (!n) return "";
+      const esc = n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return star ? `${esc}[a-z0-9]*` : esc;
+    })
+    .filter(Boolean);
+  return parts.length ? new RegExp(`(?<![a-z0-9])(?:${parts.join("|")})(?![a-z0-9])`) : null;
+}
+
+const POP_SAID_RE = POPULATIONS.map((p) => ({ slug: p.slug, re: termsRe([...p.terms, ...p.said]) }));
+const DRUG_SAID_RE = DRUG_CLASSES.map((d) => ({ slug: d.slug, re: termsRe([...d.drugs, ...d.said]) }));
+
+// Ages the visitor states: "my 6 year old", "a 3 month old", "I'm 72", "age 80", "he is 15".
+function agesSaid(n: string): { child: boolean; elderly: boolean } {
+  let child = false, elderly = false;
+  if (/(?<![a-z0-9])\d{1,2} (?:week|weeks|month|months) old(?![a-z0-9])/.test(n)) child = true;
+  for (const m of n.matchAll(/(?<![a-z0-9])(\d{1,3}) (?:year|years|yr|yrs) old(?![a-z0-9])/g)) {
+    const age = Number(m[1]);
+    if (age <= 17) child = true;
+    if (age >= 65) elderly = true;
+  }
+  for (const m of n.matchAll(/(?<![a-z0-9])(?:age|aged|i m|i am|im|he s|she s|he is|she is|turning|turned|now) (\d{2,3})(?![a-z0-9])/g)) {
+    const age = Number(m[1]);
+    if (age >= 65 && age <= 110) elderly = true;
+    if (age >= 10 && age <= 17) child = true;
+  }
+  return { child, elderly };
+}
+
+/** Populations the visitor's own words bring up (not the guide's replies, which warn generically). */
+export function populationsMentioned(said: string): Population[] {
+  const n = norm(said);
+  const out = new Set<Population>();
+  for (const p of POP_SAID_RE) if (p.re && p.re.test(n)) out.add(p.slug);
+  const ages = agesSaid(n);
+  if (ages.child) out.add("children");
+  if (ages.elderly) out.add("elderly");
+  return Array.from(out);
+}
+
+/** Drug classes the visitor's own words bring up, by medicine name, class word or condition. */
+export function drugClassesMentioned(said: string): string[] {
+  const n = norm(said);
+  return DRUG_SAID_RE.filter((d) => d.re && d.re.test(n)).map((d) => d.slug);
+}
