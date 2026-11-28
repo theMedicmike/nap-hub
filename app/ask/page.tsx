@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import "../pages.css";
 
@@ -203,7 +204,8 @@ export default function Ask() {
             ? "Tap the microphone and speak; the guide answers out loud. "
             : "Voice input works best in Chrome, Edge, or Safari. "}
           This guide is educational, not medical advice. In an emergency call 911. For thoughts of suicide or crisis,
-          call or text 988 (veterans and their families press 1).
+          call or text 988 (veterans and their families press 1). Did something you tried hurt you?{" "}
+          <Link href="/report">Tell us</Link>.
         </p>
       </section>
     </PageShell>

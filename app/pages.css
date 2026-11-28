@@ -163,4 +163,22 @@
 .ask-mic.on{color:var(--dusk);background:var(--gold-bright);border-color:var(--gold-bright)}
 .ask button:focus-visible{outline:2px solid var(--thread);outline-offset:3px}
 .ask-foot{margin:14px 0 0}
+.ask-foot a{color:var(--thread);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:640px){.ask-log{padding:16px;max-height:58vh}.ask-msg{max-width:90%;font-size:15.5px}}
+
+/* ---------- Report a harm: the form ---------- */
+.hr-form{display:grid;gap:18px;max-width:720px}
+.hr-field{display:grid;gap:8px}
+.hr-field>span{font-family:var(--serif);font-size:21px;line-height:1.3;color:var(--ivory)}
+.hr-field>span em{font-family:var(--sans);font-style:normal;font-size:13px;color:var(--ivory-faint);margin-left:10px}
+.hr-field input,.hr-field textarea{width:100%;box-sizing:border-box;padding:13px 16px;border-radius:14px;font:16px/1.5 var(--sans);color:var(--ivory);background:rgba(9,16,36,.6);border:1px solid rgba(244,238,223,.18);resize:vertical}
+.hr-field input::placeholder,.hr-field textarea::placeholder{color:var(--ivory-faint)}
+.hr-field input:focus,.hr-field textarea:focus{outline:none;border-color:var(--thread);box-shadow:0 0 0 3px rgba(214,230,138,.18)}
+.hr-hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+.hr-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.hr-err{margin:0;font-size:14.5px;color:var(--gold-bright)}
+.hr-done{padding:24px 26px;border-radius:18px;background:rgba(244,238,223,.06);border:1px solid rgba(244,238,223,.12);color:var(--ivory);font-size:17px;line-height:1.65;max-width:720px}
+.hr-done p{margin:0 0 12px}
+.hr-done p:last-child{margin:0}
+.hr-done a,.pg-pledge a{color:var(--thread);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:640px){.hr-field>span{font-size:19px}}

@@ -33,6 +33,7 @@ export function Footer() {
           <ul>
             <li><Link href="/ask">Ask the guide</Link></li>
             <li><Link href="/shape">Join the build</Link></li>
+            <li><Link href="/report">Report a harm</Link></li>
           </ul>
         </div>
       </div>

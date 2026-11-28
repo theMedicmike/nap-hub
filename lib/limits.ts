@@ -11,6 +11,7 @@ export const LIMITS = {
   shape:      { perVisitorPerHour: 15, sitePerDay: 200 },
   speak:      { perVisitorPerHour: 30, sitePerDay: 150 },
   contribute: { perVisitorPerHour: 10, sitePerDay: 200 },
+  report:     { perVisitorPerHour: 5,  sitePerDay: 100 },  // harm reports: a database write, not a model call; capped so a bot cannot fill the table
 } as const;
 
 export type Route = keyof typeof LIMITS;
@@ -25,7 +26,9 @@ function memBump(key: string, window: number, limit: number): boolean {
   return cur.n <= limit;
 }
 
-function visitorId(req: NextRequest): string {
+// The visitor's scrambled code: sha256 of a salt plus the IP, 32 hex characters. Also stored with each
+// harm report (visitor_hash), so the raw address is never kept anywhere.
+export function visitorId(req: NextRequest): string {
   const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || req.headers.get("x-real-ip") || "unknown";
   const salt = process.env.SUPABASE_SERVICE_ROLE_KEY || "nap";
   return createHash("sha256").update(salt + "|" + ip).digest("hex").slice(0, 32);

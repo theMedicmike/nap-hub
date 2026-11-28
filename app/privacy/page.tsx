@@ -29,7 +29,7 @@ export default function Privacy() {
           <li>No advertising, no ad trackers, and no analytics that follow you around.</li>
           <li>We do not sell or share your information for marketing. Ever.</li>
           <li>Conversations with the guide are not saved by NAP.</li>
-          <li>We only keep what you choose to send us: your name, email, and proposal when you submit one.</li>
+          <li>We only keep what you choose to send us: your name, email, and proposal when you submit one, or a harm report if you file one.</li>
         </ul>
       </Sec>
 
@@ -71,6 +71,16 @@ export default function Privacy() {
               When you submit a proposal or add your name, we store what you entered, including your email, in our
               database (Supabase). Your name appears publicly only if you tick the box to show it. Your email is never
               published.
+            </dd>
+          </div>
+          <div className="pg-row">
+            <dt>Reporting a harm</dt>
+            <dd>
+              If you tell us something hurt you on the <Link href="/report">report page</Link>, we store what you typed
+              (what was taken, what happened, when, and a way to reach you only if you chose to leave one) in our database
+              (Supabase), with the same scrambled connection code used for the usage counts, never your IP address. It is
+              read by the people who run NAP, is never published, and is not sent to anyone else. If the harm came from a
+              product, the FDA&apos;s MedWatch program is the place that can act on it; we cannot forward your report there.
             </dd>
           </div>
           <div className="pg-row">
