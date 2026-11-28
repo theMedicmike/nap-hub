@@ -12,7 +12,12 @@ type Entry = { date: string; title: string; body: string; correction?: boolean; 
 // Newest first. Corrections are tagged, never softened or removed.
 const ENTRIES: Entry[] = [
   {
-    date: "Nov 21, 2026", now: true,
+    date: "Nov 27, 2026", now: true,
+    title: "You can now tell NAP if something hurt you",
+    body: "A new page, Report a harm, lets anyone say that something they tried hurt them; a person will read it, and the privacy notice now says what is kept. The guide names a pharmacist or prescriber whenever it names a supplement. Behind the guide, the population and medicine-class warnings inside the 184 safety notes are being drawn out into fields a clinician or pharmacist can approve one by one; none reaches a visitor until it is approved.",
+  },
+  {
+    date: "Nov 21, 2026",
     title: "Clearer ways in: new menu and six new pages",
     body: "A grouped menu that works on phones, a full footer, and new pages on how grades are decided, who governs NAP, contact, privacy, accessibility, and this changelog. AI-made paintings are now disclosed once, quietly, at the foot of every page.",
   },

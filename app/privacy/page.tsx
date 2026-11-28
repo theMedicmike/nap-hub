@@ -22,7 +22,7 @@ export default function Privacy() {
           exactly what this site collects, where it goes, and why, in plain English.
         </>
       }
-      updated="November 21, 2026"
+      updated="November 27, 2026"
     >
       <Sec id="short" title="The short version.">
         <ul>
