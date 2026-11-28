@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
 import { checkLimit, BUSY_MESSAGE } from "@/lib/limits";
 import { safetyFloor, replyNamesWho, WHO_REPLY } from "@/lib/ask-safety";
-import { buildKnowledge, buildMatchers, ensureSafetyNotes, type Atlas, type SafetyCheck } from "@/lib/ask-atlas";
+import { buildKnowledge, buildMatchers, ensureSafetyNotes, applySafetyTables, type Atlas, type SafetyCheck, type SafetyHit, type SafetyTables } from "@/lib/ask-atlas";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -67,7 +67,23 @@ async function loadAtlas(): Promise<Atlas | null> {
   const E = (ents ?? []) as any[];
   const byId: Record<string, any> = {};
   E.forEach((e) => (byId[e.id] = e));
-  return { links: L, byId, matchers: buildMatchers(E) };
+  return { links: L, byId, matchers: buildMatchers(E), tables: await loadSafetyTables(sb) };
+}
+
+// STRUCTURED SAFETY LAYER (db/2026-11-27_safety_layer.sql): population flags and drug-class
+// interactions as fields, not prose. Only APPROVED rows are loaded; drafts never reach a visitor.
+// If the tables are missing (migration not applied) or empty, both lists are empty and the guide
+// behaves exactly as before. The rules that use them live in lib/ask-atlas.ts section 5.
+async function loadSafetyTables(sb: NonNullable<ReturnType<typeof supabaseAdmin>>): Promise<SafetyTables> {
+  try {
+    const [p, d] = await Promise.all([
+      sb.from("atlas_population_flags").select("ingredient_id,population,level,note").eq("status", "approved"),
+      sb.from("atlas_drug_interactions").select("ingredient_id,drug_class,severity,mechanism,note").eq("status", "approved"),
+    ]);
+    return { populations: p.error ? [] : ((p.data ?? []) as any[]), drugs: d.error ? [] : ((d.data ?? []) as any[]) };
+  } catch {
+    return { populations: [], drugs: [] };
+  }
 }
 
 // One model call. Returns the reply text, or the error detail when the API call fails.
@@ -131,6 +147,9 @@ export async function POST(req: NextRequest) {
   }
   try {
     const recent = messages.slice(-6).map((m) => m.content).join("\n");
+    // The visitor's own recent words, without the guide's turns: the structured safety rules key off
+    // these, so the guide's generic "if you take blood thinners" never triggers its own warning.
+    const said = messages.slice(-6).filter((m) => m.role === "user").map((m) => m.content).join("\n");
     const atlas = await loadAtlas();
     const k1 = atlas ? buildKnowledge(atlas, recent) : { text: "", shown: new Set<string>() };
     const first = await askModel(SYSTEM + k1.text, messages);
@@ -141,11 +160,13 @@ export async function POST(req: NextRequest) {
     // Every supplement the reply names must have had its full Atlas safety note in front of the
     // model; if not, one revision with the notes attached, then a pharmacist line as the backstop.
     let safetyCheck: SafetyCheck | undefined;
+    let safetyFlags: SafetyHit[] | undefined;
     if (atlas && first.text) {
       const out = await ensureSafetyNotes({
         atlas,
         system: SYSTEM,
         conversation: recent,
+        said,
         first: { reply, shown: k1.shown },
         ask: async (system) => {
           try {
@@ -158,10 +179,15 @@ export async function POST(req: NextRequest) {
       });
       reply = out.reply;
       safetyCheck = out.check;
+      // Structured safety layer: an APPROVED avoid row for an ingredient the final reply names, when the
+      // visitor brought up that population or medicine, adds one plain sentence (lib/ask-atlas.ts §5).
+      const flagged = applySafetyTables(reply, atlas, said);
+      reply = flagged.reply;
+      if (flagged.hits.length) safetyFlags = flagged.hits;
     }
     // Standing rule, enforced in code as well as in the prompt: a reply that names the WHO never ships.
     if (replyNamesWho(reply)) return NextResponse.json({ reply: WHO_REPLY, safety: "who" });
-    return NextResponse.json({ reply, safetyCheck });
+    return NextResponse.json({ reply, safetyCheck, safetyFlags });
   } catch {
     return NextResponse.json({ error: "server error" }, { status: 500 });
   }

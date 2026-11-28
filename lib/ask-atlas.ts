@@ -37,7 +37,9 @@ export type AtlasLink = {
   traditional_strength?: string | null;
   safety_note?: string | null;
 };
-export type Atlas = { links: AtlasLink[]; byId: Record<string, AtlasEntity>; matchers: IngredientMatcher[] };
+// `tables` holds the APPROVED rows of the structured safety layer (section 5); absent or empty = the
+// behavior before the layer existed.
+export type Atlas = { links: AtlasLink[]; byId: Record<string, AtlasEntity>; matchers: IngredientMatcher[]; tables?: SafetyTables };
 
 /* ---------- 1. Which claims get their FULL SAFETY NOTE attached (moved from route.ts) ---------- */
 
@@ -269,10 +271,13 @@ export type SafetyCheck = { named: string[]; revised: boolean; appended: string[
 export type ModelCall = (system: string) => Promise<string | null>; // null = the call failed
 
 // Runs after the first answer. `system` is the full system prompt WITHOUT the knowledge block.
+// `said` is the visitor's own recent words (no guide turns); it decides which approved safety-table
+// rows apply (section 5). It defaults to `conversation`.
 export async function ensureSafetyNotes(opts: {
   atlas: Atlas;
   system: string;
   conversation: string;
+  said?: string;
   first: { reply: string; shown: Set<string> };
   ask: ModelCall;
 }): Promise<{ reply: string; check: SafetyCheck }> {
@@ -284,7 +289,9 @@ export async function ensureSafetyNotes(opts: {
 
   const force = new Set(missing1.map((m) => m.id));
   const k2 = buildKnowledge(atlas, conversation, force);
-  const second = await ask(system + k2.text + revisionInstruction(first.reply, missing1.map((m) => m.short)));
+  // Approved caution / monitor rows for the ingredients the draft names ride along on the revision.
+  const flags = cautionBlock(safetyHitsFor(atlas.tables, named1, opts.said ?? conversation));
+  const second = await ask(system + k2.text + flags + revisionInstruction(first.reply, missing1.map((m) => m.short)));
   if (!second || !second.trim()) {
     check.appended = missing1.map((m) => m.short);
     return { reply: first.reply + pharmacistLine(check.appended), check };
@@ -458,4 +465,100 @@ export function populationsMentioned(said: string): Population[] {
 export function drugClassesMentioned(said: string): string[] {
   const n = norm(said);
   return DRUG_SAID_RE.filter((d) => d.re && d.re.test(n)).map((d) => d.slug);
+}
+
+/* ---------- 5. The structured safety layer: the rules ---------- */
+
+// route.ts loads the two tables' APPROVED rows next to the Atlas. Then:
+//   * an `avoid` row for an ingredient the reply names, when the visitor's own words brought up that
+//     population or a medicine in that class, adds ONE plain sentence naming the ingredient and the
+//     reason (applySafetyTables, after the safety-note check);
+//   * `caution` and `monitor` rows for the ingredients a draft names are attached to the revision
+//     prompt (cautionBlock, inside ensureSafetyNotes).
+// Only the visitor's words count (`said`), never the guide's own replies, which warn generically
+// about blood thinners and pregnancy all the time. With no tables, or no approved rows, nothing here
+// changes a reply.
+
+export type PopulationFlag = { ingredient_id: string; population: string; level: string; note?: string | null };
+export type DrugInteraction = { ingredient_id: string; drug_class: string; severity: string; mechanism?: string | null; note?: string | null };
+export type SafetyTables = { populations: PopulationFlag[]; drugs: DrugInteraction[] };
+export type SafetyHit = {
+  ingredient: string; // the name as it reads mid-sentence ("ashwagandha", "NAC")
+  slug: string;
+  kind: "population" | "drug";
+  key: string; // population slug or drug-class slug
+  level: "avoid" | "caution" | "monitor";
+  label: string; // completes "should be avoided ...": "in pregnancy", "with blood thinners"
+  reason: string | null;
+};
+
+const POP_LABEL: Record<string, string> = Object.fromEntries(POPULATIONS.map((p) => [p.slug, p.label]));
+const DRUG_LABEL: Record<string, string> = Object.fromEntries(DRUG_CLASSES.map((d) => [d.slug, d.label]));
+
+// A row's note, as one spoken-length reason: first clause only, cut at a word, no trailing punctuation.
+export function shortReason(note: string | null | undefined, max = 160): string | null {
+  if (!note) return null;
+  let t = String(note).split(" | ")[0].replace(/\s+/g, " ").trim();
+  if (!t) return null;
+  if (t.length > max) {
+    t = t.slice(0, max);
+    const sp = t.lastIndexOf(" ");
+    if (sp > 60) t = t.slice(0, sp);
+    t = t.replace(/[\s,;:(—–-]+$/, "") + "…";
+  }
+  if (/^[A-Z][a-z]/.test(t)) t = t[0].toLowerCase() + t.slice(1);
+  return t.replace(/[.;,\s]+$/, "");
+}
+
+/** The approved rows that apply: ingredients the reply names x what the visitor's own words brought up. */
+export function safetyHitsFor(tables: SafetyTables | undefined, named: IngredientMatcher[], said: string): SafetyHit[] {
+  if (!tables || !named.length) return [];
+  const pops = new Set<string>(populationsMentioned(said));
+  const classes = new Set<string>(drugClassesMentioned(said));
+  if (!pops.size && !classes.size) return [];
+  const byIng = new Map(named.map((m) => [m.id, m]));
+  const level = (s: string): SafetyHit["level"] => (s === "avoid" ? "avoid" : s === "monitor" ? "monitor" : "caution");
+  const hits: SafetyHit[] = [];
+  for (const r of tables.populations || []) {
+    const m = byIng.get(r.ingredient_id);
+    if (!m || !pops.has(r.population)) continue;
+    hits.push({ ingredient: m.short, slug: m.slug, kind: "population", key: r.population, level: level(r.level), label: POP_LABEL[r.population] || r.population, reason: shortReason(r.note) });
+  }
+  for (const r of tables.drugs || []) {
+    const m = byIng.get(r.ingredient_id);
+    if (!m || !classes.has(r.drug_class)) continue;
+    hits.push({ ingredient: m.short, slug: m.slug, kind: "drug", key: r.drug_class, level: level(r.severity), label: `with ${DRUG_LABEL[r.drug_class] || r.drug_class}`, reason: r.mechanism || shortReason(r.note) });
+  }
+  return hits;
+}
+
+/** Caution and monitor rows as text for the revision prompt; "" when there are none. */
+export function cautionBlock(hits: SafetyHit[]): string {
+  const rows = hits.filter((h) => h.level !== "avoid");
+  if (!rows.length) return "";
+  const lines = rows.map((h) => `- ${h.ingredient}: ${h.level} ${h.label}${h.reason ? ` — ${h.reason}` : ""}`);
+  return `\n\nREVIEWED SAFETY FLAGS (structured rows approved by a reviewer; each one applies here because the person brought up that population or medicine):\n${lines.join("\n")}\nFor every ingredient you keep, carry its flag into the reply in plain words, early.`;
+}
+
+/** Avoid rows as one plain sentence; "" when there are none. One ingredient's flags are grouped. */
+export function avoidSentence(hits: SafetyHit[]): string {
+  const perIngredient = new Map<string, { name: string; parts: string[]; keys: Set<string> }>();
+  for (const h of hits) {
+    if (h.level !== "avoid") continue;
+    const g = perIngredient.get(h.slug) || { name: h.ingredient, parts: [], keys: new Set<string>() };
+    if (g.keys.has(h.key)) continue;
+    g.keys.add(h.key);
+    g.parts.push(`${h.label}${h.reason ? ` (${h.reason})` : ""}`);
+    perIngredient.set(h.slug, g);
+  }
+  if (!perIngredient.size) return "";
+  const items = Array.from(perIngredient.values()).map((g) => `${g.name} should be avoided ${g.parts.join(" and ")}`);
+  return `\n\nOne more safety point from NAP's reviewed safety data, to take to your pharmacist or prescriber: ${listNames(items)}.`;
+}
+
+/** After the final reply: add the avoid sentence when an approved avoid row applies to an ingredient it names. */
+export function applySafetyTables(reply: string, atlas: Atlas, said: string): { reply: string; hits: SafetyHit[]; appended: boolean } {
+  const hits = safetyHitsFor(atlas.tables, ingredientsNamed(reply, atlas.matchers), said);
+  const line = avoidSentence(hits);
+  return { reply: line ? reply + line : reply, hits, appended: Boolean(line) };
 }
